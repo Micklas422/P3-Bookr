@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows;
 
 namespace P3_Bookr
 {
@@ -14,9 +15,7 @@ namespace P3_Bookr
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrontPage());
         }
     }
 }

@@ -14,7 +14,6 @@ namespace P3_Bookr.Windows
     {
         public FrontPage()
         {
-            InitializeComponent();
         }
     }
 }
