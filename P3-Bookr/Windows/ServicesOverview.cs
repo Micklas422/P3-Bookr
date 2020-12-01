@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P3_Bookr
+namespace P3_Bookr.Windows
 {
-    public partial class Form1 : Form
+    public partial class ServicesOverview : Form
     {
-        public Form1()
+        public ServicesOverview()
         {
             InitializeComponent();
         }
