@@ -60,8 +60,6 @@
     <Compile Include="Models\Servicegroup.cs" />
     <Compile Include="Models\ServiceOffering.cs" />
     <Compile Include="Models\Services.cs" />
-    <Compile Include="Models\Test.cs" />
-    <Compile Include="Models\Test2.cs" />
     <Compile Include="Models\Timeperiod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
