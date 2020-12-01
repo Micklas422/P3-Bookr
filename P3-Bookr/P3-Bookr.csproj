@@ -55,6 +55,12 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Servicegroup.cs" />
+    <Compile Include="Models\ServiceOffering.cs" />
+    <Compile Include="Models\Services.cs" />
+    <Compile Include="Models\Timeperiod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
