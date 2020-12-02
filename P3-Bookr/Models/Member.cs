@@ -17,14 +17,14 @@ namespace P3_Bookr.Models
         string _adress;
         string _email;
         bool _customerDeactivated;
-        MedlemsTyper _medlemsType;
-        public enum MedlemsTyper 
+        MemberTypes _memberType;
+        public enum MemberTypes 
         {
-            no
+            //implemeteres i commons/membertypes
         };
         string _username;
         string _password;
-        public Member(string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MedlemsTyper medlemsType, string username, string password)
+        public Member(string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MemberTypes memberType, string username, string password)
         {
             _firstName = firstName;
             _lastName = lastName;
@@ -34,7 +34,7 @@ namespace P3_Bookr.Models
             _adress = adress;
             _email = email;
             _customerDeactivated = customerDeactivated;
-            _medlemsType = medlemsType;
+            _memberType = memberType;
             _username = username;
             _password = password;            
         }
