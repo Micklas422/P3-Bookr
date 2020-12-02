@@ -86,10 +86,21 @@ namespace P3_Bookr.Models
             get { return _customerDeactivated; }
             set { _customerDeactivated = value; }
         }
-        //MEDLEMSTYPE UML
-        //USERNAME
-        //PASSWORD
 
+        //MEDLEMSTYPE UML
+
+        public string Username
+        {
+            get { return _username; }
+            set { _username = value; }
+        }
+
+        public string Password
+        {
+            get { return _username; }
+            set { _username = value; }
+        }
+     
         public void setPermissions()
         {
             throw new NotImplementedException();
