@@ -15,7 +15,6 @@ namespace P3_Bookr
         [STAThread]
         static void Main()
         {
-            Application.Run(new FrontPage());
         }
     }
 }
