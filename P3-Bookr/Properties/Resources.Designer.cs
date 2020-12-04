@@ -63,9 +63,35 @@ namespace P3_Bookr.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< Updated upstream
         internal static System.Drawing.Bitmap BookerFullnobackground {
             get {
                 object obj = ResourceManager.GetObject("BookerFullnobackground", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap BookerFullnobackground1 {
+            get {
+                object obj = ResourceManager.GetObject("BookerFullnobackground1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BookerFullnobackground2 {
+            get {
+                object obj = ResourceManager.GetObject("BookerFullnobackground2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BookerFullnobackground21 {
+            get {
+                object obj = ResourceManager.GetObject("BookerFullnobackground21", resourceCulture);
+>>>>>>> Stashed changes
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

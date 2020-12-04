@@ -28,33 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.sideBar1 = new P3_Bookr.Windows.SideBar();
             this.SuspendLayout();
             // 
-            // label1
+            // sideBar1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.sideBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
+            this.sideBar1.ForeColor = System.Drawing.Color.White;
+            this.sideBar1.Location = new System.Drawing.Point(-2, 0);
+            this.sideBar1.Name = "sideBar1";
+            this.sideBar1.Size = new System.Drawing.Size(217, 474);
+            this.sideBar1.TabIndex = 0;
             // 
             // FrontPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(857, 470);
+            this.Controls.Add(this.sideBar1);
             this.Name = "FrontPage";
             this.Text = "Bookr";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private SideBar sideBar1;
     }
 }

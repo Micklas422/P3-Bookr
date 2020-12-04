@@ -15,6 +15,8 @@ namespace P3_Bookr
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrontPage());
         }
     }
