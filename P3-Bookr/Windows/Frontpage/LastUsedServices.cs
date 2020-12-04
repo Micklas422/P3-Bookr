@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows.Frontpage
 {
-    public partial class LastUsedService : UserControl
+    public partial class LastUsedServices : UserControl
     {
-        public LastUsedService()
+        public LastUsedServices()
         {
             InitializeComponent();
         }

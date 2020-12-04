@@ -1,6 +1,6 @@
-﻿namespace P3_Bookr.Windows
+﻿namespace P3_Bookr.Windows.Frontpage
 {
-    partial class FrontPage
+    partial class FrontPageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lastUsedService1 = new P3_Bookr.Windows.Frontpage.LastUsedService();
+            this.lastUsedServices1 = new P3_Bookr.Windows.Frontpage.LastUsedServices();
             this.SuspendLayout();
             // 
-            // lastUsedService1
+            // lastUsedServices1
             // 
-            this.lastUsedService1.AutoScroll = true;
-            this.lastUsedService1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.lastUsedService1.Location = new System.Drawing.Point(12, 61);
-            this.lastUsedService1.Name = "lastUsedService1";
-            this.lastUsedService1.Size = new System.Drawing.Size(1113, 275);
-            this.lastUsedService1.TabIndex = 0;
+            this.lastUsedServices1.AutoScroll = true;
+            this.lastUsedServices1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
+            this.lastUsedServices1.Location = new System.Drawing.Point(32, 29);
+            this.lastUsedServices1.Name = "lastUsedServices1";
+            this.lastUsedServices1.Size = new System.Drawing.Size(876, 309);
+            this.lastUsedServices1.TabIndex = 0;
             // 
-            // FrontPage
+            // FrontPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 467);
-            this.Controls.Add(this.lastUsedService1);
-            this.Name = "FrontPage";
-            this.Text = "Bookr";
-            this.Load += new System.EventHandler(this.FrontPage_Load);
+            this.ClientSize = new System.Drawing.Size(944, 450);
+            this.Controls.Add(this.lastUsedServices1);
+            this.Name = "FrontPageForm";
+            this.Text = "FrontPageForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Frontpage.LastUsedService lastUsedService1;
+        private LastUsedServices lastUsedServices1;
     }
 }

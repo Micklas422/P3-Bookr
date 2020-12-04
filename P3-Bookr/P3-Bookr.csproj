@@ -47,22 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\MemberTypes.cs" />
-    <Compile Include="Windows\Frontpage\FrontPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\Frontpage\FrontPage.Designer.cs" />
-    <Compile Include="Windows\Frontpage\FrontPageService.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Frontpage\FrontPageService.Designer.cs" />
-    <Compile Include="Windows\Frontpage\LastUsedService.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Frontpage\LastUsedService.Designer.cs" />
-    <Compile Include="Windows\Frontpage\LastUsedServiceText.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Frontpage\LastUsedServiceText.Designer.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Member.cs" />
@@ -74,6 +58,24 @@
     <Compile Include="Models\Timeperiod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Frontpage\FrontPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\FrontPageForm.Designer.cs">
+      <DependentUpon>FrontPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Frontpage\FrontPageService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\FrontPageService.Designer.cs">
+      <DependentUpon>FrontPageService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Frontpage\LastUsedServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\LastUsedServices.Designer.cs">
+      <DependentUpon>LastUsedServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,10 +136,6 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Windows\Frontpage\FrontPage.resx" />
-    <EmbeddedResource Include="Windows\Frontpage\FrontPageService.resx" />
-    <EmbeddedResource Include="Windows\Frontpage\LastUsedService.resx" />
-    <EmbeddedResource Include="Windows\Frontpage\LastUsedServiceText.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +146,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Windows\Frontpage\FrontPageForm.resx">
+      <DependentUpon>FrontPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Frontpage\FrontPageService.resx">
+      <DependentUpon>FrontPageService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Frontpage\LastUsedServices.resx">
+      <DependentUpon>LastUsedServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,5 +16,10 @@ namespace P3_Bookr.Windows.Frontpage
         {
             InitializeComponent();
         }
+
+        private void FrontPageService_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
