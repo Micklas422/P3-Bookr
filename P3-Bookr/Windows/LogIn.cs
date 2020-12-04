@@ -31,5 +31,10 @@ namespace P3_Bookr.Windows
         {
 
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
