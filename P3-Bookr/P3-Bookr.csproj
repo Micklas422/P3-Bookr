@@ -64,7 +64,6 @@
     <Compile Include="Windows\FrontPage.Designer.cs">
       <DependentUpon>FrontPage.cs</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
     <Compile Include="Windows\History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,18 +89,23 @@
       <DependentUpon>ReservationOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServiceDetails.cs">
-=======
-    <Compile Include="Windows\SideBar.cs">
->>>>>>> Stashed changes
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\SideBar.Designer.cs">
-      <DependentUpon>SideBar.cs</DependentUpon>
+    <Compile Include="Windows\ServiceDetails.Designer.cs">
+      <DependentUpon>ServiceDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\WashingMachines.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Windows\ServiceDetailsCalendar.cs">
+      <SubType>Form</SubType>
     </Compile>
-<<<<<<< Updated upstream
+    <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
+      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServicesOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ServicesOverview.Designer.cs">
+      <DependentUpon>ServicesOverview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ServiceViewForFlow.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,10 +117,6 @@
     </Compile>
     <Compile Include="Windows\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
-=======
-    <Compile Include="Windows\WashingMachines.Designer.cs">
-      <DependentUpon>WashingMachines.cs</DependentUpon>
->>>>>>> Stashed changes
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,19 +131,11 @@
     <EmbeddedResource Include="Windows\FrontPage.resx">
       <DependentUpon>FrontPage.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
     <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ReservationOverview.resx">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Windows\SideBar.resx">
-      <DependentUpon>SideBar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\WashingMachines.resx">
-      <DependentUpon>WashingMachines.cs</DependentUpon>
->>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetails.resx">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
@@ -165,14 +157,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <None Include="Resources\BookerLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pictures\BookerFullnobackground.png" />
-=======
-    <None Include="Resources\BookerFullnobackground21.png" />
->>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

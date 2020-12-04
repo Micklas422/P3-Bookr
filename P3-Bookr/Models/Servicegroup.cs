@@ -8,5 +8,6 @@ namespace P3_Bookr.Models
 {
     class Servicegroup
     {
+        int test;
     }
 }

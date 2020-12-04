@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows
 {
-    public partial class CustomTextBox : UserControl
+    public partial class ServicesOverview : Form
     {
-        public CustomTextBox()
+        public ServicesOverview()
         {
             InitializeComponent();
         }

@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows
 {
-    public partial class FrontPage : Form
+    public partial class History : Form
     {
-        public FrontPage()
+        public History()
         {
+            InitializeComponent();
         }
     }
 }
