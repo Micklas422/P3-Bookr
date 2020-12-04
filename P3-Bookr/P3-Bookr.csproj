@@ -47,6 +47,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\MemberTypes.cs" />
+    <Compile Include="Frontpage\FrontPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontpage\FrontPage.Designer.cs" />
+    <Compile Include="Frontpage\FrontPageService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontpage\FrontPageService.Designer.cs" />
+    <Compile Include="Frontpage\LastUsedService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontpage\LastUsedService.Designer.cs" />
+    <Compile Include="Frontpage\LastUsedServiceText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontpage\LastUsedServiceText.Designer.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Member.cs" />
@@ -124,6 +140,10 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frontpage\FrontPage.resx" />
+    <EmbeddedResource Include="Frontpage\FrontPageService.resx" />
+    <EmbeddedResource Include="Frontpage\LastUsedService.resx" />
+    <EmbeddedResource Include="Frontpage\LastUsedServiceText.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
