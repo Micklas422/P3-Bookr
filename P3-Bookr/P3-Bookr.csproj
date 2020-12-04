@@ -89,7 +89,7 @@
       <DependentUpon>ReservationOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServiceDetails.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\ServiceDetails.Designer.cs">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
@@ -105,6 +105,12 @@
     </Compile>
     <Compile Include="Windows\ServicesOverview.Designer.cs">
       <DependentUpon>ServicesOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServiceViewForFlow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\ServiceViewForFlow.Designer.cs">
+      <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Settings.cs">
       <SubType>Form</SubType>
@@ -130,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ReservationOverview.resx">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServiceDetails.resx">
+      <DependentUpon>ServiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServiceViewForFlow.resx">
+      <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
