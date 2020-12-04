@@ -118,6 +118,12 @@
     <Compile Include="Windows\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\SideBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\SideBar.Designer.cs">
+      <DependentUpon>SideBar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="Windows\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SideBar.resx">
+      <DependentUpon>SideBar.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Pictures\BookerFullnobackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookerFullnobackground4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
