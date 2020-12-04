@@ -56,7 +56,7 @@
             this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Brugernavn";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.labelUsername_Click);
             // 
             // label2
             // 
@@ -66,6 +66,7 @@
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Kodeord";
+            this.label2.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // textBox1
             // 
@@ -73,16 +74,19 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 29);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(463, 426);
-            this.textBox2.Name = "textBox2";
+            this.textBox2.Name = "textBoxKodeord";
             this.textBox2.Size = new System.Drawing.Size(259, 29);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
             this.pictureBox1.Location = new System.Drawing.Point(108, 112);
             this.pictureBox1.Name = "pictureBox1";

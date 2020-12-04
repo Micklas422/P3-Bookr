@@ -22,17 +22,32 @@ namespace P3_Bookr.Windows
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBoxTextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void labelUsername_Click(object sender, EventArgs e)
         {
 
         }
 
         private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
