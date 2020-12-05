@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows
 {
-    public partial class ServicesOverview : Form
+    public partial class ServicesOverview : UserControl
     {
         public ServicesOverview()
         {
             InitializeComponent();
+        }
+
+        private void ServicesOverview_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

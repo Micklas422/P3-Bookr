@@ -113,7 +113,7 @@
       <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServicesOverview.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\ServicesOverview.Designer.cs">
       <DependentUpon>ServicesOverview.cs</DependentUpon>
@@ -163,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetails.resx">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServiceDetailsCalendar.resx">
+      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServicesOverview.resx">
+      <DependentUpon>ServicesOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows
 {
-    public partial class ServiceDetailsCalendar : Form
+    public partial class ServiceDetailsCalendar : UserControl
     {
         public ServiceDetailsCalendar()
         {
             InitializeComponent();
+        }
+
+        private void ServiceCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
     }
 }

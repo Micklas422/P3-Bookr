@@ -28,28 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ServiceFlow1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ServiceBookr = new System.Windows.Forms.PictureBox();
-            this.ServiceFlowTitel1 = new System.Windows.Forms.Label();
-            this.ServiceFlow2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ServiceFlowTitel2 = new System.Windows.Forms.Label();
+            this.ServiceDetailsTitel1 = new System.Windows.Forms.Label();
+            this.ServiceDetailsOptionPanel1 = new System.Windows.Forms.Panel();
+            this.ServiceDetailsInfoPanel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceBookr)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ServiceFlow1
-            // 
-            this.ServiceFlow1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ServiceFlow1.Location = new System.Drawing.Point(75, 122);
-            this.ServiceFlow1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ServiceFlow1.Name = "ServiceFlow1";
-            this.ServiceFlow1.Size = new System.Drawing.Size(600, 98);
-            this.ServiceFlow1.TabIndex = 0;
             // 
             // ServiceBookr
             // 
             this.ServiceBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
             this.ServiceBookr.Location = new System.Drawing.Point(225, 2);
-            this.ServiceBookr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ServiceBookr.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceBookr.Name = "ServiceBookr";
             this.ServiceBookr.Size = new System.Drawing.Size(300, 65);
             this.ServiceBookr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -58,47 +48,41 @@
             this.ServiceBookr.WaitOnLoad = true;
             this.ServiceBookr.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // ServiceFlowTitel1
+            // ServiceDetailsTitel1
             // 
-            this.ServiceFlowTitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.ServiceFlowTitel1.Location = new System.Drawing.Point(75, 103);
-            this.ServiceFlowTitel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ServiceFlowTitel1.Name = "ServiceFlowTitel1";
-            this.ServiceFlowTitel1.Size = new System.Drawing.Size(600, 16);
-            this.ServiceFlowTitel1.TabIndex = 2;
-            this.ServiceFlowTitel1.Text = "ServiceFlow Overskrift";
-            this.ServiceFlowTitel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ServiceDetailsTitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
+            this.ServiceDetailsTitel1.Location = new System.Drawing.Point(75, 103);
+            this.ServiceDetailsTitel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ServiceDetailsTitel1.Name = "ServiceDetailsTitel1";
+            this.ServiceDetailsTitel1.Size = new System.Drawing.Size(600, 16);
+            this.ServiceDetailsTitel1.TabIndex = 7;
+            this.ServiceDetailsTitel1.Text = "ServiceFlow Overskrift";
+            this.ServiceDetailsTitel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ServiceFlow2
+            // ServiceDetailsOptionPanel1
             // 
-            this.ServiceFlow2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ServiceFlow2.Location = new System.Drawing.Point(75, 260);
-            this.ServiceFlow2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ServiceFlow2.Name = "ServiceFlow2";
-            this.ServiceFlow2.Size = new System.Drawing.Size(600, 98);
-            this.ServiceFlow2.TabIndex = 3;
+            this.ServiceDetailsOptionPanel1.Location = new System.Drawing.Point(435, 122);
+            this.ServiceDetailsOptionPanel1.Name = "ServiceDetailsOptionPanel1";
+            this.ServiceDetailsOptionPanel1.Size = new System.Drawing.Size(240, 300);
+            this.ServiceDetailsOptionPanel1.TabIndex = 8;
+            this.ServiceDetailsOptionPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // ServiceFlowTitel2
+            // ServiceDetailsInfoPanel1
             // 
-            this.ServiceFlowTitel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.ServiceFlowTitel2.Location = new System.Drawing.Point(75, 241);
-            this.ServiceFlowTitel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ServiceFlowTitel2.Name = "ServiceFlowTitel2";
-            this.ServiceFlowTitel2.Size = new System.Drawing.Size(600, 16);
-            this.ServiceFlowTitel2.TabIndex = 4;
-            this.ServiceFlowTitel2.Text = "ServiceFlow Overskrift";
-            this.ServiceFlowTitel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ServiceDetailsInfoPanel1.Location = new System.Drawing.Point(78, 122);
+            this.ServiceDetailsInfoPanel1.Name = "ServiceDetailsInfoPanel1";
+            this.ServiceDetailsInfoPanel1.Size = new System.Drawing.Size(330, 300);
+            this.ServiceDetailsInfoPanel1.TabIndex = 9;
             // 
             // ServiceDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ServiceFlowTitel2);
-            this.Controls.Add(this.ServiceFlow2);
-            this.Controls.Add(this.ServiceFlowTitel1);
+            this.Controls.Add(this.ServiceDetailsInfoPanel1);
+            this.Controls.Add(this.ServiceDetailsOptionPanel1);
+            this.Controls.Add(this.ServiceDetailsTitel1);
             this.Controls.Add(this.ServiceBookr);
-            this.Controls.Add(this.ServiceFlow1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ServiceDetails";
             this.Size = new System.Drawing.Size(750, 488);
             this.Load += new System.EventHandler(this.ServiceDetails_Load);
@@ -109,10 +93,9 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel ServiceFlow1;
         private System.Windows.Forms.PictureBox ServiceBookr;
-        private System.Windows.Forms.Label ServiceFlowTitel1;
-        private System.Windows.Forms.FlowLayoutPanel ServiceFlow2;
-        private System.Windows.Forms.Label ServiceFlowTitel2;
+        private System.Windows.Forms.Label ServiceDetailsTitel1;
+        private System.Windows.Forms.Panel ServiceDetailsOptionPanel1;
+        private System.Windows.Forms.Panel ServiceDetailsInfoPanel1;
     }
 }
