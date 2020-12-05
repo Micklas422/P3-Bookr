@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P3_Bookr.Windows
+namespace P3_Bookr.Windows.Frontpage
 {
-    public partial class FrontPage : Form
+    public partial class FrontPageForm : Form
     {
-        public FrontPage()
+        public FrontPageForm()
         {
+            InitializeComponent();
         }
     }
 }
