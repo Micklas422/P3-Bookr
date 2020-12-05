@@ -29,55 +29,21 @@
         private void InitializeComponent()
         {
             this.ServiceFlow1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.serviceViewForFlow1 = new P3_Bookr.Windows.ServiceViewForFlow();
-            this.serviceViewForFlow2 = new P3_Bookr.Windows.ServiceViewForFlow();
-            this.serviceViewForFlow3 = new P3_Bookr.Windows.ServiceViewForFlow();
             this.ServiceBookr = new System.Windows.Forms.PictureBox();
             this.ServiceFlowTitel1 = new System.Windows.Forms.Label();
             this.ServiceFlow2 = new System.Windows.Forms.FlowLayoutPanel();
             this.ServiceFlowTitel2 = new System.Windows.Forms.Label();
-            this.ServiceFlow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceBookr)).BeginInit();
             this.SuspendLayout();
             // 
             // ServiceFlow1
             // 
             this.ServiceFlow1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ServiceFlow1.Controls.Add(this.serviceViewForFlow1);
-            this.ServiceFlow1.Controls.Add(this.serviceViewForFlow2);
-            this.ServiceFlow1.Controls.Add(this.serviceViewForFlow3);
             this.ServiceFlow1.Location = new System.Drawing.Point(75, 122);
             this.ServiceFlow1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ServiceFlow1.Name = "ServiceFlow1";
             this.ServiceFlow1.Size = new System.Drawing.Size(600, 98);
             this.ServiceFlow1.TabIndex = 0;
-            // 
-            // serviceViewForFlow1
-            // 
-            this.serviceViewForFlow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.serviceViewForFlow1.Location = new System.Drawing.Point(2, 2);
-            this.serviceViewForFlow1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.serviceViewForFlow1.Name = "serviceViewForFlow1";
-            this.serviceViewForFlow1.Size = new System.Drawing.Size(134, 93);
-            this.serviceViewForFlow1.TabIndex = 0;
-            // 
-            // serviceViewForFlow2
-            // 
-            this.serviceViewForFlow2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.serviceViewForFlow2.Location = new System.Drawing.Point(140, 2);
-            this.serviceViewForFlow2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.serviceViewForFlow2.Name = "serviceViewForFlow2";
-            this.serviceViewForFlow2.Size = new System.Drawing.Size(134, 93);
-            this.serviceViewForFlow2.TabIndex = 1;
-            // 
-            // serviceViewForFlow3
-            // 
-            this.serviceViewForFlow3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.serviceViewForFlow3.Location = new System.Drawing.Point(278, 2);
-            this.serviceViewForFlow3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.serviceViewForFlow3.Name = "serviceViewForFlow3";
-            this.serviceViewForFlow3.Size = new System.Drawing.Size(134, 93);
-            this.serviceViewForFlow3.TabIndex = 2;
             // 
             // ServiceBookr
             // 
@@ -136,7 +102,6 @@
             this.Name = "ServiceDetails";
             this.Size = new System.Drawing.Size(750, 488);
             this.Load += new System.EventHandler(this.ServiceDetails_Load);
-            this.ServiceFlow1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ServiceBookr)).EndInit();
             this.ResumeLayout(false);
 
@@ -149,8 +114,5 @@
         private System.Windows.Forms.Label ServiceFlowTitel1;
         private System.Windows.Forms.FlowLayoutPanel ServiceFlow2;
         private System.Windows.Forms.Label ServiceFlowTitel2;
-        private ServiceViewForFlow serviceViewForFlow1;
-        private ServiceViewForFlow serviceViewForFlow2;
-        private ServiceViewForFlow serviceViewForFlow3;
     }
 }
