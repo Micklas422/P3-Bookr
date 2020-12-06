@@ -112,6 +112,24 @@
     <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
       <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ServiceInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\ServiceInfoPanel.Designer.cs">
+      <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServiceOptionCalendarPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\ServiceOptionCalendarPanel.Designer.cs">
+      <DependentUpon>ServiceOptionCalendarPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServiceOptionChoisePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\ServiceOptionChoisePanel.Designer.cs">
+      <DependentUpon>ServiceOptionChoisePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ServicesOverview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +184,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetailsCalendar.resx">
       <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServiceInfoPanel.resx">
+      <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServiceOptionCalendarPanel.resx">
+      <DependentUpon>ServiceOptionCalendarPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServiceOptionChoisePanel.resx">
+      <DependentUpon>ServiceOptionChoisePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicesOverview.resx">
       <DependentUpon>ServicesOverview.cs</DependentUpon>
