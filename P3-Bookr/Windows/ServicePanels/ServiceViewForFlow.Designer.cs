@@ -87,13 +87,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ServiceInfoInfo);
             this.Controls.Add(this.ServiceLocationInfo);
             this.Controls.Add(this.ServiceInfo);
             this.Controls.Add(this.ServiceLocation);
             this.Controls.Add(this.ServiceTitel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ServiceViewForFlow";
             this.Size = new System.Drawing.Size(134, 93);
             this.ResumeLayout(false);

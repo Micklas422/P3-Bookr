@@ -28,25 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ServiceBookr = new System.Windows.Forms.PictureBox();
             this.ServiceDetailsTitel1 = new System.Windows.Forms.Label();
             this.ServiceDetailsOptionPanel1 = new System.Windows.Forms.Panel();
             this.ServiceDetailsInfoPanel1 = new System.Windows.Forms.Panel();
+            this.ServiceBookr = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceBookr)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ServiceBookr
-            // 
-            this.ServiceBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
-            this.ServiceBookr.Location = new System.Drawing.Point(225, 2);
-            this.ServiceBookr.Margin = new System.Windows.Forms.Padding(2);
-            this.ServiceBookr.Name = "ServiceBookr";
-            this.ServiceBookr.Size = new System.Drawing.Size(300, 65);
-            this.ServiceBookr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ServiceBookr.TabIndex = 1;
-            this.ServiceBookr.TabStop = false;
-            this.ServiceBookr.WaitOnLoad = true;
-            this.ServiceBookr.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ServiceDetailsTitel1
             // 
@@ -61,6 +48,7 @@
             // 
             // ServiceDetailsOptionPanel1
             // 
+            this.ServiceDetailsOptionPanel1.BackColor = System.Drawing.Color.White;
             this.ServiceDetailsOptionPanel1.Location = new System.Drawing.Point(435, 122);
             this.ServiceDetailsOptionPanel1.Name = "ServiceDetailsOptionPanel1";
             this.ServiceDetailsOptionPanel1.Size = new System.Drawing.Size(240, 300);
@@ -69,15 +57,30 @@
             // 
             // ServiceDetailsInfoPanel1
             // 
+            this.ServiceDetailsInfoPanel1.BackColor = System.Drawing.Color.White;
             this.ServiceDetailsInfoPanel1.Location = new System.Drawing.Point(78, 122);
             this.ServiceDetailsInfoPanel1.Name = "ServiceDetailsInfoPanel1";
             this.ServiceDetailsInfoPanel1.Size = new System.Drawing.Size(330, 300);
             this.ServiceDetailsInfoPanel1.TabIndex = 9;
             // 
+            // ServiceBookr
+            // 
+            this.ServiceBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
+            this.ServiceBookr.Location = new System.Drawing.Point(225, 2);
+            this.ServiceBookr.Margin = new System.Windows.Forms.Padding(2);
+            this.ServiceBookr.Name = "ServiceBookr";
+            this.ServiceBookr.Size = new System.Drawing.Size(300, 65);
+            this.ServiceBookr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ServiceBookr.TabIndex = 1;
+            this.ServiceBookr.TabStop = false;
+            this.ServiceBookr.WaitOnLoad = true;
+            this.ServiceBookr.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // ServiceDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.Controls.Add(this.ServiceDetailsInfoPanel1);
             this.Controls.Add(this.ServiceDetailsOptionPanel1);
             this.Controls.Add(this.ServiceDetailsTitel1);

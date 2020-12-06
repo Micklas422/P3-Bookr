@@ -39,6 +39,7 @@
             // ServiceOverviewFlow1
             // 
             this.ServiceOverviewFlow1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ServiceOverviewFlow1.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlow1.Location = new System.Drawing.Point(75, 122);
             this.ServiceOverviewFlow1.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceOverviewFlow1.Name = "ServiceOverviewFlow1";
@@ -48,6 +49,7 @@
             // ServiceOverviewFlow2
             // 
             this.ServiceOverviewFlow2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ServiceOverviewFlow2.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlow2.Location = new System.Drawing.Point(75, 260);
             this.ServiceOverviewFlow2.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceOverviewFlow2.Name = "ServiceOverviewFlow2";
@@ -56,6 +58,7 @@
             // 
             // ServiceOverviewFlowTitel2
             // 
+            this.ServiceOverviewFlowTitel2.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlowTitel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
             this.ServiceOverviewFlowTitel2.Location = new System.Drawing.Point(75, 241);
             this.ServiceOverviewFlowTitel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -67,6 +70,7 @@
             // 
             // ServiceOverviewFlowTitel1
             // 
+            this.ServiceOverviewFlowTitel1.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlowTitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
             this.ServiceOverviewFlowTitel1.Location = new System.Drawing.Point(75, 103);
             this.ServiceOverviewFlowTitel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -92,6 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.Controls.Add(this.ServiceOverviewFlowTitel1);
             this.Controls.Add(this.ServiceOverviewFlowTitel2);
             this.Controls.Add(this.ServiceOverviewFlow2);

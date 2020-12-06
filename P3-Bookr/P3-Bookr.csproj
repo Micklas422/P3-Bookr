@@ -112,23 +112,29 @@
     <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
       <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServiceInfoPanel.cs">
+    <Compile Include="Windows\ServicePanels\ServiceInfoPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\ServiceInfoPanel.Designer.cs">
+    <Compile Include="Windows\ServicePanels\ServiceInfoPanel.Designer.cs">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServiceOptionCalendarPanel.cs">
+    <Compile Include="Windows\ServicePanels\ServiceOptionCalendarPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\ServiceOptionCalendarPanel.Designer.cs">
+    <Compile Include="Windows\ServicePanels\ServiceOptionCalendarPanel.Designer.cs">
       <DependentUpon>ServiceOptionCalendarPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServiceOptionChoisePanel.cs">
+    <Compile Include="Windows\ServicePanels\ServiceOptionChoisePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\ServiceOptionChoisePanel.Designer.cs">
+    <Compile Include="Windows\ServicePanels\ServiceOptionChoisePanel.Designer.cs">
       <DependentUpon>ServiceOptionChoisePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServicePanels\ServiceOptionFlowOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\ServicePanels\ServiceOptionFlowOption.Designer.cs">
+      <DependentUpon>ServiceOptionFlowOption.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServicesOverview.cs">
       <SubType>UserControl</SubType>
@@ -136,10 +142,10 @@
     <Compile Include="Windows\ServicesOverview.Designer.cs">
       <DependentUpon>ServicesOverview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServiceViewForFlow.cs">
+    <Compile Include="Windows\ServicePanels\ServiceViewForFlow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\ServiceViewForFlow.Designer.cs">
+    <Compile Include="Windows\ServicePanels\ServiceViewForFlow.Designer.cs">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Settings.cs">
@@ -185,19 +191,22 @@
     <EmbeddedResource Include="Windows\ServiceDetailsCalendar.resx">
       <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceInfoPanel.resx">
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceInfoPanel.resx">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceOptionCalendarPanel.resx">
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceOptionCalendarPanel.resx">
       <DependentUpon>ServiceOptionCalendarPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceOptionChoisePanel.resx">
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceOptionChoisePanel.resx">
       <DependentUpon>ServiceOptionChoisePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceOptionFlowOption.resx">
+      <DependentUpon>ServiceOptionFlowOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicesOverview.resx">
       <DependentUpon>ServicesOverview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceViewForFlow.resx">
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\SideBar.resx">

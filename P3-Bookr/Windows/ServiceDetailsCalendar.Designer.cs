@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ServiceCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.ServiceCalendarBookr = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceCalendarBookr)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ServiceCalendar1
-            // 
-            this.ServiceCalendar1.Location = new System.Drawing.Point(314, 142);
-            this.ServiceCalendar1.Name = "ServiceCalendar1";
-            this.ServiceCalendar1.TabIndex = 0;
-            this.ServiceCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.ServiceCalendar1_DateChanged);
             // 
             // ServiceCalendarBookr
             // 
@@ -57,7 +49,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ServiceCalendarBookr);
-            this.Controls.Add(this.ServiceCalendar1);
             this.Name = "ServiceDetailsCalendar";
             this.Size = new System.Drawing.Size(750, 488);
             ((System.ComponentModel.ISupportInitialize)(this.ServiceCalendarBookr)).EndInit();
@@ -66,8 +57,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MonthCalendar ServiceCalendar1;
         private System.Windows.Forms.PictureBox ServiceCalendarBookr;
     }
 }
