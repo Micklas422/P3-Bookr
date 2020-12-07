@@ -20,10 +20,9 @@ namespace P3_Bookr.Models
             Taken,
             Deactivated
         };
-        public Services(string name, bool departmentDeactivatet)
+        public Services(string name)
         {
             _name = name;
-            _departmentDeactivatet = departmentDeactivatet;
         }
 
         public string Name
