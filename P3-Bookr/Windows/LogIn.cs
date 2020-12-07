@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.FunctionComponent;
 
 namespace P3_Bookr.Windows
 {
@@ -29,10 +30,15 @@ namespace P3_Bookr.Windows
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            LoginManager loginmanager = new LoginManager();
+
             string username;
             string password;
             password = textBoxUsername.Text;
             username = textBoxUsername.Text;
+
+            loginmanager.ValidateLogin(username, password);
+
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)

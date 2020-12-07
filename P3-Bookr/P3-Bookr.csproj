@@ -53,6 +53,12 @@
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="Commons\JsonHandler.cs" />
+    <Compile Include="FunctionComponent\FunctionComponentInterface.cs" />
+    <Compile Include="FunctionComponent\HistoryManager.cs" />
+    <Compile Include="FunctionComponent\LoginManager.cs" />
+    <Compile Include="FunctionComponent\PaymentManager.cs" />
+    <Compile Include="FunctionComponent\PermissionManager.cs" />
+    <Compile Include="FunctionComponent\ServiceManager.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Member.cs" />
