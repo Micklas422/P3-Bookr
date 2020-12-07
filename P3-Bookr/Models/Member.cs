@@ -27,6 +27,10 @@ namespace P3_Bookr.Models
         };
         string _username;
         string _password;
+        public Member()
+        {
+
+        }
         public Member(string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MemberTypes memberType, string username, string password)
         {
             _firstName = firstName;
@@ -113,8 +117,9 @@ namespace P3_Bookr.Models
             throw new NotImplementedException();
         }
 
-        public void acceptLogin()
+        public bool approveLogin(string username, string password)
         {
+            
             throw new NotImplementedException();
         }
     }
