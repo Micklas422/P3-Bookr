@@ -42,6 +42,7 @@
             this.LastUsedTopLabel.TabIndex = 0;
             this.LastUsedTopLabel.Text = "Sidst Anvendte Services";
             this.LastUsedTopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LastUsedTopLabel.Click += new System.EventHandler(this.LastUsedTopLabel_Click);
             // 
             // LastUsedServiceTop
             // 
