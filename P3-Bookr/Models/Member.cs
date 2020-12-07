@@ -20,7 +20,10 @@ namespace P3_Bookr.Models
         MemberTypes _memberType;
         public enum MemberTypes 
         {
-            //implemeteres i commons/membertypes
+            Renter,
+            Member,
+            Administrator,
+            Employee
         };
         string _username;
         string _password;
@@ -91,8 +94,6 @@ namespace P3_Bookr.Models
             set { _customerDeactivated = value; }
         }
 
-        //MEDLEMSTYPE UML
-
         public string Username
         {
             get { return _username; }
@@ -110,8 +111,9 @@ namespace P3_Bookr.Models
             throw new NotImplementedException();
         }
 
-        public void acceptLogin()
+        public bool approveLogin(string username, string password)
         {
+            
             throw new NotImplementedException();
         }
     }

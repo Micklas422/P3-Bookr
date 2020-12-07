@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static P3_Bookr.Commons.Common;
 
 namespace P3_Bookr.Models
 {
     class Servicegroup
     {
         string _name;
-        public enum ServiceType
-        {
-            //implemeteres i commons/membertypes
-        };
+        ServiceTypes _type;
+
         public Servicegroup()
         {
 
