@@ -36,7 +36,7 @@
             this.SmallNewsBoxTitle.BackColor = System.Drawing.Color.White;
             this.SmallNewsBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SmallNewsBoxTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.SmallNewsBoxTitle.Location = new System.Drawing.Point(0, 0);
+            this.SmallNewsBoxTitle.Location = new System.Drawing.Point(0, 130);
             this.SmallNewsBoxTitle.Name = "SmallNewsBoxTitle";
             this.SmallNewsBoxTitle.Size = new System.Drawing.Size(253, 33);
             this.SmallNewsBoxTitle.TabIndex = 0;

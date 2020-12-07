@@ -77,7 +77,7 @@
             this.Controls.Add(this.frontPageService2);
             this.Controls.Add(this.frontPageService1);
             this.Name = "LastUsedServices";
-            this.Size = new System.Drawing.Size(922, 211);
+            this.Size = new System.Drawing.Size(922, 284);
             this.ResumeLayout(false);
 
         }

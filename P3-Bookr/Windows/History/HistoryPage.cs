@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P3_Bookr.Windows.Frontpage
+namespace P3_Bookr.Windows.History
 {
-    public partial class FrontPageForm : Form
+    public partial class HistoryPage : Form
     {
-        public FrontPageForm()
+        public HistoryPage()
         {
             InitializeComponent();
         }
 
-        private void lastUsedServiceTop1_Load(object sender, EventArgs e)
+        private void HistoryPage_Load(object sender, EventArgs e)
         {
 
         }
