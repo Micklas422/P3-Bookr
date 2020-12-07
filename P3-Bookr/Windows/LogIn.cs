@@ -11,10 +11,12 @@ using P3_Bookr.FunctionComponent;
 
 namespace P3_Bookr.Windows
 {
-    public partial class Login : UserControl
+    partial class Login : UserControl
     {
-        public Login()
+        ILoginManager _loginManager;
+        public Login(ILoginManager loginManager)
         {
+            _loginManager = loginManager;
             InitializeComponent();
         }
 
@@ -30,14 +32,21 @@ namespace P3_Bookr.Windows
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            LoginManager loginmanager = new LoginManager();
 
             string username;
             string password;
             password = textBoxUsername.Text;
             username = textBoxUsername.Text;
 
-            loginmanager.ValidateLogin(username, password);
+            if (_loginManager.ValidateLogin(username, password))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Computer says nooo");
+            }
+            
 
         }
 

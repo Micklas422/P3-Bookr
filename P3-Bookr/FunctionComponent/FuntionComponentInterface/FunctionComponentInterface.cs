@@ -18,29 +18,4 @@ namespace P3_Bookr.FunctionComponent
 
         IServiceManager serviceManager { get; }
     }
-
-    interface IHistoryManager
-    {
-
-    }
-
-    interface ILoginManager
-    {
-        bool ValidateLogin(string username, string password);
-    }
-
-    interface IPaymentManager
-    {
-
-    }
-
-    interface IPermissionManager
-    {
-
-    }
-
-    interface IServiceManager
-    {
-
-    }
 }

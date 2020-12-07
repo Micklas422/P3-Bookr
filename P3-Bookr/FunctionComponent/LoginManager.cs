@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.FunctionComponent
 {
-    public class LoginManager
+    public class LoginManager : ILoginManager
     {
         
         public bool ValidateLogin(string username, string password)
         {
+
             
-            return false;
+            return true;
         }
     }
 }
