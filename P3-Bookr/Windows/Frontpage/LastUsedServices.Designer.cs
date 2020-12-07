@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.frontPageService3 = new P3_Bookr.Windows.Frontpage.FrontPageService();
-            this.frontPageService2 = new P3_Bookr.Windows.Frontpage.FrontPageService();
             this.frontPageService1 = new P3_Bookr.Windows.Frontpage.FrontPageService();
+            this.frontPageService2 = new P3_Bookr.Windows.Frontpage.FrontPageService();
+            this.frontPageService3 = new P3_Bookr.Windows.Frontpage.FrontPageService();
             this.frontPageService4 = new P3_Bookr.Windows.Frontpage.FrontPageService();
             this.SuspendLayout();
             // 
-            // frontPageService3
-            // 
-            this.frontPageService3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.frontPageService3.Location = new System.Drawing.Point(620, 52);
-            this.frontPageService3.Name = "frontPageService3";
-            this.frontPageService3.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService3.TabIndex = 2;
-            // 
-            // frontPageService2
-            // 
-            this.frontPageService2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.frontPageService2.Location = new System.Drawing.Point(323, 52);
-            this.frontPageService2.Name = "frontPageService2";
-            this.frontPageService2.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService2.TabIndex = 1;
-            // 
             // frontPageService1
             // 
-            this.frontPageService1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.frontPageService1.BackColor = System.Drawing.Color.White;
             this.frontPageService1.Location = new System.Drawing.Point(29, 52);
             this.frontPageService1.Name = "frontPageService1";
             this.frontPageService1.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService1.TabIndex = 0;
+            this.frontPageService1.TabIndex = 4;
+            // 
+            // frontPageService2
+            // 
+            this.frontPageService2.BackColor = System.Drawing.Color.White;
+            this.frontPageService2.Location = new System.Drawing.Point(322, 52);
+            this.frontPageService2.Name = "frontPageService2";
+            this.frontPageService2.Size = new System.Drawing.Size(267, 190);
+            this.frontPageService2.TabIndex = 5;
+            // 
+            // frontPageService3
+            // 
+            this.frontPageService3.BackColor = System.Drawing.Color.White;
+            this.frontPageService3.Location = new System.Drawing.Point(615, 52);
+            this.frontPageService3.Name = "frontPageService3";
+            this.frontPageService3.Size = new System.Drawing.Size(267, 190);
+            this.frontPageService3.TabIndex = 6;
             // 
             // frontPageService4
             // 
-            this.frontPageService4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.frontPageService4.Location = new System.Drawing.Point(914, 52);
+            this.frontPageService4.BackColor = System.Drawing.Color.White;
+            this.frontPageService4.Location = new System.Drawing.Point(905, 52);
             this.frontPageService4.Name = "frontPageService4";
             this.frontPageService4.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService4.TabIndex = 3;
+            this.frontPageService4.TabIndex = 7;
             // 
             // LastUsedServices
             // 
@@ -77,7 +77,7 @@
             this.Controls.Add(this.frontPageService2);
             this.Controls.Add(this.frontPageService1);
             this.Name = "LastUsedServices";
-            this.Size = new System.Drawing.Size(956, 245);
+            this.Size = new System.Drawing.Size(922, 211);
             this.ResumeLayout(false);
 
         }
