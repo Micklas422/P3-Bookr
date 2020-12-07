@@ -52,16 +52,6 @@ namespace P3_Bookr.Models
             set { _email = value; }
         }
 
-        public void editPermissions()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void approveLogin()
-        {
-            throw new NotImplementedException();
-        }
-
         public void createMember()
         {
             throw new NotImplementedException();
