@@ -90,7 +90,11 @@ namespace P3_Bookr.Models
             set { _customerDeactivated = value; }
         }
 
-        //MEDLEMSTYPE UML
+        public MemberTypes MemberType
+        {
+            get { return _memberType; }
+            set { _memberType = value; }
+        }
 
         public string Username
         {

@@ -10,11 +10,12 @@ namespace P3_Bookr.Models
     class Servicegroup
     {
         string _name;
-        ServiceTypes _type;
+        ServiceTypes _serviceType;
 
-        public Servicegroup()
+        public Servicegroup(string name, ServiceTypes serviceType)
         {
-
+            _name = name;
+            _serviceType = serviceType;
         }
 
         public string Name
@@ -22,6 +23,10 @@ namespace P3_Bookr.Models
             get { return _name; }
             set { _name = value; }
         }
-        //Servicetype (get/set)
+        public ServiceTypes ServiceType
+        {
+            get { return _serviceType; }
+            set { _serviceType = value; }
+        }
     }
 }

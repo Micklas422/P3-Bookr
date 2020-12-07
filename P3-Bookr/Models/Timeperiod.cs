@@ -11,9 +11,10 @@ namespace P3_Bookr.Models
         DateTime _startTime;
         DateTime _endTime;
         bool _serviceUsed;
-        public Timeperiod()
+        public Timeperiod(DateTime startTime, DateTime endTime)
         {
-
+            _startTime = startTime;
+            _endTime = endTime;
         }
 
         public DateTime StartTime
