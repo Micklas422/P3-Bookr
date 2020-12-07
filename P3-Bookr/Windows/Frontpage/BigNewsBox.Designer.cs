@@ -35,7 +35,7 @@
             // 
             this.BigNewsBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BigNewsBoxTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.BigNewsBoxTitle.Location = new System.Drawing.Point(0, 0);
+            this.BigNewsBoxTitle.Location = new System.Drawing.Point(0, 162);
             this.BigNewsBoxTitle.Name = "BigNewsBoxTitle";
             this.BigNewsBoxTitle.Size = new System.Drawing.Size(340, 38);
             this.BigNewsBoxTitle.TabIndex = 0;

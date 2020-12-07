@@ -53,6 +53,18 @@
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="Commons\JsonHandler.cs" />
+    <Compile Include="FunctionComponent\FunctionComponent.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\FunctionComponentInterface.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IHistoryManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\ILoginManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IPaymentManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IPermissionManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IServiceManager.cs" />
+    <Compile Include="FunctionComponent\HistoryManager.cs" />
+    <Compile Include="FunctionComponent\LoginManager.cs" />
+    <Compile Include="FunctionComponent\PaymentManager.cs" />
+    <Compile Include="FunctionComponent\PermissionManager.cs" />
+    <Compile Include="FunctionComponent\ServiceManager.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Interfaces\ICustommer.cs" />
@@ -117,11 +129,17 @@
     <Compile Include="Windows\Frontpage\SmallNewsBox.Designer.cs">
       <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\History.cs">
+    <Compile Include="Windows\History\HistoryElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\History\HistoryElement.Designer.cs">
+      <DependentUpon>HistoryElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\History\HistoryPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\History.Designer.cs">
-      <DependentUpon>History.cs</DependentUpon>
+    <Compile Include="Windows\History\HistoryPage.Designer.cs">
+      <DependentUpon>HistoryPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\LogIn.cs">
       <SubType>UserControl</SubType>
@@ -140,6 +158,18 @@
     </Compile>
     <Compile Include="Windows\ReservationOverview.Designer.cs">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Reservation\Reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Reservation\Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Reservation\ReservationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Reservation\ReservationPage.Designer.cs">
+      <DependentUpon>ReservationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServiceDetails.cs">
       <SubType>UserControl</SubType>
@@ -232,11 +262,23 @@
     <EmbeddedResource Include="Windows\Frontpage\SmallNewsBox.resx">
       <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\History\HistoryElement.resx">
+      <DependentUpon>HistoryElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\History\HistoryPage.resx">
+      <DependentUpon>HistoryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ReservationOverview.resx">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Reservation\Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Reservation\ReservationPage.resx">
+      <DependentUpon>ReservationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetails.resx">
       <DependentUpon>ServiceDetails.cs</DependentUpon>

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P3_Bookr.Windows.Frontpage
+namespace P3_Bookr.Windows.Reservation
 {
-    public partial class FrontPageForm : Form
+    public partial class ReservationPage : Form
     {
-        public FrontPageForm()
+        public ReservationPage()
         {
             InitializeComponent();
-        }
-
-        private void lastUsedServiceTop1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

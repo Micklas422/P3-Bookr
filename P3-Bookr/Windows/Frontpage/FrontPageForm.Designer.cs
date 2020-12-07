@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.smallNewsBox4 = new P3_Bookr.Windows.Frontpage.SmallNewsBox();
             this.smallNewsBox3 = new P3_Bookr.Windows.Frontpage.SmallNewsBox();
             this.bigNewsBox2 = new P3_Bookr.Windows.Frontpage.BigNewsBox();
@@ -38,17 +37,7 @@
             this.newsTop1 = new P3_Bookr.Windows.Frontpage.NewsTop();
             this.lastUsedServiceTop1 = new P3_Bookr.Windows.Frontpage.LastUsedServiceTop();
             this.lastUsedServices1 = new P3_Bookr.Windows.Frontpage.LastUsedServices();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground4;
-            this.pictureBox1.Location = new System.Drawing.Point(407, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 51);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // smallNewsBox4
             // 
@@ -109,16 +98,17 @@
             // lastUsedServiceTop1
             // 
             this.lastUsedServiceTop1.BackColor = System.Drawing.Color.White;
-            this.lastUsedServiceTop1.Location = new System.Drawing.Point(60, 92);
+            this.lastUsedServiceTop1.Location = new System.Drawing.Point(60, 85);
             this.lastUsedServiceTop1.Name = "lastUsedServiceTop1";
             this.lastUsedServiceTop1.Size = new System.Drawing.Size(876, 50);
             this.lastUsedServiceTop1.TabIndex = 1;
+            this.lastUsedServiceTop1.Load += new System.EventHandler(this.lastUsedServiceTop1_Load);
             // 
             // lastUsedServices1
             // 
             this.lastUsedServices1.AutoScroll = true;
             this.lastUsedServices1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.lastUsedServices1.Location = new System.Drawing.Point(60, 116);
+            this.lastUsedServices1.Location = new System.Drawing.Point(60, 141);
             this.lastUsedServices1.Name = "lastUsedServices1";
             this.lastUsedServices1.Size = new System.Drawing.Size(876, 285);
             this.lastUsedServices1.TabIndex = 0;
@@ -129,8 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.ClientSize = new System.Drawing.Size(1007, 664);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1024, 664);
             this.Controls.Add(this.smallNewsBox4);
             this.Controls.Add(this.smallNewsBox3);
             this.Controls.Add(this.bigNewsBox2);
@@ -143,7 +132,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrontPageForm";
             this.Text = "FrontPageForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,6 +147,5 @@
         private BigNewsBox bigNewsBox2;
         private SmallNewsBox smallNewsBox3;
         private SmallNewsBox smallNewsBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
