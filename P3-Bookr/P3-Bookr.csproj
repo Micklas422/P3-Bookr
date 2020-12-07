@@ -58,7 +58,9 @@
     <Compile Include="Models\Timeperiod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Windows\Frontpage\BigNewsBox.cs" />
+    <Compile Include="Windows\Frontpage\BigNewsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Windows\Frontpage\BigNewsBox.Designer.cs">
       <DependentUpon>BigNewsBox.cs</DependentUpon>
     </Compile>
@@ -80,15 +82,21 @@
     <Compile Include="Windows\Frontpage\LastUsedServices.Designer.cs">
       <DependentUpon>LastUsedServices.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Frontpage\LastUsedServiceTop.cs" />
+    <Compile Include="Windows\Frontpage\LastUsedServiceTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Windows\Frontpage\LastUsedServiceTop.Designer.cs">
       <DependentUpon>LastUsedServiceTop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Frontpage\NewsTop.cs" />
+    <Compile Include="Windows\Frontpage\NewsTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Windows\Frontpage\NewsTop.Designer.cs">
       <DependentUpon>NewsTop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Frontpage\SmallNewsBox.cs" />
+    <Compile Include="Windows\Frontpage\SmallNewsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Windows\Frontpage\SmallNewsBox.Designer.cs">
       <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </Compile>
@@ -99,7 +107,7 @@
       <DependentUpon>History.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\LogIn.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
@@ -123,7 +131,7 @@
       <DependentUpon>ServiceDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServiceDetailsCalendar.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
       <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
