@@ -58,6 +58,12 @@
     <Compile Include="Models\Timeperiod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Frontpage\BigNewsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\BigNewsBox.Designer.cs">
+      <DependentUpon>BigNewsBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Frontpage\FrontPageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,24 @@
     </Compile>
     <Compile Include="Windows\Frontpage\LastUsedServices.Designer.cs">
       <DependentUpon>LastUsedServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Frontpage\LastUsedServiceTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\LastUsedServiceTop.Designer.cs">
+      <DependentUpon>LastUsedServiceTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Frontpage\NewsTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\NewsTop.Designer.cs">
+      <DependentUpon>NewsTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Frontpage\SmallNewsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Frontpage\SmallNewsBox.Designer.cs">
+      <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\History.cs">
       <SubType>Form</SubType>
@@ -170,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Windows\Frontpage\BigNewsBox.resx">
+      <DependentUpon>BigNewsBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Frontpage\FrontPageForm.resx">
       <DependentUpon>FrontPageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +205,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Frontpage\LastUsedServices.resx">
       <DependentUpon>LastUsedServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Frontpage\LastUsedServiceTop.resx">
+      <DependentUpon>LastUsedServiceTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Frontpage\NewsTop.resx">
+      <DependentUpon>NewsTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Frontpage\SmallNewsBox.resx">
+      <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
