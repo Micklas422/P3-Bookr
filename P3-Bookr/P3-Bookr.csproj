@@ -67,7 +67,7 @@
     <Compile Include="FunctionComponent\ServiceManager.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\Interfaces\ICustommer.cs" />
+    <Compile Include="Models\Interfaces\ICustomer.cs" />
     <Compile Include="Models\Interfaces\IDepartment.cs" />
     <Compile Include="Models\Interfaces\IMember.cs" />
     <Compile Include="Models\Interfaces\IAllModelsInterface.cs" />

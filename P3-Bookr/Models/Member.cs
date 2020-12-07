@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Member
+    class Member : IMember
     {
         string _firstName;
         string _lastName;

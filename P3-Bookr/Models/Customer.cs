@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Customer
+    class Customer : ICustomer
     {
         bool _isActive;
         DateTime _creationDate;

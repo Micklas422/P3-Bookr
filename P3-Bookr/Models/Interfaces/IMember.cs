@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P3_Bookr.Models.Interfaces
+namespace P3_Bookr.Models
 {
     interface IMember
     {

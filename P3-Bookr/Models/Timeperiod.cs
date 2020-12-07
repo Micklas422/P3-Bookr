@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Timeperiod
+    class Timeperiod : ITimeperiod
     {
         DateTime _startTime;
         DateTime _endTime;

@@ -7,7 +7,7 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    class Servicegroup
+    class Servicegroup : IServicegroup
     {
         string _name;
         ServiceTypes _serviceType;

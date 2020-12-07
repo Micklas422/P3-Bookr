@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.Commons.Enums;
 
-namespace P3_Bookr.Models.Interfaces
+namespace P3_Bookr.Models
 {
     interface IServicegroup
     {

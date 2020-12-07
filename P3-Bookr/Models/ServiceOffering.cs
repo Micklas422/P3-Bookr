@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class ServiceOffering
+    class ServiceOffering : IServiceOffering
     {
         string _name;
         int _duration;

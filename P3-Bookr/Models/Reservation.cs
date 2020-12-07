@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Reservation
+    class Reservation : IReservation
     {
         DateTime _creationDate;
         DateTime _cancellationDate;

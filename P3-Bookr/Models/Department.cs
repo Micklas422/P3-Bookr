@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Department
+    class Department : IDepartment
     {
         bool _isActive;
         string _name;

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P3_Bookr.Models.Interfaces
+namespace P3_Bookr.Models
 {
-    interface ICustommer
+    interface ICustomer
     {
         bool IsActive { get; set; }
         DateTime CreationDate { get; set; }
