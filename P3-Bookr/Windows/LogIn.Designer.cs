@@ -86,9 +86,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 151);
+            this.pictureBox1.Location = new System.Drawing.Point(133, 147);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(994, 212);
+            this.pictureBox1.Size = new System.Drawing.Size(950, 212);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
