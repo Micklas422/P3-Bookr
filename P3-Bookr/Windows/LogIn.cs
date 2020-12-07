@@ -44,10 +44,8 @@ namespace P3_Bookr.Windows
             }
             else
             {
-                MessageBox.Show("Computer says nooo");
-            }
-            
-
+                MessageBox.Show("Indtastet brugernavn eller kodeord forkert");
+            }          
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
