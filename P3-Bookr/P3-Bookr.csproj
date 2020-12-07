@@ -49,13 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commons\Common.cs" />
+    <Compile Include="Commons\Enums.cs" />
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="Commons\JsonHandler.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Interfaces\ICustommer.cs" />
+    <Compile Include="Models\Interfaces\IDepartment.cs" />
+    <Compile Include="Models\Interfaces\IMember.cs" />
+    <Compile Include="Models\Interfaces\IAllModelsInterface.cs" />
+    <Compile Include="Models\Interfaces\IPayment.cs" />
+    <Compile Include="Models\Interfaces\IReservation.cs" />
+    <Compile Include="Models\Interfaces\IServicegroup.cs" />
+    <Compile Include="Models\Interfaces\IServiceOffering.cs" />
+    <Compile Include="Models\Interfaces\IServices.cs" />
+    <Compile Include="Models\Interfaces\ITimeperiod.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\AllModelsInterface.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Servicegroup.cs" />

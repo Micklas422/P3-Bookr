@@ -51,16 +51,13 @@ namespace P3_Bookr.Models
             get { return _email; }
             set { _email = value; }
         }
-
-        public void createMember()
+        public void CreateMember()
         {
             throw new NotImplementedException();
         }
-
-        public void deleteMember()
+        public void DeleteMember()
         {
             throw new NotImplementedException();
         }
-
     }
 }

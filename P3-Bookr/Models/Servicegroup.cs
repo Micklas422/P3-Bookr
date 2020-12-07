@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static P3_Bookr.Commons.Common;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
