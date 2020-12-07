@@ -10,20 +10,20 @@ namespace P3_Bookr.Models
     {
         DateTime _creationDate;
         DateTime _cancellationDate;
-        ReservationState _state;
-        DateTime _date;
+        ReservationStates _reservationState;
+        DateTime _reservationDate;
         int _duration;
         DateTime _reservationDeadline;
 
-        public enum ReservationState
+        public enum ReservationStates
         {
             Created,
             BindingReservation,
             Cancelled
         };
-        public Reservation()
+        public Reservation(DateTime reservationDate)
         {
-
+            _reservationDate = reservationDate;
         }
         public DateTime CreationDate
         {
@@ -35,11 +35,15 @@ namespace P3_Bookr.Models
             get { return _cancellationDate; }
             set { _cancellationDate = value; }
         }
-        //ReservationState (get/set)
-        public DateTime Date
+        public ReservationStates ReservationState
         {
-            get { return _date; }
-            set { _date = value; }
+            get { return _reservationState; }
+            set { _reservationState = value; }
+        }
+        public DateTime ReservationDate
+        {
+            get { return _reservationDate; }
+            set { _reservationDate = value; }
         }
         public int Duration
         {

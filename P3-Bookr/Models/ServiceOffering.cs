@@ -11,9 +11,11 @@ namespace P3_Bookr.Models
         string _name;
         int _duration;
         float _price;
-        public ServiceOffering()
+        public ServiceOffering(string name, int duration, float price)
         {
-
+            _name = name;
+            _duration = duration;
+            _price = price;
         }
 
         public string Name

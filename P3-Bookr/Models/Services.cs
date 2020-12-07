@@ -11,19 +11,19 @@ namespace P3_Bookr.Models
     {
         string _name;
         bool _departmentDeactivatet;
-        ServiceState _state;
-        ServiceTypes _type;
+        ServiceStates _serviceState;
+        ServiceTypes _serviceType;
 
-        public enum ServiceState
+        public enum ServiceStates
         {
             Available,
             Taken,
             Deactivated
         };
-        public Services(string name, bool departmentDeactivatet)
+        public Services(string name, ServiceTypes serviceType)
         {
             _name = name;
-            _departmentDeactivatet = departmentDeactivatet;
+            _serviceType = serviceType;
         }
 
         public string Name
@@ -35,6 +35,16 @@ namespace P3_Bookr.Models
         {
             get { return _departmentDeactivatet; }
             set { _departmentDeactivatet = value; }
+        }
+        public ServiceStates ServiceState
+        {
+            get { return _serviceState; }
+            set { _serviceState = value; }
+        }
+        public ServiceTypes ServiceType
+        {
+            get { return _serviceType; }
+            set { _serviceType = value; }
         }
     }
 }
