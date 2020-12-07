@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Commons
 {
-    class MemberTypes
+    class Common
     {
+        public enum ServiceTypes
+        {
+
+        }
     }
 }
