@@ -10,13 +10,17 @@ namespace P3_Bookr.Models
     {
         DateTime _creationDate;
         DateTime _cancellationDate;
-        public enum ReservationState
-        {
-            //implemeteres i commons/membertypes
-        };
+        ReservationState _state;
         DateTime _date;
         int _duration;
         DateTime _reservationDeadline;
+
+        public enum ReservationState
+        {
+            Created,
+            BindingReservation,
+            Cancelled
+        };
         public Reservation()
         {
 

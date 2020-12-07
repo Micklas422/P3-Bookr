@@ -20,7 +20,10 @@ namespace P3_Bookr.Models
         MemberTypes _memberType;
         public enum MemberTypes 
         {
-            //implemeteres i commons/membertypes
+            Renter,
+            Member,
+            Administrator,
+            Employee
         };
         string _username;
         string _password;
