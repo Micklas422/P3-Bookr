@@ -24,6 +24,10 @@ namespace P3_Bookr.Models
         };
         string _username;
         string _password;
+        public Member()
+        {
+
+        }
         public Member(string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MemberTypes memberType, string username, string password)
         {
             _firstName = firstName;
