@@ -8,5 +8,9 @@ namespace P3_Bookr.FunctionComponent
 {
     class LoginManager
     {
+        public bool ValidateLogin(string username, string password)
+        {
+            return false;
+        }
     }
 }
