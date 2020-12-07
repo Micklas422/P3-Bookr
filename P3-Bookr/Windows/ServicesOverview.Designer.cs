@@ -91,6 +91,7 @@
             this.ServiceOverviewBookr.TabIndex = 2;
             this.ServiceOverviewBookr.TabStop = false;
             this.ServiceOverviewBookr.WaitOnLoad = true;
+            this.ServiceOverviewBookr.Click += new System.EventHandler(this.ServiceOverviewBookr_Click);
             // 
             // ServicesOverview
             // 
