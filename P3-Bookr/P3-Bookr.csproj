@@ -52,7 +52,11 @@
     <Compile Include="Commons\Common.cs" />
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
-    <Compile Include="Commons\JsonHandler.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\Interfaces\InterfaceCustomerDAL.cs" />
+    <Compile Include="DAL\JsonHandler.cs" />
+    <Compile Include="DAL\Interfaces\InterfaceMemberDAL.cs" />
+    <Compile Include="DAL\MemberDAL.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Member.cs" />
@@ -277,5 +281,6 @@
   <ItemGroup>
     <None Include="Resources\BookerFullnobackground4.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
