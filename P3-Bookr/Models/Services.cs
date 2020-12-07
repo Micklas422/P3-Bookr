@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static P3_Bookr.Commons.Common;
 
 namespace P3_Bookr.Models
 {
@@ -10,13 +11,14 @@ namespace P3_Bookr.Models
     {
         string _name;
         bool _departmentDeactivatet;
+        ServiceState _state;
+        ServiceTypes _type;
+
         public enum ServiceState
         {
-            //implemeteres i commons/membertypes
-        };
-        public enum ServiceType
-        {
-            //implemeteres i commons/membertypes
+            Available,
+            Taken,
+            Deactivated
         };
         public Services(string name, bool departmentDeactivatet)
         {

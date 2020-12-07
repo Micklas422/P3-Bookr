@@ -44,7 +44,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground4;
-            this.pictureBox1.Location = new System.Drawing.Point(408, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(407, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(184, 51);
             this.pictureBox1.TabIndex = 9;
@@ -53,7 +53,7 @@
             // smallNewsBox4
             // 
             this.smallNewsBox4.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox4.Location = new System.Drawing.Point(294, 749);
+            this.smallNewsBox4.Location = new System.Drawing.Point(328, 743);
             this.smallNewsBox4.Name = "smallNewsBox4";
             this.smallNewsBox4.Size = new System.Drawing.Size(253, 163);
             this.smallNewsBox4.TabIndex = 8;
@@ -61,7 +61,7 @@
             // smallNewsBox3
             // 
             this.smallNewsBox3.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox3.Location = new System.Drawing.Point(26, 749);
+            this.smallNewsBox3.Location = new System.Drawing.Point(60, 749);
             this.smallNewsBox3.Name = "smallNewsBox3";
             this.smallNewsBox3.Size = new System.Drawing.Size(253, 163);
             this.smallNewsBox3.TabIndex = 7;
@@ -85,7 +85,7 @@
             // smallNewsBox1
             // 
             this.smallNewsBox1.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox1.Location = new System.Drawing.Point(418, 525);
+            this.smallNewsBox1.Location = new System.Drawing.Point(415, 525);
             this.smallNewsBox1.Name = "smallNewsBox1";
             this.smallNewsBox1.Size = new System.Drawing.Size(253, 163);
             this.smallNewsBox1.TabIndex = 4;
@@ -109,7 +109,7 @@
             // lastUsedServiceTop1
             // 
             this.lastUsedServiceTop1.BackColor = System.Drawing.Color.White;
-            this.lastUsedServiceTop1.Location = new System.Drawing.Point(60, 116);
+            this.lastUsedServiceTop1.Location = new System.Drawing.Point(60, 92);
             this.lastUsedServiceTop1.Name = "lastUsedServiceTop1";
             this.lastUsedServiceTop1.Size = new System.Drawing.Size(876, 50);
             this.lastUsedServiceTop1.TabIndex = 1;
@@ -120,7 +120,7 @@
             this.lastUsedServices1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.lastUsedServices1.Location = new System.Drawing.Point(60, 116);
             this.lastUsedServices1.Name = "lastUsedServices1";
-            this.lastUsedServices1.Size = new System.Drawing.Size(876, 309);
+            this.lastUsedServices1.Size = new System.Drawing.Size(876, 285);
             this.lastUsedServices1.TabIndex = 0;
             // 
             // FrontPageForm
@@ -128,6 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(1007, 664);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.smallNewsBox4);

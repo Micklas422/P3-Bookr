@@ -10,7 +10,8 @@ namespace P3_Bookr.Commons
     {
         public enum ServiceTypes
         {
-
+            WashingMachine,
+            CommonRoom
         }
     }
 }
