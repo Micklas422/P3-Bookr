@@ -223,11 +223,23 @@
     <Compile Include="Windows\ServicePanels\ServiceViewForFlow.Designer.cs">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Settings.cs">
+    <Compile Include="Windows\Settings\PaymentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\PaymentInfo.Designer.cs">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\PersonalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Windows\Settings\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\SideBar.cs">
       <SubType>UserControl</SubType>
@@ -307,6 +319,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicePanels\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\PaymentInfo.resx">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\SideBar.resx">
       <DependentUpon>SideBar.cs</DependentUpon>
