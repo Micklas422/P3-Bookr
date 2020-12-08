@@ -8,9 +8,11 @@ namespace P3_Bookr.Models
 {
     class Timeperiod : ITimeperiod
     {
+        int _id;
         DateTime _startTime;
         DateTime _endTime;
         bool _serviceUsed;
+
         public Timeperiod(DateTime startTime, DateTime endTime)
         {
             _startTime = startTime;

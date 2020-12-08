@@ -8,6 +8,8 @@ namespace P3_Bookr.Models
 {
     class Department : IDepartment
     {
+        int _id;
+        int _customerId;
         bool _isActive;
         string _name;
         string _adress;

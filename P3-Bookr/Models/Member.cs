@@ -9,6 +9,9 @@ namespace P3_Bookr.Models
 {
     class Member : IMember
     {
+        int _id;
+        int _customerId;
+        int _departmentId;
         string _firstName;
         string _lastName;
         bool _isActive;

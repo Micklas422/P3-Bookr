@@ -8,9 +8,11 @@ namespace P3_Bookr.Models
 {
     class ServiceOffering : IServiceOffering
     {
+        int _id;
         string _name;
         int _duration;
         float _price;
+
         public ServiceOffering(string name, int duration, float price)
         {
             _name = name;
