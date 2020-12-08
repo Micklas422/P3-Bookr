@@ -39,6 +39,7 @@ namespace P3_Bookr.Windows
         private void IndstillingerKnap_Click(object sender, EventArgs e)
         {
             var indstillingerSite = new Settings();
+
             indstillingerSite.Show();
         }
     }
