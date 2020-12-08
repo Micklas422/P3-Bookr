@@ -5,22 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using P3_Bookr.Commons;
+using System.IO;
 
 namespace P3_Bookr.DAL
 {
     class JsonHandler
     {
-        public T ReadJsonObjectFromFile<T>(string path)
+        string path = Directory.GetCurrentDirectory() + "\\";
+        public T ReadJsonObjectFromFile<T>(string fileName)
         {
             FileReader fileReader = new FileReader();
-            return JsonConvert.DeserializeObject<T>(fileReader.ReadFileAsString(path));
+            return JsonConvert.DeserializeObject<T>(fileReader.ReadFileAsString(path + fileName));
         }
 
-        public void WriteJsonObjectToFile<T>(string path, T objectToWrite)
+        public void WriteJsonObjectToFile<T>(string fileName, T objectToWrite)
         {
             FileWriter fileWriter = new FileWriter();
             var type = objectToWrite.GetType();
-            fileWriter.WriteStringToFile(path, JsonConvert.SerializeObject(objectToWrite));
+            fileWriter.WriteStringToFile(path + fileName, JsonConvert.SerializeObject(objectToWrite));
         }
     }
 }

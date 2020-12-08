@@ -8,15 +8,21 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL
 {
-    class MemberDAL : InterfaceMemberDAL
+    class MemberDAL : IMemberDAL
     {
+        string fileName = "Members";
         JsonHandler JsonHandler = new JsonHandler();
 
-        public List<Member> LoadUsers()
+        public List<Member> LoadMembers(int customerId)
         {
-            List<Member> members = new List<Member>();
-            members = JsonHandler.ReadJsonObjectFromFile<List<Member>>("");
+            List<Member> members;
+            members = JsonHandler.ReadJsonObjectFromFile<List<Member>>(fileName);
             return members;
+        }
+
+        public void SaveMembers(List<Member> members)
+        {
+            JsonHandler.WriteJsonObjectToFile(fileName, members);
         }
     }
 }
