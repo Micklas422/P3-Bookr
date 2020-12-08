@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class HistoryManager
+    class HistoryManager : IHistoryManager
     {
+        public void SeeHistory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
