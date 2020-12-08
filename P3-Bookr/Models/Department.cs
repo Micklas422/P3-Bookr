@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Department
+    class Department : IDepartment
     {
+        int _id;
+        int _customerId;
         bool _isActive;
         string _name;
         string _adress;
         string _description;
+
+        List<Services> services = new List<Services>();
 
         public Department(bool isActive, string name, string adress, string description)
         {
@@ -43,6 +47,17 @@ namespace P3_Bookr.Models
         {
             get { return _description; }
             set { _description = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int CustomerId
+        {
+            get { return _id; }
+            set { _id = value; }
         }
 
         public void createService()

@@ -16,5 +16,10 @@ namespace P3_Bookr.Windows.Reservation
         {
             InitializeComponent();
         }
+
+        private void reservation1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Customer
+    class Customer : ICustomer
     {
+        int _id;
         bool _isActive;
         DateTime _creationDate;
         string _name;
         string _adress;
         string _email;
+
+        List<Department> departments = new List<Department>();
+        List<Member> members = new List<Member>();
 
         public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
         {
@@ -51,16 +55,17 @@ namespace P3_Bookr.Models
             get { return _email; }
             set { _email = value; }
         }
-
-        public void createMember()
+        public int Id
+        {
+            get { return _id; }
+        }
+        public void CreateMember()
         {
             throw new NotImplementedException();
         }
-
-        public void deleteMember()
+        public void DeleteMember()
         {
             throw new NotImplementedException();
         }
-
     }
 }

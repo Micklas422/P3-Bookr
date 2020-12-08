@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static P3_Bookr.Commons.Common;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    class Servicegroup
+    class Servicegroup : IServicegroup
     {
+        int _id;
         string _name;
         ServiceTypes _serviceType;
+
+
 
         public Servicegroup(string name, ServiceTypes serviceType)
         {
@@ -27,6 +30,11 @@ namespace P3_Bookr.Models
         {
             get { return _serviceType; }
             set { _serviceType = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
         }
     }
 }
