@@ -8,6 +8,8 @@ namespace P3_Bookr.Models
 {
     class Reservation : IReservation
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _memberId;
         DateTime _creationDate;
@@ -23,8 +25,12 @@ namespace P3_Bookr.Models
             BindingReservation,
             Cancelled
         };
-        public Reservation(DateTime reservationDate)
+        public Reservation(int id, DateTime reservationDate)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _reservationDate = reservationDate;
         }
         public DateTime CreationDate

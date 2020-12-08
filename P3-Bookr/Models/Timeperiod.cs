@@ -8,14 +8,20 @@ namespace P3_Bookr.Models
 {
     class Timeperiod : ITimeperiod
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _ServicesId;
         DateTime _startTime;
         DateTime _endTime;
         bool _serviceUsed;
 
-        public Timeperiod(DateTime startTime, DateTime endTime)
+        public Timeperiod(int id, DateTime startTime, DateTime endTime)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _startTime = startTime;
             _endTime = endTime;
         }

@@ -9,6 +9,8 @@ namespace P3_Bookr.Models
 {
     class Services : IServices
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _departmentId;
         string _name;
@@ -25,8 +27,12 @@ namespace P3_Bookr.Models
             Taken,
             Deactivated
         };
-        public Services(string name, ServiceTypes serviceType)
+        public Services(int id, string name, ServiceTypes serviceType)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _name = name;
             _serviceType = serviceType;
         }

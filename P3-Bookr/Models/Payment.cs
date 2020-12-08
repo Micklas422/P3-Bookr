@@ -8,15 +8,20 @@ namespace P3_Bookr.Models
 {
     class Payment : IPayment
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _reservationId;
         DateTime _paymentDate;
         float _amount;
         DateTime _reservationDeadline;
 
-        public Payment()
+        public Payment(int id)
         {
-
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
         }
 
         public DateTime PaymentDate

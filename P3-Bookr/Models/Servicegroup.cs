@@ -9,14 +9,18 @@ namespace P3_Bookr.Models
 {
     class Servicegroup : IServicegroup
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         string _name;
         ServiceTypes _serviceType;
 
-
-
-        public Servicegroup(string name, ServiceTypes serviceType)
+        public Servicegroup(int id, string name, ServiceTypes serviceType)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _name = name;
             _serviceType = serviceType;
         }

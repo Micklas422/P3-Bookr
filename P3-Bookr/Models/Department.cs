@@ -8,6 +8,8 @@ namespace P3_Bookr.Models
 {
     class Department : IDepartment
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _customerId;
         bool _isActive;
@@ -17,8 +19,12 @@ namespace P3_Bookr.Models
 
         List<Services> services = new List<Services>();
 
-        public Department(bool isActive, string name, string adress, string description)
+        public Department(int id, bool isActive, string name, string adress, string description)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _isActive = isActive;
             _name = name;
             _adress = adress;

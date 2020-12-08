@@ -9,6 +9,8 @@ namespace P3_Bookr.Models
 {
     class Member : IMember
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _customerId;
         string _firstName;
@@ -36,8 +38,12 @@ namespace P3_Bookr.Models
         {
 
         }
-        public Member(string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MemberTypes memberType, string username, string password)
+        public Member(int id, string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MemberTypes memberType, string username, string password)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _firstName = firstName;
             _lastName = lastName;
             _isActive = isActive;
