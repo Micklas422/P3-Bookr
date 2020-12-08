@@ -8,7 +8,7 @@ using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    class CustomerDAL : InterfaceCustomerDAL
+    class CustomerDAL : ICustomerDAL
     {
         JsonHandler jsonHandler = new JsonHandler();
         public List<Customer> Loadcustomers()
@@ -21,5 +21,7 @@ namespace P3_Bookr.DAL.Interfaces
         {
             jsonHandler.WriteJsonObjectToFile("", customers);
         }
+
+
     }
 }

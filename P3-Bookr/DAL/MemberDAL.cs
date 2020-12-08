@@ -8,7 +8,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL
 {
-    class MemberDAL : InterfaceMemberDAL
+    class MemberDAL : IMemberDAL
     {
         JsonHandler JsonHandler = new JsonHandler();
 
