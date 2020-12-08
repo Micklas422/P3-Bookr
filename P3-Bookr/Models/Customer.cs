@@ -31,7 +31,6 @@ namespace P3_Bookr.Models
             _name = name;
             _adress = adress;
             _email = email;
-            _id = 0;
         }
 
         public bool IsActive
