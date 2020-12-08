@@ -7,8 +7,9 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface InterfaceMemberDAL
+    interface IMemberDAL
     {
-        List<Member> LoadUsers();
+        List<Member> LoadMembers(int customerId);
+        void SaveMembers(List<Member> members);
     }
 }

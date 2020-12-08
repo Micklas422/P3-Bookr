@@ -13,7 +13,8 @@ namespace P3_Bookr.DAL.Interfaces
         JsonHandler jsonHandler = new JsonHandler();
         public List<Customer> Loadcustomers()
         {
-            List<Customer> customers = new List<Customer>();
+            List<Customer> customers;
+            customers = jsonHandler.ReadJsonObjectFromFile<List<Customer>>("");
             return customers;
         }
 
