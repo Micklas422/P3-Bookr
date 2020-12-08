@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace P3_Bookr
 {
-    class UIController: ISideMenu
+    class UIController : ISideMenu
     {
         bool stayAlive = false;
         MainWindow mainWindow;
@@ -46,9 +46,21 @@ namespace P3_Bookr
         public void SwitchToServicePage()
         {
             throw new NotImplementedException();
+            //mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
         }
 
         public void SwitchToSettingsPage()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region ServicesHelper
+        public void LoadServicesToShow()
+        {
+            throw new NotImplementedException();
+        }
+        public void ChooseServices()
         {
             throw new NotImplementedException();
         }
