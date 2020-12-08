@@ -10,17 +10,18 @@ namespace P3_Bookr.DAL.Interfaces
 {
     class CustomerDAL : ICustomerDAL
     {
+        string fileName = "Customers";
         JsonHandler jsonHandler = new JsonHandler();
-        public List<Customer> Loadcustomers()
+        public List<Customer> GetCustomers()
         {
             List<Customer> customers;
-            customers = jsonHandler.ReadJsonObjectFromFile<List<Customer>>("");
+            customers = jsonHandler.ReadJsonObjectFromFile<List<Customer>>(fileName);
             return customers;
         }
 
-        public void SaveCustomers(List<Customer> customers)
+        public void SetCustomers(List<Customer> customers)
         {
-            jsonHandler.WriteJsonObjectToFile("", customers);
+            jsonHandler.WriteJsonObjectToFile(fileName, customers);
         }
 
 

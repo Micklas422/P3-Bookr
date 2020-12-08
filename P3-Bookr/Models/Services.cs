@@ -18,7 +18,7 @@ namespace P3_Bookr.Models
         ServiceStates _serviceState;
         ServiceTypes _serviceType;
 
-        List<Timeperiod> timeperiods = new List<Timeperiod>();
+        List<TimePeriod> timeperiods = new List<TimePeriod>();
         List<ServiceOffering> serviceOfferings = new List<ServiceOffering>();
 
         public enum ServiceStates

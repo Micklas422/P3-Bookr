@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Timeperiod : ITimeperiod
+    class TimePeriod : ITimeperiod
     {
         static List<int> UniqueIds = new List<int>();
 
@@ -16,7 +16,7 @@ namespace P3_Bookr.Models
         DateTime _endTime;
         bool _serviceUsed;
 
-        public Timeperiod(int id, DateTime startTime, DateTime endTime)
+        public TimePeriod(int id, DateTime startTime, DateTime endTime)
         {
             if (UniqueIds.Contains(id))
                 throw new ArgumentException();

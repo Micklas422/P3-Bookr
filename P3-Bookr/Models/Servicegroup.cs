@@ -7,7 +7,7 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    class Servicegroup : IServicegroup
+    class ServiceGroup : IServicegroup
     {
         static List<int> UniqueIds = new List<int>();
 
@@ -15,7 +15,7 @@ namespace P3_Bookr.Models
         string _name;
         ServiceTypes _serviceType;
 
-        public Servicegroup(int id, string name, ServiceTypes serviceType)
+        public ServiceGroup(int id, string name, ServiceTypes serviceType)
         {
             if (UniqueIds.Contains(id))
                 throw new ArgumentException();
