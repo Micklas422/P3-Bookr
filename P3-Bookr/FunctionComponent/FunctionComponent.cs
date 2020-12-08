@@ -8,11 +8,20 @@ namespace P3_Bookr.FunctionComponent
 {
     class FunctionComponent : IFunctionComponentInterface
     {
-        LoginManager _loginManager;
-        HistoryManager _historyManager;
-        PaymentManager _paymentManager;
-        PermissionManager _permissionManager;
-        ServiceManager _serviceManager;
+        ILoginManager _loginManager;
+        IHistoryManager _historyManager;
+        IPaymentManager _paymentManager;
+        IPermissionManager _permissionManager;
+        IServiceManager _serviceManager;
+
+        public FunctionComponent(ILoginManager loginManager, IHistoryManager historyManager, IPaymentManager paymentManager, IPermissionManager permissionManager, IServiceManager serviceManager)
+        {
+            _loginManager = loginManager;
+            _historyManager = historyManager;
+            _paymentManager = paymentManager;
+            _permissionManager = permissionManager;
+            _serviceManager = serviceManager;
+        }
         public ILoginManager loginManager
         {
             get { return _loginManager; }
