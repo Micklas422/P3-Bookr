@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IServices
+    interface IHistorik
     {
-        void SelectService();
-        void SelectServiceType();
-        void SelectDate();
-        void SelectTime();
-        void Book();
+
     }
 }

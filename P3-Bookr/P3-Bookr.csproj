@@ -262,6 +262,10 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WindowsInterfaces\IAdminTools.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IHistorik.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IHomepage.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ILogIn.cs" />
     <Compile Include="Windows\WindowsInterfaces\IReservation.cs" />
     <Compile Include="Windows\WindowsInterfaces\IServices.cs" />
     <Compile Include="Windows\WindowsInterfaces\ISideMenu.cs" />

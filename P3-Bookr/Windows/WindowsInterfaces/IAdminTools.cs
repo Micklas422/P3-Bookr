@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IServices
+    interface IAdminTools
     {
-        void SelectService();
-        void SelectServiceType();
-        void SelectDate();
-        void SelectTime();
-        void Book();
+        void AddUser();
+        void AddService();
+        void AddServiceGroup();
+        void AddUserGroup();
+
     }
 }

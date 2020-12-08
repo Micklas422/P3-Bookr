@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace P3_Bookr
 {
-    class UIController: ISideMenu
+    class UIController: ISideMenu, IHistorik, IHomepage, ILogIn, IReservation, IServices
     {
         bool stayAlive = false;
         MainWindow mainWindow;
@@ -21,6 +21,7 @@ namespace P3_Bookr
             //mainWindow.panelSideBar.Controls[0].Show();
             Application.Run(mainWindow);
         }
+
 
         #region SideMenuHandler
         public void SwitchToHistoryPage()

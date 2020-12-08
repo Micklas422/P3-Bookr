@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IServices
+    public interface IHomepage
     {
-        void SelectService();
-        void SelectServiceType();
-        void SelectDate();
-        void SelectTime();
-        void Book();
+        void LastUsedService();
+        void News();
     }
 }
