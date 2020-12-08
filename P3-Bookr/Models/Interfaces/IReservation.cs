@@ -14,5 +14,7 @@ namespace P3_Bookr.Models
         DateTime ReservationDate { get; set; }
         int Duration { get; set; }
         DateTime ReservationDeadline { get; set; }
+        int Id { get; }
+        int MemberId { get; set; }
     }
 }

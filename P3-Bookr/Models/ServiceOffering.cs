@@ -8,9 +8,12 @@ namespace P3_Bookr.Models
 {
     class ServiceOffering : IServiceOffering
     {
+        int _id;
+        int _servicesId;
         string _name;
         int _duration;
         float _price;
+
         public ServiceOffering(string name, int duration, float price)
         {
             _name = name;
@@ -32,6 +35,17 @@ namespace P3_Bookr.Models
         {
             get { return _price; }
             set { _price = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int ServicesId
+        {
+            get { return _servicesId; }
+            set { _servicesId = value; }
         }
     }
 }

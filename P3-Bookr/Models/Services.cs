@@ -9,10 +9,15 @@ namespace P3_Bookr.Models
 {
     class Services : IServices
     {
+        int _id;
+        int _departmentId;
         string _name;
         bool _departmentDeactivatet;
         ServiceStates _serviceState;
         ServiceTypes _serviceType;
+
+        List<Timeperiod> timeperiods = new List<Timeperiod>();
+        List<ServiceOffering> serviceOfferings = new List<ServiceOffering>();
 
         public enum ServiceStates
         {
@@ -45,6 +50,17 @@ namespace P3_Bookr.Models
         {
             get { return _serviceType; }
             set { _serviceType = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int DepartmentId
+        {
+            get { return _departmentId; }
+            set { _departmentId = value; }
         }
     }
 }

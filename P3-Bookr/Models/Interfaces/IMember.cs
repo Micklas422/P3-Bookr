@@ -19,6 +19,8 @@ namespace P3_Bookr.Models
         Member.MemberTypes MemberType { get; set; }
         string Username { get; set; }
         string Password { get; set; }
+        int Id { get; }
+        int CustomerId { get; set; }
         void setPermissions();
         bool approveLogin(string username, string password);
     }

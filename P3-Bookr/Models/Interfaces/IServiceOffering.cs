@@ -11,5 +11,7 @@ namespace P3_Bookr.Models
         string Name { get; set; }
         int Duration { get; set; }
         float Price { get; set; }
+        int Id { get; }
+        int ServicesId { get; set; }
     }
 }

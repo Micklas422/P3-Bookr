@@ -13,6 +13,7 @@ namespace P3_Bookr.Models
         string Name { get; set; }
         string Adress { get; set; }
         string Email { get; set; }
+        int Id { get; }
         void CreateMember();
         void DeleteMember();
     }

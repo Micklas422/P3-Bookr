@@ -8,11 +8,15 @@ namespace P3_Bookr.Models
 {
     class Customer : ICustomer
     {
+        int _id;
         bool _isActive;
         DateTime _creationDate;
         string _name;
         string _adress;
         string _email;
+
+        List<Department> departments = new List<Department>();
+        List<Member> members = new List<Member>();
 
         public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
         {
@@ -50,6 +54,10 @@ namespace P3_Bookr.Models
         {
             get { return _email; }
             set { _email = value; }
+        }
+        public int Id
+        {
+            get { return _id; }
         }
         public void CreateMember()
         {
