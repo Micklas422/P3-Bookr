@@ -13,14 +13,14 @@ namespace P3_Bookr.DAL
         string fileName = "Members";
         JsonHandler JsonHandler = new JsonHandler();
 
-        public List<Member> LoadMembers(int customerId)
+        public List<Member> GetMembers(int customerId)
         {
             List<Member> members;
-            members = JsonHandler.ReadJsonObjectFromFile<List<Member>>(fileName);
+            members = JsonHandler.ReadJsonObjectFromFile<List<Member>>(fileName).Where(c => c.CustomerId == customerId).ToList();
             return members;
         }
 
-        public void SaveMembers(List<Member> members)
+        public void SetMembers(List<Member> members)
         {
             JsonHandler.WriteJsonObjectToFile(fileName, members);
         }
