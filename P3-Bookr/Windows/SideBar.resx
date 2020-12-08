@@ -117,4 +117,220 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ServicesKnap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ServicesKnap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 21.75pt</value>
+  </data>
+  <data name="ServicesKnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 98</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ServicesKnap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="ServicesKnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 42</value>
+  </data>
+  <data name="ServicesKnap.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ServicesKnap.Text" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="&gt;&gt;ServicesKnap.Name" xml:space="preserve">
+    <value>ServicesKnap</value>
+  </data>
+  <data name="&gt;&gt;ServicesKnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ServicesKnap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ServicesKnap.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ReservationerKnap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ReservationerKnap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 21.75pt</value>
+  </data>
+  <data name="ReservationerKnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 172</value>
+  </data>
+  <data name="ReservationerKnap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="ReservationerKnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 42</value>
+  </data>
+  <data name="ReservationerKnap.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ReservationerKnap.Text" xml:space="preserve">
+    <value>Reservationer</value>
+  </data>
+  <data name="&gt;&gt;ReservationerKnap.Name" xml:space="preserve">
+    <value>ReservationerKnap</value>
+  </data>
+  <data name="&gt;&gt;ReservationerKnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReservationerKnap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ReservationerKnap.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MitForbrugKnap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MitForbrugKnap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 21.75pt</value>
+  </data>
+  <data name="MitForbrugKnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 246</value>
+  </data>
+  <data name="MitForbrugKnap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="MitForbrugKnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 42</value>
+  </data>
+  <data name="MitForbrugKnap.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MitForbrugKnap.Text" xml:space="preserve">
+    <value>Mit Forbrug</value>
+  </data>
+  <data name="&gt;&gt;MitForbrugKnap.Name" xml:space="preserve">
+    <value>MitForbrugKnap</value>
+  </data>
+  <data name="&gt;&gt;MitForbrugKnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MitForbrugKnap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MitForbrugKnap.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="IndstillingerKnap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IndstillingerKnap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 21.75pt</value>
+  </data>
+  <data name="IndstillingerKnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 320</value>
+  </data>
+  <data name="IndstillingerKnap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="IndstillingerKnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 42</value>
+  </data>
+  <data name="IndstillingerKnap.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="IndstillingerKnap.Text" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="&gt;&gt;IndstillingerKnap.Name" xml:space="preserve">
+    <value>IndstillingerKnap</value>
+  </data>
+  <data name="&gt;&gt;IndstillingerKnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IndstillingerKnap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IndstillingerKnap.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LogUdKnap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LogUdKnap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 21.75pt</value>
+  </data>
+  <data name="LogUdKnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 517</value>
+  </data>
+  <data name="LogUdKnap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="LogUdKnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 42</value>
+  </data>
+  <data name="LogUdKnap.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LogUdKnap.Text" xml:space="preserve">
+    <value>Log Ud</value>
+  </data>
+  <data name="&gt;&gt;LogUdKnap.Name" xml:space="preserve">
+    <value>LogUdKnap</value>
+  </data>
+  <data name="&gt;&gt;LogUdKnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogUdKnap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LogUdKnap.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BookrLogoKnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 4</value>
+  </data>
+  <data name="BookrLogoKnap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="BookrLogoKnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 62</value>
+  </data>
+  <data name="BookrLogoKnap.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BookrLogoKnap.Name" xml:space="preserve">
+    <value>BookrLogoKnap</value>
+  </data>
+  <data name="&gt;&gt;BookrLogoKnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BookrLogoKnap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BookrLogoKnap.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 559</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SideBar</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
