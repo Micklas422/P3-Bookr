@@ -8,9 +8,11 @@ namespace P3_Bookr.Models
 {
     class Payment : IPayment
     {
+        int _id;
         DateTime _paymentDate;
         float _amount;
         DateTime _reservationDeadline;
+
         public Payment()
         {
 

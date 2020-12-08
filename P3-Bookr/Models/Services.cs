@@ -9,6 +9,7 @@ namespace P3_Bookr.Models
 {
     class Services : IServices
     {
+        int _id;
         string _name;
         bool _departmentDeactivatet;
         ServiceStates _serviceState;

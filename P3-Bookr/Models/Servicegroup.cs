@@ -9,6 +9,7 @@ namespace P3_Bookr.Models
 {
     class Servicegroup : IServicegroup
     {
+        int _id;
         string _name;
         ServiceTypes _serviceType;
 

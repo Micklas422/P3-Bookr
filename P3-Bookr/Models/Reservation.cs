@@ -8,6 +8,7 @@ namespace P3_Bookr.Models
 {
     class Reservation : IReservation
     {
+        int _id;
         DateTime _creationDate;
         DateTime _cancellationDate;
         ReservationStates _reservationState;
