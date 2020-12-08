@@ -9,6 +9,7 @@ namespace P3_Bookr.Models
     class Reservation : IReservation
     {
         int _id;
+        int _memberId;
         DateTime _creationDate;
         DateTime _cancellationDate;
         ReservationStates _reservationState;
@@ -55,6 +56,17 @@ namespace P3_Bookr.Models
         {
             get { return _reservationDeadline; }
             set { _reservationDeadline = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int MemberId
+        {
+            get { return _memberId; }
+            set { _memberId = value; }
         }
     }
 }

@@ -11,5 +11,7 @@ namespace P3_Bookr.Models
         DateTime PaymentDate { get; set; }
         float Amount { get; set; }
         DateTime ReservationDeadline { get; set; }
+        int Id { get; }
+        int ReservationId { get; set; }
     }
 }

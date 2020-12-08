@@ -15,6 +15,9 @@ namespace P3_Bookr.Models
         string _adress;
         string _email;
 
+        List<Department> departments = new List<Department>();
+        List<Member> members = new List<Member>();
+
         public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
         {
             _isActive = isActive;

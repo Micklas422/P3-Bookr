@@ -11,7 +11,6 @@ namespace P3_Bookr.Models
     {
         int _id;
         int _customerId;
-        int _departmentId;
         string _firstName;
         string _lastName;
         bool _isActive;
@@ -30,6 +29,9 @@ namespace P3_Bookr.Models
         };
         string _username;
         string _password;
+
+        List<Reservation> reservations = new List<Reservation>();
+
         public Member()
         {
 
@@ -113,6 +115,17 @@ namespace P3_Bookr.Models
         {
             get { return _username; }
             set { _username = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int CustomerId
+        {
+            get { return _customerId; }
+            set { _customerId = value; }
         }
      
         public void setPermissions()

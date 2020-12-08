@@ -9,6 +9,7 @@ namespace P3_Bookr.Models
     class Timeperiod : ITimeperiod
     {
         int _id;
+        int _ServicesId;
         DateTime _startTime;
         DateTime _endTime;
         bool _serviceUsed;
@@ -33,6 +34,15 @@ namespace P3_Bookr.Models
         {
             get { return _serviceUsed; }
             set { _serviceUsed = value; }
+        }
+        public int Id
+        {
+            get { return _id; }
+        }
+        public int ServicesId
+        {
+            get { return _ServicesId; }
+            set { _ServicesId = value; }
         }
     }
 }

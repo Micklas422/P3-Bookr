@@ -9,6 +9,7 @@ namespace P3_Bookr.Models
     class Payment : IPayment
     {
         int _id;
+        int _reservationId;
         DateTime _paymentDate;
         float _amount;
         DateTime _reservationDeadline;
@@ -32,6 +33,17 @@ namespace P3_Bookr.Models
         {
             get { return _reservationDeadline; }
             set { _reservationDeadline = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int ReservationId
+        {
+            get { return _reservationId; }
+            set { _reservationId = value; }
         }
     }
 }
