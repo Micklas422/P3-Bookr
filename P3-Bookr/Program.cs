@@ -20,7 +20,8 @@ namespace P3_Bookr
         [STAThread]
         static void Main()
         {
-            Application.Run(new MainWindow());
+            //Application.Run(new MainMenu);
+            UIController uIController = new UIController();
             //IMemberDAL memberDAL = new MemberDAL();
 
             //List<Member> members = new List<Member>();

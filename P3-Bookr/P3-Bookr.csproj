@@ -262,6 +262,7 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WindowsInterfaces\ISideMenu.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -362,7 +363,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Windows\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BookerLogo.png" />

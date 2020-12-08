@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    class ISideMenu
+    public delegate void SideBarEvent(SideBarButtons sideBarButtons);
+
+    public enum SideBarButtons
     {
+
+    }
+    public interface ISideMenu
+    {
+        void SwitchToHomePage();
+
+
     }
 }
