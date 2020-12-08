@@ -53,10 +53,24 @@
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
-    <Compile Include="DAL\Interfaces\InterfaceCustomerDAL.cs" />
-    <Compile Include="DAL\Interfaces\InterfaceMemberDAL.cs" />
-    <Compile Include="DAL\JsonHandler.cs" />
+    <Compile Include="DAL\DepartmentDAL.cs" />
+    <Compile Include="DAL\Interfaces\ICustomerDAL.cs" />
+    <Compile Include="DAL\Interfaces\IDepartmentDAL.cs" />
+    <Compile Include="DAL\Interfaces\IMemberDAL.cs" />
+    <Compile Include="DAL\Interfaces\IPaymentDAL.cs" />
+    <Compile Include="DAL\Interfaces\IReservationDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServiceGroupDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServiceOfferingDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServicesDAL.cs" />
+    <Compile Include="DAL\Interfaces\ITimeperiodDAL.cs" />
+    <Compile Include="DAL\ReservationDAL.cs" />
+    <Compile Include="DAL\ServiceGroupDAL.cs" />
+    <Compile Include="DAL\ServiceOfferingDAL.cs" />
+    <Compile Include="DAL\ServicesDAL.cs" />
+    <Compile Include="DAL\TimeperiodDAL.cs" />
+    <Compile Include="DAL\Util\JsonHandler.cs" />
     <Compile Include="DAL\MemberDAL.cs" />
+    <Compile Include="DAL\PaymentDAL.cs" />
     <Compile Include="FunctionComponent\FunctionComponent.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\FunctionComponentInterface.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\IHistoryManager.cs" />
@@ -223,11 +237,23 @@
     <Compile Include="Windows\ServicePanels\ServiceViewForFlow.Designer.cs">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Settings.cs">
+    <Compile Include="Windows\Settings\PaymentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\PaymentInfo.Designer.cs">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\PersonalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Windows\Settings\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\SideBar.cs">
       <SubType>UserControl</SubType>
@@ -275,6 +301,9 @@
     <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\ReservationOverview.resx">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +336,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicePanels\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\PaymentInfo.resx">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\SideBar.resx">
       <DependentUpon>SideBar.cs</DependentUpon>
