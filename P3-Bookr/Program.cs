@@ -18,13 +18,6 @@ namespace P3_Bookr
         [STAThread]
         static void Main()
         {
-            List<Member> members = new List<Member>();
-            members.Add(new Member());
-            members.Add(new Member());
-            members.Add(new Member());
-            JsonHandler jsonHandler = new JsonHandler();
-            jsonHandler.WriteJsonObjectToFile(Directory.GetCurrentDirectory(), members);
-
         }
     }
 }
