@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class ServiceManager
+    class ServiceManager : IServiceManager
     {
+        public void Reserve()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SeeAvailability()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
