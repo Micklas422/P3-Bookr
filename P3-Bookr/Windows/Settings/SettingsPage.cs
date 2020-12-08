@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P3_Bookr.Windows
+namespace P3_Bookr.Windows.Settings
 {
-    public partial class Settings : Form
+    public partial class SettingsPage : Form
     {
-        public Settings()
+        public SettingsPage()
         {
             InitializeComponent();
         }
