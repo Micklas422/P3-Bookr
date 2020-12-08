@@ -15,6 +15,11 @@ namespace P3_Bookr.Windows.WindowsInterfaces
     public interface ISideMenu
     {
         void SwitchToHomePage();
+        void SwitchToServicePage();
+        void SwitchToReservationPage();
+        void SwitchToHistoryPage();
+        void SwitchToSettingsPage();
+        void SwitchToLogInPage();
 
 
     }

@@ -22,9 +22,36 @@ namespace P3_Bookr
             Application.Run(mainWindow);
         }
 
+        #region SideMenuHandler
+        public void SwitchToHistoryPage()
+        {
+            throw new NotImplementedException();
+        }
+
         public void SwitchToHomePage()
         {
             throw new NotImplementedException();
         }
+
+        public void SwitchToLogInPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SwitchToReservationPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SwitchToServicePage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SwitchToSettingsPage()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }
