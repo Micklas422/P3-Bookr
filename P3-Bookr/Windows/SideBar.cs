@@ -8,20 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using P3_Bookr.Windows.History;
+using P3_Bookr.Windows.WindowsInterfaces;
+
 
 namespace P3_Bookr.Windows
 {
     public partial class SideBar : UserControl
     {
-        public SideBar()
+        ISideMenu _handler;
+        public SideBar(ISideMenu handler)
         {
             InitializeComponent();
+            _handler = handler;
+            
         }
+
+        public event SideBarEvent sideBarEvent;
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var serviceForm = new ServicesOverview();
-            serviceForm.Show();
+            _handler.SwitchToHomePage();
         }
 
         private void ReservationerKnap_Click(object sender, EventArgs e)
