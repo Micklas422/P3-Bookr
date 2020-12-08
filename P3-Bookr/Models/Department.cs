@@ -62,8 +62,8 @@ namespace P3_Bookr.Models
 
         public int CustomerId
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _customerId; }
+            set { _customerId = value; }
         }
 
         public void createService()
