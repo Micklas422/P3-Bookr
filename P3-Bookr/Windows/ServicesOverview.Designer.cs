@@ -32,15 +32,13 @@
             this.ServiceOverviewFlow2 = new System.Windows.Forms.FlowLayoutPanel();
             this.ServiceOverviewFlowTitel2 = new System.Windows.Forms.Label();
             this.ServiceOverviewFlowTitel1 = new System.Windows.Forms.Label();
-            this.ServiceOverviewBookr = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceOverviewBookr)).BeginInit();
             this.SuspendLayout();
             // 
             // ServiceOverviewFlow1
             // 
             this.ServiceOverviewFlow1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ServiceOverviewFlow1.BackColor = System.Drawing.Color.White;
-            this.ServiceOverviewFlow1.Location = new System.Drawing.Point(75, 122);
+            this.ServiceOverviewFlow1.Location = new System.Drawing.Point(2, 33);
             this.ServiceOverviewFlow1.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceOverviewFlow1.Name = "ServiceOverviewFlow1";
             this.ServiceOverviewFlow1.Size = new System.Drawing.Size(600, 98);
@@ -50,7 +48,7 @@
             // 
             this.ServiceOverviewFlow2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ServiceOverviewFlow2.BackColor = System.Drawing.Color.White;
-            this.ServiceOverviewFlow2.Location = new System.Drawing.Point(75, 260);
+            this.ServiceOverviewFlow2.Location = new System.Drawing.Point(2, 174);
             this.ServiceOverviewFlow2.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceOverviewFlow2.Name = "ServiceOverviewFlow2";
             this.ServiceOverviewFlow2.Size = new System.Drawing.Size(600, 98);
@@ -60,7 +58,7 @@
             // 
             this.ServiceOverviewFlowTitel2.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlowTitel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.ServiceOverviewFlowTitel2.Location = new System.Drawing.Point(75, 241);
+            this.ServiceOverviewFlowTitel2.Location = new System.Drawing.Point(2, 156);
             this.ServiceOverviewFlowTitel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ServiceOverviewFlowTitel2.Name = "ServiceOverviewFlowTitel2";
             this.ServiceOverviewFlowTitel2.Size = new System.Drawing.Size(600, 16);
@@ -72,26 +70,13 @@
             // 
             this.ServiceOverviewFlowTitel1.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlowTitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.ServiceOverviewFlowTitel1.Location = new System.Drawing.Point(75, 103);
+            this.ServiceOverviewFlowTitel1.Location = new System.Drawing.Point(2, 15);
             this.ServiceOverviewFlowTitel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ServiceOverviewFlowTitel1.Name = "ServiceOverviewFlowTitel1";
             this.ServiceOverviewFlowTitel1.Size = new System.Drawing.Size(600, 16);
             this.ServiceOverviewFlowTitel1.TabIndex = 6;
             this.ServiceOverviewFlowTitel1.Text = "ServiceFlow Overskrift";
             this.ServiceOverviewFlowTitel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ServiceOverviewBookr
-            // 
-            this.ServiceOverviewBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
-            this.ServiceOverviewBookr.Location = new System.Drawing.Point(225, 2);
-            this.ServiceOverviewBookr.Margin = new System.Windows.Forms.Padding(2);
-            this.ServiceOverviewBookr.Name = "ServiceOverviewBookr";
-            this.ServiceOverviewBookr.Size = new System.Drawing.Size(300, 65);
-            this.ServiceOverviewBookr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ServiceOverviewBookr.TabIndex = 2;
-            this.ServiceOverviewBookr.TabStop = false;
-            this.ServiceOverviewBookr.WaitOnLoad = true;
-            this.ServiceOverviewBookr.Click += new System.EventHandler(this.ServiceOverviewBookr_Click);
             // 
             // ServicesOverview
             // 
@@ -102,18 +87,14 @@
             this.Controls.Add(this.ServiceOverviewFlowTitel2);
             this.Controls.Add(this.ServiceOverviewFlow2);
             this.Controls.Add(this.ServiceOverviewFlow1);
-            this.Controls.Add(this.ServiceOverviewBookr);
             this.Name = "ServicesOverview";
-            this.Size = new System.Drawing.Size(750, 488);
+            this.Size = new System.Drawing.Size(604, 328);
             this.Load += new System.EventHandler(this.ServicesOverview_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceOverviewBookr)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox ServiceOverviewBookr;
         private System.Windows.Forms.FlowLayoutPanel ServiceOverviewFlow1;
         private System.Windows.Forms.FlowLayoutPanel ServiceOverviewFlow2;
         private System.Windows.Forms.Label ServiceOverviewFlowTitel2;
