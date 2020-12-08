@@ -38,30 +38,30 @@
             // 
             this.ServiceOverviewFlow1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ServiceOverviewFlow1.BackColor = System.Drawing.Color.White;
-            this.ServiceOverviewFlow1.Location = new System.Drawing.Point(2, 33);
+            this.ServiceOverviewFlow1.Location = new System.Drawing.Point(10, 33);
             this.ServiceOverviewFlow1.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceOverviewFlow1.Name = "ServiceOverviewFlow1";
-            this.ServiceOverviewFlow1.Size = new System.Drawing.Size(600, 98);
+            this.ServiceOverviewFlow1.Size = new System.Drawing.Size(580, 98);
             this.ServiceOverviewFlow1.TabIndex = 3;
             // 
             // ServiceOverviewFlow2
             // 
             this.ServiceOverviewFlow2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ServiceOverviewFlow2.BackColor = System.Drawing.Color.White;
-            this.ServiceOverviewFlow2.Location = new System.Drawing.Point(2, 174);
+            this.ServiceOverviewFlow2.Location = new System.Drawing.Point(10, 187);
             this.ServiceOverviewFlow2.Margin = new System.Windows.Forms.Padding(2);
             this.ServiceOverviewFlow2.Name = "ServiceOverviewFlow2";
-            this.ServiceOverviewFlow2.Size = new System.Drawing.Size(600, 98);
+            this.ServiceOverviewFlow2.Size = new System.Drawing.Size(580, 98);
             this.ServiceOverviewFlow2.TabIndex = 4;
             // 
             // ServiceOverviewFlowTitel2
             // 
             this.ServiceOverviewFlowTitel2.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlowTitel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.ServiceOverviewFlowTitel2.Location = new System.Drawing.Point(2, 156);
+            this.ServiceOverviewFlowTitel2.Location = new System.Drawing.Point(10, 169);
             this.ServiceOverviewFlowTitel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ServiceOverviewFlowTitel2.Name = "ServiceOverviewFlowTitel2";
-            this.ServiceOverviewFlowTitel2.Size = new System.Drawing.Size(600, 16);
+            this.ServiceOverviewFlowTitel2.Size = new System.Drawing.Size(580, 16);
             this.ServiceOverviewFlowTitel2.TabIndex = 5;
             this.ServiceOverviewFlowTitel2.Text = "ServiceFlow Overskrift";
             this.ServiceOverviewFlowTitel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,10 +70,10 @@
             // 
             this.ServiceOverviewFlowTitel1.BackColor = System.Drawing.Color.White;
             this.ServiceOverviewFlowTitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(172)))), ((int)(((byte)(44)))));
-            this.ServiceOverviewFlowTitel1.Location = new System.Drawing.Point(2, 15);
+            this.ServiceOverviewFlowTitel1.Location = new System.Drawing.Point(10, 15);
             this.ServiceOverviewFlowTitel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ServiceOverviewFlowTitel1.Name = "ServiceOverviewFlowTitel1";
-            this.ServiceOverviewFlowTitel1.Size = new System.Drawing.Size(600, 16);
+            this.ServiceOverviewFlowTitel1.Size = new System.Drawing.Size(580, 16);
             this.ServiceOverviewFlowTitel1.TabIndex = 6;
             this.ServiceOverviewFlowTitel1.Text = "ServiceFlow Overskrift";
             this.ServiceOverviewFlowTitel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.ServiceOverviewFlow2);
             this.Controls.Add(this.ServiceOverviewFlow1);
             this.Name = "ServicesOverview";
-            this.Size = new System.Drawing.Size(604, 328);
+            this.Size = new System.Drawing.Size(600, 350);
             this.Load += new System.EventHandler(this.ServicesOverview_Load);
             this.ResumeLayout(false);
 

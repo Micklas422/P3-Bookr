@@ -196,12 +196,6 @@
     <Compile Include="Windows\ServiceDetails.Designer.cs">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServiceDetailsCalendar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
-      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Windows\ServicePanels\ServiceInfoPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -319,9 +313,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetails.resx">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceDetailsCalendar.resx">
-      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicePanels\ServiceInfoPanel.resx">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>

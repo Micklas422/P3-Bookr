@@ -36,10 +36,5 @@ namespace P3_Bookr.Windows
         {
 
         }
-
-        private void ServiceDetailsInfoPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
