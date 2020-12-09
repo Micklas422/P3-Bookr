@@ -12,7 +12,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
     {
 
     }
-    public interface ISideMenu
+    public interface ISideMenuUI
     {
         void SwitchToHomePage();
         void SwitchToServicePage();

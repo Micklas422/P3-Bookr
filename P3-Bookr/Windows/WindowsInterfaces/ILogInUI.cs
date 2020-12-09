@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    interface IAdminTools
+    public interface ILogInUI
     {
-        void AddUser();
-        void AddService();
-        void AddServiceGroup();
-        void AddUserGroup();
-
+        void LogIn();
     }
 }

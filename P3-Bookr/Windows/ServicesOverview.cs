@@ -13,8 +13,8 @@ namespace P3_Bookr.Windows
 {
     public partial class ServicesOverview : UserControl
     {
-        IServices _handler;
-        public ServicesOverview(IServices handler)
+        IServicesUI _handler;
+        public ServicesOverview(IServicesUI handler)
         {
             InitializeComponent();
             _handler = handler;

@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows.History
 {
-    public partial class HistoryPage : Form
+    public partial class HistoryPage : UserControl
     {
-        public HistoryPage()
+        IHistorikUI _handler;
+        public HistoryPage(IHistorikUI handler)
         {
             InitializeComponent();
+            _handler = handler;
         }
 
         private void HistoryPage_Load(object sender, EventArgs e)

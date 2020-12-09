@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    interface IHistorik
+    public interface IHistorikUI
     {
 
     }

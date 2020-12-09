@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using P3_Bookr.FunctionComponent;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows
 {
     partial class Login : UserControl
     {
         ILoginManager _loginManager;
-        public Login(ILoginManager loginManager)
+        ILogInUI _handler;
+        public Login(ILoginManager loginManager, ILogInUI handler)
         {
             _loginManager = loginManager;
+            _handler = handler;
             InitializeComponent();
         }
 

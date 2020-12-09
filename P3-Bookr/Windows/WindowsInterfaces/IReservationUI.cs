@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IHomepage
+    public interface IReservationUI
     {
-        void LastUsedService();
-        void News();
+        void CancelReservation();
     }
 }

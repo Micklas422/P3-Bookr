@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IReservation
+    public interface IServicesUI
     {
-        void CancelReservation();
+        void SelectService();
+        void SelectServiceType();
+        void SelectDate();
+        void SelectTime();
+        void Book();
     }
 }
