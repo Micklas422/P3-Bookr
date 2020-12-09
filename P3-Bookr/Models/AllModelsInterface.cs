@@ -29,7 +29,9 @@ namespace P3_Bookr.Models
             _serviceOffering = serviceOffering;
             _services = services;
             _timeperiod = timeperiod;
+
         }
+
         public ICustomer customer
         {
             get { return _customer; }
