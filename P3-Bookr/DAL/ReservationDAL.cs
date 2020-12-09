@@ -10,18 +10,37 @@ namespace P3_Bookr.DAL
 {
     class ReservationDAL : IReservationDAL
     {
-        string fileName = "Reservations";
-        JsonHandler jsonHandler = new JsonHandler();
-        public List<Reservation> GetReservations(int memberId)
+        List<Reservation> _reservations;
+        string _fileName = "Reservations";
+        JsonHandler _jsonHandler = new JsonHandler();
+
+        public ReservationDAL()
+        {
+            Reservations = LoadReservations();
+        }
+
+        public List<Reservation> Reservations { get => _reservations; private set => _reservations = value; }
+
+        public Reservation GetReservation(int reservationId)
+        {
+            return Reservations.Where(r => r.Id == reservationId).FirstOrDefault();
+        }
+
+        public List<Reservation> GetReservationsByMember(int memberId)
+        {
+            return Reservations.Where(r => r.MemberId == memberId).ToList();
+        }
+
+        public List<Reservation> LoadReservations()
         {
             List<Reservation> reservations;
-            reservations = jsonHandler.ReadJsonObjectFromFile<List<Reservation>>(fileName).Where(m => m.MemberId == memberId).ToList();
+            reservations = _jsonHandler.ReadJsonObjectFromFile<List<Reservation>>(_fileName);
             return reservations;
         }
 
         public void SetRevervations(List<Reservation> reservations)
         {
-            jsonHandler.WriteJsonObjectToFile(fileName, reservations);
+            _jsonHandler.WriteJsonObjectToFile(_fileName, reservations);
         }
     }
 }

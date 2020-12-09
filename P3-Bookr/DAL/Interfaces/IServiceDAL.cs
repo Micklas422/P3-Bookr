@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface IServicesDAL
+    interface IServiceDAL
     {
         List<Service> Services { get; }
         Service GetService(int id);

@@ -8,7 +8,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    class ServiceDAL : IServicesDAL
+    class ServiceDAL : IServiceDAL
     {
         List<Service> _services;
         string _fileName = "Serives";
