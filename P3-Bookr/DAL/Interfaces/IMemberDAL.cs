@@ -9,7 +9,10 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface IMemberDAL
     {
-        List<Member> GetMembers(int customerId);
+        List<Member> Members { get; }
+        Member GetMember(int id);
+        void UpdateMember(Member member);
+        List<Member> GetMembersByCustomer(int customerId);
         void SetMembers(List<Member> members);
     }
 }
