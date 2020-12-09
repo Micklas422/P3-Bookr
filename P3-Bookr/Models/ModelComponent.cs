@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.DAL;
 
 namespace P3_Bookr.Models
 {
-    class ModelComponent : IModelComponent
+    class ModelComponent
     {
+        DataAccesLayer _dataAccesLayer;
         public ModelComponent()
         {
+            _dataAccesLayer = new DataAccesLayer();
+        }
 
+        public DataAccesLayer DAL
+        {
+            get { return _dataAccesLayer; }
+            private set { _dataAccesLayer = value; }
         }
 
 
