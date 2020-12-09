@@ -9,10 +9,11 @@ using System.Windows.Forms;
 using P3_Bookr.Windows.History;
 using P3_Bookr.Windows.Frontpage;
 using P3_Bookr.Windows.Reservation;
+using P3_Bookr.Windows.Settings;
 
 namespace P3_Bookr
 {
-    class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI
+    class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         bool stayAlive = false;
         MainWindow mainWindow;
@@ -59,7 +60,8 @@ namespace P3_Bookr
 
         public void SwitchToSettingsPage()
         {
-            throw new NotImplementedException();
+            mainWindow.panelSiteView.Controls.Clear();
+            mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
         }
         #endregion
         #region ServicesUI

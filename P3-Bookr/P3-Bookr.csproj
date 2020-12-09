@@ -66,9 +66,9 @@
     <Compile Include="DAL\Interfaces\IServicesDAL.cs" />
     <Compile Include="DAL\Interfaces\ITimeperiodDAL.cs" />
     <Compile Include="DAL\ReservationDAL.cs" />
+    <Compile Include="DAL\ServiceDAL.cs" />
     <Compile Include="DAL\ServiceGroupDAL.cs" />
     <Compile Include="DAL\ServiceOfferingDAL.cs" />
-    <Compile Include="DAL\ServicesDAL.cs" />
     <Compile Include="DAL\TimeperiodDAL.cs" />
     <Compile Include="DAL\Util\JsonHandler.cs" />
     <Compile Include="DAL\MemberDAL.cs" />
@@ -101,9 +101,9 @@
     <Compile Include="Models\ModelComponent.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceGroup.cs" />
     <Compile Include="Models\ServiceOffering.cs" />
-    <Compile Include="Models\Services.cs" />
     <Compile Include="Models\TimePeriod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -241,7 +241,7 @@
       <DependentUpon>PersonalInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Settings\SettingsPage.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\Settings\SettingsPage.Designer.cs">
       <DependentUpon>SettingsPage.cs</DependentUpon>
@@ -258,6 +258,7 @@
     <Compile Include="Windows\WindowsInterfaces\ILogInUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\IReservationUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\IServicesUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ISettingsUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ISideMenuUI.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
