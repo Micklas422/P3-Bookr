@@ -53,17 +53,15 @@
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
-    <Compile Include="DAL\DataAccesLayer.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />
     <Compile Include="DAL\Interfaces\ICustomerDAL.cs" />
-    <Compile Include="DAL\Interfaces\IDataAccesLayer.cs" />
     <Compile Include="DAL\Interfaces\IDepartmentDAL.cs" />
     <Compile Include="DAL\Interfaces\IMemberDAL.cs" />
     <Compile Include="DAL\Interfaces\IPaymentDAL.cs" />
     <Compile Include="DAL\Interfaces\IReservationDAL.cs" />
     <Compile Include="DAL\Interfaces\IServiceGroupDAL.cs" />
     <Compile Include="DAL\Interfaces\IServiceOfferingDAL.cs" />
-    <Compile Include="DAL\Interfaces\IServicesDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServiceDAL.cs" />
     <Compile Include="DAL\Interfaces\ITimeperiodDAL.cs" />
     <Compile Include="DAL\ReservationDAL.cs" />
     <Compile Include="DAL\ServiceDAL.cs" />
@@ -90,7 +88,7 @@
     <Compile Include="Models\Interfaces\ICustomer.cs" />
     <Compile Include="Models\Interfaces\IDepartment.cs" />
     <Compile Include="Models\Interfaces\IMember.cs" />
-    <Compile Include="Models\Interfaces\IModelComponent.cs" />
+    <Compile Include="Models\Interfaces\IAllModelsInterface.cs" />
     <Compile Include="Models\Interfaces\IPayment.cs" />
     <Compile Include="Models\Interfaces\IReservation.cs" />
     <Compile Include="Models\Interfaces\IServicegroup.cs" />
@@ -98,7 +96,7 @@
     <Compile Include="Models\Interfaces\IServices.cs" />
     <Compile Include="Models\Interfaces\ITimeperiod.cs" />
     <Compile Include="Models\Member.cs" />
-    <Compile Include="Models\ModelComponent.cs" />
+    <Compile Include="Models\AllModelsInterface.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Service.cs" />
@@ -173,6 +171,10 @@
     </Compile>
     <Compile Include="Windows\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ReservationOverview.cs" />
+    <Compile Include="Windows\ReservationOverview.Designer.cs">
+      <DependentUpon>ReservationOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Reservation\Reservation.cs">
       <SubType>UserControl</SubType>
@@ -252,14 +254,9 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\WindowsInterfaces\IAdminToolsUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\IHistorikUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\IHomepageUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\ILogInUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\IReservationUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\IServicesUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\ISettingsUI.cs" />
-    <Compile Include="Windows\WindowsInterfaces\ISideMenuUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IReservation.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IServices.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ISideMenu.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -302,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ReservationOverview.resx">
+      <DependentUpon>ReservationOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Reservation\Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
