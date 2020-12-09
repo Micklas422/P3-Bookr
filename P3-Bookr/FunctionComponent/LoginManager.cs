@@ -9,12 +9,13 @@ namespace P3_Bookr.FunctionComponent
 {
     public class LoginManager : ILoginManager
     {
-        readonly Member member;
+        Member member;
         public bool ValidateLogin(string username, string password)
         {
             return true;
             from member in 
 
         }
+
     }
 }

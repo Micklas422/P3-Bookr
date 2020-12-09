@@ -21,7 +21,7 @@ namespace P3_Bookr.DAL
 
         public List<Member> Members { get => _members; private set => _members = value; }
 
-        public List<Member> LoadMembers()
+        List<Member> LoadMembers()
         {
             List<Member> members;
             members = _JsonHandler.ReadJsonObjectFromFile<List<Member>>(_fileName);
