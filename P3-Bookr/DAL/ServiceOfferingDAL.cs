@@ -11,25 +11,36 @@ namespace P3_Bookr.DAL
     class ServiceOfferingDAL : IServiceOfferingDAL
     {
         List<ServiceOffering> _serviceOffering;
-        string fileName = "ServiceOfferings";
-        JsonHandler jsonHandler = new JsonHandler();
+        string _fileName = "ServiceOfferings";
+        JsonHandler _jsonHandler = new JsonHandler();
 
-        public List<ServiceOffering> ServiceOfferings { get => _serviceOffering; set => _serviceOffering = value; }
+        public List<ServiceOffering> ServiceOfferings { get => _serviceOffering; private set => _serviceOffering = value; }
 
         public ServiceOfferingDAL()
         {
             ServiceOfferings = LoadServiceOfferings();
         }
-        public List<ServiceOffering> LoadServiceOfferings()
+        List<ServiceOffering> LoadServiceOfferings()
         {
             List<ServiceOffering> serviceOfferings;
-            serviceOfferings = jsonHandler.ReadJsonObjectFromFile<List<ServiceOffering>>(fileName);
+            serviceOfferings = _jsonHandler.ReadJsonObjectFromFile<List<ServiceOffering>>(_fileName);
             return serviceOfferings;
+        }
+
+
+        List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId)
+        {
+            return ServiceOfferings.Where(s => s.ServicesId == serviceId).ToList();
+        }
+
+        public ServiceOffering GetServiceOffering(int id)
+        {
+            return ServiceOfferings.Where(s => s.Id == id).FirstOrDefault();
         }
 
         public void SetServiceOfferings(List<ServiceOffering> serviceOfferings)
         {
-            jsonHandler.WriteJsonObjectToFile(fileName, serviceOfferings);
+            _jsonHandler.WriteJsonObjectToFile(_fileName, serviceOfferings);
         }
 
         public void UpdateServiceOfferings(ServiceOffering serviceOffering)
