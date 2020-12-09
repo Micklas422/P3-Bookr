@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.Models;
 using P3_Bookr.DAL;
+using P3_Bookr.FunctionComponent;
 
 namespace P3_Bookr.FunctionComponent
 {
@@ -13,10 +14,10 @@ namespace P3_Bookr.FunctionComponent
         Member _member;
         public Member ValidateLogin(string username, string password)
         {
-            return _member;
-            
+            Member member = new Member();
+            return member;
+
 
         }
-
     }
 }

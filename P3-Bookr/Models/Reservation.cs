@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Reservation : IReservation
+    public class Reservation : IReservation
     {
         static List<int> UniqueIds = new List<int>();
 

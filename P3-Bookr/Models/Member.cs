@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Member : IMember
+    public class Member : IMember
     {
         static List<int> UniqueIds = new List<int>();
 

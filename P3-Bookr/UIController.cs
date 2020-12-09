@@ -112,7 +112,7 @@ namespace P3_Bookr
         #region LogInUI
         public void LogIn(string username, string password)
         {
-            _currentUser = _logInHandler.ValidateLogin(username, password)
+            _currentUser = _logInHandler.ValidateLogin(username, password);
             if (_currentUser != null)
             {
                 _mainWindow.panelForLogIn.Visible = false;
