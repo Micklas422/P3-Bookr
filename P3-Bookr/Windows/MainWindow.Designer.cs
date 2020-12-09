@@ -31,6 +31,7 @@
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBoxBookr = new System.Windows.Forms.PictureBox();
             this.panelSiteView = new System.Windows.Forms.Panel();
+            this.panalForLogIn = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,15 +65,24 @@
             this.panelSiteView.Size = new System.Drawing.Size(740, 427);
             this.panelSiteView.TabIndex = 2;
             // 
+            // panalForLogIn
+            // 
+            this.panalForLogIn.Location = new System.Drawing.Point(12, 12);
+            this.panalForLogIn.Name = "panalForLogIn";
+            this.panalForLogIn.Size = new System.Drawing.Size(1043, 537);
+            this.panalForLogIn.TabIndex = 3;
+            this.panalForLogIn.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 623);
+            this.Controls.Add(this.panalForLogIn);
             this.Controls.Add(this.panelSiteView);
             this.Controls.Add(this.pictureBoxBookr);
             this.Controls.Add(this.panelSideBar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).EndInit();
@@ -85,5 +95,6 @@
         public System.Windows.Forms.Panel panelSideBar;
         private System.Windows.Forms.PictureBox pictureBoxBookr;
         public System.Windows.Forms.Panel panelSiteView;
+        private System.Windows.Forms.Panel panalForLogIn;
     }
 }

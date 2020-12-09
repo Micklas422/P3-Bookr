@@ -59,7 +59,6 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
         #endregion
-
         #region ServicesUI
         public void LoadServicesToShow()
         {
@@ -139,7 +138,5 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
         #endregion
-
-
     }
 }
