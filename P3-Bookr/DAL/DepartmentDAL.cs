@@ -11,32 +11,41 @@ namespace P3_Bookr.DAL
     class DepartmentDAL : IDepartmentDAL
     {
         List<Department> _department;
-        string fileName = "Departments";
-        JsonHandler jsonHandler = new JsonHandler();
+        string _fileName = "Departments";
+        JsonHandler _jsonHandler = new JsonHandler();
 
-        public List<Department> Departments { get => _department; set => _department = value; }
+        public List<Department> Departments { get => _department; private set => _department = value; }
 
         public DepartmentDAL()
         {
             Departments = LoadDepartments();
         }
 
-        public List<Department> LoadDepartments()
+        List<Department> LoadDepartments()
         {
             List<Department> departments;
-            departments = jsonHandler.ReadJsonObjectFromFile<List<Department>>(fileName);
+            departments = _jsonHandler.ReadJsonObjectFromFile<List<Department>>(_fileName);
             return departments;
+        }
+
+        public List<Department> GetDepartmentsByCustomerId(int customerId)
+        {
+            return Departments.Where(d => d.CustomerId == customerId).ToList();
+        }
+
+        public Department GetDepartment(int id)
+        {
+            return Departments.Where(d => d.Id == id).FirstOrDefault();
         }
 
         public void SetDepartments(List<Department> department)
         {
-            jsonHandler.WriteJsonObjectToFile(fileName, department);
+            _jsonHandler.WriteJsonObjectToFile(_fileName, department);
         }
 
         public void UpdateDepartment(Department department)
-        { 
-        
-            Departments.Where(c => c.Id== department.Id ).Select(c => c = department);
+        {
+            Departments.Where(c => c.Id == department.Id).Select(c => c = department);
         }
     }
 }
