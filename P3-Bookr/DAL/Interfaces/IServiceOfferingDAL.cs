@@ -9,7 +9,9 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface IServiceOfferingDAL
     {
-        List<ServiceOffering> LoadServiceOfferings();
+        List<ServiceOffering> ServiceOfferings { get; }
         void SetServiceOfferings(List<ServiceOffering> serviceOfferings);
+        ServiceOffering GetServiceOffering(int id);
+        void UpdateServiceOfferings(ServiceOffering serviceOffering);
     }
 }
