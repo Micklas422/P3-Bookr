@@ -16,15 +16,15 @@ namespace P3_Bookr.DAL
 
         public List<Department> Departments { get => _department; set => _department = value; }
 
-        public DepartmentDAL(int customerId)
+        public DepartmentDAL()
         {
-            Departments = LoadDepartments(customerId);
+            Departments = LoadDepartments();
         }
 
-        public List<Department> LoadDepartments(int customerId)
+        public List<Department> LoadDepartments()
         {
             List<Department> departments;
-            departments = jsonHandler.ReadJsonObjectFromFile<List<Department>>(fileName).Where(c => c.CustomerId == customerId).ToList();
+            departments = jsonHandler.ReadJsonObjectFromFile<List<Department>>(fileName);
             return departments;
         }
 
