@@ -4,18 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.DAL;
+using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.Models
 {
     class ModelComponent
     {
-        DataAccesLayer _dataAccesLayer;
-        public ModelComponent()
+        IDataAccesLayer _dataAccesLayer;
+        List<Customer> _customer;
+
+        public ModelComponent(IDataAccesLayer dataAccesLayer)
         {
-            _dataAccesLayer = new DataAccesLayer();
+            _dataAccesLayer = dataAccesLayer;
         }
 
-        public DataAccesLayer DAL
+        void LoadModel()
+        {
+            _customer = _dataAccesLayer.customerDAL.Customers;
+
+            foreach(Customer cus in _customer)
+            {
+                cus.Members = _dataAccesLayer.memberDAL.GetMembersByCustomer(cus.Id);
+                //cus.Departments = _dataAccesLayer.departmentDAL
+                foreach(Member member in cus.Members)
+                {
+                    member.Reservations = _dataAccesLayer.reservationDAL.GetReservationsByMember(member.Id);
+                    foreach (Reservation reservation in member.Reservations)
+                    {
+                        reservation.Payments = _dataAccesLayer.paymentDAL.GetPaymentByReservation(reservation.Id);
+                    }
+                }
+                foreach(Department department in cus.Departments)
+                {
+                    department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
+                    foreach (Service service in department.Services)
+                    {
+                        service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.LoadServiceOfferings(service.Id);
+                        service.TimePeriods = _dataAccesLayer.timeperiodDAL.GetTimePeriodsByService(service.Id);
+                    }
+                }
+            }
+        }
+
+        public IDataAccesLayer DAL
         {
             get { return _dataAccesLayer; }
             private set { _dataAccesLayer = value; }

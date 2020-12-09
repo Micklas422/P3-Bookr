@@ -19,6 +19,8 @@ namespace P3_Bookr.Models
         int _duration;
         DateTime _reservationDeadline;
 
+        List<Payment> payments = new List<Payment>();
+
         public enum ReservationStates
         {
             Created,
@@ -73,6 +75,12 @@ namespace P3_Bookr.Models
         {
             get { return _memberId; }
             set { _memberId = value; }
+        }
+
+        public List<Payment> Payments
+        {
+            get { return payments; }
+            set { payments = value; }
         }
     }
 }
