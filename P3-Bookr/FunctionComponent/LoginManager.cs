@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.Models;
+using P3_Bookr.DAL;
 
 namespace P3_Bookr.FunctionComponent
 {
     public class LoginManager : ILoginManager
     {
-        Member member;
-        public bool ValidateLogin(string username, string password)
+        Member _member;
+        public Member ValidateLogin(string username, string password)
         {
-            return true;
-            from member in 
+            return _member;
+            
 
         }
 
