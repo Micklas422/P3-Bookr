@@ -14,11 +14,16 @@ namespace P3_Bookr.DAL
         string fileName = "ServiceOfferings";
         JsonHandler jsonHandler = new JsonHandler();
 
-        public List<ServiceOffering> Departments { get => _serviceOffering; set => _serviceOffering = value; }
-        public List<ServiceOffering> LoadServiceOfferings(int serviceId)
+        public List<ServiceOffering> ServiceOfferings { get => _serviceOffering; set => _serviceOffering = value; }
+
+        public ServiceOfferingDAL()
+        {
+            ServiceOfferings = LoadServiceOfferings();
+        }
+        public List<ServiceOffering> LoadServiceOfferings()
         {
             List<ServiceOffering> serviceOfferings;
-            serviceOfferings = jsonHandler.ReadJsonObjectFromFile<List<ServiceOffering>>(fileName).Where(s => s.ServicesId == serviceId).ToList();
+            serviceOfferings = jsonHandler.ReadJsonObjectFromFile<List<ServiceOffering>>(fileName);
             return serviceOfferings;
         }
 
@@ -27,9 +32,9 @@ namespace P3_Bookr.DAL
             jsonHandler.WriteJsonObjectToFile(fileName, serviceOfferings);
         }
 
-        public void UpdateServiceOfferings()
+        public void UpdateServiceOfferings(ServiceOffering serviceOffering)
         {
-            throw new NotImplementedException();
+            ServiceOfferings.Where(c => c.Id == serviceOffering.Id).Select(c => c = serviceOffering);
         }
     }
 }
