@@ -18,7 +18,7 @@ namespace P3_Bookr.DAL
 
         public DepartmentDAL(int customerId)
         {
-            _department = LoadDepartments(customerId);
+            Departments = LoadDepartments(customerId);
         }
 
         public List<Department> LoadDepartments(int customerId)
