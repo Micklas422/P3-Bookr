@@ -25,7 +25,7 @@ namespace P3_Bookr.Models
             foreach(Customer cus in _customer)
             {
                 cus.Members = _dataAccesLayer.memberDAL.GetMembersByCustomer(cus.Id);
-                //cus.Departments = _dataAccesLayer.departmentDAL
+                cus.Departments = _dataAccesLayer.departmentDAL.GetDepartmentsByCustomerId(cus.Id);
                 foreach(Member member in cus.Members)
                 {
                     member.Reservations = _dataAccesLayer.reservationDAL.GetReservationsByMember(member.Id);
@@ -39,7 +39,7 @@ namespace P3_Bookr.Models
                     department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
                     foreach (Service service in department.Services)
                     {
-                        service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.LoadServiceOfferings(service.Id);
+                        //service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL;
                         service.TimePeriods = _dataAccesLayer.timeperiodDAL.GetTimePeriodsByService(service.Id);
                     }
                 }
