@@ -56,7 +56,6 @@
             this.ClientSize = new System.Drawing.Size(1024, 706);
             this.Controls.Add(this.paymentInfo1);
             this.Controls.Add(this.personalInfo1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingsPage";
             this.Text = "SettingsPage";
             this.ResumeLayout(false);

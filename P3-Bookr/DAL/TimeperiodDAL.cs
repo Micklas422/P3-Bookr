@@ -10,18 +10,32 @@ namespace P3_Bookr.DAL
 {
     class TimeperiodDAL : ITimeperiodDAL
     {
-        string fileName = "TimerPeriods";
-        JsonHandler jsonHandler = new JsonHandler();
-        public List<TimePeriod> GetTimeperiods(int serviceId)
+        List<TimePeriod> _timePeriods;
+        string _fileName = "TimerPeriods";
+        JsonHandler _jsonHandler = new JsonHandler();
+
+        public TimeperiodDAL()
+        {
+            TimePeriods = LoadTimeperiods();
+        }
+
+        public List<TimePeriod> TimePeriods { get => _timePeriods; private set => _timePeriods = value; }
+
+        List<TimePeriod> LoadTimeperiods()
         {
             List<TimePeriod> timePeriods;
-            timePeriods = jsonHandler.ReadJsonObjectFromFile<List<TimePeriod>>(fileName).Where(t => t.ServicesId == serviceId).ToList();
+            timePeriods = _jsonHandler.ReadJsonObjectFromFile<List<TimePeriod>>(_fileName);
             return timePeriods;
         }
 
+        public List<TimePeriod> GetTimePeriodsByService(int serivceId)
+        {
+            return TimePeriods.Where(t => t.ServicesId == serivceId).ToList();
+        } 
+
         public void SetTimePeriods(List<TimePeriod> timePeriods)
         {
-            jsonHandler.WriteJsonObjectToFile(fileName, timePeriods);
+            _jsonHandler.WriteJsonObjectToFile(_fileName, timePeriods);
         }
     }
 }
