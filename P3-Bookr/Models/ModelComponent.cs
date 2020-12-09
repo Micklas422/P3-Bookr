@@ -31,7 +31,7 @@ namespace P3_Bookr.Models
                     member.Reservations = _dataAccesLayer.reservationDAL.GetReservationsByMember(member.Id);
                     foreach (Reservation reservation in member.Reservations)
                     {
-                        //find payments
+                        reservation.Payments = _dataAccesLayer.paymentDAL.GetPaymentByReservation(reservation.Id);
                     }
                 }
                 foreach(Department department in cus.Departments)
