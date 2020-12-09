@@ -28,7 +28,7 @@ namespace P3_Bookr.DAL
         }
 
 
-        List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId)
+        public List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId)
         {
             return ServiceOfferings.Where(s => s.ServicesId == serviceId).ToList();
         }

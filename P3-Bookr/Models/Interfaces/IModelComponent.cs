@@ -8,7 +8,7 @@ namespace P3_Bookr.Models
 {
     interface IModelComponent
     {
-
+        List<Customer> customer { get; set; }
 
         //ICustomer customer { get; }
         //IDepartment department { get; }
