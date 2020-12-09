@@ -72,6 +72,7 @@
             resources.ApplyResources(this.LogUdKnap, "LogUdKnap");
             this.LogUdKnap.BackColor = System.Drawing.Color.Transparent;
             this.LogUdKnap.Name = "LogUdKnap";
+            this.LogUdKnap.Click += new System.EventHandler(this.LogUdKnap_Click);
             // 
             // BookrLogoKnap
             // 

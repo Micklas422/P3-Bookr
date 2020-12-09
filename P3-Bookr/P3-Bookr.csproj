@@ -172,12 +172,6 @@
     <Compile Include="Windows\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ReservationOverview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\ReservationOverview.Designer.cs">
-      <DependentUpon>ReservationOverview.cs</DependentUpon>
-    </Compile>
     <Compile Include="Windows\Reservation\Reservation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,7 +179,7 @@
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Reservation\ReservationPage.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\Reservation\ReservationPage.Designer.cs">
       <DependentUpon>ReservationPage.cs</DependentUpon>
@@ -305,9 +299,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ReservationOverview.resx">
-      <DependentUpon>ReservationOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Reservation\Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>

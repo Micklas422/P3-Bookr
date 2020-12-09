@@ -14,11 +14,9 @@ namespace P3_Bookr.Windows
 {
     partial class Login : UserControl
     {
-        ILoginManager _loginManager;
         ILogInUI _handler;
-        public Login(ILoginManager loginManager, ILogInUI handler)
+        public Login(ILogInUI handler)
         {
-            _loginManager = loginManager;
             _handler = handler;
             InitializeComponent();
         }
@@ -41,14 +39,14 @@ namespace P3_Bookr.Windows
             password = textBoxUsername.Text;
             username = textBoxUsername.Text;
 
-            if (_loginManager.ValidateLogin(username, password))
-            {
+            //if (_loginManager.ValidateLogin(username, password))
+            //{
 
-            }
-            else
-            {
-                MessageBox.Show("Indtastet brugernavn eller kodeord forkert");
-            }          
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Indtastet brugernavn eller kodeord forkert");
+            //}          
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)

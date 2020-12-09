@@ -8,6 +8,7 @@ using P3_Bookr.Windows;
 using System.Windows.Forms;
 using P3_Bookr.Windows.History;
 using P3_Bookr.Windows.Frontpage;
+using P3_Bookr.Windows.Reservation;
 
 namespace P3_Bookr
 {
@@ -40,12 +41,14 @@ namespace P3_Bookr
         public void SwitchToLogInPage()
         {
             mainWindow.panelSiteView.Controls.Clear();
-            
+            mainWindow.panelForLogIn.Visible = true;
+            mainWindow.panelForLogIn.Controls.Add(new Login(this));
         }
 
         public void SwitchToReservationPage()
         {
-            throw new NotImplementedException();
+            mainWindow.panelSiteView.Controls.Clear();
+            mainWindow.panelSiteView.Controls.Add(new ReservationPage(this));
         }
 
         public void SwitchToServicePage()

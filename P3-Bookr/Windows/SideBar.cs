@@ -32,8 +32,7 @@ namespace P3_Bookr.Windows
 
         private void ReservationerKnap_Click(object sender, EventArgs e)
         {
-            var reservationsPage = new ReservationOverview();
-            reservationsPage.Show();
+            _handler.SwitchToReservationPage();
         }
 
         private void MitForbrugKnap_Click(object sender, EventArgs e)
@@ -56,6 +55,11 @@ namespace P3_Bookr.Windows
         private void ServicesKnap_Click(object sender, EventArgs e)
         {
             _handler.SwitchToServicePage();
+        }
+
+        private void LogUdKnap_Click(object sender, EventArgs e)
+        {
+            _handler.SwitchToLogInPage();
         }
     }
 }

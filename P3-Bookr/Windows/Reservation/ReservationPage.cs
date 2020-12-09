@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows.Reservation
 {
-    public partial class ReservationPage : Form
+    public partial class ReservationPage : UserControl
     {
-        public ReservationPage()
+        IReservationUI _handler;
+        public ReservationPage(IReservationUI handler)
         {
+            _handler = handler;
             InitializeComponent();
         }
 
