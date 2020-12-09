@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IServices
+    public interface IHomepageUI
     {
-
+        void LastUsedService();
+        void News();
     }
 }

@@ -68,7 +68,7 @@
             this.Controls.Add(this.historyElement3);
             this.Controls.Add(this.historyElement2);
             this.Controls.Add(this.historyElement1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistoryPage";
             this.Text = "HistoryPage";
             this.Load += new System.EventHandler(this.HistoryPage_Load);

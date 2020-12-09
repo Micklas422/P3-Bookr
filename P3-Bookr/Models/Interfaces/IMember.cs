@@ -21,6 +21,7 @@ namespace P3_Bookr.Models
         string Password { get; set; }
         int Id { get; }
         int CustomerId { get; set; }
+        List<Reservation> Reservations { get; set; }
         void setPermissions();
         bool approveLogin(string username, string password);
     }

@@ -15,8 +15,8 @@ namespace P3_Bookr.Windows
 {
     public partial class SideBar : UserControl
     {
-        ISideMenu _handler;
-        public SideBar(ISideMenu handler)
+        ISideMenuUI _handler;
+        public SideBar(ISideMenuUI handler)
         {
             InitializeComponent();
             _handler = handler;
@@ -32,14 +32,12 @@ namespace P3_Bookr.Windows
 
         private void ReservationerKnap_Click(object sender, EventArgs e)
         {
-            var reservationsPage = new ReservationOverview();
-            reservationsPage.Show();
+            _handler.SwitchToReservationPage();
         }
 
         private void MitForbrugKnap_Click(object sender, EventArgs e)
         {
-            var mitForbrugSite = new HistoryPage();
-            mitForbrugSite.Show();
+            _handler.SwitchToHistoryPage();
         }
 
         private void IndstillingerKnap_Click(object sender, EventArgs e)
@@ -52,6 +50,16 @@ namespace P3_Bookr.Windows
         private void SideBar_Load(object sender, EventArgs e)
         {
             //this.Dock = DockStyle.Fill;
+        }
+
+        private void ServicesKnap_Click(object sender, EventArgs e)
+        {
+            _handler.SwitchToServicePage();
+        }
+
+        private void LogUdKnap_Click(object sender, EventArgs e)
+        {
+            _handler.SwitchToLogInPage();
         }
     }
 }

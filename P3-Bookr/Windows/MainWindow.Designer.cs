@@ -31,44 +31,58 @@
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBoxBookr = new System.Windows.Forms.PictureBox();
             this.panelSiteView = new System.Windows.Forms.Panel();
+            this.panelForLogIn = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideBar
             // 
-            this.panelSideBar.Location = new System.Drawing.Point(9, 10);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSideBar.Location = new System.Drawing.Point(12, 12);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(223, 436);
+            this.panelSideBar.Size = new System.Drawing.Size(297, 537);
             this.panelSideBar.TabIndex = 0;
             // 
             // pictureBoxBookr
             // 
             this.pictureBoxBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
-            this.pictureBoxBookr.Location = new System.Drawing.Point(326, 10);
-            this.pictureBoxBookr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxBookr.Location = new System.Drawing.Point(435, 12);
+            this.pictureBoxBookr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxBookr.Name = "pictureBoxBookr";
-            this.pictureBoxBookr.Size = new System.Drawing.Size(370, 84);
+            this.pictureBoxBookr.Size = new System.Drawing.Size(493, 103);
             this.pictureBoxBookr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBookr.TabIndex = 1;
             this.pictureBoxBookr.TabStop = false;
             // 
             // panelSiteView
             // 
-            this.panelSiteView.Location = new System.Drawing.Point(236, 98);
-            this.panelSiteView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSiteView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSiteView.Location = new System.Drawing.Point(315, 121);
+            this.panelSiteView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSiteView.Name = "panelSiteView";
-            this.panelSiteView.Size = new System.Drawing.Size(555, 347);
+            this.panelSiteView.Size = new System.Drawing.Size(740, 427);
             this.panelSiteView.TabIndex = 2;
+            // 
+            // panelForLogIn
+            // 
+            this.panelForLogIn.Location = new System.Drawing.Point(12, 12);
+            this.panelForLogIn.Name = "panelForLogIn";
+            this.panelForLogIn.Size = new System.Drawing.Size(1043, 537);
+            this.panelForLogIn.TabIndex = 3;
+            this.panelForLogIn.Visible = false;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 506);
+            this.ClientSize = new System.Drawing.Size(1067, 623);
+            this.Controls.Add(this.panelForLogIn);
             this.Controls.Add(this.panelSiteView);
             this.Controls.Add(this.pictureBoxBookr);
             this.Controls.Add(this.panelSideBar);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).EndInit();
@@ -81,5 +95,6 @@
         public System.Windows.Forms.Panel panelSideBar;
         private System.Windows.Forms.PictureBox pictureBoxBookr;
         public System.Windows.Forms.Panel panelSiteView;
+        public System.Windows.Forms.Panel panelForLogIn;
     }
 }

@@ -138,7 +138,7 @@
             this.Controls.Add(this.newsTop1);
             this.Controls.Add(this.lastUsedServiceTop1);
             this.Controls.Add(this.lastUsedServices1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrontPageForm";
             this.Text = "FrontPageForm";

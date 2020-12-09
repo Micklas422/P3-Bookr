@@ -133,7 +133,13 @@ namespace P3_Bookr.Models
             get { return _customerId; }
             set { _customerId = value; }
         }
-     
+
+        public List<Reservation> Reservations
+        {
+            get { return reservations; }
+            set { reservations = value; }
+        }
+
         public void setPermissions()
         {
             throw new NotImplementedException();
