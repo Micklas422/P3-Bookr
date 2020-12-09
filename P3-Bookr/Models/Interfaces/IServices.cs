@@ -15,5 +15,7 @@ namespace P3_Bookr.Models
         ServiceTypes ServiceType { get; set; }
         int Id { get; }
         int DepartmentId { get; set; }
+        List<TimePeriod> TimePeriods { get; set; }
+        List<ServiceOffering> ServiceOfferings { get; set; }
     }
 }

@@ -66,6 +66,12 @@ namespace P3_Bookr.Models
             set { _customerId = value; }
         }
 
+        public List<Services> Services
+        {
+            get { return services; }
+            set { services = value; }
+        }
+
         public void createService()
         {
             throw new NotImplementedException();

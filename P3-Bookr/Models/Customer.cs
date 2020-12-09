@@ -65,6 +65,16 @@ namespace P3_Bookr.Models
         {
             get { return _id; }
         }
+        public List<Department> Departments
+        {
+            get { return departments; }
+            set { departments = value; }
+        }
+        public List<Member> Members
+        {
+            get { return members; }
+            set { members = value; }
+        }
         public void CreateMember()
         {
             throw new NotImplementedException();

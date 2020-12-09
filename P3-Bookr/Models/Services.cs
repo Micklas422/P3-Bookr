@@ -68,5 +68,16 @@ namespace P3_Bookr.Models
             get { return _departmentId; }
             set { _departmentId = value; }
         }
+        public List<TimePeriod> TimePeriods
+        {
+            get { return timeperiods; }
+            set { timeperiods = value; }
+        }
+
+        public List<ServiceOffering> ServiceOfferings
+        {
+            get { return serviceOfferings; }
+            set { serviceOfferings = value; }
+        }
     }
 }
