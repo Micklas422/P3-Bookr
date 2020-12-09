@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    public interface IReservation
+    public interface ILogInUI
     {
-        void CancelReservation();
+        void LogIn();
     }
 }

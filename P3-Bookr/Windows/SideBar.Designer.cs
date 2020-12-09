@@ -44,6 +44,7 @@
             resources.ApplyResources(this.ServicesKnap, "ServicesKnap");
             this.ServicesKnap.BackColor = System.Drawing.Color.Transparent;
             this.ServicesKnap.Name = "ServicesKnap";
+            this.ServicesKnap.Click += new System.EventHandler(this.ServicesKnap_Click);
             // 
             // ReservationerKnap
             // 

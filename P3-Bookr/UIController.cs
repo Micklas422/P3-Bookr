@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using P3_Bookr.Windows.WindowsInterfaces;
 using P3_Bookr.Windows;
 using System.Windows.Forms;
+using P3_Bookr.Windows.History;
+using P3_Bookr.Windows.Frontpage;
 
 namespace P3_Bookr
 {
-    class UIController : ISideMenu
+    class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI
     {
         bool stayAlive = false;
         MainWindow mainWindow;
@@ -25,17 +27,20 @@ namespace P3_Bookr
         #region SideMenuHandler
         public void SwitchToHistoryPage()
         {
-            throw new NotImplementedException();
+            mainWindow.panelSiteView.Controls.Clear();
+            mainWindow.panelSiteView.Controls.Add(new HistoryPage(this));
         }
 
         public void SwitchToHomePage()
         {
-            throw new NotImplementedException();
+            mainWindow.panelSiteView.Controls.Clear();
+            mainWindow.panelSiteView.Controls.Add(new FrontPageForm(this));
         }
 
         public void SwitchToLogInPage()
         {
-            throw new NotImplementedException();
+            mainWindow.panelSiteView.Controls.Clear();
+            
         }
 
         public void SwitchToReservationPage()
@@ -45,8 +50,8 @@ namespace P3_Bookr
 
         public void SwitchToServicePage()
         {
-            throw new NotImplementedException();
-            //mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
+            mainWindow.panelSiteView.Controls.Clear();
+            mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
         }
 
         public void SwitchToSettingsPage()
@@ -55,7 +60,7 @@ namespace P3_Bookr
         }
         #endregion
 
-        #region ServicesHelper
+        #region ServicesUI
         public void LoadServicesToShow()
         {
             throw new NotImplementedException();
@@ -64,6 +69,77 @@ namespace P3_Bookr
         {
             throw new NotImplementedException();
         }
+
+        public void SelectService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SelectServiceType()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SelectDate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SelectTime()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Book()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
+        #region ResevationUI
+        public void CancelReservation()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region LogInUI
+        public void LogIn()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region HomepageUI
+        public void LastUsedService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void News()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region AdminToolsUI
+        public void AddUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddServiceGroup()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddUserGroup()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+
     }
 }

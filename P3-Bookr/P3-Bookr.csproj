@@ -113,7 +113,7 @@
       <DependentUpon>BigNewsBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Frontpage\FrontPageForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\Frontpage\FrontPageForm.Designer.cs">
       <DependentUpon>FrontPageForm.cs</DependentUpon>
@@ -155,7 +155,7 @@
       <DependentUpon>HistoryElement.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\History\HistoryPage.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\History\HistoryPage.Designer.cs">
       <DependentUpon>HistoryPage.cs</DependentUpon>
@@ -256,9 +256,13 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\WindowsInterfaces\IReservation.cs" />
-    <Compile Include="Windows\WindowsInterfaces\IServices.cs" />
-    <Compile Include="Windows\WindowsInterfaces\ISideMenu.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IAdminToolsUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IHistorikUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IHomepageUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ILogInUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IReservationUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IServicesUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ISideMenuUI.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
