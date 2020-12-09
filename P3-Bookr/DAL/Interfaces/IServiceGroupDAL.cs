@@ -11,6 +11,6 @@ namespace P3_Bookr.DAL.Interfaces
     {
         List<ServiceGroup> GetServicesByMember(int memberId);
         List<ServiceGroup> GetServicesBySerivce(int serviceId);
-        void SetServices(List<Services> services);
+        void SetServices(List<Service> services);
     }
 }

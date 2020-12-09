@@ -17,7 +17,7 @@ namespace P3_Bookr.Models
         string _adress;
         string _description;
 
-        List<Services> services = new List<Services>();
+        List<Service> services = new List<Service>();
 
         public Department(int id, bool isActive, string name, string adress, string description)
         {

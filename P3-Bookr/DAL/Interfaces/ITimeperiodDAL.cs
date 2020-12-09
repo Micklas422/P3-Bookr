@@ -9,7 +9,8 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface ITimeperiodDAL
     {
-        List<TimePeriod> GetTimeperiods(int serviceId);
+        List<TimePeriod> TimePeriods { get; }
+        List<TimePeriod> GetTimePeriodsByService(int serivceId);
         void SetTimePeriods(List<TimePeriod> timeperiods);
     }
 }

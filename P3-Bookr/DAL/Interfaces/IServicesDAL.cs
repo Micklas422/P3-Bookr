@@ -9,10 +9,10 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface IServicesDAL
     {
-        List<Services> Services { get; }
-        Services GetService(int id);
-        Services GetServicesByDepartmentId(int departmentId);
-        void UpdateSerivce(Services service);
-        void SetServices(List<Services> services);
+        List<Service> Services { get; }
+        Service GetService(int id);
+        Service GetServicesByDepartmentId(int departmentId);
+        void UpdateSerivce(Service service);
+        void SetServices(List<Service> services);
     }
 }
