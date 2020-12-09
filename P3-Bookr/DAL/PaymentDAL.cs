@@ -10,18 +10,37 @@ namespace P3_Bookr.DAL
 {
     class PaymentDAL : IPaymentDAL
     {
-        string fileName = "Payments";
-        JsonHandler JsonHandler = new JsonHandler();
-        public List<Payment> GetPayments(int reservationsId)
+        List<Payment> _payments;
+        string _fileName = "Payments";
+        JsonHandler _JsonHandler = new JsonHandler();
+
+        public PaymentDAL()
+        {
+            Payments = LoadPayments();
+        }
+
+        public List<Payment> Payments { get => _payments; private set => _payments = value; }
+
+        public Payment GetPayment(int paymentId)
+        {
+            return Payments.Where(p => p.Id == paymentId).FirstOrDefault();
+        }
+
+        public List<Payment> GetPaymentByReservation(int reservationId)
+        {
+            return Payments.Where(p => p.ReservationId == reservationId).ToList();
+        }
+
+        public List<Payment> LoadPayments()
         {
             List<Payment> payments;
-            payments = JsonHandler.ReadJsonObjectFromFile<List<Payment>>(fileName).Where(p => p.ReservationId == reservationsId).ToList();
+            payments = _JsonHandler.ReadJsonObjectFromFile<List<Payment>>(_fileName);
             return payments;
         }
 
         public void SetPayments(List<Payment> payments)
         {
-            JsonHandler.WriteJsonObjectToFile(fileName, payments);
+            _JsonHandler.WriteJsonObjectToFile(_fileName, payments);
         }
     }
 }

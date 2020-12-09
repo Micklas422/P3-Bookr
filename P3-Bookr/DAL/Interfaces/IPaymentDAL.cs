@@ -9,7 +9,11 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface IPaymentDAL
     {
-        List<Payment> GetPayments(int reservationsId);
+        List<Payment> Payments { get; }
+        Payment GetPayment(int paymentId);
+
+        List<Payment> GetPaymentByReservation(int reservationId);
+
         void SetPayments(List<Payment> payments);
     }
 }
