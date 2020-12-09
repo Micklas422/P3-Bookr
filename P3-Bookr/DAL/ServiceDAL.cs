@@ -10,7 +10,7 @@ namespace P3_Bookr.DAL.Interfaces
 {
     class ServiceDAL : IServicesDAL
     {
-        List<Services> _services;
+        List<Service> _services;
         string _fileName = "Serives";
         JsonHandler _jsonHandler = new JsonHandler();
 
@@ -19,36 +19,36 @@ namespace P3_Bookr.DAL.Interfaces
             Services = LoadServices();
         }
 
-        public List<Services> Services { get => _services; private set => _services = value; }
+        public List<Service> Services { get => _services; private set => _services = value; }
 
-        public List<Services> LoadServices()
+        public List<Service> LoadServices()
         {
-            List<Services> services;
-            services = _jsonHandler.ReadJsonObjectFromFile<List<Services>>(_fileName);
+            List<Service> services;
+            services = _jsonHandler.ReadJsonObjectFromFile<List<Service>>(_fileName);
             return services;
         }
 
-        public List<Services> GetServices()
+        public List<Service> GetServices()
         {
             return Services;
         }
 
-        public Services GetService(int id)
+        public Service GetService(int id)
         {
             return Services.Where(s => s.Id == id).FirstOrDefault();
         }
 
-        public Services GetServicesByDepartmentId(int departmentId)
+        public Service GetServicesByDepartmentId(int departmentId)
         {
             return Services.Where(s => s.DepartmentId == departmentId).FirstOrDefault();
         }
 
-        public void UpdateSerivce(Services service)
+        public void UpdateSerivce(Service service)
         {
             Services.Where(s => s.Id == service.Id).Select(s => s = service);
         }
 
-        public void SetServices(List<Services> services)
+        public void SetServices(List<Service> services)
         {
             _jsonHandler.WriteJsonObjectToFile(_fileName, services);
         }
