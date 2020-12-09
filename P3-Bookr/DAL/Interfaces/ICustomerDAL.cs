@@ -9,7 +9,7 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface ICustomerDAL
     {
-        List<Customer> Loadcustomers();
-        void SaveCustomers(List<Customer> customers);
+        List<Customer> GetCustomers();
+        void SetCustomers(List<Customer> customers);
     }
 }

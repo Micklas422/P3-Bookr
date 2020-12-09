@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class PermissionManager
+    class PermissionManager : IPermissionManager
     {
+        public bool ValidatePermission(string username)
+        {
+            return true;
+        }
     }
 }

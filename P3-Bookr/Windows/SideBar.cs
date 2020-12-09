@@ -48,5 +48,10 @@ namespace P3_Bookr.Windows
 
             //indstillingerSite.Show();
         }
+
+        private void SideBar_Load(object sender, EventArgs e)
+        {
+            //this.Dock = DockStyle.Fill;
+        }
     }
 }

@@ -8,14 +8,20 @@ namespace P3_Bookr.Models
 {
     class ServiceOffering : IServiceOffering
     {
+        static List<int> UniqueIds = new List<int>();
+
         int _id;
         int _servicesId;
         string _name;
         int _duration;
         float _price;
 
-        public ServiceOffering(string name, int duration, float price)
+        public ServiceOffering(int id, string name, int duration, float price)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _name = name;
             _duration = duration;
             _price = price;

@@ -99,10 +99,10 @@
     <Compile Include="Models\AllModelsInterface.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Reservation.cs" />
-    <Compile Include="Models\Servicegroup.cs" />
+    <Compile Include="Models\ServiceGroup.cs" />
     <Compile Include="Models\ServiceOffering.cs" />
     <Compile Include="Models\Services.cs" />
-    <Compile Include="Models\Timeperiod.cs" />
+    <Compile Include="Models\TimePeriod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIController.cs" />
@@ -195,12 +195,6 @@
     </Compile>
     <Compile Include="Windows\ServiceDetails.Designer.cs">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ServiceDetailsCalendar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
-      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServicePanels\ServiceInfoPanel.cs">
       <SubType>UserControl</SubType>
@@ -323,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetails.resx">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceDetailsCalendar.resx">
-      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicePanels\ServiceInfoPanel.resx">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>

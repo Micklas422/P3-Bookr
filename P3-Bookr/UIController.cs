@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace P3_Bookr
 {
-    class UIController: ISideMenu, IHistorik, IHomepage, ILogIn, IReservation, IServices
+    class UIController : ISideMenu
     {
         bool stayAlive = false;
         MainWindow mainWindow;
@@ -21,7 +21,6 @@ namespace P3_Bookr
             //mainWindow.panelSideBar.Controls[0].Show();
             Application.Run(mainWindow);
         }
-
 
         #region SideMenuHandler
         public void SwitchToHistoryPage()
@@ -47,9 +46,21 @@ namespace P3_Bookr
         public void SwitchToServicePage()
         {
             throw new NotImplementedException();
+            //mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
         }
 
         public void SwitchToSettingsPage()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region ServicesHelper
+        public void LoadServicesToShow()
+        {
+            throw new NotImplementedException();
+        }
+        public void ChooseServices()
         {
             throw new NotImplementedException();
         }

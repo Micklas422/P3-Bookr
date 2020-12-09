@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows
 {
     public partial class ServicesOverview : UserControl
     {
-        public ServicesOverview()
+        IServices _handler;
+        public ServicesOverview(IServices handler)
         {
             InitializeComponent();
+            _handler = handler;
         }
 
         private void ServicesOverview_Load(object sender, EventArgs e)
