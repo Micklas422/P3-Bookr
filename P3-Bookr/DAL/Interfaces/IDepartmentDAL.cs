@@ -9,7 +9,7 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface IDepartmentDAL
     {
-        List<Department> GetDepartments(int customerId);
+        List<Department> LoadDepartments(int customerId);
         void SetDepartments(List<Department> departments);
     }
 }
