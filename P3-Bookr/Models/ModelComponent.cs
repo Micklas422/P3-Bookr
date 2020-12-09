@@ -36,10 +36,14 @@ namespace P3_Bookr.Models
                 }
                 foreach(Department department in cus.Departments)
                 {
-                    //department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
+                    department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
+                    foreach (Service service in department.Services)
+                    {
+                        service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.LoadServiceOfferings(service.Id);
+                        service.TimePeriods = _dataAccesLayer.timeperiodDAL.GetTimePeriodsByService(service.Id);
+                    }
                 }
             }
-
         }
 
         public IDataAccesLayer DAL
