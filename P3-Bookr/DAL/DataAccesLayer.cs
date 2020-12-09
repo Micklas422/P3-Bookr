@@ -29,11 +29,53 @@ namespace P3_Bookr.DAL
             _serviceGroupDAL = new ServiceGroupDAL();
             _serviceOfferingDAL = new ServiceOfferingDAL();
             //_servicesDAL = new ServicesDAL();
+            _timeperiodDAL = new TimeperiodDAL();
         }
 
-        ICustomerDAL CustomerDAL
+        public ICustomerDAL CustomerDAL
         {
             get { return _customerDAL; }
+            private set { _customerDAL = value; }
+        }
+        public IDepartmentDAL DepartmentDAL
+        {
+            get { return _departmentDAL; }
+            private set { _departmentDAL = value; }
+        }
+        public IMemberDAL MemberDAL
+        {
+            get { return _memberDAL; }
+            private set { _memberDAL = value; }
+        }
+        public IPaymentDAL PaymentDAL
+        {
+            get { return _paymentDAL; }
+            private set { _paymentDAL = value; }
+        }
+        public IReservationDAL ReservationDAL
+        {
+            get { return _reservationDAL; }
+            private set { _reservationDAL = value; }
+        }
+        public IServiceGroupDAL ServiceGroupDAL
+        {
+            get { return _serviceGroupDAL; }
+            private set { _serviceGroupDAL = value; }
+        }
+        public IServiceOfferingDAL ServiceOfferingDAL
+        {
+            get { return _serviceOfferingDAL; }
+            private set { _serviceOfferingDAL = value; }
+        }
+        public IServicesDAL ServicesDAL
+        {
+            get { return _servicesDAL; }
+            private set { _servicesDAL = value; }
+        }
+        public ITimeperiodDAL TimeperiodDAL
+        {
+            get { return _timeperiodDAL; }
+            private set { _timeperiodDAL = value; }
         }
     }
 }
