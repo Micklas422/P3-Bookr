@@ -39,7 +39,7 @@ namespace P3_Bookr.Models
                     department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
                     foreach (Service service in department.Services)
                     {
-                        service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.LoadServiceOfferings(service.Id);
+                        service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.GetServiceOfferingsByServiceId(service.Id);
                         service.TimePeriods = _dataAccesLayer.timeperiodDAL.GetTimePeriodsByService(service.Id);
                     }
                 }
