@@ -15,7 +15,7 @@ namespace P3_Bookr.DAL.Interfaces
         IReservationDAL reservationDAL { get; }
         IServiceGroupDAL serviceGroupDAL { get; }
         IServiceOfferingDAL serviceOfferingDAL { get; }
-        IServicesDAL servicesDAL { get; }
+        IServiceDAL serviceDAL { get; }
         ITimeperiodDAL timeperiodDAL { get; }
     }
 }
