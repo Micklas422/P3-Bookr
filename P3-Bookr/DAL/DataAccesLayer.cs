@@ -7,7 +7,7 @@ using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.DAL
 {
-    class DataAccesLayer : IDataAccesLayer
+    class DataAccesLayer
     {
         ICustomerDAL _customerDAL;
         IDepartmentDAL _departmentDAL;
@@ -32,47 +32,47 @@ namespace P3_Bookr.DAL
             _timeperiodDAL = new TimeperiodDAL();
         }
 
-        public ICustomerDAL CustomerDAL
+        public ICustomerDAL customerDAL
         {
             get { return _customerDAL; }
             private set { _customerDAL = value; }
         }
-        public IDepartmentDAL DepartmentDAL
+        public IDepartmentDAL cepartmentDAL
         {
             get { return _departmentDAL; }
             private set { _departmentDAL = value; }
         }
-        public IMemberDAL MemberDAL
+        public IMemberDAL memberDAL
         {
             get { return _memberDAL; }
             private set { _memberDAL = value; }
         }
-        public IPaymentDAL PaymentDAL
+        public IPaymentDAL paymentDAL
         {
             get { return _paymentDAL; }
             private set { _paymentDAL = value; }
         }
-        public IReservationDAL ReservationDAL
+        public IReservationDAL reservationDAL
         {
             get { return _reservationDAL; }
             private set { _reservationDAL = value; }
         }
-        public IServiceGroupDAL ServiceGroupDAL
+        public IServiceGroupDAL serviceGroupDAL
         {
             get { return _serviceGroupDAL; }
             private set { _serviceGroupDAL = value; }
         }
-        public IServiceOfferingDAL ServiceOfferingDAL
+        public IServiceOfferingDAL serviceOfferingDAL
         {
             get { return _serviceOfferingDAL; }
             private set { _serviceOfferingDAL = value; }
         }
-        public IServicesDAL ServiceDAL
+        public IServicesDAL serviceDAL
         {
             get { return _serviceDAL; }
             private set { _serviceDAL = value; }
         }
-        public ITimeperiodDAL TimeperiodDAL
+        public ITimeperiodDAL timeperiodDAL
         {
             get { return _timeperiodDAL; }
             private set { _timeperiodDAL = value; }
