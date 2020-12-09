@@ -10,6 +10,7 @@ using P3_Bookr.Windows.History;
 using P3_Bookr.Windows.Frontpage;
 using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
+using P3_Bookr.FunctionComponent;
 
 namespace P3_Bookr
 {
@@ -17,6 +18,7 @@ namespace P3_Bookr
     {
         bool stayAlive = false;
         MainWindow mainWindow;
+        ILoginManager _logInHandler =new LoginManager();
         public UIController()
         {
             mainWindow = new MainWindow();
@@ -63,7 +65,7 @@ namespace P3_Bookr
             mainWindow.panelSiteView.Controls.Clear();
             mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
         }
-        #endregion
+        #endregion //DONE
         #region ServicesUI
         public void LoadServicesToShow()
         {
@@ -106,9 +108,15 @@ namespace P3_Bookr
         }
         #endregion
         #region LogInUI
-        public void LogIn()
+        public void LogIn(string username, string password)
         {
-            throw new NotImplementedException();
+
+            if (_logInHandler.ValidateLogin(username, password) == true)
+            {
+                mainWindow.panelForLogIn.Visible = false;
+                SwitchToHomePage();
+            }
+            
         }
         #endregion
         #region HomepageUI

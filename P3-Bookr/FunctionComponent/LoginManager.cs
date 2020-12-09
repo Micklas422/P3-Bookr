@@ -12,13 +12,9 @@ namespace P3_Bookr.FunctionComponent
         readonly Member member;
         public bool ValidateLogin(string username, string password)
         {
-            
-            if (member.Username == username && member.Password == password)
-            {
-                return true;
-            }
-            else 
-                return false;
+            return true;
+            from member in 
+
         }
     }
 }
