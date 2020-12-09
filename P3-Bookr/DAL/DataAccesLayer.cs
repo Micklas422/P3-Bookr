@@ -16,7 +16,7 @@ namespace P3_Bookr.DAL
         IReservationDAL _reservationDAL;
         IServiceGroupDAL _serviceGroupDAL;
         IServiceOfferingDAL _serviceOfferingDAL;
-        IServicesDAL _servicesDAL;
+        IServicesDAL _serviceDAL;
         ITimeperiodDAL _timeperiodDAL;
 
         public DataAccesLayer()
@@ -28,7 +28,7 @@ namespace P3_Bookr.DAL
             _reservationDAL = new ReservationDAL();
             _serviceGroupDAL = new ServiceGroupDAL();
             _serviceOfferingDAL = new ServiceOfferingDAL();
-            //_servicesDAL = new ServicesDAL();
+            _serviceDAL = new ServiceDAL();
             _timeperiodDAL = new TimeperiodDAL();
         }
 
@@ -67,10 +67,10 @@ namespace P3_Bookr.DAL
             get { return _serviceOfferingDAL; }
             private set { _serviceOfferingDAL = value; }
         }
-        public IServicesDAL ServicesDAL
+        public IServicesDAL ServiceDAL
         {
-            get { return _servicesDAL; }
-            private set { _servicesDAL = value; }
+            get { return _serviceDAL; }
+            private set { _serviceDAL = value; }
         }
         public ITimeperiodDAL TimeperiodDAL
         {
