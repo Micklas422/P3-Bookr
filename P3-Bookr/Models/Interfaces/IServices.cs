@@ -7,7 +7,7 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    interface IServices
+    interface IService
     {
         string Name { get; set; }
         bool DepartmentDeactivatet { get; set; }

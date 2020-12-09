@@ -66,7 +66,7 @@ namespace P3_Bookr.Models
             set { _customerId = value; }
         }
 
-        public List<Services> Services
+        public List<Service> Services
         {
             get { return services; }
             set { services = value; }

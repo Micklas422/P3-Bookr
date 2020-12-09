@@ -38,9 +38,9 @@ namespace P3_Bookr.DAL.Interfaces
             return Services.Where(s => s.Id == id).FirstOrDefault();
         }
 
-        public Service GetServicesByDepartmentId(int departmentId)
+        public List<Service> GetServicesByDepartmentId(int departmentId)
         {
-            return Services.Where(s => s.DepartmentId == departmentId).FirstOrDefault();
+            return Services.Where(s => s.DepartmentId == departmentId).ToList();
         }
 
         public void UpdateSerivce(Service service)

@@ -7,7 +7,7 @@ using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.DAL
 {
-    class DataAccesLayer
+    class DataAccesLayer : IDataAccesLayer
     {
         ICustomerDAL _customerDAL;
         IDepartmentDAL _departmentDAL;
@@ -16,7 +16,7 @@ namespace P3_Bookr.DAL
         IReservationDAL _reservationDAL;
         IServiceGroupDAL _serviceGroupDAL;
         IServiceOfferingDAL _serviceOfferingDAL;
-        IServicesDAL _serviceDAL;
+        IServiceDAL _serviceDAL;
         ITimeperiodDAL _timeperiodDAL;
 
         public DataAccesLayer()
@@ -37,7 +37,7 @@ namespace P3_Bookr.DAL
             get { return _customerDAL; }
             private set { _customerDAL = value; }
         }
-        public IDepartmentDAL cepartmentDAL
+        public IDepartmentDAL departmentDAL
         {
             get { return _departmentDAL; }
             private set { _departmentDAL = value; }
@@ -67,7 +67,7 @@ namespace P3_Bookr.DAL
             get { return _serviceOfferingDAL; }
             private set { _serviceOfferingDAL = value; }
         }
-        public IServicesDAL serviceDAL
+        public IServiceDAL serviceDAL
         {
             get { return _serviceDAL; }
             private set { _serviceDAL = value; }
