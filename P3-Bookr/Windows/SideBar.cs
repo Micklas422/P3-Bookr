@@ -42,9 +42,7 @@ namespace P3_Bookr.Windows
 
         private void IndstillingerKnap_Click(object sender, EventArgs e)
         {
-            //var indstillingerSite = new Settings();
-
-            //indstillingerSite.Show();
+            _handler.SwitchToSettingsPage();
         }
 
         private void SideBar_Load(object sender, EventArgs e)
