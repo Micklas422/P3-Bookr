@@ -51,7 +51,14 @@ namespace P3_Bookr
                 c.Departments[0].Services[0]),
                 c.Departments[0].Services[0].ServiceOfferings[0]));
 
+            List<Customer> customers = new List<Customer>();
+            customers.Add(c);
+
+            IDataAccesLayer dal = new DataAccesLayer();
+            dal.customerDAL.SetCustomers(customers);
+
             IModelComponent m = new ModelComponent(new DataAccesLayer());
+
             m.customer.Add(c);
             //IFunctionComponentInterface functionComponent = new FunctionComponenten(new ModelComponent(new DataAccesLayer()));
             IFunctionComponentInterface functionComponent = new FunctionComponenten(m);
