@@ -35,17 +35,17 @@
             // personalInfo1
             // 
             this.personalInfo1.BackColor = System.Drawing.Color.White;
-            this.personalInfo1.Location = new System.Drawing.Point(73, 74);
+            this.personalInfo1.Location = new System.Drawing.Point(66, 20);
             this.personalInfo1.Name = "personalInfo1";
-            this.personalInfo1.Size = new System.Drawing.Size(889, 318);
+            this.personalInfo1.Size = new System.Drawing.Size(888, 318);
             this.personalInfo1.TabIndex = 0;
             // 
             // paymentInfo1
             // 
             this.paymentInfo1.BackColor = System.Drawing.Color.White;
-            this.paymentInfo1.Location = new System.Drawing.Point(73, 423);
+            this.paymentInfo1.Location = new System.Drawing.Point(66, 358);
             this.paymentInfo1.Name = "paymentInfo1";
-            this.paymentInfo1.Size = new System.Drawing.Size(889, 271);
+            this.paymentInfo1.Size = new System.Drawing.Size(888, 271);
             this.paymentInfo1.TabIndex = 1;
             // 
             // SettingsPage
@@ -53,11 +53,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.ClientSize = new System.Drawing.Size(1024, 706);
             this.Controls.Add(this.paymentInfo1);
             this.Controls.Add(this.personalInfo1);
             this.Name = "SettingsPage";
-            this.Text = "SettingsPage";
+            this.Size = new System.Drawing.Size(1020, 720);
             this.ResumeLayout(false);
 
         }

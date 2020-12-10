@@ -58,6 +58,7 @@ namespace P3_Bookr.Windows
         private void LogUdKnap_Click(object sender, EventArgs e)
         {
             _handler.SwitchToLogInPage();
+            
         }
     }
 }
