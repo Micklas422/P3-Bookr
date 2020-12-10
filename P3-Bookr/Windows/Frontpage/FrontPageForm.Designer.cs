@@ -42,7 +42,7 @@
             // smallNewsBox4
             // 
             this.smallNewsBox4.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox4.Location = new System.Drawing.Point(328, 743);
+            this.smallNewsBox4.Location = new System.Drawing.Point(326, 679);
             this.smallNewsBox4.Margin = new System.Windows.Forms.Padding(4);
             this.smallNewsBox4.Name = "smallNewsBox4";
             this.smallNewsBox4.Size = new System.Drawing.Size(253, 163);
@@ -51,7 +51,7 @@
             // smallNewsBox3
             // 
             this.smallNewsBox3.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox3.Location = new System.Drawing.Point(60, 749);
+            this.smallNewsBox3.Location = new System.Drawing.Point(58, 679);
             this.smallNewsBox3.Margin = new System.Windows.Forms.Padding(4);
             this.smallNewsBox3.Name = "smallNewsBox3";
             this.smallNewsBox3.Size = new System.Drawing.Size(253, 163);
@@ -60,7 +60,7 @@
             // bigNewsBox2
             // 
             this.bigNewsBox2.BackColor = System.Drawing.Color.White;
-            this.bigNewsBox2.Location = new System.Drawing.Point(596, 706);
+            this.bigNewsBox2.Location = new System.Drawing.Point(594, 642);
             this.bigNewsBox2.Margin = new System.Windows.Forms.Padding(4);
             this.bigNewsBox2.Name = "bigNewsBox2";
             this.bigNewsBox2.Size = new System.Drawing.Size(340, 200);
@@ -69,7 +69,7 @@
             // smallNewsBox2
             // 
             this.smallNewsBox2.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox2.Location = new System.Drawing.Point(683, 525);
+            this.smallNewsBox2.Location = new System.Drawing.Point(681, 461);
             this.smallNewsBox2.Margin = new System.Windows.Forms.Padding(4);
             this.smallNewsBox2.Name = "smallNewsBox2";
             this.smallNewsBox2.Size = new System.Drawing.Size(253, 163);
@@ -78,7 +78,7 @@
             // smallNewsBox1
             // 
             this.smallNewsBox1.BackColor = System.Drawing.Color.White;
-            this.smallNewsBox1.Location = new System.Drawing.Point(415, 525);
+            this.smallNewsBox1.Location = new System.Drawing.Point(413, 461);
             this.smallNewsBox1.Margin = new System.Windows.Forms.Padding(4);
             this.smallNewsBox1.Name = "smallNewsBox1";
             this.smallNewsBox1.Size = new System.Drawing.Size(253, 163);
@@ -87,7 +87,7 @@
             // bigNewsBox1
             // 
             this.bigNewsBox1.BackColor = System.Drawing.Color.White;
-            this.bigNewsBox1.Location = new System.Drawing.Point(60, 525);
+            this.bigNewsBox1.Location = new System.Drawing.Point(58, 461);
             this.bigNewsBox1.Margin = new System.Windows.Forms.Padding(4);
             this.bigNewsBox1.Name = "bigNewsBox1";
             this.bigNewsBox1.Size = new System.Drawing.Size(340, 200);
@@ -96,7 +96,7 @@
             // newsTop1
             // 
             this.newsTop1.BackColor = System.Drawing.Color.White;
-            this.newsTop1.Location = new System.Drawing.Point(60, 457);
+            this.newsTop1.Location = new System.Drawing.Point(58, 393);
             this.newsTop1.Margin = new System.Windows.Forms.Padding(4);
             this.newsTop1.Name = "newsTop1";
             this.newsTop1.Size = new System.Drawing.Size(876, 50);
@@ -105,7 +105,7 @@
             // lastUsedServiceTop1
             // 
             this.lastUsedServiceTop1.BackColor = System.Drawing.Color.White;
-            this.lastUsedServiceTop1.Location = new System.Drawing.Point(60, 85);
+            this.lastUsedServiceTop1.Location = new System.Drawing.Point(58, 20);
             this.lastUsedServiceTop1.Margin = new System.Windows.Forms.Padding(4);
             this.lastUsedServiceTop1.Name = "lastUsedServiceTop1";
             this.lastUsedServiceTop1.Size = new System.Drawing.Size(876, 50);
@@ -114,9 +114,10 @@
             // 
             // lastUsedServices1
             // 
+            this.lastUsedServices1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lastUsedServices1.AutoScroll = true;
             this.lastUsedServices1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.lastUsedServices1.Location = new System.Drawing.Point(60, 141);
+            this.lastUsedServices1.Location = new System.Drawing.Point(58, 77);
             this.lastUsedServices1.Margin = new System.Windows.Forms.Padding(4);
             this.lastUsedServices1.Name = "lastUsedServices1";
             this.lastUsedServices1.Size = new System.Drawing.Size(876, 285);
@@ -126,6 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.Controls.Add(this.smallNewsBox4);

@@ -65,7 +65,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSiteView.AutoScroll = true;
-            this.panelSiteView.AutoSize = true;
             this.panelSiteView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.panelSiteView.Location = new System.Drawing.Point(236, 98);
             this.panelSiteView.Margin = new System.Windows.Forms.Padding(2);
