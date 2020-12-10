@@ -11,16 +11,16 @@ namespace P3_Bookr.FunctionComponent
 {
     public class LoginManager : ILoginManager
     {
-        Member _member = null;
-        IModelComponent _modelComponentHandler;
+        Member _member;
+        IModelComponent _modelComponent;
+        public LoginManager(IModelComponent modelComponent)
+        {
+            _modelComponent = modelComponent;
+        }
         public Member ValidateLogin(string username, string password)
         {
-            Member member = _modelComponentHandler.GetMemberByUsername(username); //sets the new member to member by username
-            if (member != null && member.Password == password)
-                _member = member;
-            if (member != null && member.Password != password)
-                return _member;
-            return _member;
+            Member member = new Member();
+            return member;
 
 
         }

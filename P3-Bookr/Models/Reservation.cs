@@ -18,6 +18,8 @@ namespace P3_Bookr.Models
         DateTime _reservationDate;
         int _duration;
         DateTime _reservationDeadline;
+        TimePeriod _timePeriod;
+        ServiceOffering _serviceOffering;
 
         List<Payment> payments = new List<Payment>();
 
@@ -27,13 +29,16 @@ namespace P3_Bookr.Models
             BindingReservation,
             Cancelled
         };
-        public Reservation(int id, DateTime reservationDate)
+        public Reservation(int id, DateTime reservationDate, TimePeriod timePeriod, ServiceOffering serviceOffering)
         {
             if (UniqueIds.Contains(id))
                 throw new ArgumentException();
             UniqueIds.Add(id);
             _id = id;
             _reservationDate = reservationDate;
+            TimePeriod = timePeriod;
+            ServiceOffering = serviceOffering;
+            
         }
         public DateTime CreationDate
         {
@@ -82,5 +87,8 @@ namespace P3_Bookr.Models
             get { return payments; }
             set { payments = value; }
         }
+
+        internal TimePeriod TimePeriod { get => _timePeriod; set => _timePeriod = value; }
+        internal ServiceOffering ServiceOffering { get => _serviceOffering; set => _serviceOffering = value; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace P3_Bookr.FunctionComponent
 {
-    interface IServiceManager
+    public interface IServiceManager
     {
         void Reserve();
 

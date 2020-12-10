@@ -7,7 +7,7 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    class Service : IService
+    public class Service : IService
     {
         static List<int> UniqueIds = new List<int>();
 

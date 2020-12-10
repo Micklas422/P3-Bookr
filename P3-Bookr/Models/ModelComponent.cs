@@ -8,7 +8,7 @@ using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.Models
 {
-    class ModelComponent
+    class ModelComponent:IModelComponent
     {
         IDataAccesLayer _dataAccesLayer;
         List<Customer> _customer;
