@@ -36,26 +36,26 @@
             // historyElement1
             // 
             this.historyElement1.BackColor = System.Drawing.Color.White;
-            this.historyElement1.Location = new System.Drawing.Point(11, 86);
+            this.historyElement1.Location = new System.Drawing.Point(200, 86);
             this.historyElement1.Name = "historyElement1";
-            this.historyElement1.Size = new System.Drawing.Size(881, 112);
+            this.historyElement1.Size = new System.Drawing.Size(880, 112);
             this.historyElement1.TabIndex = 0;
             // 
             // historyElement2
             // 
             this.historyElement2.BackColor = System.Drawing.Color.White;
-            this.historyElement2.Location = new System.Drawing.Point(11, 233);
+            this.historyElement2.Location = new System.Drawing.Point(200, 233);
             this.historyElement2.Name = "historyElement2";
-            this.historyElement2.Size = new System.Drawing.Size(881, 112);
+            this.historyElement2.Size = new System.Drawing.Size(880, 112);
             this.historyElement2.TabIndex = 1;
             // 
             // historyElement3
             // 
             this.historyElement3.AutoScroll = true;
             this.historyElement3.BackColor = System.Drawing.Color.White;
-            this.historyElement3.Location = new System.Drawing.Point(14, 378);
+            this.historyElement3.Location = new System.Drawing.Point(200, 378);
             this.historyElement3.Name = "historyElement3";
-            this.historyElement3.Size = new System.Drawing.Size(881, 112);
+            this.historyElement3.Size = new System.Drawing.Size(880, 112);
             this.historyElement3.TabIndex = 2;
             // 
             // HistoryPage
@@ -64,13 +64,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.ClientSize = new System.Drawing.Size(924, 450);
             this.Controls.Add(this.historyElement3);
             this.Controls.Add(this.historyElement2);
             this.Controls.Add(this.historyElement1);
-            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistoryPage";
-            this.Text = "HistoryPage";
+            this.Size = new System.Drawing.Size(1280, 720);
             this.Load += new System.EventHandler(this.HistoryPage_Load);
             this.ResumeLayout(false);
 

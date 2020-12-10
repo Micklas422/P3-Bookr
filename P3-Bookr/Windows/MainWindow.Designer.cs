@@ -37,17 +37,20 @@
             // 
             // panelSideBar
             // 
+            this.panelSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelSideBar.Location = new System.Drawing.Point(9, 10);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideBar.Name = "panelSideBar";
             this.panelSideBar.Size = new System.Drawing.Size(223, 660);
             this.panelSideBar.TabIndex = 0;
             // 
             // pictureBoxBookr
             // 
+            this.pictureBoxBookr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
             this.pictureBoxBookr.Location = new System.Drawing.Point(528, 10);
-            this.pictureBoxBookr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxBookr.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxBookr.Name = "pictureBoxBookr";
             this.pictureBoxBookr.Size = new System.Drawing.Size(370, 84);
             this.pictureBoxBookr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -60,15 +63,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSiteView.Location = new System.Drawing.Point(236, 98);
-            this.panelSiteView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSiteView.Margin = new System.Windows.Forms.Padding(2);
             this.panelSiteView.Name = "panelSiteView";
             this.panelSiteView.Size = new System.Drawing.Size(1019, 572);
             this.panelSiteView.TabIndex = 2;
             // 
             // panelForLogIn
             // 
+            this.panelForLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelForLogIn.Location = new System.Drawing.Point(9, 10);
-            this.panelForLogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelForLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.panelForLogIn.Name = "panelForLogIn";
             this.panelForLogIn.Size = new System.Drawing.Size(1246, 660);
             this.panelForLogIn.TabIndex = 3;
@@ -79,10 +85,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panelForLogIn);
             this.Controls.Add(this.panelSiteView);
             this.Controls.Add(this.pictureBoxBookr);
             this.Controls.Add(this.panelSideBar);
+            this.Controls.Add(this.panelForLogIn);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).EndInit();
