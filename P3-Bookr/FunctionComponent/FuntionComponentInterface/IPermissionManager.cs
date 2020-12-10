@@ -2,6 +2,6 @@
 {
     interface IPermissionManager
     {
-
+        bool ValidatePermission(string username);
     }
 }

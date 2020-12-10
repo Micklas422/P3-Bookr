@@ -32,13 +32,14 @@ namespace P3_Bookr.Windows
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
+        
         {
 
             string username;
             string password;
             password = textBoxUsername.Text;
             username = textBoxUsername.Text;
-
+            _handler.LogIn(username, password);
             //if (_loginManager.ValidateLogin(username, password))
             //{
 

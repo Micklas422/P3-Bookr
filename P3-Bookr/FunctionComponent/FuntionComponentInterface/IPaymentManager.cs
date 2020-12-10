@@ -2,6 +2,8 @@
 {
     interface IPaymentManager
     {
+        void Pay();
 
+        void Cancel();
     }
 }

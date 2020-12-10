@@ -8,6 +8,6 @@ namespace P3_Bookr.Windows.WindowsInterfaces
 {
     public interface ILogInUI
     {
-        void LogIn();
+        void LogIn(string username, string password);
     }
 }

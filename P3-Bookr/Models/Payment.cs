@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Payment : IPayment
+    public class Payment : IPayment
     {
         static List<int> UniqueIds = new List<int>();
 
