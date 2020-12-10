@@ -10,7 +10,6 @@ namespace P3_Bookr.DAL.Interfaces
     interface IServiceOfferingDAL
     {
         List<ServiceOffering> ServiceOfferings { get; }
-        List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId);
         void SetServiceOfferings(List<ServiceOffering> serviceOfferings);
         List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId);
         ServiceOffering GetServiceOffering(int id);

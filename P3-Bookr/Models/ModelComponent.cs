@@ -52,6 +52,15 @@ namespace P3_Bookr.Models
             set { _customer = value; }
         }
 
+        public Member GetMemberByUsername(string username)
+        {
+            foreach (Customer cus in _customer)
+            {
+                return cus.Members.Where(m => m.Username == username).FirstOrDefault();
+            }
+            throw new ArgumentException();
+        }
+
         public IDataAccesLayer DAL
         {
             get { return _dataAccesLayer; }
