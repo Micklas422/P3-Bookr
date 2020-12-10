@@ -36,7 +36,7 @@
             // historyElement1
             // 
             this.historyElement1.BackColor = System.Drawing.Color.White;
-            this.historyElement1.Location = new System.Drawing.Point(70, 86);
+            this.historyElement1.Location = new System.Drawing.Point(70, 20);
             this.historyElement1.Name = "historyElement1";
             this.historyElement1.Size = new System.Drawing.Size(880, 112);
             this.historyElement1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // historyElement2
             // 
             this.historyElement2.BackColor = System.Drawing.Color.White;
-            this.historyElement2.Location = new System.Drawing.Point(70, 233);
+            this.historyElement2.Location = new System.Drawing.Point(70, 152);
             this.historyElement2.Name = "historyElement2";
             this.historyElement2.Size = new System.Drawing.Size(880, 112);
             this.historyElement2.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             this.historyElement3.AutoScroll = true;
             this.historyElement3.BackColor = System.Drawing.Color.White;
-            this.historyElement3.Location = new System.Drawing.Point(70, 378);
+            this.historyElement3.Location = new System.Drawing.Point(70, 284);
             this.historyElement3.Name = "historyElement3";
             this.historyElement3.Size = new System.Drawing.Size(880, 112);
             this.historyElement3.TabIndex = 2;
@@ -63,7 +63,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.historyElement3);
             this.Controls.Add(this.historyElement2);
             this.Controls.Add(this.historyElement1);
