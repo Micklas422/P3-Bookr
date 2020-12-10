@@ -14,6 +14,21 @@ namespace P3_Bookr.FunctionComponent
         {
             _modelComponent = modelComponent;
         }
+
+        public List<Service> GetActiveServices()
+        {
+            List<Service> services = _modelComponent.GetAllServices();
+            List<Service> result = new List<Service>();
+            foreach (Service ser in services)
+            {
+                if (ser.ServiceState == 0)
+                {
+                    result.Add(ser);
+                }
+            }
+            return result;
+        }
+
         public void Reserve()
         {
             throw new NotImplementedException();
