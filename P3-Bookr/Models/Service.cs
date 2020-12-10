@@ -39,6 +39,18 @@ namespace P3_Bookr.Models
             _serviceType = serviceType;
         }
 
+        public string Location
+        {
+            get { return _location; }
+            set { _location = value; }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
+
         public string Name
         {
             get { return _name; }
