@@ -114,7 +114,7 @@ namespace P3_Bookr
         #region LogInUI
         public void LogIn(string username, string password)
         {
-            _currentUser = _logInHandler.ValidateLogin(username, password);
+            _currentUser = _functionComponent.loginManager.ValidateLogin(username, password);
             try
             {
                 if (_currentUser != null)
