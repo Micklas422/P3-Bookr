@@ -35,7 +35,7 @@
             // personalInfo1
             // 
             this.personalInfo1.BackColor = System.Drawing.Color.White;
-            this.personalInfo1.Location = new System.Drawing.Point(196, 74);
+            this.personalInfo1.Location = new System.Drawing.Point(66, 74);
             this.personalInfo1.Name = "personalInfo1";
             this.personalInfo1.Size = new System.Drawing.Size(888, 318);
             this.personalInfo1.TabIndex = 0;
@@ -43,7 +43,7 @@
             // paymentInfo1
             // 
             this.paymentInfo1.BackColor = System.Drawing.Color.White;
-            this.paymentInfo1.Location = new System.Drawing.Point(196, 423);
+            this.paymentInfo1.Location = new System.Drawing.Point(66, 423);
             this.paymentInfo1.Name = "paymentInfo1";
             this.paymentInfo1.Size = new System.Drawing.Size(888, 271);
             this.paymentInfo1.TabIndex = 1;
@@ -56,7 +56,7 @@
             this.Controls.Add(this.paymentInfo1);
             this.Controls.Add(this.personalInfo1);
             this.Name = "SettingsPage";
-            this.Size = new System.Drawing.Size(1280, 720);
+            this.Size = new System.Drawing.Size(1020, 720);
             this.ResumeLayout(false);
 
         }

@@ -39,6 +39,7 @@
             // 
             this.panelSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelSideBar.BackColor = System.Drawing.Color.Transparent;
             this.panelSideBar.Location = new System.Drawing.Point(9, 10);
             this.panelSideBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideBar.Name = "panelSideBar";
@@ -48,6 +49,7 @@
             // pictureBoxBookr
             // 
             this.pictureBoxBookr.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxBookr.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxBookr.Image = global::P3_Bookr.Properties.Resources.BookerFullnobackground;
             this.pictureBoxBookr.Location = new System.Drawing.Point(528, 10);
             this.pictureBoxBookr.Margin = new System.Windows.Forms.Padding(2);
@@ -62,10 +64,11 @@
             this.panelSiteView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSiteView.AutoSize = true;
             this.panelSiteView.Location = new System.Drawing.Point(236, 98);
             this.panelSiteView.Margin = new System.Windows.Forms.Padding(2);
             this.panelSiteView.Name = "panelSiteView";
-            this.panelSiteView.Size = new System.Drawing.Size(1019, 572);
+            this.panelSiteView.Size = new System.Drawing.Size(1020, 572);
             this.panelSiteView.TabIndex = 2;
             // 
             // panelForLogIn
@@ -93,6 +96,7 @@
             this.Text = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

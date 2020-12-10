@@ -37,8 +37,8 @@
             // 
             this.reservation3.AutoScroll = true;
             this.reservation3.BackColor = System.Drawing.Color.White;
-            this.reservation3.Location = new System.Drawing.Point(200, 384);
-            this.reservation3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reservation3.Location = new System.Drawing.Point(70, 384);
+            this.reservation3.Margin = new System.Windows.Forms.Padding(4);
             this.reservation3.Name = "reservation3";
             this.reservation3.Size = new System.Drawing.Size(880, 112);
             this.reservation3.TabIndex = 2;
@@ -46,8 +46,8 @@
             // reservation2
             // 
             this.reservation2.BackColor = System.Drawing.Color.White;
-            this.reservation2.Location = new System.Drawing.Point(200, 242);
-            this.reservation2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reservation2.Location = new System.Drawing.Point(70, 242);
+            this.reservation2.Margin = new System.Windows.Forms.Padding(4);
             this.reservation2.Name = "reservation2";
             this.reservation2.Size = new System.Drawing.Size(880, 112);
             this.reservation2.TabIndex = 1;
@@ -55,8 +55,8 @@
             // reservation1
             // 
             this.reservation1.BackColor = System.Drawing.Color.White;
-            this.reservation1.Location = new System.Drawing.Point(200, 96);
-            this.reservation1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reservation1.Location = new System.Drawing.Point(70, 96);
+            this.reservation1.Margin = new System.Windows.Forms.Padding(4);
             this.reservation1.Name = "reservation1";
             this.reservation1.Size = new System.Drawing.Size(880, 112);
             this.reservation1.TabIndex = 0;
@@ -67,12 +67,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.Controls.Add(this.reservation3);
             this.Controls.Add(this.reservation2);
             this.Controls.Add(this.reservation1);
             this.Name = "ReservationPage";
-            this.Size = new System.Drawing.Size(1280, 720);
+            this.Size = new System.Drawing.Size(1020, 720);
             this.ResumeLayout(false);
 
         }
