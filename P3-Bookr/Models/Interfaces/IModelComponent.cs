@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    interface IModelComponent
+    public interface IModelComponent
     {
 
 

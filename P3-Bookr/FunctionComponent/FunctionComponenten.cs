@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.Models;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class FunctionComponent : IFunctionComponentInterface
+    public class FunctionComponenten : IFunctionComponentInterface
     {
+        IModelComponent _modelComponent;
         ILoginManager _loginManager;
         IHistoryManager _historyManager;
         IPaymentManager _paymentManager;
         IPermissionManager _permissionManager;
         IServiceManager _serviceManager;
-
-        public FunctionComponent(ILoginManager loginManager, IHistoryManager historyManager, IPaymentManager paymentManager, IPermissionManager permissionManager, IServiceManager serviceManager)
+        
+        public FunctionComponenten(IModelComponent modelComponent)
         {
-            _loginManager = loginManager;
-            _historyManager = historyManager;
-            _paymentManager = paymentManager;
-            _permissionManager = permissionManager;
-            _serviceManager = serviceManager;
+            _modelComponent = modelComponent;
+            _loginManager = new LoginManager(_modelComponent);
+            _historyManager = new HistoryManager(_modelComponent);
+            _paymentManager = new PaymentManager(_modelComponent);
+            _permissionManager = new PermissionManager(_modelComponent);
+            _serviceManager = new ServiceManager(_modelComponent);
         }
         public ILoginManager loginManager
         {

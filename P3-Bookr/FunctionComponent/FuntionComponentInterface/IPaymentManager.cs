@@ -1,6 +1,6 @@
 ﻿namespace P3_Bookr.FunctionComponent
 {
-    interface IPaymentManager
+    public interface IPaymentManager
     {
         void Pay();
 

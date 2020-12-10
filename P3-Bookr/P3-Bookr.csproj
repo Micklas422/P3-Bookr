@@ -73,7 +73,7 @@
     <Compile Include="DAL\Util\JsonHandler.cs" />
     <Compile Include="DAL\MemberDAL.cs" />
     <Compile Include="DAL\PaymentDAL.cs" />
-    <Compile Include="FunctionComponent\FunctionComponent.cs" />
+    <Compile Include="FunctionComponent\FunctionComponenten.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\FunctionComponentInterface.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\IHistoryManager.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\ILoginManager.cs" />

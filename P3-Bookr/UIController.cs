@@ -19,10 +19,12 @@ namespace P3_Bookr
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
-        ILoginManager _logInHandler =new LoginManager();
+        ILoginManager _logInHandler;
         Member _currentUser;
-        public UIController()
+        IFunctionComponentInterface _functionComponent;
+        public UIController(IFunctionComponentInterface functionComponenten)
         {
+            _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
