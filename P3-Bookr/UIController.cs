@@ -16,10 +16,12 @@ using P3_Bookr.Commons.CustomExceptions;
 
 namespace P3_Bookr
 {
-    class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
+    public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
+        ServiceDetails _serviceDetails;
+        ServiceInfoPanel _serviceInfoPanel;
         //ILoginManager _logInHandler;
         Member _currentUser;
         IFunctionComponentInterface _functionComponent;
@@ -27,6 +29,8 @@ namespace P3_Bookr
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
+            _serviceDetails = new ServiceDetails(this);
+            _serviceInfoPanel = new ServiceInfoPanel(this);
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
             Application.Run(_mainWindow);
@@ -85,9 +89,9 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public void SelectServiceType()
+        public void SelectServiceType(ServiceOptionFlowOption price, Service service)
         {
-            throw new NotImplementedException();
+            service.ServiceOfferings.
         }
 
         public void SelectDate()
@@ -103,6 +107,26 @@ namespace P3_Bookr
         public void Book()
         {
             throw new NotImplementedException();
+        }
+        public void SwitchToService()
+        {
+            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(this));
+
+
+            _serviceDetails.ServiceDetailsInfoPanel1.Controls.Add(new ServiceInfoPanel(this));
+            _serviceDetails.ServiceDetailsOptionPanel1.Controls.Add();
+            
+        }
+        public void LoadInfoPanelForService(IService service)
+        {
+            _serviceInfoPanel.ServiceAdressInfo1 = service;
+            _serviceInfoPanel.ServiceDescriptionInfo1 = service;
+        }
+        public void LoadandExecutePanelForServiceBooking()
+        {
+            throw new NotImplementedException();
+            Service service;
+
         }
         #endregion
         #region ResevationUI
@@ -163,6 +187,11 @@ namespace P3_Bookr
         }
 
         public void AddUserGroup()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LoadInfoPanelForService()
         {
             throw new NotImplementedException();
         }
