@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Department
+    class Department : IDepartment
     {
+        static List<int> UniqueIds = new List<int>();
+
+        int _id;
+        int _customerId;
         bool _isActive;
         string _name;
         string _adress;
         string _description;
 
-        public Department(bool isActive, string name, string adress, string description)
+        List<Service> services = new List<Service>();
+
+        public Department(int id, bool isActive, string name, string adress, string description)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _isActive = isActive;
             _name = name;
             _adress = adress;
@@ -43,6 +53,23 @@ namespace P3_Bookr.Models
         {
             get { return _description; }
             set { _description = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int CustomerId
+        {
+            get { return _customerId; }
+            set { _customerId = value; }
+        }
+
+        public List<Service> Services
+        {
+            get { return services; }
+            set { services = value; }
         }
 
         public void createService()

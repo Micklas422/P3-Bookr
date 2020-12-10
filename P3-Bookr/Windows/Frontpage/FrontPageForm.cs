@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows.Frontpage
 {
-    public partial class FrontPageForm : Form
+    public partial class FrontPageForm : UserControl
     {
-        public FrontPageForm()
+        IHomepageUI _handler;
+        public FrontPageForm(IHomepageUI handler)
         {
+            _handler = handler;
             InitializeComponent();
+        }
+
+        private void lastUsedServiceTop1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,16 +6,26 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Customer
+    class Customer : ICustomer
     {
+        static List<int> UniqueIds = new List<int>();
+
+        int _id;
         bool _isActive;
         DateTime _creationDate;
         string _name;
         string _adress;
         string _email;
 
-        public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
+        List<Department> departments = new List<Department>();
+        List<Member> members = new List<Member>();
+
+        public Customer(int id,  bool isActive, DateTime creationDate, string name, string adress, string email)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _isActive = isActive;
             _creationDate = creationDate;
             _name = name;
@@ -51,16 +61,27 @@ namespace P3_Bookr.Models
             get { return _email; }
             set { _email = value; }
         }
-
-        public void createMember()
+        public int Id
+        {
+            get { return _id; }
+        }
+        public List<Department> Departments
+        {
+            get { return departments; }
+            set { departments = value; }
+        }
+        public List<Member> Members
+        {
+            get { return members; }
+            set { members = value; }
+        }
+        public void CreateMember()
         {
             throw new NotImplementedException();
         }
-
-        public void deleteMember()
+        public void DeleteMember()
         {
             throw new NotImplementedException();
         }
-
     }
 }

@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows.WindowsInterfaces;
 
-namespace P3_Bookr.Windows
+namespace P3_Bookr.Windows.Settings
 {
-    public partial class History : Form
+    public partial class SettingsPage : UserControl
     {
-        public History()
+        ISettingsUI _handler;
+        public SettingsPage(ISettingsUI handler)
         {
+            _handler = handler;
             InitializeComponent();
         }
     }

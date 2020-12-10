@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Payment
+    public class Payment : IPayment
     {
+        static List<int> UniqueIds = new List<int>();
+
+        int _id;
+        int _reservationId;
         DateTime _paymentDate;
         float _amount;
         DateTime _reservationDeadline;
-        public Payment()
-        {
 
+        public Payment(int id, float amount)
+        {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
+            PaymentDate = DateTime.UtcNow;
+            Amount = amount;
         }
 
         public DateTime PaymentDate
@@ -30,6 +40,17 @@ namespace P3_Bookr.Models
         {
             get { return _reservationDeadline; }
             set { _reservationDeadline = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int ReservationId
+        {
+            get { return _reservationId; }
+            set { _reservationId = value; }
         }
     }
 }

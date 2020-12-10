@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static P3_Bookr.Commons.Common;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    class Services
+    public class Service : IService
     {
+        static List<int> UniqueIds = new List<int>();
+
+        int _id;
+        int _departmentId;
         string _name;
         bool _departmentDeactivatet;
         ServiceStates _serviceState;
         ServiceTypes _serviceType;
+
+        List<TimePeriod> timeperiods = new List<TimePeriod>();
+        List<ServiceOffering> serviceOfferings = new List<ServiceOffering>();
 
         public enum ServiceStates
         {
@@ -20,8 +27,12 @@ namespace P3_Bookr.Models
             Taken,
             Deactivated
         };
-        public Services(string name, ServiceTypes serviceType)
+        public Service(int id, string name, ServiceTypes serviceType)
         {
+            if (UniqueIds.Contains(id))
+                throw new ArgumentException();
+            UniqueIds.Add(id);
+            _id = id;
             _name = name;
             _serviceType = serviceType;
         }
@@ -45,6 +56,28 @@ namespace P3_Bookr.Models
         {
             get { return _serviceType; }
             set { _serviceType = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+        }
+
+        public int DepartmentId
+        {
+            get { return _departmentId; }
+            set { _departmentId = value; }
+        }
+        public List<TimePeriod> TimePeriods
+        {
+            get { return timeperiods; }
+            set { timeperiods = value; }
+        }
+
+        public List<ServiceOffering> ServiceOfferings
+        {
+            get { return serviceOfferings; }
+            set { serviceOfferings = value; }
         }
     }
 }

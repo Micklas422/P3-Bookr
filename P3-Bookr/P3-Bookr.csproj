@@ -49,21 +49,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commons\Common.cs" />
+    <Compile Include="Commons\CustomExceptions\BadPasswordException.cs" />
+    <Compile Include="Commons\Enums.cs" />
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
-    <Compile Include="Commons\JsonHandler.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\DataAccesLayer.cs" />
+    <Compile Include="DAL\DepartmentDAL.cs" />
+    <Compile Include="DAL\Interfaces\ICustomerDAL.cs" />
+    <Compile Include="DAL\Interfaces\IDataAccesLayer.cs" />
+    <Compile Include="DAL\Interfaces\IDepartmentDAL.cs" />
+    <Compile Include="DAL\Interfaces\IMemberDAL.cs" />
+    <Compile Include="DAL\Interfaces\IPaymentDAL.cs" />
+    <Compile Include="DAL\Interfaces\IReservationDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServiceGroupDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServiceOfferingDAL.cs" />
+    <Compile Include="DAL\Interfaces\IServiceDAL.cs" />
+    <Compile Include="DAL\Interfaces\ITimeperiodDAL.cs" />
+    <Compile Include="DAL\ReservationDAL.cs" />
+    <Compile Include="DAL\ServiceDAL.cs" />
+    <Compile Include="DAL\ServiceGroupDAL.cs" />
+    <Compile Include="DAL\ServiceOfferingDAL.cs" />
+    <Compile Include="DAL\TimeperiodDAL.cs" />
+    <Compile Include="DAL\Util\JsonHandler.cs" />
+    <Compile Include="DAL\MemberDAL.cs" />
+    <Compile Include="DAL\PaymentDAL.cs" />
+    <Compile Include="FunctionComponent\FunctionComponenten.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\FunctionComponentInterface.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IHistoryManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\ILoginManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IPaymentManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IPermissionManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IServiceManager.cs" />
+    <Compile Include="FunctionComponent\HistoryManager.cs" />
+    <Compile Include="FunctionComponent\LoginManager.cs" />
+    <Compile Include="FunctionComponent\PaymentManager.cs" />
+    <Compile Include="FunctionComponent\PermissionManager.cs" />
+    <Compile Include="FunctionComponent\ServiceManager.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Interfaces\ICustomer.cs" />
+    <Compile Include="Models\Interfaces\IDepartment.cs" />
+    <Compile Include="Models\Interfaces\IMember.cs" />
+    <Compile Include="Models\Interfaces\IModelComponent.cs" />
+    <Compile Include="Models\Interfaces\IPayment.cs" />
+    <Compile Include="Models\Interfaces\IReservation.cs" />
+    <Compile Include="Models\Interfaces\IServicegroup.cs" />
+    <Compile Include="Models\Interfaces\IServiceOffering.cs" />
+    <Compile Include="Models\Interfaces\IServices.cs" />
+    <Compile Include="Models\Interfaces\ITimeperiod.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\ModelComponent.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Reservation.cs" />
-    <Compile Include="Models\Servicegroup.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\ServiceGroup.cs" />
     <Compile Include="Models\ServiceOffering.cs" />
-    <Compile Include="Models\Services.cs" />
-    <Compile Include="Models\Timeperiod.cs" />
+    <Compile Include="Models\TimePeriod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIController.cs" />
     <Compile Include="Windows\Frontpage\BigNewsBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,7 +116,7 @@
       <DependentUpon>BigNewsBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Frontpage\FrontPageForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\Frontpage\FrontPageForm.Designer.cs">
       <DependentUpon>FrontPageForm.cs</DependentUpon>
@@ -106,11 +151,17 @@
     <Compile Include="Windows\Frontpage\SmallNewsBox.Designer.cs">
       <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\History.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Windows\History\HistoryElement.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\History.Designer.cs">
-      <DependentUpon>History.cs</DependentUpon>
+    <Compile Include="Windows\History\HistoryElement.Designer.cs">
+      <DependentUpon>HistoryElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\History\HistoryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\History\HistoryPage.Designer.cs">
+      <DependentUpon>HistoryPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\LogIn.cs">
       <SubType>UserControl</SubType>
@@ -125,22 +176,28 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ReservationOverview.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\ReservationOverview.Designer.cs">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Reservation\Reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Reservation\Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Reservation\ReservationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Reservation\ReservationPage.Designer.cs">
+      <DependentUpon>ReservationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServiceDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Windows\ServiceDetails.Designer.cs">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ServiceDetailsCalendar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\ServiceDetailsCalendar.Designer.cs">
-      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServicePanels\ServiceInfoPanel.cs">
       <SubType>UserControl</SubType>
@@ -178,11 +235,47 @@
     <Compile Include="Windows\ServicePanels\ServiceViewForFlow.Designer.cs">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Settings.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Windows\Services\ServiceCollection.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Windows\Services\ServiceCollection.Designer.cs">
+      <DependentUpon>ServiceCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceElement.Designer.cs">
+      <DependentUpon>ServiceElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceGathering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceGathering.Designer.cs">
+      <DependentUpon>ServiceGathering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Services\ServicesTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServicesTop.Designer.cs">
+      <DependentUpon>ServicesTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\PaymentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\PaymentInfo.Designer.cs">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\PersonalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Settings\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\SideBar.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +283,14 @@
     <Compile Include="Windows\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WindowsInterfaces\IAdminToolsUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IHistorikUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IHomepageUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ILogInUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IReservationUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IServicesUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ISettingsUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\ISideMenuUI.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -221,17 +322,26 @@
     <EmbeddedResource Include="Windows\Frontpage\SmallNewsBox.resx">
       <DependentUpon>SmallNewsBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\History\HistoryElement.resx">
+      <DependentUpon>HistoryElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\History\HistoryPage.resx">
+      <DependentUpon>HistoryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ReservationOverview.resx">
-      <DependentUpon>ReservationOverview.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Reservation\Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Reservation\ReservationPage.resx">
+      <DependentUpon>ReservationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServiceDetails.resx">
       <DependentUpon>ServiceDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServiceDetailsCalendar.resx">
-      <DependentUpon>ServiceDetailsCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicePanels\ServiceInfoPanel.resx">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
@@ -251,6 +361,27 @@
     <EmbeddedResource Include="Windows\ServicePanels\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServiceCollection.resx">
+      <DependentUpon>ServiceCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServiceElement.resx">
+      <DependentUpon>ServiceElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServiceGathering.resx">
+      <DependentUpon>ServiceGathering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServicesTop.resx">
+      <DependentUpon>ServicesTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\PaymentInfo.resx">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Settings\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\SideBar.resx">
       <DependentUpon>SideBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,7 +397,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Windows\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BookerLogo.png" />

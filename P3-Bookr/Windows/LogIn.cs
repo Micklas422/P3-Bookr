@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.FunctionComponent;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows
 {
-    public partial class Login : UserControl
+    partial class Login : UserControl
     {
-        public Login()
+        ILogInUI _handler;
+        public Login(ILogInUI handler)
         {
+            _handler = handler;
             InitializeComponent();
         }
 
@@ -28,8 +32,22 @@ namespace P3_Bookr.Windows
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
+        
         {
-            
+
+            string username;
+            string password;
+            password = textBoxUsername.Text;
+            username = textBoxUsername.Text;
+            _handler.LogIn(username, password);
+            //if (_loginManager.ValidateLogin(username, password))
+            //{
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Indtastet brugernavn eller kodeord forkert");
+            //}          
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)

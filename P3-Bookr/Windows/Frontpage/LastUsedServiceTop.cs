@@ -16,5 +16,10 @@ namespace P3_Bookr.Windows.Frontpage
         {
             InitializeComponent();
         }
+
+        private void LastUsedTopLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
