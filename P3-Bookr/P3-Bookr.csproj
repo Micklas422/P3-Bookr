@@ -226,6 +226,30 @@
     <Compile Include="Windows\ServicePanels\ServiceViewForFlow.Designer.cs">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Services\ServiceCollection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceCollection.Designer.cs">
+      <DependentUpon>ServiceCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceElement.Designer.cs">
+      <DependentUpon>ServiceElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceGathering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServiceGathering.Designer.cs">
+      <DependentUpon>ServiceGathering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Services\ServicesTop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\ServicesTop.Designer.cs">
+      <DependentUpon>ServicesTop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Settings\PaymentInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +351,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicePanels\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServiceCollection.resx">
+      <DependentUpon>ServiceCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServiceElement.resx">
+      <DependentUpon>ServiceElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServiceGathering.resx">
+      <DependentUpon>ServiceGathering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Services\ServicesTop.resx">
+      <DependentUpon>ServicesTop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Settings\PaymentInfo.resx">
       <DependentUpon>PaymentInfo.cs</DependentUpon>
