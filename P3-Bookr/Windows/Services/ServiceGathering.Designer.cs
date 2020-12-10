@@ -45,7 +45,7 @@
             // serviceElement2
             // 
             this.serviceElement2.BackColor = System.Drawing.Color.White;
-            this.serviceElement2.Location = new System.Drawing.Point(327, 39);
+            this.serviceElement2.Location = new System.Drawing.Point(329, 39);
             this.serviceElement2.Name = "serviceElement2";
             this.serviceElement2.Size = new System.Drawing.Size(267, 190);
             this.serviceElement2.TabIndex = 1;
@@ -53,7 +53,7 @@
             // serviceElement3
             // 
             this.serviceElement3.BackColor = System.Drawing.Color.White;
-            this.serviceElement3.Location = new System.Drawing.Point(628, 39);
+            this.serviceElement3.Location = new System.Drawing.Point(629, 39);
             this.serviceElement3.Name = "serviceElement3";
             this.serviceElement3.Size = new System.Drawing.Size(267, 190);
             this.serviceElement3.TabIndex = 2;
@@ -61,7 +61,7 @@
             // serviceElement4
             // 
             this.serviceElement4.BackColor = System.Drawing.Color.White;
-            this.serviceElement4.Location = new System.Drawing.Point(930, 39);
+            this.serviceElement4.Location = new System.Drawing.Point(929, 39);
             this.serviceElement4.Name = "serviceElement4";
             this.serviceElement4.Size = new System.Drawing.Size(267, 190);
             this.serviceElement4.TabIndex = 3;
@@ -87,6 +87,6 @@
         private ServiceElement serviceElement1;
         private ServiceElement serviceElement2;
         private ServiceElement serviceElement3;
-        private ServiceElement serviceElement4;
+        private ServiceElement serviceElement4;        
     }
 }

@@ -68,6 +68,22 @@ namespace P3_Bookr.Models
             return new Member();
         }
 
+        public List<Service> GetAllServices()
+        {
+            List<Service> result = new List<Service>();
+            foreach (Customer cus in _customer)
+            {
+                foreach (Department dep in cus.Departments)
+                {
+                    foreach (Service ser in dep.Services)
+                    {
+                        result.Add(ser);
+                    }
+                }
+            }
+            return result;
+        }
+
         public IDataAccesLayer DAL
         {
             get { return _dataAccesLayer; }
