@@ -119,7 +119,7 @@ namespace P3_Bookr
                 SwitchToHomePage();
             }
             else
-                throw new NotImplementedException();
+                throw new NotImplementedException(); //user not found exception
             
         }
         #endregion
