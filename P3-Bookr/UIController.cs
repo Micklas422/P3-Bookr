@@ -12,6 +12,7 @@ using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
+using P3_Bookr.Commons.CustomExceptions;
 
 namespace P3_Bookr
 {
@@ -113,18 +114,24 @@ namespace P3_Bookr
         #region LogInUI
         public void LogIn(string username, string password)
         {
-            _currentUser = _functionComponent.loginManager.ValidateLogin(username, password);
             try
             {
+                _currentUser = _functionComponent.loginManager.ValidateLogin(username, password);
                 if (_currentUser != null)
                 {
                     _mainWindow.panelForLogIn.Visible = false;
+                    _mainWindow.panelForLogIn.Controls.Clear();
                     SwitchToHomePage();
                 }
             }
-            catch(ArgumentNullException)
+            catch(Exception ex)
             {
-                return;
+                if (ex is UserNotFoundException || ex is BadPasswordException)
+                    MessageBox.Show("User or Password was wrong");
+                else
+                    MessageBox.Show("Fejl 40 fundet");
+                _mainWindow.panelForLogIn.Controls.Clear();
+                _mainWindow.panelForLogIn.Controls.Add(new Login(this));
             }
         }
         #endregion
