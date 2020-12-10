@@ -39,7 +39,7 @@
             // 
             this.panelSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelSideBar.BackColor = System.Drawing.Color.Transparent;
+            this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
             this.panelSideBar.Location = new System.Drawing.Point(9, 10);
             this.panelSideBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideBar.Name = "panelSideBar";
@@ -64,7 +64,9 @@
             this.panelSiteView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSiteView.AutoScroll = true;
             this.panelSiteView.AutoSize = true;
+            this.panelSiteView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
             this.panelSiteView.Location = new System.Drawing.Point(236, 98);
             this.panelSiteView.Margin = new System.Windows.Forms.Padding(2);
             this.panelSiteView.Name = "panelSiteView";
@@ -76,6 +78,8 @@
             this.panelForLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelForLogIn.AutoSize = true;
+            this.panelForLogIn.BackColor = System.Drawing.Color.White;
             this.panelForLogIn.Location = new System.Drawing.Point(9, 10);
             this.panelForLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.panelForLogIn.Name = "panelForLogIn";
@@ -87,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelForLogIn);
             this.Controls.Add(this.panelSiteView);
