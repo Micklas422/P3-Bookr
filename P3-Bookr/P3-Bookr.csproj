@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\CustomExceptions\BadPasswordException.cs" />
+    <Compile Include="Commons\CustomExceptions\UserNotFoundException.cs" />
     <Compile Include="Commons\Enums.cs" />
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />

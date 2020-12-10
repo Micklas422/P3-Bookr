@@ -24,12 +24,11 @@ namespace P3_Bookr
             //Application.Run(new MainMenu);
 
             Customer c = new Customer(0, true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
-
             c.Members.Add(new Member(0, "testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123"));
             c.Members.Add(new Member(1, "testPerson2", "testTest2", true, "0094", "104", "TestvejLejer 31", "member2@gmail.com", false, Member.MemberTypes.Renter, "test2", "test123"));
             c.Members.Add(new Member(2, "testPerson3", "testTest3", true, "0095", "105", "TestvejLejer 32", "member3@gmail.com", false, Member.MemberTypes.Renter, "test3", "test123"));
             c.Departments.Add(new Department(0, true, "testAfdeling", "afdelingvej 19", "Dette er en test afdeling!"));
-            c.Departments.Add(new Department(0, true, "testAfdeling2", "afdelingvej 20", "Dette er en test afdeling2!"));
+            c.Departments.Add(new Department(1, true, "testAfdeling2", "afdelingvej 20", "Dette er en test afdeling2!"));
 
             int i = 0;
             foreach (Department d in c.Departments)
@@ -38,8 +37,8 @@ namespace P3_Bookr
                 {
                     d.Services.Add(new Service(i, $"service{i},{k}", Commons.Enums.ServiceTypes.CommonRoom));
                     d.Services[0].ServiceOfferings.Add(new ServiceOffering(i, $"Offering{i}", 120, 30 + k * 2));
+                    i++;
                 }
-                i++;
             }
 
             c.Members[1].Reservations.Add(
@@ -52,9 +51,10 @@ namespace P3_Bookr
                 c.Departments[0].Services[0]),
                 c.Departments[0].Services[0].ServiceOfferings[0]));
 
-
-            IFunctionComponentInterface functionComponent = new FunctionComponenten(new ModelComponent(new DataAccesLayer()));
-
+            IModelComponent m = new ModelComponent(new DataAccesLayer());
+            m.customer.Add(c);
+            //IFunctionComponentInterface functionComponent = new FunctionComponenten(new ModelComponent(new DataAccesLayer()));
+            IFunctionComponentInterface functionComponent = new FunctionComponenten(m);
 
 
             UIController uIController = new UIController(functionComponent);

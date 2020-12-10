@@ -11,7 +11,7 @@ namespace P3_Bookr.Models
     class ModelComponent:IModelComponent
     {
         IDataAccesLayer _dataAccesLayer;
-        List<Customer> _customer;
+        List<Customer> _customer = new List<Customer>();
 
         public ModelComponent(IDataAccesLayer dataAccesLayer)
         {
