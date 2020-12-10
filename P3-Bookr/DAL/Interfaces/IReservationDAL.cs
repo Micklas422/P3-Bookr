@@ -9,7 +9,9 @@ namespace P3_Bookr.DAL.Interfaces
 {
     interface IReservationDAL
     {
-        List<Reservation> GetReservations(int memberId);
+        List<Reservation> Reservations { get; }
+        List<Reservation> GetReservationsByMember(int memberId);
+        Reservation GetReservation(int reservationId);
         void SetRevervations(List<Reservation> reservations);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class Reservation : IReservation
+    public class Reservation : IReservation
     {
         static List<int> UniqueIds = new List<int>();
 
@@ -18,6 +18,8 @@ namespace P3_Bookr.Models
         DateTime _reservationDate;
         int _duration;
         DateTime _reservationDeadline;
+
+        List<Payment> payments = new List<Payment>();
 
         public enum ReservationStates
         {
@@ -73,6 +75,12 @@ namespace P3_Bookr.Models
         {
             get { return _memberId; }
             set { _memberId = value; }
+        }
+
+        public List<Payment> Payments
+        {
+            get { return payments; }
+            set { payments = value; }
         }
     }
 }

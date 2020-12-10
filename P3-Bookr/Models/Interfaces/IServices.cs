@@ -7,11 +7,11 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    interface IServices
+    interface IService
     {
         string Name { get; set; }
         bool DepartmentDeactivatet { get; set; }
-        Services.ServiceStates ServiceState { get; set; }
+        Service.ServiceStates ServiceState { get; set; }
         ServiceTypes ServiceType { get; set; }
         int Id { get; }
         int DepartmentId { get; set; }

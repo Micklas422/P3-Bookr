@@ -17,7 +17,7 @@ namespace P3_Bookr.Models
         string _adress;
         string _description;
 
-        List<Services> services = new List<Services>();
+        List<Service> services = new List<Service>();
 
         public Department(int id, bool isActive, string name, string adress, string description)
         {
@@ -66,7 +66,7 @@ namespace P3_Bookr.Models
             set { _customerId = value; }
         }
 
-        public List<Services> Services
+        public List<Service> Services
         {
             get { return services; }
             set { services = value; }

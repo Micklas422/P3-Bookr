@@ -10,60 +10,64 @@ using P3_Bookr.Windows.History;
 using P3_Bookr.Windows.Frontpage;
 using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
+using P3_Bookr.FunctionComponent;
+using P3_Bookr.Models;
 
 namespace P3_Bookr
 {
     class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         bool stayAlive = false;
-        MainWindow mainWindow;
+        MainWindow _mainWindow;
+        ILoginManager _logInHandler =new LoginManager();
+        Member _currentUser;
         public UIController()
         {
-            mainWindow = new MainWindow();
-            mainWindow.panelSideBar.Controls.Clear();
-            mainWindow.panelSideBar.Controls.Add(new SideBar(this));
+            _mainWindow = new MainWindow();
+            _mainWindow.panelSideBar.Controls.Clear();
+            _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
             //mainWindow.panelSideBar.Controls[0].Show();
-            Application.Run(mainWindow);
+            Application.Run(_mainWindow);
         }
 
         #region SideMenuHandler
         public void SwitchToHistoryPage()
         {
-            mainWindow.panelSiteView.Controls.Clear();
-            mainWindow.panelSiteView.Controls.Add(new HistoryPage(this));
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new HistoryPage(this));
         }
 
         public void SwitchToHomePage()
         {
-            mainWindow.panelSiteView.Controls.Clear();
-            mainWindow.panelSiteView.Controls.Add(new FrontPageForm(this));
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new FrontPageForm(this));
         }
 
         public void SwitchToLogInPage()
         {
-            mainWindow.panelSiteView.Controls.Clear();
-            mainWindow.panelForLogIn.Visible = true;
-            mainWindow.panelForLogIn.Controls.Add(new Login(this));
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelForLogIn.Visible = true;
+            _mainWindow.panelForLogIn.Controls.Add(new Login(this));
         }
 
         public void SwitchToReservationPage()
         {
-            mainWindow.panelSiteView.Controls.Clear();
-            mainWindow.panelSiteView.Controls.Add(new ReservationPage(this));
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new ReservationPage(this));
         }
 
         public void SwitchToServicePage()
         {
-            mainWindow.panelSiteView.Controls.Clear();
-            mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
         }
 
         public void SwitchToSettingsPage()
         {
-            mainWindow.panelSiteView.Controls.Clear();
-            mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
         }
-        #endregion
+        #endregion //DONE
         #region ServicesUI
         public void LoadServicesToShow()
         {
@@ -106,9 +110,17 @@ namespace P3_Bookr
         }
         #endregion
         #region LogInUI
-        public void LogIn()
+        public void LogIn(string username, string password)
         {
-            throw new NotImplementedException();
+            _currentUser = _logInHandler.ValidateLogin(username, password);
+            if (_currentUser != null)
+            {
+                _mainWindow.panelForLogIn.Visible = false;
+                SwitchToHomePage();
+            }
+            else
+                throw new NotImplementedException(); //user not found exception
+            
         }
         #endregion
         #region HomepageUI

@@ -27,7 +27,7 @@ namespace P3_Bookr.DAL
             return services;
         }
 
-        public void SetServices(List<Services> services)
+        public void SetServices(List<Service> services)
         {
             jsonHandler.WriteJsonObjectToFile(fileName, services);
         }
