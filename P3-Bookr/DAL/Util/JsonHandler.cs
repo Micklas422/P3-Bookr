@@ -14,8 +14,8 @@ namespace P3_Bookr.DAL
         string path = Directory.GetCurrentDirectory() + "\\";
         public T ReadJsonObjectFromFile<T>(string fileName)
         {
-            FileReader fileReader = new FileReader();
-            return JsonConvert.DeserializeObject<T>(fileReader.ReadFileAsString(path + fileName));
+            //FileReader fileReader = new FileReader();
+            return Activator.CreateInstance<T>();//JsonConvert.DeserializeObject<T>(fileReader.ReadFileAsString(path + fileName));
         }
 
         public void WriteJsonObjectToFile<T>(string fileName, T objectToWrite)

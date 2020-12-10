@@ -19,7 +19,7 @@ namespace P3_Bookr
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
-        ILoginManager _logInHandler;
+        //ILoginManager _logInHandler;
         Member _currentUser;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
@@ -28,7 +28,6 @@ namespace P3_Bookr
             _mainWindow = new MainWindow();
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
-            //mainWindow.panelSideBar.Controls[0].Show();
             Application.Run(_mainWindow);
         }
 
@@ -114,7 +113,7 @@ namespace P3_Bookr
         #region LogInUI
         public void LogIn(string username, string password)
         {
-            _currentUser = _logInHandler.ValidateLogin(username, password);
+            _currentUser = _functionComponent.loginManager.ValidateLogin(username, password);
             try
             {
                 if (_currentUser != null)

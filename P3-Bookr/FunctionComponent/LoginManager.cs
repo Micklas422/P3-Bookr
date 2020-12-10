@@ -11,7 +11,6 @@ namespace P3_Bookr.FunctionComponent
 {
     public class LoginManager : ILoginManager
     {
-        Member _member;
         IModelComponent _modelComponent;
         public LoginManager(IModelComponent modelComponent)
         {
@@ -24,7 +23,7 @@ namespace P3_Bookr.FunctionComponent
                 throw new UserNotFoundException("User does not exsist");
             if (member.Password != password)
                 throw new BadPasswordException("Invalid password enter");
-            return _member;
+            return member;
         }
     }
 }
