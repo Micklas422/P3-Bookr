@@ -2,6 +2,8 @@
 {
     interface IServiceManager
     {
+        void Reserve();
 
+        void SeeAvailability();
     }
 }
