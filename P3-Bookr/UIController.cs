@@ -113,14 +113,18 @@ namespace P3_Bookr
         public void LogIn(string username, string password)
         {
             _currentUser = _logInHandler.ValidateLogin(username, password);
-            if (_currentUser != null)
+            try
             {
-                _mainWindow.panelForLogIn.Visible = false;
-                SwitchToHomePage();
+                if (_currentUser != null)
+                {
+                    _mainWindow.panelForLogIn.Visible = false;
+                    SwitchToHomePage();
+                }
             }
-            else
-                throw new NotImplementedException(); //user not found exception
-            
+            catch(ArgumentNullException)
+            {
+                return;
+            }
         }
         #endregion
         #region HomepageUI

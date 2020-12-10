@@ -54,11 +54,18 @@ namespace P3_Bookr.Models
 
         public Member GetMemberByUsername(string username)
         {
-            foreach (Customer cus in _customer)
+            try
             {
-                return cus.Members.Where(m => m.Username == username).FirstOrDefault();
+                foreach (Customer cus in _customer)
+                {
+                    return cus.Members.Where(m => m.Username == username).FirstOrDefault();
+                }
             }
-            throw new ArgumentException();
+            catch (ArgumentNullException)
+            {
+                
+            }
+            return new Member();
         }
 
         public IDataAccesLayer DAL

@@ -9,7 +9,7 @@ namespace P3_Bookr.Models
     interface IModelComponent
     {
         List<Customer> customer { get; set; }
-
+        Member GetMemberByUsername(string username);
         //ICustomer customer { get; }
         //IDepartment department { get; }
         //IMember member { get; }
