@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.Models;
-using P3_Bookr.DAL;
+using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.FunctionComponent;
 
 namespace P3_Bookr.FunctionComponent
@@ -19,10 +19,10 @@ namespace P3_Bookr.FunctionComponent
         }
         public Member ValidateLogin(string username, string password)
         {
-            Member member = new Member();
-            return member;
-
-
+            Member member = _modelComponent.GetMemberByUsername(username); //sets the new member to member by username
+            if (member?.Password != password)
+                throw new BadPasswordException("Invalid password enter");
+            return _member;
         }
     }
 }
