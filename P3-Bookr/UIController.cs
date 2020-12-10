@@ -12,6 +12,8 @@ using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
+using P3_Bookr.Commons.Enums;
+using P3_Bookr.Windows.Services;
 
 namespace P3_Bookr
 {
@@ -19,8 +21,11 @@ namespace P3_Bookr
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
+        ServicesOverview _servicesOverview;
+        List<ServiceGathering> _serviceGatherings;
         //ILoginManager _logInHandler;
         Member _currentUser;
+        List<Service> _activeServices;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
         {
@@ -59,8 +64,9 @@ namespace P3_Bookr
 
         public void SwitchToServicePage()
         {
+            _servicesOverview = new ServicesOverview(this);
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
+            _mainWindow.panelSiteView.Controls.Add(_servicesOverview);
         }
 
         public void SwitchToSettingsPage()
@@ -72,7 +78,52 @@ namespace P3_Bookr
         #region ServicesUI
         public void LoadServicesToShow()
         {
-            throw new NotImplementedException();
+            _activeServices = _functionComponent.serviceManager.GetActiveServices();
+            var enumValue = Enum.GetValues(typeof(ServiceTypes));
+            var enumNames = Enum.GetNames(typeof(ServiceTypes));
+
+            List<List<Service>> sortedByServiceTypes = new List<List<Service>>();
+
+            foreach (int i in enumValue)
+            {
+                List<Service> v = _activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
+                if (v.Count > 0) 
+                {
+                    sortedByServiceTypes.Add(v);
+                }
+            }
+            foreach (List<Service> services in sortedByServiceTypes)
+            {
+                _servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
+                foreach (Service service in services)
+                {
+                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service));
+                }
+            }
+
+            //for (int i = 0; i < enumNames.Length; i++)
+            //{
+            //    foreach (Service service in _activeServices)
+            //    {
+            //        if (Enum.GetName(typeof(ServiceTypes), service.ServiceType) == enumNames[i])
+            //        {
+            //            _serviceGatherings.Add(new ServiceGathering());
+            //            _servicesOverview.ServiceOverviewFlow1.Controls.Add(new ServiceGathering());
+            //            //indsæt navn på gatherings
+            //            break;
+            //        }
+            //    }
+            //}
+            //for (int i = 0; i < enumNames.Length; i++)
+            //{
+            //    foreach (Service service in _activeServices)
+            //    {
+            //        if (Enum.GetName(typeof(ServiceTypes), service.ServiceType) == enumNames[i])
+            //        {
+
+            //        }
+            //    }
+            //}
         }
         public void ChooseServices()
         {

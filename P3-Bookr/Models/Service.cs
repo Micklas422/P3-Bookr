@@ -11,6 +11,8 @@ namespace P3_Bookr.Models
     {
         static List<int> UniqueIds = new List<int>();
 
+        string _location;
+        string _description;
         int _id;
         int _departmentId;
         string _name;
