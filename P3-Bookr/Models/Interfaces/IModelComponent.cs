@@ -10,6 +10,7 @@ namespace P3_Bookr.Models
     {
         List<Customer> customer { get; set; }
 
+        List<Service> GetAllServices();
         //ICustomer customer { get; }
         //IDepartment department { get; }
         //IMember member { get; }

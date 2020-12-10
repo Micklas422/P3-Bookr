@@ -12,6 +12,7 @@ using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr
 {
@@ -21,12 +22,12 @@ namespace P3_Bookr
         MainWindow _mainWindow;
         ILoginManager _logInHandler =new LoginManager();
         Member _currentUser;
+        List<Service> _activeServices;
         public UIController()
         {
             _mainWindow = new MainWindow();
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
-            //mainWindow.panelSideBar.Controls[0].Show();
             Application.Run(_mainWindow);
         }
 
@@ -71,7 +72,11 @@ namespace P3_Bookr
         #region ServicesUI
         public void LoadServicesToShow()
         {
-            throw new NotImplementedException();
+            //_activeServices = GetActiveServices();
+            foreach (Service ser in _activeServices)
+            {
+                
+            }
         }
         public void ChooseServices()
         {
