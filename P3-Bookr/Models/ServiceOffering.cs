@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    class ServiceOffering : IServiceOffering
+    public class ServiceOffering : IServiceOffering
     {
         static List<int> UniqueIds = new List<int>();
 

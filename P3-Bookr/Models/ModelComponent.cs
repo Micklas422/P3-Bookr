@@ -8,7 +8,7 @@ using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.Models
 {
-    class ModelComponent
+    class ModelComponent:IModelComponent
     {
         IDataAccesLayer _dataAccesLayer;
         List<Customer> _customer;
@@ -54,11 +54,18 @@ namespace P3_Bookr.Models
 
         public Member GetMemberByUsername(string username)
         {
-            foreach (Customer cus in _customer)
+            try
             {
-                return cus.Members.Where(m => m.Username == username).FirstOrDefault();
+                foreach (Customer cus in _customer)
+                {
+                    return cus.Members.Where(m => m.Username == username).FirstOrDefault();
+                }
             }
-            throw new ArgumentException();
+            catch (ArgumentNullException)
+            {
+                
+            }
+            return new Member();
         }
 
         public List<Service> GetAllServices()

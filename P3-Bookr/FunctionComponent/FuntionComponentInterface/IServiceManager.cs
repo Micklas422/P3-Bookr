@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace P3_Bookr.FunctionComponent
 {
-    interface IServiceManager
+    public interface IServiceManager
     {
         List<Service> GetActiveServices();
         void Reserve();

@@ -16,12 +16,14 @@ namespace P3_Bookr.Models
         float _amount;
         DateTime _reservationDeadline;
 
-        public Payment(int id)
+        public Payment(int id, float amount)
         {
             if (UniqueIds.Contains(id))
                 throw new ArgumentException();
             UniqueIds.Add(id);
             _id = id;
+            PaymentDate = DateTime.UtcNow;
+            Amount = amount;
         }
 
         public DateTime PaymentDate

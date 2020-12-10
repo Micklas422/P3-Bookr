@@ -10,27 +10,9 @@ namespace P3_Bookr.FunctionComponent
     class ServiceManager : IServiceManager
     {
         IModelComponent _modelComponent;
-        ServiceManager(IModelComponent modelComponent)
+        public ServiceManager(IModelComponent modelComponent)
         {
             _modelComponent = modelComponent;
-        }
-        public IModelComponent modelComponent
-        {
-            get { return _modelComponent; }
-            private set { _modelComponent = value; }
-        }
-        public List<Service> GetActiveServices()
-        {
-            List<Service> services = _modelComponent.GetAllServices();
-            List<Service> result = new List<Service>();
-            foreach (Service ser in services)
-            {
-                if (ser.ServiceState == 0)
-                {
-                    result.Add(ser);
-                }
-            }
-            return result;
         }
         public void Reserve()
         {

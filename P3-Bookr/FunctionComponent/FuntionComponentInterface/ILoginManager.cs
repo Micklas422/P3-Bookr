@@ -2,7 +2,7 @@
 
 namespace P3_Bookr.FunctionComponent
 {
-    interface ILoginManager
+    public interface ILoginManager
     {
         Member ValidateLogin(string username, string password);
     }

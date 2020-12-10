@@ -12,7 +12,6 @@ using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
-using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr
 {
@@ -20,14 +19,16 @@ namespace P3_Bookr
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
-        ILoginManager _logInHandler =new LoginManager();
+        ILoginManager _logInHandler;
         Member _currentUser;
-        List<Service> _activeServices;
-        public UIController()
+        IFunctionComponentInterface _functionComponent;
+        public UIController(IFunctionComponentInterface functionComponenten)
         {
+            _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
+            //mainWindow.panelSideBar.Controls[0].Show();
             Application.Run(_mainWindow);
         }
 
@@ -72,11 +73,7 @@ namespace P3_Bookr
         #region ServicesUI
         public void LoadServicesToShow()
         {
-            //_activeServices = GetActiveServices();
-            foreach (Service ser in _activeServices)
-            {
-                
-            }
+            throw new NotImplementedException();
         }
         public void ChooseServices()
         {
@@ -117,15 +114,19 @@ namespace P3_Bookr
         #region LogInUI
         public void LogIn(string username, string password)
         {
-            _currentUser = _logInHandler.ValidateLogin(username, password);
-            if (_currentUser != null)
+            _currentUser = _functionComponent.loginManager.ValidateLogin(username, password);
+            try
             {
-                _mainWindow.panelForLogIn.Visible = false;
-                SwitchToHomePage();
+                if (_currentUser != null)
+                {
+                    _mainWindow.panelForLogIn.Visible = false;
+                    SwitchToHomePage();
+                }
             }
-            else
-                throw new NotImplementedException(); //user not found exception
-            
+            catch(ArgumentNullException)
+            {
+                return;
+            }
         }
         #endregion
         #region HomepageUI
