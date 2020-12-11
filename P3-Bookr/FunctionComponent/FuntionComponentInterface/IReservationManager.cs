@@ -5,5 +5,6 @@ namespace P3_Bookr.FunctionComponent
 {
     public interface IReservationManager
     {
+        List<Reservation> GetActiveReservationsByMember(Member member);
     }
 }

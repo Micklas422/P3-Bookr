@@ -1,4 +1,4 @@
-﻿namespace P3_Bookr.Windows.Reservation
+﻿namespace P3_Bookr.Windows.ReservationPanels
 {
     partial class ReservationPage
     {

@@ -8,7 +8,7 @@ using P3_Bookr.Windows;
 using System.Windows.Forms;
 using P3_Bookr.Windows.History;
 using P3_Bookr.Windows.Frontpage;
-using P3_Bookr.Windows.Reservation;
+using P3_Bookr.Windows.ReservationPanels;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
@@ -136,9 +136,14 @@ namespace P3_Bookr
         }
         #endregion
         #region ResevationUI
-        public void LoadReservations()
+        public void LoadReservationsOfMember()
         {
-            throw new NotImplementedException();
+            _activeMemberReservations = _functionComponent.reservationManager.GetActiveReservationsByMember(_currentUser);
+
+            foreach (Reservation reservation in _activeMemberReservations)
+            {
+                //_reservationPage.flowLayoutPanel1.Controls.Add(new ReservationPanel());
+            }
         }
         public void CancelReservation()
         {
