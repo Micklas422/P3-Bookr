@@ -35,7 +35,7 @@
             // personalInfo1
             // 
             this.personalInfo1.BackColor = System.Drawing.Color.White;
-            this.personalInfo1.Location = new System.Drawing.Point(66, 74);
+            this.personalInfo1.Location = new System.Drawing.Point(66, 20);
             this.personalInfo1.Name = "personalInfo1";
             this.personalInfo1.Size = new System.Drawing.Size(888, 318);
             this.personalInfo1.TabIndex = 0;
@@ -43,7 +43,7 @@
             // paymentInfo1
             // 
             this.paymentInfo1.BackColor = System.Drawing.Color.White;
-            this.paymentInfo1.Location = new System.Drawing.Point(66, 423);
+            this.paymentInfo1.Location = new System.Drawing.Point(66, 358);
             this.paymentInfo1.Name = "paymentInfo1";
             this.paymentInfo1.Size = new System.Drawing.Size(888, 271);
             this.paymentInfo1.TabIndex = 1;

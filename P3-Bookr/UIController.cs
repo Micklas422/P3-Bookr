@@ -12,25 +12,27 @@ using P3_Bookr.Windows.Reservation;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
+using P3_Bookr.Commons.Enums;
+using P3_Bookr.Windows.Services;
 using P3_Bookr.Commons.CustomExceptions;
+
 
 namespace P3_Bookr
 {
-    public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
+    class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
-        ServiceDetails _serviceDetails;
-        ServiceInfoPanel _serviceInfoPanel;
+        ServicesOverview _servicesOverview;
+        List<ServiceGathering> _serviceGatherings;
         //ILoginManager _logInHandler;
         Member _currentUser;
+        List<Service> _activeServices;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
-            _serviceDetails = new ServiceDetails(this);
-            _serviceInfoPanel = new ServiceInfoPanel(this);
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
             Application.Run(_mainWindow);
@@ -64,8 +66,9 @@ namespace P3_Bookr
 
         public void SwitchToServicePage()
         {
+            _servicesOverview = new ServicesOverview(this);
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
+            _mainWindow.panelSiteView.Controls.Add(_servicesOverview);
         }
 
         public void SwitchToSettingsPage()
@@ -77,7 +80,52 @@ namespace P3_Bookr
         #region ServicesUI
         public void LoadServicesToShow()
         {
-            throw new NotImplementedException();
+            _activeServices = _functionComponent.serviceManager.GetActiveServices();
+            var enumValue = Enum.GetValues(typeof(ServiceTypes));
+            var enumNames = Enum.GetNames(typeof(ServiceTypes));
+
+            List<List<Service>> sortedByServiceTypes = new List<List<Service>>();
+
+            foreach (int i in enumValue)
+            {
+                List<Service> v = _activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
+                if (v.Count > 0) 
+                {
+                    sortedByServiceTypes.Add(v);
+                }
+            }
+            foreach (List<Service> services in sortedByServiceTypes)
+            {
+                _servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
+                foreach (Service service in services)
+                {
+                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service));
+                }
+            }
+
+            //for (int i = 0; i < enumNames.Length; i++)
+            //{
+            //    foreach (Service service in _activeServices)
+            //    {
+            //        if (Enum.GetName(typeof(ServiceTypes), service.ServiceType) == enumNames[i])
+            //        {
+            //            _serviceGatherings.Add(new ServiceGathering());
+            //            _servicesOverview.ServiceOverviewFlow1.Controls.Add(new ServiceGathering());
+            //            //indsæt navn på gatherings
+            //            break;
+            //        }
+            //    }
+            //}
+            //for (int i = 0; i < enumNames.Length; i++)
+            //{
+            //    foreach (Service service in _activeServices)
+            //    {
+            //        if (Enum.GetName(typeof(ServiceTypes), service.ServiceType) == enumNames[i])
+            //        {
+
+            //        }
+            //    }
+            //}
         }
         public void ChooseServices()
         {
@@ -89,9 +137,9 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public void SelectServiceType(ServiceOptionFlowOption price, Service service)
+        public void SelectServiceType()
         {
-            service.ServiceOfferings.
+            throw new NotImplementedException();
         }
 
         public void SelectDate()
@@ -107,26 +155,6 @@ namespace P3_Bookr
         public void Book()
         {
             throw new NotImplementedException();
-        }
-        public void SwitchToService()
-        {
-            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(this));
-
-
-            _serviceDetails.ServiceDetailsInfoPanel1.Controls.Add(new ServiceInfoPanel(this));
-            _serviceDetails.ServiceDetailsOptionPanel1.Controls.Add();
-            
-        }
-        public void LoadInfoPanelForService(IService service)
-        {
-            _serviceInfoPanel.ServiceAdressInfo1 = service;
-            _serviceInfoPanel.ServiceDescriptionInfo1 = service;
-        }
-        public void LoadandExecutePanelForServiceBooking()
-        {
-            throw new NotImplementedException();
-            Service service;
-
         }
         #endregion
         #region ResevationUI
@@ -187,11 +215,6 @@ namespace P3_Bookr
         }
 
         public void AddUserGroup()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void LoadInfoPanelForService()
         {
             throw new NotImplementedException();
         }

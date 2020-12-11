@@ -7,7 +7,6 @@ namespace P3_Bookr.FunctionComponent
     {
         List<Service> GetActiveServices();
         void Reserve();
-
         void SeeAvailability();
     }
 }
