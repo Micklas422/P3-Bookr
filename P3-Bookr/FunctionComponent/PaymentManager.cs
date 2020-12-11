@@ -20,9 +20,22 @@ namespace P3_Bookr.FunctionComponent
             throw new NotImplementedException();
         }
 
-        public void Cancel()
+        public bool Cancel(List<Payment> payments)
         {
-            throw new NotImplementedException();
+            payments.ElementAt(0).Refunded = RefundPayment(payments.ElementAt(0));
+            if (payments.ElementAt(0).Refunded)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool RefundPayment(Payment payment)
+        {
+            return true;
         }
     }
 }

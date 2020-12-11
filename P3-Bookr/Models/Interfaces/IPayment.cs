@@ -13,5 +13,6 @@ namespace P3_Bookr.Models
         DateTime ReservationDeadline { get; set; }
         int Id { get; }
         int ReservationId { get; set; }
+        bool Refunded { get; set; }
     }
 }

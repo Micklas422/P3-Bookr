@@ -7,7 +7,6 @@ namespace P3_Bookr.FunctionComponent
     {
         List<Reservation> GetActiveReservationsByMember(Member member);
 
-        void CancelReservation(Reservation reservation);
-        void CancelPayment(List<Payment> payments);
+        bool CancelReservation(Reservation reservation, Member member);
     }
 }

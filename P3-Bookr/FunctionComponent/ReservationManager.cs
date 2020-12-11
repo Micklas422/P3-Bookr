@@ -22,14 +22,9 @@ namespace P3_Bookr.FunctionComponent
                 Where(r => (ReservationStates) r.ReservationState != ReservationStates.Cancelled).ToList();
         }
 
-        public void CancelReservation(Reservation reservation)
+        public bool CancelReservation(Reservation reservation, Member member)
         {
-            throw new NotImplementedException();
-        }
-
-        public void CancelPayment(List<Payment> payments)
-        {
-            throw new NotImplementedException();
+            return _modelComponent.CancelReservation(reservation, member);
         }
     }
 }

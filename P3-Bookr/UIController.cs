@@ -176,8 +176,15 @@ namespace P3_Bookr
         {
             if (reservation.ReservationState != ReservationStates.BindingReservation)
             {
-                _functionComponent.reservationManager.CancelReservation(reservation);
-                _functionComponent.reservationManager.CancelPayment(reservation.Payments);
+                if (_functionComponent.reservationManager.CancelReservation(reservation, _currentUser))
+                {
+                    MessageBox.Show("Reservation annulleret");
+                    _functionComponent.paymentManager.Cancel(reservation.Payments);
+                }
+                else
+                {
+                    MessageBox.Show("Reservation kunne ikke annulleres");
+                }
             } 
             else
             {
