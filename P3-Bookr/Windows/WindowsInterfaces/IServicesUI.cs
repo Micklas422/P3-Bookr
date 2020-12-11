@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.Models;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
@@ -13,7 +14,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
         void SelectDate();
         void SelectTime();
         void Book();
-        void SwitchToService();
+        void SwitchToService(Service services);
         void LoadInfoPanelForService();
         void LoadandExecutePanelForServiceBooking();
     }

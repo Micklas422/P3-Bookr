@@ -20,8 +20,8 @@ namespace P3_Bookr
     {
         bool stayAlive = false;
         MainWindow _mainWindow;
-        ServiceDetails _serviceDetails;
-        ServiceInfoPanel _serviceInfoPanel;
+        //ServiceDetails _serviceDetails;
+        //ServiceInfoPanel _serviceInfoPanel;
         //ILoginManager _logInHandler;
         Member _currentUser;
         IFunctionComponentInterface _functionComponent;
@@ -29,10 +29,11 @@ namespace P3_Bookr
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
-            _serviceDetails = new ServiceDetails(this);
-            _serviceInfoPanel = new ServiceInfoPanel(this);
+            //_serviceDetails = new ServiceDetails(this);
+            //_serviceInfoPanel = new ServiceInfoPanel(this);
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
+            SwitchToLogInPage();
             Application.Run(_mainWindow);
         }
 
@@ -46,7 +47,15 @@ namespace P3_Bookr
         public void SwitchToHomePage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new FrontPageForm(this));
+            FrontPageForm form = new FrontPageForm(this);
+            List<Service> services = _functionComponent.serviceManager.FindLastServicesUsed(_currentUser, 5);
+            foreach(Service s in services)
+            {
+                form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
+            }
+
+            
+            _mainWindow.panelSiteView.Controls.Add(form);
         }
 
         public void SwitchToLogInPage()
@@ -89,9 +98,9 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public void SelectServiceType(ServiceOptionFlowOption price, Service service)
+        public void SelectServiceType(ServiceSubOptions price, Service service)
         {
-            service.ServiceOfferings.
+            //service.ServiceOfferings.
         }
 
         public void SelectDate()
@@ -108,19 +117,15 @@ namespace P3_Bookr
         {
             throw new NotImplementedException();
         }
-        public void SwitchToService()
+        public void SwitchToService(Service service)
         {
-            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(this));
-
-
-            _serviceDetails.ServiceDetailsInfoPanel1.Controls.Add(new ServiceInfoPanel(this));
-            _serviceDetails.ServiceDetailsOptionPanel1.Controls.Add();
-            
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this, service.ServiceOfferings)));
         }
         public void LoadInfoPanelForService(IService service)
         {
-            _serviceInfoPanel.ServiceAdressInfo1 = service;
-            _serviceInfoPanel.ServiceDescriptionInfo1 = service;
+            //_serviceInfoPanel.ServiceAdressInfo1.Text = service.Name;
+            //_serviceInfoPanel.ServiceDescriptionInfo1.Text = service.Name;
         }
         public void LoadandExecutePanelForServiceBooking()
         {
@@ -192,6 +197,11 @@ namespace P3_Bookr
         }
 
         public void LoadInfoPanelForService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SelectServiceType()
         {
             throw new NotImplementedException();
         }

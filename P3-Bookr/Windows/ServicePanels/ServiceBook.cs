@@ -12,12 +12,15 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.Windows
 {
-    public partial class ServiceOptionCalendarPanel : UserControl
+    public partial class ServiceBook : UserControl
     {
-        List<ServiceOffering> _serviceOfferings;
-        public ServiceOptionCalendarPanel(List<ServiceOffering> serviceOfferings)
+        IServicesUI _handler;
+        List<ServiceOffering> _serviceOffering;
+        //List<ServiceOffering> _serviceOfferings;
+        public ServiceBook(IServicesUI handler, List<ServiceOffering> serviceOffering)
         {
-            _serviceOfferings = serviceOfferings;
+            _handler = handler;
+            _serviceOffering = serviceOffering;
             InitializeComponent();
         }
 
@@ -31,13 +34,13 @@ namespace P3_Bookr.Windows
 
         }
 
-        private void ServiceOptionCalendarPanel_Load(object sender, EventArgs e)
+        private void ServiceBook_Load(object sender, EventArgs e)
         {
-            this.flowLayoutPanel1.Controls.Clear();
-            foreach (ServiceOffering s in _serviceOfferings)
+            foreach (ServiceOffering so in _serviceOffering)
             {
-                this.flowLayoutPanel1.Controls.Add(new ServiceOptionFlowOption());
+                flowLayoutPanelOfferings.Controls.Add(new ServiceSubOptions(so));
             }
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace P3_Bookr.Windows
 {
-    partial class ServiceOptionFlowOption
+    partial class ServiceSubOptions
     {
         /// <summary> 
         /// Required designer variable.
