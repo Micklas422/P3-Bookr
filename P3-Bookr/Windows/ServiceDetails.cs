@@ -7,34 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Windows.WindowsInterfaces;
+using P3_Bookr.Models;
 
 namespace P3_Bookr.Windows
 {
     public partial class ServiceDetails : UserControl
     {
-        public ServiceDetails()
+        ServiceInfoPanel _serviceInfoPanel;
+        ServiceBook _serviceBook;
+
+        public ServiceDetails(ServiceInfoPanel serviceInfoPanel, ServiceBook serviceBook)
         {
+            _serviceInfoPanel = serviceInfoPanel;
+            _serviceBook = serviceBook;
             InitializeComponent();
+
+
         }
 
         private void ServiceDetails_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ServiceFlowTitel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            ServiceDetailsInfoPanel1.Controls.Add(_serviceInfoPanel);
+            ServiceDetailsOptionPanel1.Controls.Add(_serviceBook);
         }
     }
 }

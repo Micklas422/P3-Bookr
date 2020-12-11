@@ -208,23 +208,17 @@
     <Compile Include="Windows\ServicePanels\ServiceInfoPanel.Designer.cs">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServicePanels\ServiceOptionCalendarPanel.cs">
+    <Compile Include="Windows\ServicePanels\ServiceBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\ServicePanels\ServiceOptionCalendarPanel.Designer.cs">
-      <DependentUpon>ServiceOptionCalendarPanel.cs</DependentUpon>
+    <Compile Include="Windows\ServicePanels\ServiceBook.Designer.cs">
+      <DependentUpon>ServiceBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ServicePanels\ServiceOptionChoisePanel.cs">
+    <Compile Include="Windows\ServicePanels\ServiceSubOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\ServicePanels\ServiceOptionChoisePanel.Designer.cs">
-      <DependentUpon>ServiceOptionChoisePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ServicePanels\ServiceOptionFlowOption.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\ServicePanels\ServiceOptionFlowOption.Designer.cs">
-      <DependentUpon>ServiceOptionFlowOption.cs</DependentUpon>
+    <Compile Include="Windows\ServicePanels\ServiceSubOptions.Designer.cs">
+      <DependentUpon>ServiceSubOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServicesOverview.cs">
       <SubType>UserControl</SubType>
@@ -291,6 +285,7 @@
     <Compile Include="Windows\WindowsInterfaces\IHomepageUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ILogInUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\IReservationUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IServiceBookingUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\IServicesUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ISettingsUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ISideMenuUI.cs" />
@@ -349,14 +344,11 @@
     <EmbeddedResource Include="Windows\ServicePanels\ServiceInfoPanel.resx">
       <DependentUpon>ServiceInfoPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServicePanels\ServiceOptionCalendarPanel.resx">
-      <DependentUpon>ServiceOptionCalendarPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceBook.resx">
+      <DependentUpon>ServiceBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServicePanels\ServiceOptionChoisePanel.resx">
-      <DependentUpon>ServiceOptionChoisePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ServicePanels\ServiceOptionFlowOption.resx">
-      <DependentUpon>ServiceOptionFlowOption.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ServicePanels\ServiceSubOptions.resx">
+      <DependentUpon>ServiceSubOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ServicesOverview.resx">
       <DependentUpon>ServicesOverview.cs</DependentUpon>

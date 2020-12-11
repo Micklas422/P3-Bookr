@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.FunctionComponent
 {
-    interface IFunctionComponentInterface
+    public interface IFunctionComponentInterface
     {
         ILoginManager loginManager { get; }
 

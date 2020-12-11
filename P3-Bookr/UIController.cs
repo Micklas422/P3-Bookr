@@ -12,14 +12,13 @@ using P3_Bookr.Windows.ReservationPanels;
 using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
+using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.Commons.Enums;
 using P3_Bookr.Windows.Services;
-using P3_Bookr.Commons.CustomExceptions;
-
 
 namespace P3_Bookr
 {
-    class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
+    public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         MainWindow _mainWindow;
         ServicesOverview _servicesOverview;
@@ -33,8 +32,11 @@ namespace P3_Bookr
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
+            //_serviceDetails = new ServiceDetails(this);
+            //_serviceInfoPanel = new ServiceInfoPanel(this);
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
+            SwitchToLogInPage();
             Application.Run(_mainWindow);
         }
 
@@ -48,7 +50,15 @@ namespace P3_Bookr
         public void SwitchToHomePage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new FrontPageForm(this));
+            FrontPageForm form = new FrontPageForm(this);
+            List<Service> services = _functionComponent.serviceManager.FindLastServicesUsed(_currentUser, 5);
+            foreach(Service s in services)
+            {
+                form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
+            }
+
+            
+            _mainWindow.panelSiteView.Controls.Add(form);
         }
 
         public void SwitchToLogInPage()
@@ -67,9 +77,8 @@ namespace P3_Bookr
 
         public void SwitchToServicePage()
         {
-            _servicesOverview = new ServicesOverview(this);
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(_servicesOverview);
+            _mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
         }
 
         public void SwitchToSettingsPage()
@@ -101,7 +110,7 @@ namespace P3_Bookr
                 _servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
                 foreach (Service service in services)
                 {
-                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service));
+                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service, this));
                 }
             }
         }
@@ -115,9 +124,9 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public void SelectServiceType()
+        public void SelectServiceType(ServiceSubOptions price, Service service)
         {
-            throw new NotImplementedException();
+            //service.ServiceOfferings.
         }
 
         public void SelectDate()
@@ -133,6 +142,22 @@ namespace P3_Bookr
         public void Book()
         {
             throw new NotImplementedException();
+        }
+        public void SwitchToService(Service service)
+        {
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this, service.ServiceOfferings)));
+        }
+        public void LoadInfoPanelForService(IService service)
+        {
+            //_serviceInfoPanel.ServiceAdressInfo1.Text = service.Name;
+            //_serviceInfoPanel.ServiceDescriptionInfo1.Text = service.Name;
+        }
+        public void LoadandExecutePanelForServiceBooking()
+        {
+            throw new NotImplementedException();
+            Service service;
+
         }
         #endregion
         #region ResevationUI
@@ -202,6 +227,16 @@ namespace P3_Bookr
         }
 
         public void AddUserGroup()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LoadInfoPanelForService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SelectServiceType()
         {
             throw new NotImplementedException();
         }
