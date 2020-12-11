@@ -15,32 +15,58 @@ namespace P3_Bookr.Windows
     public partial class ServiceBook : UserControl
     {
         IServicesUI _handler;
-        List<ServiceOffering> _serviceOffering;
+        IReservationUI _reservationHandler;
+        Service _service;
+        ServiceSubOptions _selectedServiceOffering;
         //List<ServiceOffering> _serviceOfferings;
-        public ServiceBook(IServicesUI handler, List<ServiceOffering> serviceOffering)
+        public ServiceBook(IServicesUI serivceHandler, IReservationUI reservationHandler, Service service)
         {
-            _handler = handler;
-            _serviceOffering = serviceOffering;
+            _handler = serivceHandler;
+            _service = service;
+            _reservationHandler = reservationHandler;
             InitializeComponent();
         }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        
+        private void ServiceSubOptions_click(object sender, EventArgs e)
         {
-            //this.DateTimePickerService.sele
-        }
-
-        private void ServiceOptionBookButton1_Click(object sender, EventArgs e)
-        {
-
+            foreach(ServiceSubOptions s in flowLayoutPanelOfferings.Controls)
+            {
+                s.BackColor = Color.White;
+            }
+            ServiceSubOptions sub = (ServiceSubOptions)sender;
+            sub.BackColor = Color.LightGreen;
+            _selectedServiceOffering = sub;
         }
 
         private void ServiceBook_Load(object sender, EventArgs e)
         {
-            foreach (ServiceOffering so in _serviceOffering)
+            foreach (ServiceOffering so in _service.ServiceOfferings)
             {
-                flowLayoutPanelOfferings.Controls.Add(new ServiceSubOptions(so));
+                ServiceSubOptions sub = new ServiceSubOptions(so);
+                sub.Click += ServiceSubOptions_click;
+                flowLayoutPanelOfferings.Controls.Add(sub);
             }
 
+        }
+
+        private void ButtonBook_Click(object sender, EventArgs e)
+        {
+            if(_selectedServiceOffering != null)
+            {
+                ServiceOffering so = _selectedServiceOffering.GetServiceOffering();
+                if(_reservationHandler.CreateNewReservation(_service, so, dateTimePickerServicerBook.Value))
+                {
+                    MessageBox.Show("Reservation godkendt");
+                }
+                else
+                {
+                    MessageBox.Show("Reservation kunne ikke gennemføres");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vælg service!");
+            }
         }
     }
 }
