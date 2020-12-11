@@ -8,18 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using P3_Bookr.Models;
+using P3_Bookr.Windows.WindowsInterfaces;
 
 namespace P3_Bookr.Windows.ReservationPanels
 {
     public partial class ReservationPanel : UserControl
     {
-        public ReservationPanel(Reservation reservation)
+        IReservationUI _reservationUI;
+        public ReservationPanel(Reservation reservation, IReservationUI reservationUI)
         {
             InitializeComponent();
+            _reservationUI = reservationUI;
             this.ReservationServiceName.Text = reservation.ServiceOffering.Name;
             this.ReservationPrice.Text = reservation.ServiceOffering.Price.ToString();
             this.ReservationDate.Text = reservation.ReservationDate.ToString();
-            
+            this.labelReservationId.Text = reservation.Id.ToString();
+        }
+
+        private void CanselReservation_Click(object sender, EventArgs e)
+        {
+            _reservationUI.CancelReservation(int.Parse(this.labelReservationId.Text));
         }
     }
 }

@@ -21,19 +21,15 @@ namespace P3_Bookr
     public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         MainWindow _mainWindow;
-        ServicesOverview _servicesOverview;
-        ReservationPage _reservationPage;
+        //ServicesOverview _servicesOverview;
+        //ReservationPage _reservationPage;
         //ILoginManager _logInHandler;
         Member _currentUser;
-        List<Service> _activeServices;
-        List<Reservation> _activeMemberReservations;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
-            //_serviceDetails = new ServiceDetails(this);
-            //_serviceInfoPanel = new ServiceInfoPanel(this);
             _mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
             SwitchToLogInPage();
@@ -70,15 +66,15 @@ namespace P3_Bookr
 
         public void SwitchToReservationPage()
         {
-            _reservationPage = new ReservationPage(this);
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(_reservationPage);
+            _mainWindow.panelSiteView.Controls.Add(LoadReservationsOfMember());
         }
 
         public void SwitchToServicePage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new ServicesOverview(this));
+
+            _mainWindow.panelSiteView.Controls.Add(LoadServicesToShow());
         }
 
         public void SwitchToSettingsPage()
@@ -88,9 +84,11 @@ namespace P3_Bookr
         }
         #endregion //DONE
         #region ServicesUI
-        public void LoadServicesToShow()
+        public ServicesOverview LoadServicesToShow()
         {
-            _activeServices = _functionComponent.serviceManager.GetActiveServices();
+            ServicesOverview servicesOverview = new ServicesOverview(this);
+            List<Service> activeServices = new List<Service>();
+            activeServices = _functionComponent.serviceManager.GetActiveServices();
             var enumValue = Enum.GetValues(typeof(ServiceTypes));
             var enumNames = Enum.GetNames(typeof(ServiceTypes));
 
@@ -98,7 +96,7 @@ namespace P3_Bookr
 
             foreach (int i in enumValue)
             {
-                List<Service> v = _activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
+                List<Service> v = activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
                 if (v.Count > 0) 
                 {
                     sortedByServiceTypes.Add(v);
@@ -106,13 +104,14 @@ namespace P3_Bookr
             }
             foreach (List<Service> services in sortedByServiceTypes)
             {
-                _servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
-                _servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
+                servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
+                servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
                 foreach (Service service in services)
                 {
-                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service, this));
+                    servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service, this));
                 }
             }
+            return servicesOverview;
         }
         public void ChooseServices()
         {
@@ -161,16 +160,19 @@ namespace P3_Bookr
         }
         #endregion
         #region ResevationUI
-        public void LoadReservationsOfMember()
+        public ReservationPage LoadReservationsOfMember()
         {
-            _activeMemberReservations = _functionComponent.reservationManager.GetActiveReservationsByMember(_currentUser);
+            ReservationPage reservationPage = new ReservationPage(this);
+            List<Reservation> activeMemberReservations = new List<Reservation>();
+            activeMemberReservations = _functionComponent.reservationManager.GetActiveReservationsByMember(_currentUser);
 
-            foreach (Reservation reservation in _activeMemberReservations)
+            foreach (Reservation reservation in activeMemberReservations)
             {
-                //_reservationPage.flowLayoutPanel1.Controls.Add(new ReservationPanel());
+                reservationPage.flowLayoutPanel1.Controls.Add(new ReservationPanel(reservation, this));
             }
+            return reservationPage;
         }
-        public void CancelReservation()
+        public void CancelReservation(int reservationId)
         {
             throw new NotImplementedException();
         }

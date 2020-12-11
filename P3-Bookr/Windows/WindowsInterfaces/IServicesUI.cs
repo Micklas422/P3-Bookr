@@ -9,6 +9,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
 {
     public interface IServicesUI
     {
+        ServicesOverview LoadServicesToShow();
         void SelectService();
         void SelectServiceType();
         void SelectDate();
