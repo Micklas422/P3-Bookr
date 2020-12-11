@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
@@ -10,7 +11,7 @@ namespace P3_Bookr.Models
     {
         DateTime CreationDate { get; set; }
         DateTime CancellationDate { get; set; }
-        Reservation.ReservationStates ReservationState { get; set; }
+        ReservationStates ReservationState { get; set; }
         DateTime ReservationDate { get; set; }
         int Duration { get; set; }
         DateTime ReservationDeadline { get; set; }

@@ -17,8 +17,8 @@ namespace P3_Bookr.Windows
         {
             InitializeComponent();
             this.ServiceTitel.Text = service.Name;
-            //this.ServiceLocationInfo.Text
-            //this.ServiceInfoInfo.Text
+            this.ServiceLocationInfo.Text = service.Location;
+            this.ServiceInfoInfo.Text = service.Description;
         }
 
         private void label1_Click(object sender, EventArgs e)

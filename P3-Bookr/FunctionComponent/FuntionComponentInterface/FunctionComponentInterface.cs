@@ -16,6 +16,8 @@ namespace P3_Bookr.FunctionComponent
 
         IPermissionManager permissionManager { get; }
 
+        IReservationManager reservationManager { get; }
+
         IServiceManager serviceManager { get; }
     }
 }

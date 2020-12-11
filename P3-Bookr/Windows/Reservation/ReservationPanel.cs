@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows.Reservation
 {
-    public partial class Reservation : UserControl
+    public partial class ReservationPanel : UserControl
     {
-        public Reservation()
+        public ReservationPanel()
         {
             InitializeComponent();
         }

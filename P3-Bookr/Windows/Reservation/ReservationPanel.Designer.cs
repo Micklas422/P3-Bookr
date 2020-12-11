@@ -1,6 +1,6 @@
 ﻿namespace P3_Bookr.Windows.Reservation
 {
-    partial class Reservation
+    partial class ReservationPanel
     {
         /// <summary> 
         /// Required designer variable.
