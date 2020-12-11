@@ -7,24 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Models;
 
 namespace P3_Bookr.Windows
 {
     public partial class ServiceViewForFlow : UserControl
     {
-        public ServiceViewForFlow()
+        public ServiceViewForFlow(Service service)
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.ServiceTitel.Text = service.Name;
+            //this.ServiceLocation.Text
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        public string Titel
+        {
+            get { return this.ServiceTitel.Text; }
+            set { this.ServiceTitel.Text = value; }
+        }
+        public string LocationInfo
+        {
+            get { return this.ServiceLocationInfo.Text; }
+            set { this.ServiceLocationInfo.Text = value; }
+        }
+        public string InfoInfo
+        {
+            get { return this.ServiceInfoInfo.Text; }
+            set { this.ServiceInfoInfo.Text = value; }
         }
     }
 }
