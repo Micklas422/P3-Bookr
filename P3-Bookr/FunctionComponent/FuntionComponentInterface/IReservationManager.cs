@@ -9,5 +9,7 @@ namespace P3_Bookr.FunctionComponent
         List<Reservation> GetActiveReservationsByMember(Member member);
 
         bool CreateReservation(Member member, Service service, ServiceOffering serviceOffering, DateTime dateTime);
+        void CancelReservation(Reservation reservation);
+        void CancelPayment(List<Payment> payments);
     }
 }

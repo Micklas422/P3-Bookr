@@ -22,7 +22,7 @@ namespace P3_Bookr.Models
         TimePeriod _timePeriod;
         ServiceOffering _serviceOffering;
 
-        List<Payment> payments = new List<Payment>();
+        List<Payment> _payments = new List<Payment>();
 
         public Reservation(int id, DateTime reservationDate, TimePeriod timePeriod, ServiceOffering serviceOffering)
         {
@@ -79,8 +79,8 @@ namespace P3_Bookr.Models
 
         public List<Payment> Payments
         {
-            get { return payments; }
-            set { payments = value; }
+            get { return _payments; }
+            set { _payments = value; }
         }
 
         internal TimePeriod TimePeriod { get => _timePeriod; set => _timePeriod = value; }
