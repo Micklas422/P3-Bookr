@@ -256,6 +256,11 @@ namespace P3_Bookr
         {
             return _functionComponent.reservationManager.CreateReservation(_currentUser, service, serviceOffering, dateTime);
         }
+
+        public void CancelReservation()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
