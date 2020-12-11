@@ -13,6 +13,8 @@ using P3_Bookr.Windows.Settings;
 using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
 using P3_Bookr.Commons.CustomExceptions;
+using P3_Bookr.Commons.Enums;
+using P3_Bookr.Windows.Services;
 
 namespace P3_Bookr
 {
@@ -108,7 +110,7 @@ namespace P3_Bookr
                 _servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
                 foreach (Service service in services)
                 {
-                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service));
+                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service, this));
                 }
             }
         }
