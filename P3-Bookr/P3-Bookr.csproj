@@ -81,11 +81,13 @@
     <Compile Include="FunctionComponent\FuntionComponentInterface\ILoginManager.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\IPaymentManager.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\IPermissionManager.cs" />
+    <Compile Include="FunctionComponent\FuntionComponentInterface\IReservationManager.cs" />
     <Compile Include="FunctionComponent\FuntionComponentInterface\IServiceManager.cs" />
     <Compile Include="FunctionComponent\HistoryManager.cs" />
     <Compile Include="FunctionComponent\LoginManager.cs" />
     <Compile Include="FunctionComponent\PaymentManager.cs" />
     <Compile Include="FunctionComponent\PermissionManager.cs" />
+    <Compile Include="FunctionComponent\ReservationManager.cs" />
     <Compile Include="FunctionComponent\ServiceManager.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
@@ -182,11 +184,11 @@
     <Compile Include="Windows\ReservationOverview.Designer.cs">
       <DependentUpon>ReservationOverview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Reservation\Reservation.cs">
+    <Compile Include="Windows\Reservation\ReservationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\Reservation\Reservation.Designer.cs">
-      <DependentUpon>Reservation.cs</DependentUpon>
+    <Compile Include="Windows\Reservation\ReservationPanel.Designer.cs">
+      <DependentUpon>ReservationPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Reservation\ReservationPage.cs">
       <SubType>UserControl</SubType>
@@ -330,8 +332,8 @@
     <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Reservation\Reservation.resx">
-      <DependentUpon>Reservation.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\Reservation\ReservationPanel.resx">
+      <DependentUpon>ReservationPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Reservation\ReservationPage.resx">
       <DependentUpon>ReservationPage.cs</DependentUpon>

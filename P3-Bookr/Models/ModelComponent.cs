@@ -52,6 +52,26 @@ namespace P3_Bookr.Models
             set { _customer = value; }
         }
 
+        public List<Reservation> GetAllReservationsByMemberId(int id)
+        {
+            List<Reservation> result = new List<Reservation>();
+
+            foreach (Customer cus in _customer)
+            {
+                foreach (Member mem in cus.Members)
+                {
+                    if (mem.Id == id)
+                    {
+                        foreach (Reservation res in mem.Reservations)
+                        {
+                            result.Add(res);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
         public Member GetMemberByUsername(string username)
         {
             try

@@ -18,12 +18,13 @@ namespace P3_Bookr
 {
     public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
-        bool stayAlive = false;
         MainWindow _mainWindow;
-        //ServiceDetails _serviceDetails;
-        //ServiceInfoPanel _serviceInfoPanel;
+        ServicesOverview _servicesOverview;
+        ReservationPage _reservationPage;
         //ILoginManager _logInHandler;
         Member _currentUser;
+        List<Service> _activeServices;
+        List<Reservation> _activeMemberReservations;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
         {
@@ -67,8 +68,9 @@ namespace P3_Bookr
 
         public void SwitchToReservationPage()
         {
+            _reservationPage = new ReservationPage(this);
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new ReservationPage(this));
+            _mainWindow.panelSiteView.Controls.Add(_reservationPage);
         }
 
         public void SwitchToServicePage()
@@ -86,7 +88,29 @@ namespace P3_Bookr
         #region ServicesUI
         public void LoadServicesToShow()
         {
-            throw new NotImplementedException();
+            _activeServices = _functionComponent.serviceManager.GetActiveServices();
+            var enumValue = Enum.GetValues(typeof(ServiceTypes));
+            var enumNames = Enum.GetNames(typeof(ServiceTypes));
+
+            List<List<Service>> sortedByServiceTypes = new List<List<Service>>();
+
+            foreach (int i in enumValue)
+            {
+                List<Service> v = _activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
+                if (v.Count > 0) 
+                {
+                    sortedByServiceTypes.Add(v);
+                }
+            }
+            foreach (List<Service> services in sortedByServiceTypes)
+            {
+                _servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
+                _servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
+                foreach (Service service in services)
+                {
+                    _servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service));
+                }
+            }
         }
         public void ChooseServices()
         {
@@ -135,6 +159,10 @@ namespace P3_Bookr
         }
         #endregion
         #region ResevationUI
+        public void LoadReservations()
+        {
+            throw new NotImplementedException();
+        }
         public void CancelReservation()
         {
             throw new NotImplementedException();

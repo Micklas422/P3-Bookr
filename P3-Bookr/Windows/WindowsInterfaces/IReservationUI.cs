@@ -8,6 +8,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
 {
     public interface IReservationUI
     {
+        void LoadReservations();
         void CancelReservation();
     }
 }

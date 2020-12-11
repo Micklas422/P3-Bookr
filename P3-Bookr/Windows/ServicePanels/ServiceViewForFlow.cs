@@ -21,10 +21,9 @@ namespace P3_Bookr.Windows
             _service = service;
             _servicesUI = IServices;
             InitializeComponent();
-            this.ServiceTitel.Text = _service.Name;
-            this.ServiceLocation.Text = _service.Location;
-            this.Update();
-
+            this.ServiceTitel.Text = service.Name;
+            this.ServiceLocationInfo.Text = service.Location;
+            this.ServiceInfoInfo.Text = service.Description;
         }
 
         private void label1_Click(object sender, EventArgs e)
