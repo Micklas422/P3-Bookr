@@ -34,7 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.ReservationLogo = new System.Windows.Forms.PictureBox();
             this.ReservationAddress = new System.Windows.Forms.Label();
-            this.labelReservationId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,24 +113,11 @@
             this.ReservationAddress.Text = "Adresse";
             this.ReservationAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelReservationId
-            // 
-            this.labelReservationId.AutoSize = true;
-            this.labelReservationId.BackColor = System.Drawing.Color.Transparent;
-            this.labelReservationId.ForeColor = System.Drawing.Color.Transparent;
-            this.labelReservationId.Location = new System.Drawing.Point(4, 4);
-            this.labelReservationId.Name = "labelReservationId";
-            this.labelReservationId.Size = new System.Drawing.Size(36, 17);
-            this.labelReservationId.TabIndex = 6;
-            this.labelReservationId.Text = "Test";
-            this.labelReservationId.Visible = false;
-            // 
             // ReservationPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.labelReservationId);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ReservationDate);
             this.Controls.Add(this.ReservationPrice);
@@ -155,6 +141,5 @@
         public System.Windows.Forms.Label ReservationPrice;
         public System.Windows.Forms.Label ReservationDate;
         public System.Windows.Forms.Label ReservationAddress;
-        public System.Windows.Forms.Label labelReservationId;
     }
 }

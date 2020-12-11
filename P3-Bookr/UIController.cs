@@ -172,9 +172,17 @@ namespace P3_Bookr
             }
             return reservationPage;
         }
-        public void CancelReservation(int reservationId)
+        public void CancelReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            if (reservation.ReservationState != ReservationStates.BindingReservation)
+            {
+                _functionComponent.reservationManager.CancelReservation(reservation);
+                _functionComponent.reservationManager.CancelPayment(reservation.Payments);
+            } 
+            else
+            {
+                MessageBox.Show("Reservation kan ikke annulleres");
+            }
         }
         #endregion
         #region LogInUI

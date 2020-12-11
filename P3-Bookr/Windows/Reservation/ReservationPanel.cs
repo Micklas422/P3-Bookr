@@ -15,6 +15,7 @@ namespace P3_Bookr.Windows.ReservationPanels
     public partial class ReservationPanel : UserControl
     {
         IReservationUI _reservationUI;
+        Reservation _reservation;
         public ReservationPanel(Reservation reservation, IReservationUI reservationUI)
         {
             InitializeComponent();
@@ -22,12 +23,12 @@ namespace P3_Bookr.Windows.ReservationPanels
             this.ReservationServiceName.Text = reservation.ServiceOffering.Name;
             this.ReservationPrice.Text = reservation.ServiceOffering.Price.ToString();
             this.ReservationDate.Text = reservation.ReservationDate.ToString();
-            this.labelReservationId.Text = reservation.Id.ToString();
+            _reservation = reservation;
         }
 
         private void CanselReservation_Click(object sender, EventArgs e)
         {
-            _reservationUI.CancelReservation(int.Parse(this.labelReservationId.Text));
+            _reservationUI.CancelReservation(_reservation);
         }
     }
 }

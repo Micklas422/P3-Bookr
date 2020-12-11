@@ -21,5 +21,15 @@ namespace P3_Bookr.FunctionComponent
             return _modelComponent.GetAllReservationsByMemberId(member.Id).
                 Where(r => (ReservationStates) r.ReservationState != ReservationStates.Cancelled).ToList();
         }
+
+        public void CancelReservation(Reservation reservation)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CancelPayment(List<Payment> payments)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
