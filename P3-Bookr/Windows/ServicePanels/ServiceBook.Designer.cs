@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.ServiceOptionTitel1 = new System.Windows.Forms.Label();
-            this.ServiceOptionBookButton1 = new System.Windows.Forms.Button();
+            this.ButtonBook = new System.Windows.Forms.Button();
             this.dateTimePickerServicerBook = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanelOfferings = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
@@ -44,15 +44,15 @@
             this.ServiceOptionTitel1.Text = "Beskrivelse af valg";
             this.ServiceOptionTitel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ServiceOptionBookButton1
+            // ButtonBook
             // 
-            this.ServiceOptionBookButton1.Location = new System.Drawing.Point(60, 260);
-            this.ServiceOptionBookButton1.Name = "ServiceOptionBookButton1";
-            this.ServiceOptionBookButton1.Size = new System.Drawing.Size(120, 30);
-            this.ServiceOptionBookButton1.TabIndex = 2;
-            this.ServiceOptionBookButton1.Text = "Book/Betal";
-            this.ServiceOptionBookButton1.UseVisualStyleBackColor = true;
-            this.ServiceOptionBookButton1.Click += new System.EventHandler(this.ServiceOptionBookButton1_Click);
+            this.ButtonBook.Location = new System.Drawing.Point(60, 260);
+            this.ButtonBook.Name = "ButtonBook";
+            this.ButtonBook.Size = new System.Drawing.Size(120, 30);
+            this.ButtonBook.TabIndex = 2;
+            this.ButtonBook.Text = "Book/Betal";
+            this.ButtonBook.UseVisualStyleBackColor = true;
+            this.ButtonBook.Click += new System.EventHandler(this.ButtonBook_Click);
             // 
             // dateTimePickerServicerBook
             // 
@@ -77,7 +77,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.flowLayoutPanelOfferings);
             this.Controls.Add(this.dateTimePickerServicerBook);
-            this.Controls.Add(this.ServiceOptionBookButton1);
+            this.Controls.Add(this.ButtonBook);
             this.Controls.Add(this.ServiceOptionTitel1);
             this.Name = "ServiceBook";
             this.Size = new System.Drawing.Size(240, 300);
@@ -89,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label ServiceOptionTitel1;
-        private System.Windows.Forms.Button ServiceOptionBookButton1;
+        private System.Windows.Forms.Button ButtonBook;
         private System.Windows.Forms.DateTimePicker dateTimePickerServicerBook;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelOfferings;
     }

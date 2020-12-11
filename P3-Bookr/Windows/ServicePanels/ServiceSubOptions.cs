@@ -18,13 +18,20 @@ namespace P3_Bookr.Windows
         {
             _serviceOffering = serviceOffering;
             InitializeComponent();
-            this.ServiceOptionFlowOptionInfo1.Text = _serviceOffering.Name;
-            this.ServiceOptionFlowOptionInfo2.Text = _serviceOffering.Price.ToString("F");
+            ServiceOptionFlowOptionInfo1.Text = _serviceOffering.Name;
+            ServiceOptionFlowOptionInfo2.Text = _serviceOffering.Price.ToString("F");
+            ServiceOptionFlowOptionInfo1.Click += RaiseClick;
+            ServiceOptionFlowOptionInfo2.Click += RaiseClick;
         }
 
-        private void ServiceOptionFlowOption_DoubleClick(object sender, EventArgs e)
+        void RaiseClick(object sender, EventArgs e)
         {
-            
+            OnClick(e);
+        }
+
+        public ServiceOffering GetServiceOffering()
+        {
+            return _serviceOffering;
         }
     }
 }

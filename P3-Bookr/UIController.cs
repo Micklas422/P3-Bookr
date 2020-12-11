@@ -104,6 +104,7 @@ namespace P3_Bookr
                     sortedByServiceTypes.Add(v);
                 }
             }
+
             foreach (List<Service> services in sortedByServiceTypes)
             {
                 _servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
@@ -146,7 +147,7 @@ namespace P3_Bookr
         public void SwitchToService(Service service)
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this, service.ServiceOfferings)));
+            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this,this, service)));
         }
         public void LoadInfoPanelForService(IService service)
         {
@@ -239,6 +240,11 @@ namespace P3_Bookr
         public void SelectServiceType()
         {
             throw new NotImplementedException();
+        }
+
+        public bool CreateNewReservation(Service service, ServiceOffering serviceOffering, DateTime dateTime)
+        {
+            return _functionComponent.reservationManager.CreateReservation(_currentUser, service, serviceOffering, dateTime);
         }
         #endregion
     }

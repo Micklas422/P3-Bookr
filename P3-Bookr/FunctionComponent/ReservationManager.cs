@@ -16,6 +16,11 @@ namespace P3_Bookr.FunctionComponent
             _modelComponent = modelComponent;
         }
 
+        public bool CreateReservation(Member member, Service service, ServiceOffering serviceOffering, DateTime dateTime)
+        {
+            return true;
+        }
+
         public List<Reservation> GetActiveReservationsByMember(Member member)
         {
             return _modelComponent.GetAllReservationsByMemberId(member.Id).
