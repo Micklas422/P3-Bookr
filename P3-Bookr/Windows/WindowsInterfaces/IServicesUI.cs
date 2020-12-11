@@ -13,5 +13,8 @@ namespace P3_Bookr.Windows.WindowsInterfaces
         void SelectDate();
         void SelectTime();
         void Book();
+        void SwitchToService();
+        void LoadInfoPanelForService();
+        void LoadandExecutePanelForServiceBooking();
     }
 }

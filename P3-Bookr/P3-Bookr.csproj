@@ -289,6 +289,7 @@
     <Compile Include="Windows\WindowsInterfaces\IHomepageUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ILogInUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\IReservationUI.cs" />
+    <Compile Include="Windows\WindowsInterfaces\IServiceBookingUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\IServicesUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ISettingsUI.cs" />
     <Compile Include="Windows\WindowsInterfaces\ISideMenuUI.cs" />

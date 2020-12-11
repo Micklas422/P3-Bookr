@@ -16,5 +16,10 @@ namespace P3_Bookr.Windows
         {
             InitializeComponent();
         }
+
+        private void ServiceOptionFlowOption_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
