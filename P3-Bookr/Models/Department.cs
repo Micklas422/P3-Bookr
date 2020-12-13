@@ -8,27 +8,17 @@ namespace P3_Bookr.Models
 {
     public class Department : IDepartment
     {
-        static List<int> UniqueIds = new List<int>();
-
-        int _id;
-        int _customerId;
         bool _isActive;
         string _name;
         string _adress;
         string _description;
+        Customer _customer;
+        List<Service> _services = new List<Service>();
 
-        List<Service> services = new List<Service>();
-
-        public Department(int id, bool isActive, string name, string adress, string description)
+        public Department(Customer customer, string name)
         {
-            if (UniqueIds.Contains(id))
-                throw new ArgumentException();
-            UniqueIds.Add(id);
-            _id = id;
-            _isActive = isActive;
-            _name = name;
-            _adress = adress;
-            _description = description;
+            Customer = customer;
+            Name = name;
         }
 
         public bool IsActive
@@ -55,22 +45,13 @@ namespace P3_Bookr.Models
             set { _description = value; }
         }
 
-        public int Id
-        {
-            get { return _id; }
-        }
-
-        public int CustomerId
-        {
-            get { return _customerId; }
-            set { _customerId = value; }
-        }
-
         public List<Service> Services
         {
-            get { return services; }
-            set { services = value; }
+            get { return _services; }
+            set { _services = value; }
         }
+
+        public Customer Customer { get => _customer; set => _customer = value; }
 
         public void createService()
         {
