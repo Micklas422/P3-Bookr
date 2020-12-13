@@ -1,6 +1,6 @@
 ﻿namespace P3_Bookr.Windows
 {
-    partial class ServiceOptionFlowOption
+    partial class ServiceSubOptions
     {
         /// <summary> 
         /// Required designer variable.
@@ -65,7 +65,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ServiceOptionFlowOption";
             this.Size = new System.Drawing.Size(277, 71);
-            this.DoubleClick += new System.EventHandler(this.ServiceOptionFlowOption_DoubleClick);
             this.ResumeLayout(false);
 
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using P3_Bookr.Windows.WindowsInterfaces;
 
-namespace P3_Bookr.Windows.Reservation
+namespace P3_Bookr.Windows.ReservationPanels
 {
     public partial class ReservationPage : UserControl
     {

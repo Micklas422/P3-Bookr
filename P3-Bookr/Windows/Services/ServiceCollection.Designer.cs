@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.serviceGathering1 = new P3_Bookr.Windows.Services.ServiceGathering();
-            this.servicesTop1 = new P3_Bookr.Windows.Services.ServicesTop();
+            //this.servicesTop1 = new P3_Bookr.Windows.Services.ServicesTop();
             this.SuspendLayout();
             // 
             // serviceGathering1

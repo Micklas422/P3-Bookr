@@ -15,14 +15,11 @@ namespace P3_Bookr.Models
         string RentalNumber { get; set; }
         string Adress { get; set; }
         string Email { get; set; }
-        bool CustomerDeactivated { get; set; }
         Member.MemberTypes MemberType { get; set; }
         string Username { get; set; }
         string Password { get; set; }
-        int Id { get; }
-        int CustomerId { get; set; }
+        bool IsCustomerActive { get; }
+        Customer Customer { get; }
         List<Reservation> Reservations { get; set; }
-        void setPermissions();
-        bool approveLogin(string username, string password);
     }
 }

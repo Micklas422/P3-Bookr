@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.DAL;
 using P3_Bookr.DAL.Interfaces;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
@@ -52,6 +53,26 @@ namespace P3_Bookr.Models
             set { _customer = value; }
         }
 
+        public List<Reservation> GetAllReservationsByMemberId(int id)
+        {
+            List<Reservation> result = new List<Reservation>();
+
+            foreach (Customer cus in _customer)
+            {
+                foreach (Member mem in cus.Members)
+                {
+                    if (mem.Id == id)
+                    {
+                        foreach (Reservation res in mem.Reservations)
+                        {
+                            result.Add(res);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
         public Member GetMemberByUsername(string username)
         {
             try
@@ -88,6 +109,27 @@ namespace P3_Bookr.Models
         {
             get { return _dataAccesLayer; }
             private set { _dataAccesLayer = value; }
+        }
+        public bool CancelReservation(Reservation reservation, Member member)
+        {
+            foreach (Customer cus in _customer)
+            {
+                foreach (Member mem in cus.Members)
+                {
+                    if (mem == member)
+                    {
+                        foreach (Reservation res in mem.Reservations)
+                        {
+                            if (res == reservation)
+                            {
+                                res.ReservationState = ReservationStates.Cancelled;
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
 
