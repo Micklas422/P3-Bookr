@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using P3_Bookr.Models;
 using P3_Bookr.Commons.Enums;
 
-namespace P3_Bookr.Windows.Services
+namespace P3_Bookr.Windows
 {
     public partial class ServicesTop : UserControl
     {
