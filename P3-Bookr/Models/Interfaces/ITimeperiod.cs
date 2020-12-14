@@ -11,7 +11,5 @@ namespace P3_Bookr.Models
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
         bool ServiceUsed { get; set; }
-        int Id { get; }
-        int ServicesId { get; set; }
     }
 }

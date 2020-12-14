@@ -13,8 +13,6 @@ namespace P3_Bookr.Models
 
         string _location;
         string _description;
-        int _id;
-        int _departmentId;
         string _name;
         bool _departmentDeactivatet;
         ServiceStates _serviceState;
@@ -31,10 +29,6 @@ namespace P3_Bookr.Models
         };
         public Service(int id, string name, ServiceTypes serviceType)
         {
-            if (UniqueIds.Contains(id))
-                throw new ArgumentException();
-            UniqueIds.Add(id);
-            _id = id;
             _name = name;
             _serviceType = serviceType;
         }
@@ -70,17 +64,6 @@ namespace P3_Bookr.Models
         {
             get { return _serviceType; }
             set { _serviceType = value; }
-        }
-
-        public int Id
-        {
-            get { return _id; }
-        }
-
-        public int DepartmentId
-        {
-            get { return _departmentId; }
-            set { _departmentId = value; }
         }
         public List<TimePeriod> TimePeriods
         {
