@@ -56,7 +56,7 @@ namespace P3_Bookr
                 }
             }
 
-            c.Members[1].Reservations.Add(
+            c.Members[0].Reservations.Add(
                 new Reservation(
                 DateTime.Now,
                 new TimePeriod(
@@ -80,7 +80,6 @@ namespace P3_Bookr
             IFunctionComponentInterface functionComponent = new FunctionComponenten(m);
 
             UIController uIController = new UIController(functionComponent);
-            
         }
     }
 }
