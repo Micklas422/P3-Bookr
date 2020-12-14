@@ -52,8 +52,6 @@
     <Compile Include="Commons\CustomExceptions\BadPasswordException.cs" />
     <Compile Include="Commons\CustomExceptions\UserNotFoundException.cs" />
     <Compile Include="Commons\Enums.cs" />
-    <Compile Include="Commons\FileReader.cs" />
-    <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\DataAccesLayer.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />
@@ -72,7 +70,6 @@
     <Compile Include="DAL\ServiceGroupDAL.cs" />
     <Compile Include="DAL\ServiceOfferingDAL.cs" />
     <Compile Include="DAL\TimeperiodDAL.cs" />
-    <Compile Include="DAL\Util\JsonHandler.cs" />
     <Compile Include="DAL\MemberDAL.cs" />
     <Compile Include="DAL\PaymentDAL.cs" />
     <Compile Include="FunctionComponent\FunctionComponenten.cs" />
