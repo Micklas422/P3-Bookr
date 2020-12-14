@@ -21,7 +21,7 @@ namespace P3_Bookr.FunctionComponent
             List<Service> result = new List<Service>();
             foreach (Service ser in services)
             {
-                if (ser.ServiceState == 0)
+                if (ser.ServiceState != Service.ServiceStates.Deactivated)
                 {
                     result.Add(ser);
                 }
@@ -39,11 +39,18 @@ namespace P3_Bookr.FunctionComponent
         public List<Service> GetActiveServicesByMember(Member member)
         {
             List<Service> result = new List<Service>();
-            //foreach (Department d in member)
-            //{
-
-            //}
-
+            foreach (Department d in member.Departments)
+            {
+                foreach (Service s in d.Services)
+                {
+                    if (!result.Contains(s) 
+                        && s.ServiceState != Service.ServiceStates.Deactivated 
+                        && member.SystemRights >= s.SystemRights)
+                    {
+                        result.Add(s);
+                    }
+                }
+            }
             return result;
         }
 

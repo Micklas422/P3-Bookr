@@ -17,6 +17,7 @@ namespace P3_Bookr.Models
         bool _departmentDeactivatet;
         ServiceStates _serviceState;
         ServiceTypes _serviceType;
+        SystemRights _systemRights;
 
         List<TimePeriod> timeperiods = new List<TimePeriod>();
         List<ServiceOffering> serviceOfferings = new List<ServiceOffering>();
@@ -68,6 +69,11 @@ namespace P3_Bookr.Models
         {
             get { return _serviceType; }
             set { _serviceType = value; }
+        }
+        public SystemRights SystemRights
+        {
+            get { return _systemRights; }
+            set { _systemRights = value; }
         }
         public List<TimePeriod> TimePeriods
         {
