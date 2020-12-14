@@ -27,7 +27,7 @@ namespace P3_Bookr
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
-            _mainWindow.panelSideBar.Controls.Clear();
+            //_mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
             SwitchToLogInPage();
             Application.Run(_mainWindow);
@@ -42,6 +42,7 @@ namespace P3_Bookr
 
         public void SwitchToHomePage()
         {
+            _mainWindow.HideAllControls();
             _mainWindow.panelSiteView.Controls.Clear();
             FrontPageForm form = new FrontPageForm(this);
             List<Service> services = _functionComponent.serviceManager.FindLastServicesUsed(_currentUser, 5);
@@ -49,16 +50,25 @@ namespace P3_Bookr
             {
                 form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
             }
-
-            
             _mainWindow.panelSiteView.Controls.Add(form);
+
+            _mainWindow.labelUserLoggedIn.Text = _currentUser.Username;
+            _mainWindow.panelSideBar.Show();
+            _mainWindow.panelSiteView.Show();
+            _mainWindow.pictureBoxBookr.Show();
+            _mainWindow.labelUserLoggedIn.Show();
+            _mainWindow.labelLoggedIn.Show();
+            
         }
 
         public void SwitchToLogInPage()
         {
+            _mainWindow.HideAllControls();
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelForLogIn.Visible = true;
+            //_mainWindow.panelForLogIn.Visible = true;
             _mainWindow.panelForLogIn.Controls.Add(new Login(this));
+            _mainWindow.panelForLogIn.Show();
+            //_mainWindow.panelForLogIn.BringToFront();
         }
 
         public void SwitchToReservationPage()
@@ -196,7 +206,6 @@ namespace P3_Bookr
                 _currentUser = _functionComponent.loginManager.ValidateLogin(username, password);
                 if (_currentUser != null)
                 {
-                    _mainWindow.panelForLogIn.Visible = false;
                     _mainWindow.panelForLogIn.Controls.Clear();
                     SwitchToHomePage();
                 }

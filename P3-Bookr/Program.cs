@@ -50,7 +50,7 @@ namespace P3_Bookr
             {
                 for (int k = 0; k < 3; k++)
                 {
-                    d.Services.Add(new Service(i, $"service{i},{k}", Commons.Enums.ServiceTypes.CommonRoom));
+                    d.Services.Add(new Service(i, $"Min service {i} , {k}", Commons.Enums.ServiceTypes.CommonRoom) {Description ="Dette er en test", Location ="Vingevej 19" });
                     d.Services[0].ServiceOfferings.Add(new ServiceOffering($"Offering{i}", 120, 30 + k * 2));
                     i++;
                 }
