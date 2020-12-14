@@ -71,7 +71,6 @@ namespace P3_Bookr
         public void SwitchToServicePage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-
             _mainWindow.panelSiteView.Controls.Add(LoadServicesToShow());
         }
 

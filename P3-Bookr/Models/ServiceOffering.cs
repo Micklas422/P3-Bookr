@@ -14,6 +14,12 @@ namespace P3_Bookr.Models
         int _servicesId;
         string _name;
         int _duration;
+
+        internal int CompareTo(ServiceOffering serviceOffering)
+        {
+            throw new NotImplementedException();
+        }
+
         float _price;
 
         public ServiceOffering(int id, string name, int duration, float price)

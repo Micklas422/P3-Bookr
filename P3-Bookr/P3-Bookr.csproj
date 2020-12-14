@@ -54,6 +54,7 @@
     <Compile Include="Commons\Enums.cs" />
     <Compile Include="Commons\FileReader.cs" />
     <Compile Include="Commons\FileWriter.cs" />
+    <Compile Include="Commons\LastServiceOrdering.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\DataAccesLayer.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />

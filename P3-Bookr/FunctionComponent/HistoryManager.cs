@@ -19,5 +19,15 @@ namespace P3_Bookr.FunctionComponent
         {
             throw new NotImplementedException();
         }
+
+        public List<Service> GetLastUsedServices(Member member)
+        {
+            List<Service> result = new List<Service>();
+            List<Reservation> reservations = _modelComponent.GetAllReservationsByMember(member);
+            reservations = reservations.OrderBy(r => r.CreationDate).ToList();
+
+
+            return result;
+        }
     }
 }
