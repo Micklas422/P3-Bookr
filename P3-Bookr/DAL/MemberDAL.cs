@@ -28,19 +28,19 @@ namespace P3_Bookr.DAL
             return members;
         }
 
-        public Member GetMember(int id)
-        {
-            return Members.Where(m => m.Id == id).FirstOrDefault();
-        }
+        //public Member GetMember(int id)
+        //{
+        //    return Members.Where(m => m.Id == id).FirstOrDefault();
+        //}
 
-        public List<Member> GetMembersByCustomer(int customerId)
+        public List<Member> GetMembersByCustomer(Customer customer)
         {
-            return Members.Where(m => m.CustomerId == customerId).ToList();
+            return Members.Where(m => m.Customer.Id == customer.Id).ToList();
         }
 
         public void UpdateMember(Member member)
         {
-            Members.Where(m => m.Id == member.Id).Select(m => m = member);
+            Members.Where(m => m.Equals(member)).Select(m => m = member);
         }
 
         public void SetMembers(List<Member> members)

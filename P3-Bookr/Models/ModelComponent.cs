@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using P3_Bookr.DAL;
 using P3_Bookr.DAL.Interfaces;
 using P3_Bookr.Commons.Enums;
+using P3_Bookr.Commons.CustomExceptions;
 
 namespace P3_Bookr.Models
 {
@@ -19,33 +21,33 @@ namespace P3_Bookr.Models
             _dataAccesLayer = dataAccesLayer;
         }
 
-        void LoadModel()
-        {
-            _customer = _dataAccesLayer.customerDAL.Customers;
+        //void LoadModel()
+        //{
+        //    _customer = _dataAccesLayer.customerDAL.Customers;
 
-            foreach(Customer cus in _customer)
-            {
-                cus.Members = _dataAccesLayer.memberDAL.GetMembersByCustomer(cus.Id);
-                cus.Departments = _dataAccesLayer.departmentDAL.GetDepartmentsByCustomerId(cus.Id);
-                foreach(Member member in cus.Members)
-                {
-                    member.Reservations = _dataAccesLayer.reservationDAL.GetReservationsByMember(member.Id);
-                    foreach (Reservation reservation in member.Reservations)
-                    {
-                        reservation.Payments = _dataAccesLayer.paymentDAL.GetPaymentByReservation(reservation.Id);
-                    }
-                }
-                foreach(Department department in cus.Departments)
-                {
-                    department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
-                    foreach (Service service in department.Services)
-                    {
-                        service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.GetServiceOfferingsByServiceId(service.Id);
-                        service.TimePeriods = _dataAccesLayer.timeperiodDAL.GetTimePeriodsByService(service.Id);
-                    }
-                }
-            }
-        }
+        //    foreach(Customer cus in _customer)
+        //    {
+        //        cus.Members = _dataAccesLayer.memberDAL.GetMembersByCustomer(cus.Id);
+        //        cus.Departments = _dataAccesLayer.departmentDAL.GetDepartmentsByCustomerId(cus.Id);
+        //        foreach(Member member in cus.Members)
+        //        {
+        //            member.Reservations = _dataAccesLayer.reservationDAL.GetReservationsByMember(member.Id);
+        //            foreach (Reservation reservation in member.Reservations)
+        //            {
+        //                reservation.Payments = _dataAccesLayer.paymentDAL.GetPaymentByReservation(reservation.Id);
+        //            }
+        //        }
+        //        foreach(Department department in cus.Departments)
+        //        {
+        //            department.Services = _dataAccesLayer.serviceDAL.GetServicesByDepartmentId(department.Id);
+        //            foreach (Service service in department.Services)
+        //            {
+        //                service.ServiceOfferings = _dataAccesLayer.serviceOfferingDAL.GetServiceOfferingsByServiceId(service.Id);
+        //                service.TimePeriods = _dataAccesLayer.timeperiodDAL.GetTimePeriodsByService(service.Id);
+        //            }
+        //        }
+        //    }
+        //}
 
         public List<Customer> customer
         {
@@ -53,7 +55,7 @@ namespace P3_Bookr.Models
             set { _customer = value; }
         }
 
-        public List<Reservation> GetAllReservationsByMemberId(int id)
+        public List<Reservation> GetAllReservationsByMember(Member member)
         {
             List<Reservation> result = new List<Reservation>();
 
@@ -61,7 +63,7 @@ namespace P3_Bookr.Models
             {
                 foreach (Member mem in cus.Members)
                 {
-                    if (mem.Id == id)
+                    if (mem.Equals(member))
                     {
                         foreach (Reservation res in mem.Reservations)
                         {
@@ -75,18 +77,24 @@ namespace P3_Bookr.Models
 
         public Member GetMemberByUsername(string username)
         {
+            Member member = null;
             try
             {
                 foreach (Customer cus in _customer)
                 {
-                    return cus.Members.Where(m => m.Username == username).FirstOrDefault();
+                    member = cus.Members.Where(m => m.Username == username).FirstOrDefault();
                 }
             }
-            catch (ArgumentNullException)
+            catch (Exception ex)
             {
-                
+                member = null;
+                Debug.WriteLine(ex);
             }
-            return new Member();
+
+            if (member == null)
+                throw new UserNotFoundException($"Cloud not find user by that username: {username}");
+            else
+                return member;
         }
 
         public List<Service> GetAllServices()
