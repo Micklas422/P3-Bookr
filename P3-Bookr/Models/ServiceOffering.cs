@@ -13,11 +13,12 @@ namespace P3_Bookr.Models
         float _price;
         Service _service;
 
-        public ServiceOffering(string name, int duration, float price)
+        public ServiceOffering(string name, int duration, float price, Service service)
         {
             _name = name;
             _duration = duration;
             _price = price;
+            _service = service;
         }
 
         public string Name
@@ -34,6 +35,11 @@ namespace P3_Bookr.Models
         {
             get { return _price; }
             set { _price = value; }
+        }
+        public Service Service
+        {
+            get { return _service; }
+            set { _service = value; }
         }
     }
 }

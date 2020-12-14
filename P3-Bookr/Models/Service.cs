@@ -70,7 +70,6 @@ namespace P3_Bookr.Models
             get { return timeperiods; }
             set { timeperiods = value; }
         }
-
         public List<ServiceOffering> ServiceOfferings
         {
             get { return serviceOfferings; }
