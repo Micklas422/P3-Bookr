@@ -32,6 +32,8 @@
             this.pictureBoxBookr = new System.Windows.Forms.PictureBox();
             this.panelSiteView = new System.Windows.Forms.Panel();
             this.panelForLogIn = new System.Windows.Forms.Panel();
+            this.labelLoggedIn = new System.Windows.Forms.Label();
+            this.labelUserLoggedIn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,12 +81,30 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelForLogIn.AutoSize = true;
             this.panelForLogIn.BackColor = System.Drawing.Color.White;
-            this.panelForLogIn.Location = new System.Drawing.Point(9, 10);
+            this.panelForLogIn.Location = new System.Drawing.Point(7, 38);
             this.panelForLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.panelForLogIn.Name = "panelForLogIn";
-            this.panelForLogIn.Size = new System.Drawing.Size(1246, 660);
+            this.panelForLogIn.Size = new System.Drawing.Size(1246, 630);
             this.panelForLogIn.TabIndex = 3;
             this.panelForLogIn.Visible = false;
+            // 
+            // labelLoggedIn
+            // 
+            this.labelLoggedIn.AutoSize = true;
+            this.labelLoggedIn.Location = new System.Drawing.Point(977, 10);
+            this.labelLoggedIn.Name = "labelLoggedIn";
+            this.labelLoggedIn.Size = new System.Drawing.Size(63, 13);
+            this.labelLoggedIn.TabIndex = 0;
+            this.labelLoggedIn.Text = "Logged ind:";
+            // 
+            // labelUserLoggedIn
+            // 
+            this.labelUserLoggedIn.AutoSize = true;
+            this.labelUserLoggedIn.Location = new System.Drawing.Point(1046, 10);
+            this.labelUserLoggedIn.Name = "labelUserLoggedIn";
+            this.labelUserLoggedIn.Size = new System.Drawing.Size(55, 13);
+            this.labelUserLoggedIn.TabIndex = 1;
+            this.labelUserLoggedIn.Text = "testBruger";
             // 
             // MainWindow
             // 
@@ -92,10 +112,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panelForLogIn);
-            this.Controls.Add(this.panelSiteView);
+            this.Controls.Add(this.labelUserLoggedIn);
+            this.Controls.Add(this.labelLoggedIn);
             this.Controls.Add(this.pictureBoxBookr);
             this.Controls.Add(this.panelSideBar);
+            this.Controls.Add(this.panelSiteView);
+            this.Controls.Add(this.panelForLogIn);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).EndInit();
@@ -107,8 +129,10 @@
         #endregion
 
         public System.Windows.Forms.Panel panelSideBar;
-        private System.Windows.Forms.PictureBox pictureBoxBookr;
         public System.Windows.Forms.Panel panelSiteView;
         public System.Windows.Forms.Panel panelForLogIn;
+        public System.Windows.Forms.Label labelUserLoggedIn;
+        public System.Windows.Forms.Label labelLoggedIn;
+        public System.Windows.Forms.PictureBox pictureBoxBookr;
     }
 }

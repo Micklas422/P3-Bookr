@@ -16,5 +16,16 @@ namespace P3_Bookr.Windows
         {
             InitializeComponent();
         }
+
+        public void HideAllControls()
+        {
+            foreach (Control c in this.Controls)
+            {
+                c.Hide();
+            }
+            labelLoggedIn.Hide();
+            labelUserLoggedIn.Hide();
+            pictureBoxBookr.Hide();
+        }
     }
 }
