@@ -20,54 +20,23 @@ namespace P3_Bookr.Windows
             _handler = handler;
             InitializeComponent();
         }
-
-        private void labelUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonLogin_Click(object sender, EventArgs e)
-        
         {
-
-            string username;
-            string password;
-            password = textBoxUsername.Text;
-            username = textBoxUsername.Text;
-            _handler.LogIn(username, password);
-            //if (_loginManager.ValidateLogin(username, password))
-            //{
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Indtastet brugernavn eller kodeord forkert");
-            //}          
+            _handler.LogIn(textBoxUsername.Text, textBoxPassword.Text);         
         }
 
-        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void textBoxPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxLogo_Click(object sender, EventArgs e)
-        {
-
+            if((Keys)e.KeyChar == Keys.Enter)
+            {
+                buttonLogin_Click(sender, e);
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            textBoxUsername.KeyPress += Login_KeyPress;
+            textBoxPassword.KeyPress += Login_KeyPress;
         }
     }
 }
