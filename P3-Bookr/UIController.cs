@@ -14,7 +14,7 @@ using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
 using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.Commons.Enums;
-using P3_Bookr.Windows.Services;
+using P3_Bookr.Windows.ServicePanels;
 
 namespace P3_Bookr
 {
@@ -45,7 +45,7 @@ namespace P3_Bookr
             _mainWindow.HideAllControls();
             _mainWindow.panelSiteView.Controls.Clear();
             FrontPageForm form = new FrontPageForm(this);
-            List<Service> services = _functionComponent.serviceManager.FindLastServicesUsed(_currentUser, 5);
+            List<Service> services = LastUsedService(5);
             foreach(Service s in services)
             {
                 form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
@@ -221,14 +221,9 @@ namespace P3_Bookr
         }
         #endregion
         #region HomepageUI
-        public void LastUsedService()
+        public List<Service> LastUsedService(int count)
         {
-            List<Service> lastServicesUsed = _functionComponent.historyManager.GetLastUsedServices(_currentUser, 5);
-            foreach (Service ser in lastServicesUsed)
-            {
-                break;
-                throw new NotImplementedException();
-            }
+            return _functionComponent.historyManager.GetLastUsedServices(_currentUser, count);
         }
 
         public void News()
