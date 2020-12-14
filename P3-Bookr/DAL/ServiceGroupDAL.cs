@@ -10,26 +10,19 @@ namespace P3_Bookr.DAL
 {
     class ServiceGroupDAL : IServiceGroupDAL
     {
-        string fileName = "Services";
-        JsonHandler jsonHandler = new JsonHandler();
-
         public List<ServiceGroup> GetServicesByMember(int memberId)
         {
-            List<ServiceGroup> services;
-            services = jsonHandler.ReadJsonObjectFromFile<List<ServiceGroup>>(fileName);
-            return services;
+            throw new NotImplementedException();
         }
 
         public List<ServiceGroup> GetServicesBySerivce(int serviceId)
         {
-            List<ServiceGroup> services;
-            services = jsonHandler.ReadJsonObjectFromFile<List<ServiceGroup>>(fileName);
-            return services;
+            throw new NotImplementedException();
         }
 
         public void SetServices(List<Service> services)
         {
-            jsonHandler.WriteJsonObjectToFile(fileName, services);
+            throw new NotImplementedException();
         }
     }
 }
