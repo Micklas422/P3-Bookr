@@ -21,5 +21,6 @@ namespace P3_Bookr.Models
         bool IsCustomerActive { get; }
         Customer Customer { get; }
         List<Reservation> Reservations { get; set; }
+        List<Department> Departments { get; set; }
     }
 }

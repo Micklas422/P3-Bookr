@@ -110,12 +110,12 @@ namespace P3_Bookr
 
             foreach (List<Service> services in sortedByServiceTypes)
             {
-                servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
                 servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
                 foreach (Service service in services)
                 {
                     servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service, this));
                 }
+                servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
             }
             return servicesOverview;
         }
@@ -236,16 +236,16 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public Service AddService(string location, string description, string name, ServiceTypes serviceType, string timePeriod, List<ServiceOffering> serviceOfferings)
+        public Service AddService(Service service)
         {
-            Service service = new Service();
-            service.Location = location;
-            service.Description = description;
-            service.Name = name;
-            service.ServiceType = serviceType;
+            //Service service = new Service();
+            //service.Location = location;
+            //service.Description = description;
+            //service.Name = name;
+            //service.ServiceType = serviceType;
             //service.TimePeriods = timePeriod;
-            service.ServiceOfferings = serviceOfferings;
-            service.DepartmentDeactivatet = false;
+            //service.ServiceOfferings = serviceOfferings;
+            //service.DepartmentDeactivatet = false;
 
             return service;
         }
