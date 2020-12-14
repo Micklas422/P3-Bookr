@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Bookr.Windows.CreateNewService
 {
-    public partial class ServiceOffering : UserControl
+    public partial class PageServiceOffering : UserControl
     {
-        public ServiceOffering()
+        public PageServiceOffering()
         {
             InitializeComponent();
         }
