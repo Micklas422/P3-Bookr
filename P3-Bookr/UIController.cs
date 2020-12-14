@@ -154,8 +154,6 @@ namespace P3_Bookr
         public void LoadandExecutePanelForServiceBooking()
         {
             throw new NotImplementedException();
-            Service service;
-
         }
         #endregion
         #region ResevationUI
@@ -178,7 +176,7 @@ namespace P3_Bookr
                 if (_functionComponent.reservationManager.CancelReservation(reservation, _currentUser))
                 {
                     MessageBox.Show("Reservation annulleret");
-                    _functionComponent.paymentManager.Cancel(reservation.Payments);
+                    //_functionComponent.paymentManager.Cancel(reservation.Payment);
                 }
                 else
                 {

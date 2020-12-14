@@ -23,8 +23,6 @@ namespace P3_Bookr.Windows
             
         }
 
-        public event SideBarEvent sideBarEvent;
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             _handler.SwitchToHomePage();

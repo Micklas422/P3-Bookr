@@ -13,7 +13,6 @@ namespace P3_Bookr.Models
         string Name { get; set; }
         string Adress { get; set; }
         string Email { get; set; }
-        int Id { get; }
         List<Department> Departments { get; set; }
         List<Member> Members { get; set; }
         void CreateMember();

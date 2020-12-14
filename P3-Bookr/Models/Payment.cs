@@ -8,22 +8,13 @@ namespace P3_Bookr.Models
 {
     public class Payment : IPayment
     {
-        static List<int> UniqueIds = new List<int>();
-
-        int _id;
-        int _reservationId;
         DateTime _paymentDate;
         float _amount;
         DateTime _reservationDeadline;
         bool _refunded;
-
-        public Payment(int id, float amount)
+        public Payment(DateTime paymentDate, float amount)
         {
-            if (UniqueIds.Contains(id))
-                throw new ArgumentException();
-            UniqueIds.Add(id);
-            _id = id;
-            PaymentDate = DateTime.UtcNow;
+            PaymentDate = paymentDate;
             Amount = amount;
             Refunded = false;
         }
@@ -42,17 +33,6 @@ namespace P3_Bookr.Models
         {
             get { return _reservationDeadline; }
             set { _reservationDeadline = value; }
-        }
-
-        public int Id
-        {
-            get { return _id; }
-        }
-
-        public int ReservationId
-        {
-            get { return _reservationId; }
-            set { _reservationId = value; }
         }
 
         public bool Refunded

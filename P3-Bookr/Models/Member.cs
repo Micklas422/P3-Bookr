@@ -110,8 +110,8 @@ namespace P3_Bookr.Models
 
         public string Password
         {
-            get { return _username; }
-            set { _username = value; }
+            get { return _password; }
+            set { _password = value; }
         }
 
         public List<Reservation> Reservations

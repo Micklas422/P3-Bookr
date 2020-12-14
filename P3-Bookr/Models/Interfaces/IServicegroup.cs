@@ -11,6 +11,5 @@ namespace P3_Bookr.Models
     {
         string Name { get; set; }
         ServiceTypes ServiceType { get; set; }
-        int Id { get; }
     }
 }
