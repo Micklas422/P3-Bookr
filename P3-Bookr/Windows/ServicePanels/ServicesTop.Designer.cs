@@ -1,4 +1,4 @@
-﻿namespace P3_Bookr.Windows.Services
+﻿namespace P3_Bookr.Windows
 {
     partial class ServicesTop
     {
