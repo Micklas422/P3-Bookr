@@ -10,32 +10,32 @@ using P3_Bookr.FunctionComponent;
 using P3_Bookr;
 
 
-namespace P3_Bookr.Tests
+namespace P3_Bookr.UnitTest
 {
     public class LoginManagerTest
     {
-        IModelComponent _modelComponent;
+        //IModelComponent _modelComponent;
 
-        public Member mbr = new Member(0, "testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123");
+        //Member mbr = new Member(0, "testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123");
         
 
-        [Fact]
-        public void ValidateLogin_CorrectUsernameAndPasswordShouldReturnUser()
-        {
-            Member member;
+        //[Fact]
+        //public void ValidateLogin_CorrectUsernameAndPasswordShouldReturnUser()
+        //{
+        //    Member member;
             
-            LoginManager lgnmngr = new LoginManager(_modelComponent);
-            //Member member = _modelComponent.GetMemberByUsername(mbr.Username);
+        //    LoginManager lgnmngr = new LoginManager(_modelComponent);
+        //    //Member member = _modelComponent.GetMemberByUsername(mbr.Username);
 
-            //Arrange
-            Member expected = mbr;
+        //    //Arrange
+        //    Member expected = mbr;
 
-            //Act
-            Member actual = lgnmngr.ValidateLogin("test" , "test123");
+        //    //Act
+        //    Member actual = lgnmngr.ValidateLogin("test" , "test123");
 
-            //Assert
+        //    //Assert
 
-            Assert.Equal(expected, actual);
-        }
+        //    Assert.Equal(expected, actual);
+        //}
     }
 }
