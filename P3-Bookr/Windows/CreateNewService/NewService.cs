@@ -29,13 +29,14 @@ namespace P3_Bookr.Windows.CreateNewService
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
+            Service service = new Service(textBoxName.Text, (ServiceTypes)DropdownServiceType.SelectedIndex);
+
             foreach (PageServiceOffering offering in flowPanelServiceOffering.Controls)
             {
-                ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text));
+                ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text), service);
                 serviceOfferingsList.Add(serviceOffering);
             }
 
-            Service service = new Service(textBoxName.Text, (ServiceTypes)DropdownServiceType.SelectedIndex) ;
             service.Location = textBoxAddress.Text;
             service.Name = textBoxName.Text;
             service.Description = richTextBoxDescription.Text;
