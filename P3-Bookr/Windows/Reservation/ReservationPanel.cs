@@ -20,9 +20,21 @@ namespace P3_Bookr.Windows.ReservationPanels
         {
             InitializeComponent();
             _reservationUI = reservationUI;
-            this.ReservationServiceName.Text = reservation.ServiceOffering.Name;
-            this.ReservationPrice.Text = reservation.ServiceOffering.Price.ToString();
-            this.ReservationDate.Text = reservation.ReservationDate.ToString();
+            ReservationServiceName.Text = reservation.ServiceOffering.Name;
+            labelPrice.Text = reservation.ServiceOffering.Price.ToString();
+            labelOrderDate.Text = reservation.ReservationDate.ToString();
+            
+            if(reservation.CancellationDate != null)
+            {
+                buttonCancel.Hide();
+                labelCancelDate.Text = reservation.CancellationDate.ToString();
+            }
+            else
+            {
+                labelCancelDate.Hide();
+                labelCancel.Hide();
+            }
+
             _reservation = reservation;
         }
 

@@ -14,7 +14,6 @@ using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
 using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.Commons.Enums;
-using P3_Bookr.Windows.ServicePanels;
 
 namespace P3_Bookr
 {
