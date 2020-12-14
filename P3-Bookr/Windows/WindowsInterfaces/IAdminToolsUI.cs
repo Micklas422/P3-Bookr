@@ -10,7 +10,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
 {
     interface IAdminToolsUI
     {
-        Service AddService(string location, string description, string name, ServiceTypes serviceType, string timePeriod, List<ServiceOffering> serviceOfferings);
+        Service AddService(Service service);
         void AddUser();
         void AddServiceGroup();
         void AddUserGroup();

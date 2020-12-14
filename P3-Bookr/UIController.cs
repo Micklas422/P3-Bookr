@@ -236,16 +236,8 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public Service AddService(string location, string description, string name, ServiceTypes serviceType, string timePeriod, List<ServiceOffering> serviceOfferings)
+        public Service AddService(Service service)
         {
-            Service service = new Service();
-            service.Location = location;
-            service.Description = description;
-            service.Name = name;
-            service.ServiceType = serviceType;
-            //service.TimePeriods = timePeriod;
-            service.ServiceOfferings = serviceOfferings;
-            service.DepartmentDeactivatet = false;
 
             return service;
         }
