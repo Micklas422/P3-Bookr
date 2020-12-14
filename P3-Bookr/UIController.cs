@@ -237,9 +237,23 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public void AddService()
+        public Service AddService(string location, string description, string name, ServiceTypes serviceType, string timePeriod, List<ServiceOffering> serviceOfferings)
+        {
+            Service service = new Service();
+            service.Location = location;
+            service.Description = description;
+            service.Name = name;
+            service.ServiceType = serviceType;
+            service.TimePeriods = timePeriod;
+            service.ServiceOfferings = serviceOfferings;
+            service.DepartmentDeactivatet = false;
+
+            return service;
+        }
+        public void CreateServiceOffering()
         {
             throw new NotImplementedException();
+
         }
 
         public void AddServiceGroup()
@@ -251,7 +265,7 @@ namespace P3_Bookr
         {
             throw new NotImplementedException();
         }
-
+        #endregion
         public void LoadInfoPanelForService()
         {
             throw new NotImplementedException();
@@ -271,6 +285,6 @@ namespace P3_Bookr
         {
             throw new NotImplementedException();
         }
-        #endregion
+        
     }
 }

@@ -27,7 +27,7 @@ namespace P3_Bookr.Models
             Taken,
             Deactivated
         };
-        public Service(int id, string name, ServiceTypes serviceType)
+        public Service(string name, ServiceTypes serviceType)
         {
             _name = name;
             _serviceType = serviceType;
