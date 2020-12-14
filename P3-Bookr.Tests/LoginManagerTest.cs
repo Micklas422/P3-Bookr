@@ -10,7 +10,7 @@ using P3_Bookr.FunctionComponent;
 using P3_Bookr;
 
 
-namespace P3_Bookr.UnitTest
+namespace P3_Bookr.Tests
 {
     public class LoginManagerTest
     {
