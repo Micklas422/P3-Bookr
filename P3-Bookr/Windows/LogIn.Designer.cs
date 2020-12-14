@@ -49,7 +49,6 @@
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Brugernavn";
-            this.label1.Click += new System.EventHandler(this.labelUsername_Click);
             // 
             // label2
             // 
@@ -63,7 +62,6 @@
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Kodeord";
-            this.label2.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // button1
             // 
@@ -89,7 +87,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(183, 20);
             this.textBoxUsername.TabIndex = 3;
-            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // textBoxPassword
             // 
@@ -102,7 +99,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(183, 20);
             this.textBoxPassword.TabIndex = 4;
             this.textBoxPassword.UseSystemPasswordChar = true;
-            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // pictureBox1
             // 
@@ -115,7 +111,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // Login
             // 
@@ -131,6 +126,7 @@
             this.Name = "Login";
             this.Size = new System.Drawing.Size(1280, 720);
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

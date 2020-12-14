@@ -21,7 +21,6 @@ namespace P3_Bookr
     public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         MainWindow _mainWindow;
-        //ILoginManager _logInHandler;
         Member _currentUser;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
