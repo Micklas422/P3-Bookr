@@ -16,8 +16,8 @@ namespace P3_Bookr.Tests
     {
         //IModelComponent _modelComponent;
 
-        //public Member mbr = new Member("testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123");
-
+        //Member mbr = new Member(0, "testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123");
+        
 
         //[Fact]
         //public void ValidateLogin_CorrectUsernameAndPasswordShouldReturnUser()
