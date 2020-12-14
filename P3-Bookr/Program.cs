@@ -50,7 +50,7 @@ namespace P3_Bookr
             {
                 for (int k = 0; k < 3; k++)
                 {
-                    d.Services.Add(new Service(i, $"Min service {i} , {k}", Commons.Enums.ServiceTypes.CommonRoom) {Description ="Dette er en test", Location ="Vingevej 19" });
+                    d.Services.Add(new Service($"Min service {i} , {k}", Commons.Enums.ServiceTypes.CommonRoom) {Description ="Dette er en test", Location ="Vingevej 19" });
                     d.Services[0].ServiceOfferings.Add(new ServiceOffering($"Offering{i}", 120, 30 + k * 2));
                     i++;
                 }
@@ -59,12 +59,14 @@ namespace P3_Bookr
             c.Members[0].Reservations.Add(
                 new Reservation(
                 DateTime.Now,
+                c.Members[0],
                 new TimePeriod(
                 DateTime.Now.AddDays(2),
-                DateTime.Now.AddDays(3), 
+                DateTime.Now.AddDays(3),
                 c.Departments[0].Services[0]),
                 c.Departments[0].Services[0].ServiceOfferings[0],
-                new Payment(DateTime.Now, c.Departments[0].Services[0].ServiceOfferings[0].Price)));
+                new Payment(DateTime.Now, c.Departments[0].Services[0].ServiceOfferings[0].Price))
+                { ReservationDeadline = DateTime.Now.AddDays(3) }) ;
 
             List<Customer> customers = new List<Customer>();
             customers.Add(c);

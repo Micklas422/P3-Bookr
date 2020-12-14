@@ -58,7 +58,7 @@
             this.ReservationPrice.AutoSize = true;
             this.ReservationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReservationPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
-            this.ReservationPrice.Location = new System.Drawing.Point(359, 23);
+            this.ReservationPrice.Location = new System.Drawing.Point(337, 23);
             this.ReservationPrice.Name = "ReservationPrice";
             this.ReservationPrice.Size = new System.Drawing.Size(83, 24);
             this.ReservationPrice.TabIndex = 3;
@@ -70,7 +70,7 @@
             this.ReservationDate.AutoSize = true;
             this.ReservationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReservationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
-            this.ReservationDate.Location = new System.Drawing.Point(448, 23);
+            this.ReservationDate.Location = new System.Drawing.Point(427, 23);
             this.ReservationDate.Name = "ReservationDate";
             this.ReservationDate.Size = new System.Drawing.Size(100, 24);
             this.ReservationDate.TabIndex = 4;
@@ -114,21 +114,21 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.labelPrice.Location = new System.Drawing.Point(359, 47);
+            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelPrice.Location = new System.Drawing.Point(338, 47);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(50, 24);
+            this.labelPrice.Size = new System.Drawing.Size(40, 17);
             this.labelPrice.TabIndex = 6;
             this.labelPrice.Text = "1000";
             // 
             // labelOrderDate
             // 
             this.labelOrderDate.AutoSize = true;
-            this.labelOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelOrderDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
-            this.labelOrderDate.Location = new System.Drawing.Point(448, 57);
+            this.labelOrderDate.Location = new System.Drawing.Point(428, 57);
             this.labelOrderDate.Name = "labelOrderDate";
-            this.labelOrderDate.Size = new System.Drawing.Size(100, 24);
+            this.labelOrderDate.Size = new System.Drawing.Size(79, 17);
             this.labelOrderDate.TabIndex = 7;
             this.labelOrderDate.Text = "Dato bestilt";
             this.labelOrderDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,7 +138,7 @@
             this.labelCancel.AutoSize = true;
             this.labelCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
-            this.labelCancel.Location = new System.Drawing.Point(554, 23);
+            this.labelCancel.Location = new System.Drawing.Point(553, 23);
             this.labelCancel.Name = "labelCancel";
             this.labelCancel.Size = new System.Drawing.Size(114, 24);
             this.labelCancel.TabIndex = 8;
@@ -148,11 +148,11 @@
             // labelCancelDate
             // 
             this.labelCancelDate.AutoSize = true;
-            this.labelCancelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCancelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelCancelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
             this.labelCancelDate.Location = new System.Drawing.Point(554, 57);
             this.labelCancelDate.Name = "labelCancelDate";
-            this.labelCancelDate.Size = new System.Drawing.Size(100, 24);
+            this.labelCancelDate.Size = new System.Drawing.Size(79, 17);
             this.labelCancelDate.TabIndex = 9;
             this.labelCancelDate.Text = "Dato bestilt";
             this.labelCancelDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

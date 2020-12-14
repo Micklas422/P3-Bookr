@@ -24,7 +24,7 @@ namespace P3_Bookr.FunctionComponent
             _historyManager = new HistoryManager(_modelComponent);
             _paymentManager = new PaymentManager(_modelComponent);
             _permissionManager = new PermissionManager(_modelComponent);
-            _reservationManager = new ReservationManager(_modelComponent);
+            _reservationManager = new ReservationManager(_modelComponent, _paymentManager);
             _serviceManager = new ServiceManager(_modelComponent);
         }
         public ILoginManager loginManager

@@ -179,22 +179,32 @@ namespace P3_Bookr
         }
         public void CancelReservation(Reservation reservation)
         {
-            if (reservation.ReservationState != ReservationStates.BindingReservation)
+            try
             {
-                if (_functionComponent.reservationManager.CancelReservation(reservation, _currentUser))
-                {
-                    MessageBox.Show("Reservation annulleret");
-                    //_functionComponent.paymentManager.Cancel(reservation.Payment);
-                }
-                else
-                {
-                    MessageBox.Show("Reservation kunne ikke annulleres");
-                }
-            } 
-            else
-            {
-                MessageBox.Show("Reservation kan ikke annulleres");
+                _functionComponent.reservationManager.CancelReservation(reservation);
+                //SwitchToReservationPage();
             }
+            catch(Exception )
+            {
+
+            }
+
+            //if (reservation.ReservationState != ReservationStates.BindingReservation)
+            //{
+            //    if ()
+            //    {
+            //        MessageBox.Show("Reservation annulleret");
+            //        //_functionComponent.paymentManager.Cancel(reservation.Payment);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Reservation kunne ikke annulleres");
+            //    }
+            //} 
+            //else
+            //{
+            //    MessageBox.Show("Reservation frist udløbet");
+            //}
         }
         #endregion
         #region LogInUI

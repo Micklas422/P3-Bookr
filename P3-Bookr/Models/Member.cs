@@ -90,12 +90,6 @@ namespace P3_Bookr.Models
             set { _email = value; }
         }
 
-        //public bool CustomerDeactivated
-        //{
-        //    get { return _customerDeactivated; }
-        //    set { _customerDeactivated = value; }
-        //}
-
         public MemberTypes MemberType
         {
             get { return _memberType; }

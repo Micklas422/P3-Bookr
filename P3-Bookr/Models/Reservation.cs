@@ -16,13 +16,16 @@ namespace P3_Bookr.Models
         int _duration;
         DateTime _reservationDeadline;
         TimePeriod _timePeriod;
+        Member _member;
         ServiceOffering _serviceOffering;
         Payment _payment;
 
-        public Reservation(DateTime reservationDate, TimePeriod timePeriod, ServiceOffering serviceOffering, Payment payment)
+
+        public Reservation(DateTime reservationDate, Member member, TimePeriod timePeriod, ServiceOffering serviceOffering, Payment payment)
         {
             Payment = payment;
-            _reservationDate = reservationDate;
+            ReservationDate = reservationDate;
+            Member = member;
             TimePeriod = timePeriod;
             ServiceOffering = serviceOffering;
         }
@@ -63,6 +66,7 @@ namespace P3_Bookr.Models
             set { _payment = value; }
         }
 
+        public Member Member { get => _member; set => _member = value; }
         internal TimePeriod TimePeriod { get => _timePeriod; set => _timePeriod = value; }
         internal ServiceOffering ServiceOffering { get => _serviceOffering; set => _serviceOffering = value; }
     }

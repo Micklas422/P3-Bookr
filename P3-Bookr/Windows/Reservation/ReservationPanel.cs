@@ -22,19 +22,18 @@ namespace P3_Bookr.Windows.ReservationPanels
             _reservationUI = reservationUI;
             ReservationServiceName.Text = reservation.ServiceOffering.Name;
             labelPrice.Text = reservation.ServiceOffering.Price.ToString();
-            labelOrderDate.Text = reservation.ReservationDate.ToString();
+            labelOrderDate.Text = reservation.ReservationDate.ToString("dd:MM:yy HH:mm");
             
-            if(reservation.CancellationDate != null)
+            if(reservation.CancellationDate != new DateTime())
             {
                 buttonCancel.Hide();
-                labelCancelDate.Text = reservation.CancellationDate.ToString();
+                labelCancelDate.Text = reservation.CancellationDate.ToString("dd:MM:yy HH:mm");
             }
             else
             {
                 labelCancelDate.Hide();
                 labelCancel.Hide();
             }
-
             _reservation = reservation;
         }
 
