@@ -11,7 +11,7 @@ namespace P3_Bookr.DAL.Interfaces
     {
         List<Department> Departments { get; }
         List<Department> GetDepartmentsByCustomerId(int customerId);
-        Department GetDepartment(int id);
+        //Department GetDepartment(int id);
         void UpdateDepartment(Department department);
         void SetDepartments(List<Department> departments);
     }

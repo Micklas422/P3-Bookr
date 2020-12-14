@@ -94,19 +94,19 @@
             this.Controls.Add(this.ServiceInfo);
             this.Controls.Add(this.ServiceLocation);
             this.Controls.Add(this.ServiceTitel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ServiceViewForFlow";
             this.Size = new System.Drawing.Size(134, 93);
+            this.DoubleClick += new System.EventHandler(this.ServiceViewForFlow_DoubleClick);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label ServiceTitel;
         private System.Windows.Forms.Label ServiceLocation;
         private System.Windows.Forms.Label ServiceInfo;
-        private System.Windows.Forms.Label ServiceLocationInfo;
-        private System.Windows.Forms.Label ServiceInfoInfo;
+        public System.Windows.Forms.Label ServiceTitel;
+        public System.Windows.Forms.Label ServiceLocationInfo;
+        public System.Windows.Forms.Label ServiceInfoInfo;
     }
 }

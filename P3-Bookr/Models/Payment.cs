@@ -15,6 +15,7 @@ namespace P3_Bookr.Models
         DateTime _paymentDate;
         float _amount;
         DateTime _reservationDeadline;
+        bool _refunded;
 
         public Payment(int id, float amount)
         {
@@ -24,6 +25,7 @@ namespace P3_Bookr.Models
             _id = id;
             PaymentDate = DateTime.UtcNow;
             Amount = amount;
+            Refunded = false;
         }
 
         public DateTime PaymentDate
@@ -51,6 +53,12 @@ namespace P3_Bookr.Models
         {
             get { return _reservationId; }
             set { _reservationId = value; }
+        }
+
+        public bool Refunded
+        {
+            get { return _refunded; }
+            set { _refunded = value; }
         }
     }
 }

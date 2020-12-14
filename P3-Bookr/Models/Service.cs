@@ -11,6 +11,8 @@ namespace P3_Bookr.Models
     {
         static List<int> UniqueIds = new List<int>();
 
+        string _location;
+        string _description;
         int _id;
         int _departmentId;
         string _name;
@@ -35,6 +37,18 @@ namespace P3_Bookr.Models
             _id = id;
             _name = name;
             _serviceType = serviceType;
+        }
+
+        public string Location
+        {
+            get { return _location; }
+            set { _location = value; }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
         }
 
         public string Name

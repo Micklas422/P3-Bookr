@@ -31,7 +31,6 @@
             this.ServiceAddressLabel1 = new System.Windows.Forms.Label();
             this.ServiceAdressInfo1 = new System.Windows.Forms.Label();
             this.ServiceDescriptionInfo1 = new System.Windows.Forms.Label();
-            this.ServiceBookButton1 = new System.Windows.Forms.Button();
             this.ServiceDetailsPicture1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceDetailsPicture1)).BeginInit();
             this.SuspendLayout();
@@ -64,15 +63,7 @@
             this.ServiceDescriptionInfo1.Size = new System.Drawing.Size(170, 150);
             this.ServiceDescriptionInfo1.TabIndex = 3;
             this.ServiceDescriptionInfo1.Text = "Info omkring service her";
-            // 
-            // ServiceBookButton1
-            // 
-            this.ServiceBookButton1.Location = new System.Drawing.Point(105, 267);
-            this.ServiceBookButton1.Name = "ServiceBookButton1";
-            this.ServiceBookButton1.Size = new System.Drawing.Size(120, 30);
-            this.ServiceBookButton1.TabIndex = 4;
-            this.ServiceBookButton1.Text = "Book/Betal";
-            this.ServiceBookButton1.UseVisualStyleBackColor = true;
+            this.ServiceDescriptionInfo1.Click += new System.EventHandler(this.ServiceDescriptionInfo1_Click);
             // 
             // ServiceDetailsPicture1
             // 
@@ -87,7 +78,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.ServiceBookButton1);
             this.Controls.Add(this.ServiceDescriptionInfo1);
             this.Controls.Add(this.ServiceDetailsPicture1);
             this.Controls.Add(this.ServiceAdressInfo1);
@@ -103,9 +93,8 @@
         #endregion
 
         private System.Windows.Forms.Label ServiceAddressLabel1;
-        private System.Windows.Forms.Label ServiceAdressInfo1;
         private System.Windows.Forms.PictureBox ServiceDetailsPicture1;
-        private System.Windows.Forms.Label ServiceDescriptionInfo1;
-        private System.Windows.Forms.Button ServiceBookButton1;
+        public System.Windows.Forms.Label ServiceAdressInfo1;
+        public System.Windows.Forms.Label ServiceDescriptionInfo1;
     }
 }

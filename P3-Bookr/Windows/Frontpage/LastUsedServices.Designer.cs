@@ -28,43 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.frontPageService1 = new P3_Bookr.Windows.Frontpage.FrontPageService();
-            this.frontPageService2 = new P3_Bookr.Windows.Frontpage.FrontPageService();
-            this.frontPageService3 = new P3_Bookr.Windows.Frontpage.FrontPageService();
-            this.frontPageService4 = new P3_Bookr.Windows.Frontpage.FrontPageService();
+            this.flowLayoutPanelLastUsed = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // frontPageService1
+            // flowLayoutPanelLastUsed
             // 
-            this.frontPageService1.BackColor = System.Drawing.Color.White;
-            this.frontPageService1.Location = new System.Drawing.Point(29, 52);
-            this.frontPageService1.Name = "frontPageService1";
-            this.frontPageService1.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService1.TabIndex = 4;
-            // 
-            // frontPageService2
-            // 
-            this.frontPageService2.BackColor = System.Drawing.Color.White;
-            this.frontPageService2.Location = new System.Drawing.Point(322, 52);
-            this.frontPageService2.Name = "frontPageService2";
-            this.frontPageService2.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService2.TabIndex = 5;
-            // 
-            // frontPageService3
-            // 
-            this.frontPageService3.BackColor = System.Drawing.Color.White;
-            this.frontPageService3.Location = new System.Drawing.Point(615, 52);
-            this.frontPageService3.Name = "frontPageService3";
-            this.frontPageService3.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService3.TabIndex = 6;
-            // 
-            // frontPageService4
-            // 
-            this.frontPageService4.BackColor = System.Drawing.Color.White;
-            this.frontPageService4.Location = new System.Drawing.Point(905, 52);
-            this.frontPageService4.Name = "frontPageService4";
-            this.frontPageService4.Size = new System.Drawing.Size(267, 190);
-            this.frontPageService4.TabIndex = 7;
+            this.flowLayoutPanelLastUsed.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanelLastUsed.Name = "flowLayoutPanelLastUsed";
+            this.flowLayoutPanelLastUsed.Size = new System.Drawing.Size(870, 95);
+            this.flowLayoutPanelLastUsed.TabIndex = 0;
             // 
             // LastUsedServices
             // 
@@ -72,21 +44,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.Controls.Add(this.frontPageService4);
-            this.Controls.Add(this.frontPageService3);
-            this.Controls.Add(this.frontPageService2);
-            this.Controls.Add(this.frontPageService1);
+            this.Controls.Add(this.flowLayoutPanelLastUsed);
             this.Name = "LastUsedServices";
-            this.Size = new System.Drawing.Size(922, 284);
+            this.Size = new System.Drawing.Size(876, 104);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private FrontPageService frontPageService1;
-        private FrontPageService frontPageService2;
-        private FrontPageService frontPageService3;
-        private FrontPageService frontPageService4;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLastUsed;
     }
 }

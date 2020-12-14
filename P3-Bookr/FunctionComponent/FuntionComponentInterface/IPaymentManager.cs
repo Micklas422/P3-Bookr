@@ -1,9 +1,12 @@
-﻿namespace P3_Bookr.FunctionComponent
+﻿using P3_Bookr.Models;
+using System.Collections.Generic;
+
+namespace P3_Bookr.FunctionComponent
 {
     public interface IPaymentManager
     {
         void Pay();
 
-        void Cancel();
+        bool Cancel(List<Payment> payments);
     }
 }

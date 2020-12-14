@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
@@ -21,14 +22,8 @@ namespace P3_Bookr.Models
         TimePeriod _timePeriod;
         ServiceOffering _serviceOffering;
 
-        List<Payment> payments = new List<Payment>();
+        List<Payment> _payments = new List<Payment>();
 
-        public enum ReservationStates
-        {
-            Created,
-            BindingReservation,
-            Cancelled
-        };
         public Reservation(int id, DateTime reservationDate, TimePeriod timePeriod, ServiceOffering serviceOffering)
         {
             if (UniqueIds.Contains(id))
@@ -84,8 +79,8 @@ namespace P3_Bookr.Models
 
         public List<Payment> Payments
         {
-            get { return payments; }
-            set { payments = value; }
+            get { return _payments; }
+            set { _payments = value; }
         }
 
         internal TimePeriod TimePeriod { get => _timePeriod; set => _timePeriod = value; }

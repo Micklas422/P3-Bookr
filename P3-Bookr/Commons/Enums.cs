@@ -12,4 +12,11 @@ namespace P3_Bookr.Commons.Enums
         CommonRoom
     }
 
+    public enum ReservationStates
+    {
+        Created,
+        BindingReservation,
+        Cancelled
+    };
+
 }

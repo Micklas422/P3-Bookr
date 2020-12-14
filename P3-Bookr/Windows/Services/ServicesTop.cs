@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P3_Bookr.Models;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Windows.Services
 {
     public partial class ServicesTop : UserControl
     {
-        public ServicesTop()
+        public ServicesTop(Service service)
         {
             InitializeComponent();
+            this.LastUsedTopLabel.Text = Enum.GetName(typeof(ServiceTypes), service.ServiceType);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P3_Bookr.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.FunctionComponent
 {
-    interface IFunctionComponentInterface
+    public interface IFunctionComponentInterface
     {
         ILoginManager loginManager { get; }
 
@@ -15,6 +16,8 @@ namespace P3_Bookr.FunctionComponent
         IPaymentManager paymentManager { get; }
 
         IPermissionManager permissionManager { get; }
+
+        IReservationManager reservationManager { get; }
 
         IServiceManager serviceManager { get; }
     }

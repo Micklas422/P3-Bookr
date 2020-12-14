@@ -30,13 +30,13 @@ namespace P3_Bookr.DAL
 
         public List<Department> GetDepartmentsByCustomerId(int customerId)
         {
-            return Departments.Where(d => d.CustomerId == customerId).ToList();
+            return Departments.Where(d => d.Customer.Id == customerId).ToList();
         }
 
-        public Department GetDepartment(int id)
-        {
-            return Departments.Where(d => d.Id == id).FirstOrDefault();
-        }
+        //public Department GetDepartment(int id)
+        //{
+        //    return Departments.Where(d => d == id).FirstOrDefault();
+        //}
 
         public void SetDepartments(List<Department> department)
         {
@@ -45,7 +45,7 @@ namespace P3_Bookr.DAL
 
         public void UpdateDepartment(Department department)
         {
-            Departments.Where(c => c.Id == department.Id).Select(c => c = department);
+            Departments.Where(c => c.Equals(department)).Select(c => c = department);
         }
     }
 }

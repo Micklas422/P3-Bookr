@@ -9,10 +9,14 @@ namespace P3_Bookr.Models
 {
     public class Member : IMember
     {
-        static List<int> UniqueIds = new List<int>();
+        public enum MemberTypes
+        {
+            Renter,
+            Member,
+            Administrator,
+            Employee
+        };
 
-        int _id;
-        int _customerId;
         string _firstName;
         string _lastName;
         bool _isActive;
@@ -20,41 +24,28 @@ namespace P3_Bookr.Models
         string _rentalNumber;
         string _adress;
         string _email;
-        bool _customerDeactivated;
-        MemberTypes _memberType;
-        public enum MemberTypes 
-        {
-            Renter,
-            Member,
-            Administrator,
-            Employee
-        };
         string _username;
         string _password;
 
-        List<Reservation> reservations = new List<Reservation>();
+        MemberTypes _memberType;
+        Customer _customer;
+        List<Reservation> _reservations = new List<Reservation>();
+        List<Department> _departments = new List<Department>();
 
-        public Member()
+        public Member(Customer customer, string firstName, string lastName, string adress)
         {
-
+            Customer = customer;
+            FirstName = firstName;
+            LastName = lastName;
+            Adress = adress;         
         }
-        public Member(int id, string firstName, string lastName, bool isActive, string memberNumber, string rentalNumber, string adress, string email, bool customerDeactivated, MemberTypes memberType, string username, string password)
+
+        public bool IsCustomerActive
         {
-            if (UniqueIds.Contains(id))
-                throw new ArgumentException();
-            UniqueIds.Add(id);
-            _id = id;
-            _firstName = firstName;
-            _lastName = lastName;
-            _isActive = isActive;
-            _memberNumber = memberNumber;
-            _rentalNumber = rentalNumber;
-            _adress = adress;
-            _email = email;
-            _customerDeactivated = customerDeactivated;
-            _memberType = memberType;
-            _username = username;
-            _password = password;            
+            get
+            {
+                return Customer != null ? Customer.IsActive : false;
+            }
         }
 
         public string FirstName
@@ -99,11 +90,11 @@ namespace P3_Bookr.Models
             set { _email = value; }
         }
 
-        public bool CustomerDeactivated
-        {
-            get { return _customerDeactivated; }
-            set { _customerDeactivated = value; }
-        }
+        //public bool CustomerDeactivated
+        //{
+        //    get { return _customerDeactivated; }
+        //    set { _customerDeactivated = value; }
+        //}
 
         public MemberTypes MemberType
         {
@@ -123,32 +114,13 @@ namespace P3_Bookr.Models
             set { _username = value; }
         }
 
-        public int Id
-        {
-            get { return _id; }
-        }
-
-        public int CustomerId
-        {
-            get { return _customerId; }
-            set { _customerId = value; }
-        }
-
         public List<Reservation> Reservations
         {
-            get { return reservations; }
-            set { reservations = value; }
+            get { return _reservations; }
+            set { _reservations = value; }
         }
 
-        public void setPermissions()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool approveLogin(string username, string password)
-        {
-            
-            throw new NotImplementedException();
-        }
+        public Customer Customer { get => _customer; private set => _customer = value; }
+        public List<Department> Departments { get => _departments; set => _departments = value; }
     }
 }
