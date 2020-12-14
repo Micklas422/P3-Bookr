@@ -10,32 +10,16 @@ namespace P3_Bookr.DAL
 {
     class TimeperiodDAL : ITimeperiodDAL
     {
-        List<TimePeriod> _timePeriods;
-        string _fileName = "TimerPeriods";
-        JsonHandler _jsonHandler = new JsonHandler();
-
-        public TimeperiodDAL()
-        {
-            TimePeriods = LoadTimeperiods();
-        }
-
-        public List<TimePeriod> TimePeriods { get => _timePeriods; private set => _timePeriods = value; }
-
-        List<TimePeriod> LoadTimeperiods()
-        {
-            List<TimePeriod> timePeriods;
-            timePeriods = _jsonHandler.ReadJsonObjectFromFile<List<TimePeriod>>(_fileName);
-            return timePeriods;
-        }
+        public List<TimePeriod> TimePeriods => throw new NotImplementedException();
 
         public List<TimePeriod> GetTimePeriodsByService(int serivceId)
         {
-            return TimePeriods.Where(t => t.ServicesId == serivceId).ToList();
-        } 
+            throw new NotImplementedException();
+        }
 
-        public void SetTimePeriods(List<TimePeriod> timePeriods)
+        public void SetTimePeriods(List<TimePeriod> timeperiods)
         {
-            _jsonHandler.WriteJsonObjectToFile(_fileName, timePeriods);
+            throw new NotImplementedException();
         }
     }
 }

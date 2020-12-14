@@ -10,47 +10,26 @@ namespace P3_Bookr.DAL.Interfaces
 {
     class ServiceDAL : IServiceDAL
     {
-        List<Service> _services;
-        string _fileName = "Serives";
-        JsonHandler _jsonHandler = new JsonHandler();
-
-        public ServiceDAL()
-        {
-            Services = LoadServices();
-        }
-
-        public List<Service> Services { get => _services; private set => _services = value; }
-
-        public List<Service> LoadServices()
-        {
-            List<Service> services;
-            services = _jsonHandler.ReadJsonObjectFromFile<List<Service>>(_fileName);
-            return services;
-        }
-
-        public List<Service> GetServices()
-        {
-            return Services;
-        }
+        public List<Service> Services => throw new NotImplementedException();
 
         public Service GetService(int id)
         {
-            return Services.Where(s => s.Id == id).FirstOrDefault();
+            throw new NotImplementedException();
         }
 
         public List<Service> GetServicesByDepartmentId(int departmentId)
         {
-            return Services.Where(s => s.DepartmentId == departmentId).ToList();
-        }
-
-        public void UpdateSerivce(Service service)
-        {
-            Services.Where(s => s.Id == service.Id).Select(s => s = service);
+            throw new NotImplementedException();
         }
 
         public void SetServices(List<Service> services)
         {
-            _jsonHandler.WriteJsonObjectToFile(_fileName, services);
+            throw new NotImplementedException();
+        }
+
+        public void UpdateSerivce(Service service)
+        {
+            throw new NotImplementedException();
         }
     }
 }

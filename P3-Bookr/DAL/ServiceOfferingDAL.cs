@@ -10,42 +10,26 @@ namespace P3_Bookr.DAL
 {
     class ServiceOfferingDAL : IServiceOfferingDAL
     {
-        List<ServiceOffering> _serviceOffering;
-        string _fileName = "ServiceOfferings";
-        JsonHandler _jsonHandler = new JsonHandler();
-
-        public List<ServiceOffering> ServiceOfferings { get => _serviceOffering; private set => _serviceOffering = value; }
-
-        public ServiceOfferingDAL()
-        {
-            ServiceOfferings = LoadServiceOfferings();
-        }
-        List<ServiceOffering> LoadServiceOfferings()
-        {
-            List<ServiceOffering> serviceOfferings;
-            serviceOfferings = _jsonHandler.ReadJsonObjectFromFile<List<ServiceOffering>>(_fileName);
-            return serviceOfferings;
-        }
-
-
-        public List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId)
-        {
-            return ServiceOfferings.Where(s => s.ServicesId == serviceId).ToList();
-        }
+        public List<ServiceOffering> ServiceOfferings => throw new NotImplementedException();
 
         public ServiceOffering GetServiceOffering(int id)
         {
-            return ServiceOfferings.Where(s => s.Id == id).FirstOrDefault();
+            throw new NotImplementedException();
+        }
+
+        public List<ServiceOffering> GetServiceOfferingsByServiceId(int serviceId)
+        {
+            throw new NotImplementedException();
         }
 
         public void SetServiceOfferings(List<ServiceOffering> serviceOfferings)
         {
-            _jsonHandler.WriteJsonObjectToFile(_fileName, serviceOfferings);
+            throw new NotImplementedException();
         }
 
         public void UpdateServiceOfferings(ServiceOffering serviceOffering)
         {
-            ServiceOfferings.Where(c => c.Id == serviceOffering.Id).Select(c => c = serviceOffering);
+            throw new NotImplementedException();
         }
     }
 }
