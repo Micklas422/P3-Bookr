@@ -44,7 +44,7 @@ namespace P3_Bookr
             _mainWindow.HideAllControls();
             _mainWindow.panelSiteView.Controls.Clear();
             FrontPageForm form = new FrontPageForm(this);
-            List<Service> services = _functionComponent.serviceManager.FindLastServicesUsed(_currentUser, 5);
+            List<Service> services = LastUsedService(5);
             foreach(Service s in services)
             {
                 form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
@@ -220,14 +220,9 @@ namespace P3_Bookr
         }
         #endregion
         #region HomepageUI
-        public void LastUsedService()
+        public List<Service> LastUsedService(int count)
         {
-            List<Service> lastServicesUsed = _functionComponent.historyManager.GetLastUsedServices(_currentUser, 5);
-            foreach (Service ser in lastServicesUsed)
-            {
-                break;
-                throw new NotImplementedException();
-            }
+            return _functionComponent.historyManager.GetLastUsedServices(_currentUser, count);
         }
 
         public void News()
@@ -241,9 +236,18 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public Service AddService(Service service)
+        public Service AddService(string location, string description, string name, ServiceTypes serviceType, string timePeriod, List<ServiceOffering> serviceOfferings)
         {
-            throw new NotImplementedException();
+            Service service = new Service();
+            service.Location = location;
+            service.Description = description;
+            service.Name = name;
+            service.ServiceType = serviceType;
+            //service.TimePeriods = timePeriod;
+            service.ServiceOfferings = serviceOfferings;
+            service.DepartmentDeactivatet = false;
+
+            return service;
         }
         public void CreateServiceOffering()
         {
