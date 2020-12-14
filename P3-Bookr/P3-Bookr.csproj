@@ -112,6 +112,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIController.cs" />
+    <Compile Include="Windows\CreateNewService\NewService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\CreateNewService\NewService.Designer.cs">
+      <DependentUpon>NewService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CreateNewService\ServiceOffering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\CreateNewService\ServiceOffering.Designer.cs">
+      <DependentUpon>ServiceOffering.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Frontpage\BigNewsBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +311,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Windows\CreateNewService\NewService.resx">
+      <DependentUpon>NewService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\CreateNewService\ServiceOffering.resx">
+      <DependentUpon>ServiceOffering.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Frontpage\BigNewsBox.resx">
       <DependentUpon>BigNewsBox.cs</DependentUpon>
     </EmbeddedResource>
