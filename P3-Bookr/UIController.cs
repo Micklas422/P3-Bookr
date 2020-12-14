@@ -243,7 +243,7 @@ namespace P3_Bookr
             service.Description = description;
             service.Name = name;
             service.ServiceType = serviceType;
-            service.TimePeriods = timePeriod;
+            //service.TimePeriods = timePeriod;
             service.ServiceOfferings = serviceOfferings;
             service.DepartmentDeactivatet = false;
 
