@@ -50,5 +50,14 @@ namespace P3_Bookr.Windows
         {
             _servicesUI.SwitchToService(_service);
         }
+
+        private void ServiceViewForFlow_Load(object sender, EventArgs e)
+        {
+            ServiceTitel.DoubleClick += ServiceViewForFlow_DoubleClick;
+            ServiceLocation.DoubleClick += ServiceViewForFlow_DoubleClick;
+            ServiceLocationInfo.DoubleClick += ServiceViewForFlow_DoubleClick;
+            ServiceInfo.DoubleClick += ServiceViewForFlow_DoubleClick;
+            ServiceInfoInfo.DoubleClick += ServiceViewForFlow_DoubleClick;
+        }
     }
 }

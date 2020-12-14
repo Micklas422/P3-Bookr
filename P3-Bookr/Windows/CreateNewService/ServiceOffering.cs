@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P3_Bookr.Windows.Services
+namespace P3_Bookr.Windows.CreateNewService
 {
-    public partial class ServiceCollection : UserControl
+    public partial class ServiceOffering : UserControl
     {
-        public ServiceCollection()
+        public ServiceOffering()
         {
             InitializeComponent();
         }

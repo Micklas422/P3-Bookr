@@ -52,8 +52,6 @@
     <Compile Include="Commons\CustomExceptions\BadPasswordException.cs" />
     <Compile Include="Commons\CustomExceptions\UserNotFoundException.cs" />
     <Compile Include="Commons\Enums.cs" />
-    <Compile Include="Commons\FileReader.cs" />
-    <Compile Include="Commons\FileWriter.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\DataAccesLayer.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />
@@ -72,7 +70,6 @@
     <Compile Include="DAL\ServiceGroupDAL.cs" />
     <Compile Include="DAL\ServiceOfferingDAL.cs" />
     <Compile Include="DAL\TimeperiodDAL.cs" />
-    <Compile Include="DAL\Util\JsonHandler.cs" />
     <Compile Include="DAL\MemberDAL.cs" />
     <Compile Include="DAL\PaymentDAL.cs" />
     <Compile Include="FunctionComponent\FunctionComponenten.cs" />
@@ -112,6 +109,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIController.cs" />
+    <Compile Include="Windows\CreateNewService\NewService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\CreateNewService\NewService.Designer.cs">
+      <DependentUpon>NewService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CreateNewService\ServiceOffering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\CreateNewService\ServiceOffering.Designer.cs">
+      <DependentUpon>ServiceOffering.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Frontpage\BigNewsBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,28 +241,10 @@
     <Compile Include="Windows\ServicePanels\ServiceViewForFlow.Designer.cs">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Services\ServiceCollection.cs">
+    <Compile Include="Windows\ServicePanels\ServicesTop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\Services\ServiceCollection.Designer.cs">
-      <DependentUpon>ServiceCollection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Services\ServiceElement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Services\ServiceElement.Designer.cs">
-      <DependentUpon>ServiceElement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Services\ServiceGathering.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Services\ServiceGathering.Designer.cs">
-      <DependentUpon>ServiceGathering.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Services\ServicesTop.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Services\ServicesTop.Designer.cs">
+    <Compile Include="Windows\ServicePanels\ServicesTop.Designer.cs">
       <DependentUpon>ServicesTop.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Settings\PaymentInfo.cs">
@@ -299,6 +290,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Windows\CreateNewService\NewService.resx">
+      <DependentUpon>NewService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\CreateNewService\ServiceOffering.resx">
+      <DependentUpon>ServiceOffering.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Frontpage\BigNewsBox.resx">
       <DependentUpon>BigNewsBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,16 +353,7 @@
     <EmbeddedResource Include="Windows\ServicePanels\ServiceViewForFlow.resx">
       <DependentUpon>ServiceViewForFlow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Services\ServiceCollection.resx">
-      <DependentUpon>ServiceCollection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Services\ServiceElement.resx">
-      <DependentUpon>ServiceElement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Services\ServiceGathering.resx">
-      <DependentUpon>ServiceGathering.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Services\ServicesTop.resx">
+    <EmbeddedResource Include="Windows\ServicePanels\ServicesTop.resx">
       <DependentUpon>ServicesTop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Settings\PaymentInfo.resx">
@@ -392,7 +380,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Windows\App.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BookerLogo.png" />

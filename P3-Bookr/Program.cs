@@ -22,7 +22,7 @@ namespace P3_Bookr
         static void Main()
         {
             int i = 0;
-            Customer c = new Customer(0, true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
+            Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
             for (i = 0; i < 2; i++)
             {
@@ -50,34 +50,33 @@ namespace P3_Bookr
             {
                 for (int k = 0; k < 3; k++)
                 {
-                    d.Services.Add(new Service(i, $"service{i},{k}", Commons.Enums.ServiceTypes.CommonRoom));
-                    d.Services[0].ServiceOfferings.Add(new ServiceOffering(i, $"Offering{i}", 120, 30 + k * 2));
+                    d.Services.Add(new Service(i, $"Min service {i} , {k}", Commons.Enums.ServiceTypes.CommonRoom) {Description ="Dette er en test", Location ="Vingevej 19" });
+                    d.Services[0].ServiceOfferings.Add(new ServiceOffering($"Offering{i}", 120, 30 + k * 2));
                     i++;
                 }
             }
 
             c.Members[1].Reservations.Add(
-                new Reservation(0,
+                new Reservation(
                 DateTime.Now,
-                new TimePeriod(0,
+                new TimePeriod(
                 DateTime.Now.AddDays(2),
-                DateTime.Now.AddDays(3),
-                new Payment(0, c.Departments[0].Services[0].ServiceOfferings[0].Price), 
+                DateTime.Now.AddDays(3), 
                 c.Departments[0].Services[0]),
-                c.Departments[0].Services[0].ServiceOfferings[0]));
+                c.Departments[0].Services[0].ServiceOfferings[0],
+                new Payment(DateTime.Now, c.Departments[0].Services[0].ServiceOfferings[0].Price)));
 
             List<Customer> customers = new List<Customer>();
             customers.Add(c);
 
             IDataAccesLayer dal = new DataAccesLayer();
-            dal.customerDAL.SetCustomers(customers);
-            dal.departmentDAL.SetDepartments(c.Departments);
-            dal.memberDAL.SetMembers(c.Members);
+            //dal.customerDAL.SetCustomers(customers);
+            //dal.departmentDAL.SetDepartments(c.Departments);
+            //dal.memberDAL.SetMembers(c.Members);
 
             IModelComponent m = new ModelComponent(new DataAccesLayer());
 
             m.customer.Add(c);
-            //IFunctionComponentInterface functionComponent = new FunctionComponenten(new ModelComponent(new DataAccesLayer()));
             IFunctionComponentInterface functionComponent = new FunctionComponenten(m);
 
             UIController uIController = new UIController(functionComponent);

@@ -8,9 +8,6 @@ namespace P3_Bookr.Models
 {
     public class Customer : ICustomer
     {
-        static List<int> UniqueIds = new List<int>();
-
-        int _id;
         bool _isActive;
         DateTime _creationDate;
         string _name;
@@ -20,12 +17,8 @@ namespace P3_Bookr.Models
         List<Department> departments = new List<Department>();
         List<Member> members = new List<Member>();
 
-        public Customer(int id,  bool isActive, DateTime creationDate, string name, string adress, string email)
+        public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
         {
-            if (UniqueIds.Contains(id))
-                throw new ArgumentException();
-            UniqueIds.Add(id);
-            _id = id;
             _isActive = isActive;
             _creationDate = creationDate;
             _name = name;
@@ -60,10 +53,6 @@ namespace P3_Bookr.Models
         {
             get { return _email; }
             set { _email = value; }
-        }
-        public int Id
-        {
-            get { return _id; }
         }
         public List<Department> Departments
         {
