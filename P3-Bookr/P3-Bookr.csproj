@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -52,9 +52,6 @@
     <Compile Include="Commons\CustomExceptions\BadPasswordException.cs" />
     <Compile Include="Commons\CustomExceptions\UserNotFoundException.cs" />
     <Compile Include="Commons\Enums.cs" />
-    <Compile Include="Commons\FileReader.cs" />
-    <Compile Include="Commons\FileWriter.cs" />
-    <Compile Include="Commons\LastServiceOrdering.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\DataAccesLayer.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />

@@ -215,7 +215,12 @@ namespace P3_Bookr
         #region HomepageUI
         public void LastUsedService()
         {
-            throw new NotImplementedException();
+            List<Service> lastServicesUsed = _functionComponent.historyManager.GetLastUsedServices(_currentUser, 5);
+            foreach (Service ser in lastServicesUsed)
+            {
+                break;
+                throw new NotImplementedException();
+            }
         }
 
         public void News()
