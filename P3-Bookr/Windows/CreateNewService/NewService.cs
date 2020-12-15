@@ -58,14 +58,9 @@ namespace P3_Bookr.Windows.CreateNewService
             flowPanelServiceOffering.Controls.Add(new PageServiceOffering());
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            
+            _handler.SwitchToHomePage();
         }
     }
 }

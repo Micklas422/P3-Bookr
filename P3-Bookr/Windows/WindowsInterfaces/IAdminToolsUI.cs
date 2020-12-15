@@ -16,6 +16,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
         void AddServiceGroup();
         void AddUserGroup();
         void CreateServiceOffering();
+        void SwitchToHomePage();
 
     }
 }
