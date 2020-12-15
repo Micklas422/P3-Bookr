@@ -37,7 +37,7 @@ namespace P3_Bookr
         public void SwitchToHistoryPage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new HistoryPage(this));
+            _mainWindow.panelSiteView.Controls.Add(LoadHistoryPage());
         }
 
         public void SwitchToHomePage()
