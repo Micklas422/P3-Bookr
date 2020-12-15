@@ -108,6 +108,7 @@
             // 
             // flowPanelServiceOffering
             // 
+            this.flowPanelServiceOffering.AutoScroll = true;
             this.flowPanelServiceOffering.BackColor = System.Drawing.Color.White;
             this.flowPanelServiceOffering.Location = new System.Drawing.Point(35, 263);
             this.flowPanelServiceOffering.Margin = new System.Windows.Forms.Padding(4);

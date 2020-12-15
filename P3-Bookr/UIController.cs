@@ -243,7 +243,15 @@ namespace P3_Bookr
 
         public void AddService(Service service, Department department)
         {
-            _functionComponent.serviceManager.AddServiceToServiceList(service, department);
+            bool Succeded;
+            Succeded = _functionComponent.serviceManager.AddServiceToServiceList(service, department);
+            if (!Succeded)
+            {
+                throw new NullReferenceException();
+                MessageBox.Show("Noget gik galt under oprettelsen af servicen");
+            }
+            MessageBox.Show("Service oprettet, tryk på annuller for at returnere til hovedmenuen");
+
         }
         public void CreateServiceOffering()
         {
