@@ -5,7 +5,7 @@ namespace P3_Bookr.FunctionComponent
 {
     public  interface IHistoryManager
     {
-        void SeeHistory();
+        List<Reservation> SeeHistory(Member member);
         List<Service> GetLastUsedServices(Member member, int count);
     }
 }

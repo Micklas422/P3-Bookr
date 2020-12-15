@@ -37,7 +37,7 @@ namespace P3_Bookr
         public void SwitchToHistoryPage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new HistoryPage(this));
+            _mainWindow.panelSiteView.Controls.Add(LoadHistoryPage());
         }
 
         public void SwitchToHomePage()
@@ -278,6 +278,21 @@ namespace P3_Bookr
 
             return departmentList;
         }
+        #endregion
+        #region HistorikUI
+
+        public HistoryPage LoadHistoryPage()
+        {
+            HistoryPage historyPage = new HistoryPage(this);
+            List<Reservation> reservations = _functionComponent.historyManager.SeeHistory(_currentUser);
+
+            foreach (Reservation r in reservations)
+            {
+                historyPage.flowLayoutPanel1.Controls.Add(new HistoryElement(r));
+            }
+            return historyPage;
+        }
+
         #endregion
         public void LoadInfoPanelForService()
         {
