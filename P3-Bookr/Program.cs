@@ -79,7 +79,7 @@ namespace P3_Bookr
 
             IModelComponent m = new ModelComponent(new DataAccesLayer());
 
-            m.customer.Add(c);
+            m.customer = c;
             IFunctionComponentInterface functionComponent = new FunctionComponenten(m);
 
             UIController uIController = new UIController(functionComponent);

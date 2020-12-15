@@ -32,7 +32,7 @@ namespace P3_Bookr.FunctionComponent
         public List<Service> FindLastServicesUsed(Member  member, int cnt)
         {
             List<Service> services = new List<Service>();
-            services.Add(_modelComponent.customer[0].Departments[0].Services[0]);
+            services.Add(_modelComponent.customer.Departments[0].Services[0]);
             return services;
         }
 
