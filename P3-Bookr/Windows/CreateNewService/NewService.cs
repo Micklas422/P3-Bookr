@@ -17,7 +17,7 @@ namespace P3_Bookr.Windows.CreateNewService
     {
         IAdminToolsUI _handler;
         List<ServiceOffering> serviceOfferingsList = new List<ServiceOffering>();
-        public NewService()
+        public NewService(List<Department> memberDepartments)
         {
             InitializeComponent();
             foreach(string serviceTypes in Enum.GetNames(typeof(ServiceTypes)))
@@ -25,6 +25,11 @@ namespace P3_Bookr.Windows.CreateNewService
                 DropdownServiceType.Items.Add(serviceTypes);
             }
             DropdownServiceType.SelectedIndex = 0;
+            foreach(Department department in memberDepartments)
+            {
+                DropdownAfdeling.Items.Add(department);
+            }
+            DropdownAfdeling.SelectedIndex = 0;
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
@@ -49,6 +54,11 @@ namespace P3_Bookr.Windows.CreateNewService
         private void ButtonNewService_Click(object sender, EventArgs e)
         {
             flowPanelServiceOffering.Controls.Add(new PageServiceOffering());
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

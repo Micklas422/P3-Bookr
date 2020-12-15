@@ -238,14 +238,6 @@ namespace P3_Bookr
 
         public Service AddService(Service service)
         {
-            //Service service = new Service();
-            //service.Location = location;
-            //service.Description = description;
-            //service.Name = name;
-            //service.ServiceType = serviceType;
-            //service.TimePeriods = timePeriod;
-            //service.ServiceOfferings = serviceOfferings;
-            //service.DepartmentDeactivatet = false;
 
             return service;
         }
@@ -263,6 +255,16 @@ namespace P3_Bookr
         public void AddUserGroup()
         {
             throw new NotImplementedException();
+        }
+        public List<Department> deparmentListFromMember(Member member)
+        {
+            List<Department> departmentList = new List<Department>();
+            foreach(Department department in member.Departments)
+            {
+                departmentList.Add(department);
+            }
+
+            return departmentList;
         }
         #endregion
         public void LoadInfoPanelForService()
