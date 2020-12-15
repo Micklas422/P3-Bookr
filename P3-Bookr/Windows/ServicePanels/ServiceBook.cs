@@ -18,13 +18,17 @@ namespace P3_Bookr.Windows
         IReservationUI _reservationHandler;
         Service _service;
         ServiceSubOptions _selectedServiceOffering;
+        DateTime _dateTime;
+        bool _TimeSelected;
         //List<ServiceOffering> _serviceOfferings;
         public ServiceBook(IServicesUI serivceHandler, IReservationUI reservationHandler, Service service)
         {
             _handler = serivceHandler;
             _service = service;
             _reservationHandler = reservationHandler;
+            _dateTime = DateTime.Now;
             InitializeComponent();
+            buttonBack.Hide();
         }
         
         private void ServiceSubOptions_click(object sender, EventArgs e)
@@ -46,27 +50,100 @@ namespace P3_Bookr.Windows
                 sub.Click += ServiceSubOptions_click;
                 flowLayoutPanelOfferings.Controls.Add(sub);
             }
+            LoadTimePeriodes(_dateTime);
+        }
 
+        void LoadTimePeriodes(DateTime dayToLoad)
+        {
+            DateTime endTime;
+            comboBoxTimeSlots.Items.Clear();
+            List<TimePeriod> timePeriods = _service.TimePeriods.Where(t => t.StartTime.Date == dayToLoad.Date || t.EndTime.Date == dayToLoad.Date).ToList();
+
+            if (dayToLoad.Date == DateTime.Now.Date)
+            {
+                //find the next quater
+                int min = ((dayToLoad.Minute / 15) * 15) + 15;
+                min = min - dayToLoad.Minute;
+                dayToLoad = dayToLoad.AddMinutes(min);
+            }
+            else
+            {
+                dayToLoad = new DateTime(dayToLoad.Year, dayToLoad.Month, dayToLoad.Day, 0, 0, 0);
+            }
+
+            //set midnight
+            endTime = new DateTime(dayToLoad.Year, dayToLoad.Month, dayToLoad.Day, 0, 0, 0);
+            endTime = endTime.AddDays(1);
+
+            do
+            {
+                if(!timePeriods.Exists(t => dayToLoad >= t.StartTime && dayToLoad <= t.EndTime))
+                    comboBoxTimeSlots.Items.Add(dayToLoad.ToString("HH:mm dd/MM/yyyy "));
+
+                dayToLoad = dayToLoad.AddMinutes(15);
+            } while (dayToLoad < endTime);
+
+            if(comboBoxTimeSlots.Items.Count == 0)
+            {
+                comboBoxTimeSlots.Items.Add("Ingen ledige tider");
+                _TimeSelected = false;
+            }
+            else
+            {
+                _TimeSelected = true;
+            }
+            comboBoxTimeSlots.SelectedIndex = 0;
         }
 
         private void ButtonBook_Click(object sender, EventArgs e)
         {
             if(_selectedServiceOffering != null)
             {
-                ServiceOffering so = _selectedServiceOffering.GetServiceOffering();
-                if(_reservationHandler.CreateNewReservation(_service, so, dateTimePickerServicerBook.Value))
+                if(_TimeSelected)
                 {
-                    MessageBox.Show("Reservation godkendt");
+                    ServiceOffering so = _selectedServiceOffering.GetServiceOffering();
+                    if (_reservationHandler.CreateNewReservation(_service, so, Convert.ToDateTime(comboBoxTimeSlots.SelectedItem)))
+                    {
+                        MessageBox.Show("Reservation godkendt");
+                        LoadTimePeriodes(_dateTime);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Reservation kunne ikke gennemføres");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Reservation kunne ikke gennemføres");
+                    MessageBox.Show("Ingen tid valgt");
                 }
             }
             else
             {
                 MessageBox.Show("Vælg service!");
             }
+            
+
+        }
+
+        private void buttonForward_Click(object sender, EventArgs e)
+        {
+            buttonBack.Show();
+            _dateTime = _dateTime.AddDays(1);
+            LoadTimePeriodes(_dateTime);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            DateTime d = _dateTime.AddDays(-1);
+            if (d.Date <= DateTime.Now.Date)
+            {
+                _dateTime = DateTime.Now;
+                buttonBack.Hide();
+            }
+            else
+                _dateTime = d;
+
+            LoadTimePeriodes(_dateTime);
         }
     }
 }

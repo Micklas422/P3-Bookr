@@ -30,8 +30,10 @@
         {
             this.ServiceOptionTitel1 = new System.Windows.Forms.Label();
             this.ButtonBook = new System.Windows.Forms.Button();
-            this.dateTimePickerServicerBook = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanelOfferings = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxTimeSlots = new System.Windows.Forms.ComboBox();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonForward = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ServiceOptionTitel1
@@ -54,14 +56,6 @@
             this.ButtonBook.UseVisualStyleBackColor = true;
             this.ButtonBook.Click += new System.EventHandler(this.ButtonBook_Click);
             // 
-            // dateTimePickerServicerBook
-            // 
-            this.dateTimePickerServicerBook.Location = new System.Drawing.Point(7, 236);
-            this.dateTimePickerServicerBook.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerServicerBook.Name = "dateTimePickerServicerBook";
-            this.dateTimePickerServicerBook.Size = new System.Drawing.Size(228, 20);
-            this.dateTimePickerServicerBook.TabIndex = 3;
-            // 
             // flowLayoutPanelOfferings
             // 
             this.flowLayoutPanelOfferings.Location = new System.Drawing.Point(2, 21);
@@ -70,13 +64,43 @@
             this.flowLayoutPanelOfferings.Size = new System.Drawing.Size(233, 199);
             this.flowLayoutPanelOfferings.TabIndex = 4;
             // 
+            // comboBoxTimeSlots
+            // 
+            this.comboBoxTimeSlots.FormattingEnabled = true;
+            this.comboBoxTimeSlots.Location = new System.Drawing.Point(60, 225);
+            this.comboBoxTimeSlots.Name = "comboBoxTimeSlots";
+            this.comboBoxTimeSlots.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxTimeSlots.TabIndex = 5;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(25, 225);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(29, 21);
+            this.buttonBack.TabIndex = 6;
+            this.buttonBack.Text = "<";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // buttonForward
+            // 
+            this.buttonForward.Location = new System.Drawing.Point(186, 225);
+            this.buttonForward.Name = "buttonForward";
+            this.buttonForward.Size = new System.Drawing.Size(29, 21);
+            this.buttonForward.TabIndex = 7;
+            this.buttonForward.Text = ">";
+            this.buttonForward.UseVisualStyleBackColor = true;
+            this.buttonForward.Click += new System.EventHandler(this.buttonForward_Click);
+            // 
             // ServiceBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.buttonForward);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.comboBoxTimeSlots);
             this.Controls.Add(this.flowLayoutPanelOfferings);
-            this.Controls.Add(this.dateTimePickerServicerBook);
             this.Controls.Add(this.ButtonBook);
             this.Controls.Add(this.ServiceOptionTitel1);
             this.Name = "ServiceBook";
@@ -90,7 +114,9 @@
 
         private System.Windows.Forms.Label ServiceOptionTitel1;
         private System.Windows.Forms.Button ButtonBook;
-        private System.Windows.Forms.DateTimePicker dateTimePickerServicerBook;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelOfferings;
+        private System.Windows.Forms.ComboBox comboBoxTimeSlots;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonForward;
     }
 }

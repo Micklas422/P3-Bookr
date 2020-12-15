@@ -20,14 +20,15 @@ namespace P3_Bookr.FunctionComponent
 
         public bool CreateReservation(Member member, Service service, ServiceOffering serviceOffering, DateTime dateTime)
         {
+            TimePeriod p = new TimePeriod(dateTime, dateTime.AddMinutes(serviceOffering.Duration), service);
             Reservation r = new Reservation(dateTime,
                 member,
-                new TimePeriod(dateTime, dateTime.AddMinutes(serviceOffering.Duration), service),
+                p,
                 serviceOffering,
                 new Payment(DateTime.Now, serviceOffering.Price));
 
             _modelComponent.customer.Members.Where(m => m.Equals(member)).FirstOrDefault().Reservations.Add(r);
-
+            service.TimePeriods.Add(p);
             return true;
         }
 
