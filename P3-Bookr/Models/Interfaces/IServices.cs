@@ -13,6 +13,7 @@ namespace P3_Bookr.Models
         bool DepartmentDeactivatet { get; set; }
         Service.ServiceStates ServiceState { get; set; }
         ServiceTypes ServiceType { get; set; }
+        SystemRights SystemRights { get; set; }
         List<TimePeriod> TimePeriods { get; set; }
         List<ServiceOffering> ServiceOfferings { get; set; }
     }

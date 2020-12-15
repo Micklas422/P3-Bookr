@@ -42,8 +42,8 @@
             this.ButtonCreate = new System.Windows.Forms.Button();
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.DropdownServiceType = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LabelAfdeling = new System.Windows.Forms.Label();
+            this.DropdownAfdeling = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -195,33 +195,33 @@
             this.DropdownServiceType.Size = new System.Drawing.Size(399, 24);
             this.DropdownServiceType.TabIndex = 20;
             // 
-            // label7
+            // LabelAfdeling
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(568, 144);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 29);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Afdeling:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.LabelAfdeling.AutoSize = true;
+            this.LabelAfdeling.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAfdeling.Location = new System.Drawing.Point(568, 144);
+            this.LabelAfdeling.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelAfdeling.Name = "LabelAfdeling";
+            this.LabelAfdeling.Size = new System.Drawing.Size(107, 29);
+            this.LabelAfdeling.TabIndex = 21;
+            this.LabelAfdeling.Text = "Afdeling:";
+            this.LabelAfdeling.Click += new System.EventHandler(this.label7_Click);
             // 
-            // comboBox1
+            // DropdownAfdeling
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(723, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 24);
-            this.comboBox1.TabIndex = 22;
+            this.DropdownAfdeling.FormattingEnabled = true;
+            this.DropdownAfdeling.Location = new System.Drawing.Point(723, 151);
+            this.DropdownAfdeling.Name = "DropdownAfdeling";
+            this.DropdownAfdeling.Size = new System.Drawing.Size(265, 24);
+            this.DropdownAfdeling.TabIndex = 22;
             // 
             // NewService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.DropdownAfdeling);
+            this.Controls.Add(this.LabelAfdeling);
             this.Controls.Add(this.DropdownServiceType);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonCreate);
@@ -260,7 +260,7 @@
         private System.Windows.Forms.Button ButtonCancel;
         public System.Windows.Forms.ComboBox DropdownServiceType;
         public System.Windows.Forms.FlowLayoutPanel flowPanelServiceOffering;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label LabelAfdeling;
+        private System.Windows.Forms.ComboBox DropdownAfdeling;
     }
 }
