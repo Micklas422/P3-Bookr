@@ -272,6 +272,21 @@ namespace P3_Bookr
             return departmentList;
         }
         #endregion
+        #region HistorikUI
+
+        public HistoryPage LoadHistoryPage()
+        {
+            HistoryPage historyPage = new HistoryPage(this);
+            List<Reservation> reservations = _functionComponent.historyManager.SeeHistory(_currentUser);
+
+            foreach (Reservation r in reservations)
+            {
+                historyPage.flowLayoutPanel1.Controls.Add(new HistoryElement(r));
+            }
+            return historyPage;
+        }
+
+        #endregion
         public void LoadInfoPanelForService()
         {
             throw new NotImplementedException();

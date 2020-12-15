@@ -28,56 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.historyElement1 = new P3_Bookr.Windows.History.HistoryElement();
-            this.historyElement2 = new P3_Bookr.Windows.History.HistoryElement();
-            this.historyElement3 = new P3_Bookr.Windows.History.HistoryElement();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // historyElement1
+            // flowLayoutPanel1
             // 
-            this.historyElement1.BackColor = System.Drawing.Color.White;
-            this.historyElement1.Location = new System.Drawing.Point(70, 20);
-            this.historyElement1.Name = "historyElement1";
-            this.historyElement1.Size = new System.Drawing.Size(880, 112);
-            this.historyElement1.TabIndex = 0;
-            // 
-            // historyElement2
-            // 
-            this.historyElement2.BackColor = System.Drawing.Color.White;
-            this.historyElement2.Location = new System.Drawing.Point(70, 152);
-            this.historyElement2.Name = "historyElement2";
-            this.historyElement2.Size = new System.Drawing.Size(880, 112);
-            this.historyElement2.TabIndex = 1;
-            // 
-            // historyElement3
-            // 
-            this.historyElement3.AutoScroll = true;
-            this.historyElement3.BackColor = System.Drawing.Color.White;
-            this.historyElement3.Location = new System.Drawing.Point(70, 284);
-            this.historyElement3.Name = "historyElement3";
-            this.historyElement3.Size = new System.Drawing.Size(880, 112);
-            this.historyElement3.TabIndex = 2;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(93, 25);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1173, 833);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // HistoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.historyElement3);
-            this.Controls.Add(this.historyElement2);
-            this.Controls.Add(this.historyElement1);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HistoryPage";
-            this.Size = new System.Drawing.Size(1020, 720);
+            this.Size = new System.Drawing.Size(1360, 886);
             this.Load += new System.EventHandler(this.HistoryPage_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private HistoryElement historyElement1;
-        private HistoryElement historyElement2;
-        private HistoryElement historyElement3;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
