@@ -65,8 +65,16 @@ namespace P3_Bookr.FunctionComponent
         }
         public bool AddServiceToServiceList(Service service, Department department)
         {
-            _modelComponent.customer.Departments.Where(d => d.Equals(department)).FirstOrDefault().Services.Add(service);
+            try
+            {
+                _modelComponent.customer.Departments.Where(d => d.Equals(department)).FirstOrDefault().Services.Add(service);
+            }
+            catch (ArgumentNullException)
+            {
+                return false;
+            }
             return true;
+
         }
     }
 }
