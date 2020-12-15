@@ -16,12 +16,11 @@ namespace P3_Bookr.Windows
     public partial class SideBar : UserControl
     {
         ISideMenuUI _handler;
-        public SideBar(ISideMenuUI handler)
+        public SideBar(ISideMenuUI handler, bool adminPermission)
         {
             InitializeComponent();
             _handler = handler;
-            
-            
+            this.LabelAdminTools.Visible = adminPermission;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

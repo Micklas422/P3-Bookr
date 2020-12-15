@@ -39,6 +39,7 @@ namespace P3_Bookr.Models
                     {
                         result.Add(res);
                     }
+                    break;
                 }
             }
          

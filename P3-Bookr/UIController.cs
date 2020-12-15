@@ -15,6 +15,7 @@ using P3_Bookr.Models;
 using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.Commons.Enums;
 using P3_Bookr.Windows.CreateNewService;
+using P3_Bookr.Windows.AdminTools;
 
 namespace P3_Bookr
 {
@@ -28,7 +29,7 @@ namespace P3_Bookr
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
             //_mainWindow.panelSideBar.Controls.Clear();
-            _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
+            _mainWindow.panelSideBar.Controls.Add(new SideBar(this, false));
             SwitchToLogInPage();
             Application.Run(_mainWindow);
         }
@@ -37,7 +38,7 @@ namespace P3_Bookr
         public void SwitchToHistoryPage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new HistoryPage(this));
+            _mainWindow.panelSiteView.Controls.Add(LoadHistoryPage());
         }
 
         public void SwitchToHomePage()
@@ -51,6 +52,17 @@ namespace P3_Bookr
                 form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
             }
             _mainWindow.panelSiteView.Controls.Add(form);
+
+            if (_functionComponent.permissionManager.ValidateAdminPermission(_currentUser))
+            {
+                _mainWindow.panelSideBar.Controls.Clear();
+                _mainWindow.panelSideBar.Controls.Add(new SideBar(this, true));
+            } 
+            else
+            {
+                _mainWindow.panelSideBar.Controls.Clear();
+                _mainWindow.panelSideBar.Controls.Add(new SideBar(this, false));
+            }
 
             _mainWindow.labelUserLoggedIn.Text = _currentUser.Username;
             _mainWindow.panelSideBar.Show();
@@ -89,6 +101,11 @@ namespace P3_Bookr
             _mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
         }
         public void SwitchToAdminToolsPage()
+        {
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new AdminPage(this, deparmentListFromMember(_currentUser)));
+        }
+        public void SwitchToNewService()
         {
             _mainWindow.panelSiteView.Controls.Clear();
             _mainWindow.panelSiteView.Controls.Add(new NewService(this, deparmentListFromMember(_currentUser)));
@@ -241,10 +258,17 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public Service AddService(Service service, Department department)
+        public void AddService(Service service, Department department)
         {
+            bool Succeded;
+            Succeded = _functionComponent.serviceManager.AddServiceToServiceList(service, department);
+            if (!Succeded)
+            {
+                throw new NullReferenceException();
+                MessageBox.Show("Noget gik galt under oprettelsen af servicen");
+            }
+            MessageBox.Show("Service oprettet, tryk på annuller for at returnere til hovedmenuen");
 
-            return service;
         }
         public void CreateServiceOffering()
         {
@@ -271,6 +295,21 @@ namespace P3_Bookr
 
             return departmentList;
         }
+        #endregion
+        #region HistorikUI
+
+        public HistoryPage LoadHistoryPage()
+        {
+            HistoryPage historyPage = new HistoryPage(this);
+            List<Reservation> reservations = _functionComponent.historyManager.SeeHistory(_currentUser);
+
+            foreach (Reservation r in reservations)
+            {
+                historyPage.flowLayoutPanel1.Controls.Add(new HistoryElement(r));
+            }
+            return historyPage;
+        }
+
         #endregion
         public void LoadInfoPanelForService()
         {

@@ -16,12 +16,15 @@ namespace P3_Bookr.Windows.CreateNewService
     public partial class NewService : UserControl
     {
         IAdminToolsUI _handler;
-        List<ServiceOffering> serviceOfferingsList = new List<ServiceOffering>();
+        List<ServiceOffering> _serviceOfferingsList = new List<ServiceOffering>();
+        List<Department> _departmentsListForUser;
+        Department selectedDepartment;
         public NewService(IAdminToolsUI handler, List<Department> memberDepartments)
         {
 
             InitializeComponent();
             _handler = handler;
+            _departmentsListForUser = memberDepartments;
             foreach(string serviceTypes in Enum.GetNames(typeof(ServiceTypes)))
             {
                 DropdownServiceType.Items.Add(serviceTypes);
@@ -40,17 +43,53 @@ namespace P3_Bookr.Windows.CreateNewService
 
             foreach (PageServiceOffering offering in flowPanelServiceOffering.Controls)
             {
-                ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text), service);
-                serviceOfferingsList.Add(serviceOffering);
+                if(offering.textBoxName.TextLength > 0 || offering.textBoxPrice.TextLength > 0 ||offering.textBoxTime.TextLength > 0)
+                {
+                    ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text), service);
+                    _serviceOfferingsList.Add(serviceOffering);
+
+                }
+                else
+                {
+                    MessageBox.Show("Et af service udbydelserne har manglende informationer");
+                }
             }
 
             service.Location = textBoxAddress.Text;
             service.Name = textBoxName.Text;
             service.Description = richTextBoxDescription.Text;
-            service.ServiceOfferings = serviceOfferingsList;
+            service.ServiceOfferings = _serviceOfferingsList;
             service.ServiceState = 0;
 
-            _handler.AddService(service, (Department)DropdownAfdeling.SelectedItem);
+            selectedDepartment = _departmentsListForUser.Where(d => d.Name.Equals(DropdownAfdeling.SelectedItem)).FirstOrDefault();
+            
+            foreach(Control c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (c.Text.Length < 1)
+                        MessageBox.Show("Servicen mangler informationer, venligst udfyld");
+
+                }
+                if (c is RichTextBox)
+                {
+                    if (c.Text.Length < 1)
+                        MessageBox.Show("Servicen mangler en beskrivelse, venligst udfyld");
+                }
+                if(c is FlowLayoutPanel)
+                {
+                    if (c.Controls.Count < 1)
+                        MessageBox.Show("Servicen mangler udbydelser, venligst udfyld");
+                }
+            }
+
+            if(textBoxAddress.TextLength > 0 || textBoxName.TextLength > 0 || richTextBoxDescription.TextLength > 0 || flowPanelServiceOffering.Controls.Count > 0)
+            {
+                _handler.AddService(service, selectedDepartment);
+            }
+
+
+
         }
 
         private void ButtonNewService_Click(object sender, EventArgs e)
@@ -60,7 +99,7 @@ namespace P3_Bookr.Windows.CreateNewService
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            _handler.SwitchToHomePage();
+            _handler.SwitchToAdminToolsPage();
         }
     }
 }

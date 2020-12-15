@@ -15,9 +15,10 @@ namespace P3_Bookr.FunctionComponent
             _modelComponent = modelComponent;
         }
 
-        public void SeeHistory()
+        public List<Reservation> SeeHistory(Member member)
         {
-            throw new NotImplementedException();
+            return _modelComponent.GetAllReservationsByMember(member)
+                .Where(r => r.ReservationState == Commons.Enums.ReservationStates.Finalised).ToList();
         }
 
         public List<Service> GetLastUsedServices(Member member, int count)

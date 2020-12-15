@@ -30,6 +30,10 @@ namespace P3_Bookr.Windows.CreateNewService
                 MessageBox.Show("Tidsfeltet skal skrives i hele tal med minutform");
                 textBoxTime.Clear();
             }
+            if(textBoxTime.TextLength < 0)
+            {
+                MessageBox.Show("Tidsfeltet skal udfyldes, skriv hvor lang tid servicen tager i minutter");
+            }
         }
 
         private void textBoxPrice_Validating(object sender, CancelEventArgs e)
@@ -39,6 +43,10 @@ namespace P3_Bookr.Windows.CreateNewService
             {
                 MessageBox.Show("Prisfeltet skal skrives i tal med max et komma, prisformaten er kr,øre");
                 textBoxPrice.Clear();
+            }
+            if(textBoxPrice.TextLength < 0)
+            {
+                MessageBox.Show("Prisfeltet skal udfyldes");
             }
         }
     }
