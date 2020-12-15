@@ -15,6 +15,7 @@ using P3_Bookr.Models;
 using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.Commons.Enums;
 using P3_Bookr.Windows.CreateNewService;
+using P3_Bookr.Windows.AdminTools;
 
 namespace P3_Bookr
 {
@@ -89,6 +90,11 @@ namespace P3_Bookr
             _mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
         }
         public void SwitchToAdminToolsPage()
+        {
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new AdminPage(this, deparmentListFromMember(_currentUser)));
+        }
+        public void SwitchToNewService()
         {
             _mainWindow.panelSiteView.Controls.Clear();
             _mainWindow.panelSiteView.Controls.Add(new NewService(this, deparmentListFromMember(_currentUser)));

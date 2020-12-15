@@ -99,7 +99,7 @@ namespace P3_Bookr.Windows.CreateNewService
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            _handler.SwitchToHomePage();
+            _handler.SwitchToAdminToolsPage();
         }
     }
 }

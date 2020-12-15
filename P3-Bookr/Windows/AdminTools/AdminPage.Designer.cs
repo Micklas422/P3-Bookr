@@ -29,46 +29,46 @@
         private void InitializeComponent()
         {
             this.labelAdministratingTools = new System.Windows.Forms.Label();
-            this.administrateUser1 = new P3_Bookr.Windows.AdminTools.AdministrateUser();
-            this.administrateService1 = new P3_Bookr.Windows.AdminTools.AdministrateService();
+            this.panelServiceAdminTool = new System.Windows.Forms.Panel();
+            this.panelAdministrateUserAdminTool = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelAdministratingTools
             // 
             this.labelAdministratingTools.AutoSize = true;
             this.labelAdministratingTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdministratingTools.Location = new System.Drawing.Point(179, 20);
+            this.labelAdministratingTools.Location = new System.Drawing.Point(239, 25);
+            this.labelAdministratingTools.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAdministratingTools.Name = "labelAdministratingTools";
-            this.labelAdministratingTools.Size = new System.Drawing.Size(662, 63);
+            this.labelAdministratingTools.Size = new System.Drawing.Size(815, 76);
             this.labelAdministratingTools.TabIndex = 0;
             this.labelAdministratingTools.Text = "Administrerende værktøjer";
             // 
-            // administrateUser1
+            // panelServiceAdminTool
             // 
-            this.administrateUser1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.administrateUser1.Location = new System.Drawing.Point(0, 120);
-            this.administrateUser1.Name = "administrateUser1";
-            this.administrateUser1.Size = new System.Drawing.Size(1020, 270);
-            this.administrateUser1.TabIndex = 1;
+            this.panelServiceAdminTool.Location = new System.Drawing.Point(0, 578);
+            this.panelServiceAdminTool.Name = "panelServiceAdminTool";
+            this.panelServiceAdminTool.Size = new System.Drawing.Size(1360, 332);
+            this.panelServiceAdminTool.TabIndex = 2;
             // 
-            // administrateService1
+            // panelAdministrateUserAdminTool
             // 
-            this.administrateService1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(227)))));
-            this.administrateService1.Location = new System.Drawing.Point(0, 450);
-            this.administrateService1.Name = "administrateService1";
-            this.administrateService1.Size = new System.Drawing.Size(1020, 270);
-            this.administrateService1.TabIndex = 2;
+            this.panelAdministrateUserAdminTool.Location = new System.Drawing.Point(0, 131);
+            this.panelAdministrateUserAdminTool.Name = "panelAdministrateUserAdminTool";
+            this.panelAdministrateUserAdminTool.Size = new System.Drawing.Size(1360, 332);
+            this.panelAdministrateUserAdminTool.TabIndex = 3;
             // 
             // AdminPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.administrateService1);
-            this.Controls.Add(this.administrateUser1);
+            this.Controls.Add(this.panelAdministrateUserAdminTool);
+            this.Controls.Add(this.panelServiceAdminTool);
             this.Controls.Add(this.labelAdministratingTools);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminPage";
-            this.Size = new System.Drawing.Size(1020, 720);
+            this.Size = new System.Drawing.Size(1360, 886);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,7 +77,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelAdministratingTools;
-        private AdministrateUser administrateUser1;
-        private AdministrateService administrateService1;
+        private System.Windows.Forms.Panel panelServiceAdminTool;
+        private System.Windows.Forms.Panel panelAdministrateUserAdminTool;
     }
 }
