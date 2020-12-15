@@ -26,6 +26,8 @@ namespace P3_Bookr.FunctionComponent
                 serviceOffering,
                 new Payment(DateTime.Now, serviceOffering.Price));
 
+            _modelComponent.customer.Members.Where(m => m.Equals(member)).FirstOrDefault().Reservations.Add(r);
+
             return true;
         }
 
