@@ -29,6 +29,12 @@ namespace P3_Bookr.Windows.ReservationPanels
                 buttonCancel.Hide();
                 labelCancelDate.Text = reservation.CancellationDate.ToString("dd:MM:yy HH:mm");
             }
+            else if(DateTime.Now > reservation.ReservationDeadline)
+            {
+                buttonCancel.Hide();
+                labelCancelDate.Hide();
+                labelCancel.Hide();
+            }
             else
             {
                 labelCancelDate.Hide();
