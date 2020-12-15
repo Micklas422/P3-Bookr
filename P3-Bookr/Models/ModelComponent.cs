@@ -85,26 +85,26 @@ namespace P3_Bookr.Models
             return result;
         }
 
-        public bool CancelReservation(Reservation reservation, Member member)
-        {
-            foreach (Customer cus in _customer)
-            {
-                foreach (Member mem in cus.Members)
-                {
-                    if (mem == member)
-                    {
-                        foreach (Reservation res in mem.Reservations)
-                        {
-                            if (res == reservation)
-                            {
-                                res.ReservationState = ReservationStates.Cancelled;
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
-            return false;
-        }
+        //public bool CancelReservation(Reservation reservation, Member member)
+        //{
+        //    foreach (Customer cus in _customer)
+        //    {
+        //        foreach (Member mem in cus.Members)
+        //        {
+        //            if (mem == member)
+        //            {
+        //                foreach (Reservation res in mem.Reservations)
+        //                {
+        //                    if (res == reservation)
+        //                    {
+        //                        res.ReservationState = ReservationStates.Cancelled;
+        //                        return true;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

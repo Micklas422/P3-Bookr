@@ -5,8 +5,8 @@ namespace P3_Bookr.FunctionComponent
 {
     public interface IPaymentManager
     {
-        void Pay();
+        bool Pay(Payment payment);
 
-        bool Cancel(List<Payment> payments);
+        bool Cancel(Payment payments);
     }
 }

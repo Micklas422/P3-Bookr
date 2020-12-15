@@ -11,13 +11,21 @@ namespace P3_Bookr.FunctionComponent
     class ReservationManager : IReservationManager
     {
         IModelComponent _modelComponent;
-        public ReservationManager(IModelComponent modelComponent)
+        IPaymentManager _paymentManager;
+        public ReservationManager(IModelComponent modelComponent, IPaymentManager paymentManager)
         {
             _modelComponent = modelComponent;
+            _paymentManager = paymentManager;
         }
 
         public bool CreateReservation(Member member, Service service, ServiceOffering serviceOffering, DateTime dateTime)
         {
+            Reservation r = new Reservation(dateTime,
+                member,
+                new TimePeriod(dateTime, dateTime.AddMinutes(serviceOffering.Duration), service),
+                serviceOffering,
+                new Payment(DateTime.Now, serviceOffering.Price));
+
             return true;
         }
 
@@ -27,9 +35,25 @@ namespace P3_Bookr.FunctionComponent
                 Where(r => r.ReservationState != ReservationStates.Cancelled).ToList();
         }
 
-        public bool CancelReservation(Reservation reservation, Member member)
+        public bool CancelReservation(Reservation reservation)
         {
-            return _modelComponent.CancelReservation(reservation, member);
+            if(DateTime.Now < reservation.ReservationDeadline)
+            {
+                if (_paymentManager.Cancel(reservation.Payment))
+                {
+                    reservation.CancellationDate = DateTime.Now;
+                    reservation.ReservationState = ReservationStates.Cancelled;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -15,22 +15,15 @@ namespace P3_Bookr.FunctionComponent
         {
             _modelComponent = modelComponent;
         }
-        public void Pay()
+        public bool Pay(Payment payment)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
-        public bool Cancel(List<Payment> payments)
+        public bool Cancel(Payment payments)
         {
-            payments.ElementAt(0).Refunded = RefundPayment(payments.ElementAt(0));
-            if (payments.ElementAt(0).Refunded)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            payments.Refunded = true;
+            return true;
         }
 
         public bool RefundPayment(Payment payment)
