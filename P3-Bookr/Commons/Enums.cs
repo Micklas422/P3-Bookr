@@ -11,6 +11,11 @@ namespace P3_Bookr.Commons.Enums
         WashingMachine,
         CommonRoom
     }
+    public enum ServiceTypesTitel
+    {
+        Vaskemaskiner,
+        Festlokaler
+    }
 
     public enum ReservationStates
     {
