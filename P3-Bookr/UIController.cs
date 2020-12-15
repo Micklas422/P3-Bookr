@@ -116,12 +116,11 @@ namespace P3_Bookr
 
             foreach (List<Service> services in sortedByServiceTypes)
             {
-                servicesOverview.FlowPanelOfFlow.Controls.Add(new FlowLayoutPanel());
+                servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
                 foreach (Service service in services)
                 {
-                    servicesOverview.flowLayoutPanel1.Controls.Add(new ServiceViewForFlow(service, this));
+                    servicesOverview.FlowPanelOfFlow.Controls.Add(new ServiceViewForFlow(service, this));
                 }
-                servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
             }
             return servicesOverview;
         }
