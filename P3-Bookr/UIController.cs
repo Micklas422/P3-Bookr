@@ -28,7 +28,7 @@ namespace P3_Bookr
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
             //_mainWindow.panelSideBar.Controls.Clear();
-            _mainWindow.panelSideBar.Controls.Add(new SideBar(this));
+            _mainWindow.panelSideBar.Controls.Add(new SideBar(this, false));
             SwitchToLogInPage();
             Application.Run(_mainWindow);
         }
@@ -51,6 +51,17 @@ namespace P3_Bookr
                 form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
             }
             _mainWindow.panelSiteView.Controls.Add(form);
+
+            if (_functionComponent.permissionManager.ValidateAdminPermission(_currentUser))
+            {
+                _mainWindow.panelSideBar.Controls.Clear();
+                _mainWindow.panelSideBar.Controls.Add(new SideBar(this, true));
+            } 
+            else
+            {
+                _mainWindow.panelSideBar.Controls.Clear();
+                _mainWindow.panelSideBar.Controls.Add(new SideBar(this, false));
+            }
 
             _mainWindow.labelUserLoggedIn.Text = _currentUser.Username;
             _mainWindow.panelSideBar.Show();
