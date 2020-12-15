@@ -12,6 +12,6 @@ namespace P3_Bookr.Models
         List<Reservation> GetAllReservationsByMember(Member member);
         Member GetMemberByUsername(string username);
         List<Service> GetAllServices();
-        bool CancelReservation(Reservation reservation, Member member);
+        //bool CancelReservation(Reservation reservation, Member member);
     }
 }
