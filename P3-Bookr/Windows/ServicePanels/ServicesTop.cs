@@ -17,7 +17,8 @@ namespace P3_Bookr.Windows
         public ServicesTop(Service service)
         {
             InitializeComponent();
-            this.LastUsedTopLabel.Text = Enum.GetName(typeof(ServiceTypes), service.ServiceType);
+
+            this.LastUsedTopLabel.Text = Enum.GetName(typeof(ServiceTypesTitel), service.ServiceType);
         }
     }
 }
