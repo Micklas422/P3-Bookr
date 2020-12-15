@@ -241,10 +241,9 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public Service AddService(Service service, Department department)
+        public void AddService(Service service, Department department)
         {
-
-            return service;
+            _functionComponent.serviceManager.AddServiceToServiceList(service, department);
         }
         public void CreateServiceOffering()
         {

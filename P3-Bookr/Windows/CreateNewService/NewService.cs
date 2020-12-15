@@ -16,12 +16,15 @@ namespace P3_Bookr.Windows.CreateNewService
     public partial class NewService : UserControl
     {
         IAdminToolsUI _handler;
-        List<ServiceOffering> serviceOfferingsList = new List<ServiceOffering>();
+        List<ServiceOffering> _serviceOfferingsList = new List<ServiceOffering>();
+        List<Department> _departmentsListForUser;
+        Department selectedDepartment;
         public NewService(IAdminToolsUI handler, List<Department> memberDepartments)
         {
 
             InitializeComponent();
             _handler = handler;
+            _departmentsListForUser = memberDepartments;
             foreach(string serviceTypes in Enum.GetNames(typeof(ServiceTypes)))
             {
                 DropdownServiceType.Items.Add(serviceTypes);
@@ -41,16 +44,20 @@ namespace P3_Bookr.Windows.CreateNewService
             foreach (PageServiceOffering offering in flowPanelServiceOffering.Controls)
             {
                 ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text), service);
-                serviceOfferingsList.Add(serviceOffering);
+                _serviceOfferingsList.Add(serviceOffering);
             }
 
             service.Location = textBoxAddress.Text;
             service.Name = textBoxName.Text;
             service.Description = richTextBoxDescription.Text;
-            service.ServiceOfferings = serviceOfferingsList;
+            service.ServiceOfferings = _serviceOfferingsList;
             service.ServiceState = 0;
 
-            _handler.AddService(service, (Department)DropdownAfdeling.SelectedItem);
+            selectedDepartment = _departmentsListForUser.Where(d => d.Name.Equals(DropdownAfdeling.SelectedItem)).FirstOrDefault();
+            
+
+
+            _handler.AddService(service, selectedDepartment);
         }
 
         private void ButtonNewService_Click(object sender, EventArgs e)
