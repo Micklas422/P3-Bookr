@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P3_Bookr.Commons.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace P3_Bookr.Models
 {
     interface IPayment
     {
+        void StateHandler(ReservationStates reservationState);
+        ReservationStates ReservationStates { get; set; }
         DateTime PaymentDate { get; set; }
         float Amount { get; set; }
         DateTime ReservationDeadline { get; set; }

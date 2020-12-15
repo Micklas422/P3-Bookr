@@ -21,7 +21,8 @@ namespace P3_Bookr.Commons.Enums
     {
         Created,
         BindingReservation,
-        Cancelled
+        Cancelled,
+        Finalised
     };
 
     public enum SystemRights
