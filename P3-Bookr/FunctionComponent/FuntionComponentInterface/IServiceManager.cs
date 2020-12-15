@@ -10,6 +10,6 @@ namespace P3_Bookr.FunctionComponent
         List<Service> FindLastServicesUsed(Member member, int cnt);
         void Reserve();
         void SeeAvailability();
-        void AddServiceToServiceList(Service service, Department department);
+        bool AddServiceToServiceList(Service service, Department department);
     }
 }
