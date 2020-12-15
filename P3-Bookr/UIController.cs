@@ -93,7 +93,7 @@ namespace P3_Bookr
         {
             ServicesOverview servicesOverview = new ServicesOverview(this);
             List<Service> activeServices = new List<Service>();
-            activeServices = _functionComponent.serviceManager.GetActiveServices();
+            activeServices = _functionComponent.serviceManager.GetActiveServicesByMember(_currentUser);
             var enumValue = Enum.GetValues(typeof(ServiceTypes));
             var enumNames = Enum.GetNames(typeof(ServiceTypes));
 

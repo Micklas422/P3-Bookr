@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P3_Bookr.Commons.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace P3_Bookr.Models
         string Adress { get; set; }
         string Email { get; set; }
         Member.MemberTypes MemberType { get; set; }
+        SystemRights SystemRights { get; set; }
         string Username { get; set; }
         string Password { get; set; }
         bool IsCustomerActive { get; }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
@@ -26,7 +27,7 @@ namespace P3_Bookr.Models
         string _email;
         string _username;
         string _password;
-
+        SystemRights _systemRights;
         MemberTypes _memberType;
         Customer _customer;
         List<Reservation> _reservations = new List<Reservation>();
@@ -100,6 +101,12 @@ namespace P3_Bookr.Models
         {
             get { return _memberType; }
             set { _memberType = value; }
+        }
+
+        public SystemRights SystemRights
+        {
+            get { return _systemRights; }
+            set { _systemRights = value; }
         }
 
         public string Username
