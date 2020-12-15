@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using P3_Bookr.Commons.Enums;
+using System.Timers;
+using System.Diagnostics;
 
 namespace P3_Bookr.Models
 {
@@ -19,16 +21,46 @@ namespace P3_Bookr.Models
         Member _member;
         ServiceOffering _serviceOffering;
         Payment _payment;
+        Timer _stateHandlerTimer;
 
 
         public Reservation(DateTime reservationDate, Member member, TimePeriod timePeriod, ServiceOffering serviceOffering, Payment payment)
         {
             Payment = payment;
             ReservationDate = reservationDate;
+            ReservationDeadline = reservationDate.AddDays(-1);
             Member = member;
             TimePeriod = timePeriod;
             ServiceOffering = serviceOffering;
+            StateHandlerTimer = new Timer(60000);
+            StateHandlerTimer.Elapsed += OnTimedEvent;
+            StateHandlerTimer.AutoReset = true;
+            StateHandlerTimer.Enabled = true;
         }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            StateHandler();
+        }
+        private void StateHandler()
+        {
+            if (ReservationDeadline <= DateTime.Now)
+            {
+                ReservationState = ReservationStates.BindingReservation;
+                Payment.StateHandler(ReservationStates.BindingReservation);
+            }
+            if (ReservationDate <= DateTime.Now)
+            {
+                ReservationState = ReservationStates.Finalised;
+                Payment.StateHandler(ReservationStates.Finalised);
+            }
+        }
+        private Timer StateHandlerTimer
+        {
+            get { return _stateHandlerTimer; }
+            set { _stateHandlerTimer = value; }
+        }
+
         public DateTime CreationDate
         {
             get { return _creationDate; }
