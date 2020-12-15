@@ -14,6 +14,7 @@ using P3_Bookr.FunctionComponent;
 using P3_Bookr.Models;
 using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.Commons.Enums;
+using P3_Bookr.Windows.CreateNewService;
 
 namespace P3_Bookr
 {
@@ -86,6 +87,11 @@ namespace P3_Bookr
         {
             _mainWindow.panelSiteView.Controls.Clear();
             _mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
+        }
+        public void SwitchToAdminToolsPage()
+        {
+            _mainWindow.panelSiteView.Controls.Clear();
+            _mainWindow.panelSiteView.Controls.Add(new NewService(this, deparmentListFromMember(_currentUser)));
         }
         #endregion //DONE
         #region ServicesUI
@@ -235,7 +241,7 @@ namespace P3_Bookr
             throw new NotImplementedException();
         }
 
-        public Service AddService(Service service)
+        public Service AddService(Service service, Department department)
         {
 
             return service;

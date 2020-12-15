@@ -72,7 +72,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(109, 31);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(273, 22);
             this.textBoxName.TabIndex = 3;
@@ -80,18 +80,21 @@
             // textBoxTime
             // 
             this.textBoxTime.Location = new System.Drawing.Point(109, 60);
-            this.textBoxTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTime.Name = "textBoxTime";
             this.textBoxTime.Size = new System.Drawing.Size(65, 22);
             this.textBoxTime.TabIndex = 4;
+            this.textBoxTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTime_KeyPress);
+            this.textBoxTime.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxTime_Validating);
             // 
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(251, 63);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(132, 22);
             this.textBoxPrice.TabIndex = 5;
+            this.textBoxPrice.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPrice_Validating);
             // 
             // PageServiceOffering
             // 
@@ -104,7 +107,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LabelName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PageServiceOffering";
             this.Size = new System.Drawing.Size(400, 98);
             this.ResumeLayout(false);

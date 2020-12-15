@@ -17,9 +17,11 @@ namespace P3_Bookr.Windows.CreateNewService
     {
         IAdminToolsUI _handler;
         List<ServiceOffering> serviceOfferingsList = new List<ServiceOffering>();
-        public NewService(List<Department> memberDepartments)
+        public NewService(IAdminToolsUI handler, List<Department> memberDepartments)
         {
+
             InitializeComponent();
+            _handler = handler;
             foreach(string serviceTypes in Enum.GetNames(typeof(ServiceTypes)))
             {
                 DropdownServiceType.Items.Add(serviceTypes);
@@ -27,7 +29,7 @@ namespace P3_Bookr.Windows.CreateNewService
             DropdownServiceType.SelectedIndex = 0;
             foreach(Department department in memberDepartments)
             {
-                DropdownAfdeling.Items.Add(department);
+                DropdownAfdeling.Items.Add(department.Name);
             }
             DropdownAfdeling.SelectedIndex = 0;
         }
@@ -48,7 +50,7 @@ namespace P3_Bookr.Windows.CreateNewService
             service.ServiceOfferings = serviceOfferingsList;
             service.ServiceState = 0;
 
-            _handler.AddService(service);
+            _handler.AddService(service, (Department)DropdownAfdeling.SelectedItem);
         }
 
         private void ButtonNewService_Click(object sender, EventArgs e)
@@ -56,9 +58,9 @@ namespace P3_Bookr.Windows.CreateNewService
             flowPanelServiceOffering.Controls.Add(new PageServiceOffering());
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void ButtonCancel_Click(object sender, EventArgs e)
         {
-
+            _handler.SwitchToHomePage();
         }
     }
 }

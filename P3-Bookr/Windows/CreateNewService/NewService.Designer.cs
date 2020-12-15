@@ -186,6 +186,7 @@
             this.ButtonCancel.TabIndex = 19;
             this.ButtonCancel.Text = "Annuller";
             this.ButtonCancel.UseVisualStyleBackColor = false;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // DropdownServiceType
             // 
@@ -205,7 +206,6 @@
             this.LabelAfdeling.Size = new System.Drawing.Size(107, 29);
             this.LabelAfdeling.TabIndex = 21;
             this.LabelAfdeling.Text = "Afdeling:";
-            this.LabelAfdeling.Click += new System.EventHandler(this.label7_Click);
             // 
             // DropdownAfdeling
             // 

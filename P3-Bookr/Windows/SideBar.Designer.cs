@@ -36,6 +36,7 @@
             this.IndstillingerKnap = new System.Windows.Forms.Label();
             this.LogUdKnap = new System.Windows.Forms.Label();
             this.BookrLogoKnap = new System.Windows.Forms.PictureBox();
+            this.LabelAdminTools = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BookrLogoKnap)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,11 +83,19 @@
             this.BookrLogoKnap.TabStop = false;
             this.BookrLogoKnap.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // LabelAdminTools
+            // 
+            resources.ApplyResources(this.LabelAdminTools, "LabelAdminTools");
+            this.LabelAdminTools.BackColor = System.Drawing.Color.Transparent;
+            this.LabelAdminTools.Name = "LabelAdminTools";
+            this.LabelAdminTools.Click += new System.EventHandler(this.LabelAdminTools_Click);
+            // 
             // SideBar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(95)))), ((int)(((byte)(88)))));
+            this.Controls.Add(this.LabelAdminTools);
             this.Controls.Add(this.LogUdKnap);
             this.Controls.Add(this.IndstillingerKnap);
             this.Controls.Add(this.MitForbrugKnap);
@@ -110,5 +119,6 @@
         private System.Windows.Forms.Label MitForbrugKnap;
         private System.Windows.Forms.Label IndstillingerKnap;
         private System.Windows.Forms.Label LogUdKnap;
+        public System.Windows.Forms.Label LabelAdminTools;
     }
 }

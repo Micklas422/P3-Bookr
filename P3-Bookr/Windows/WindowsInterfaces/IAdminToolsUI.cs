@@ -8,14 +8,15 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
-    interface IAdminToolsUI
+    public interface IAdminToolsUI
     {
         //Service AddService(string location, string description, string name, ServiceTypes serviceType, string timePeriod, List<ServiceOffering> serviceOfferings);
         void AddUser();
-        Service AddService(Service service);
+        Service AddService(Service service, Department department);
         void AddServiceGroup();
         void AddUserGroup();
         void CreateServiceOffering();
+        void SwitchToHomePage();
 
     }
 }
