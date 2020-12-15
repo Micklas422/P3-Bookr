@@ -34,7 +34,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(93, 25);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1173, 833);
@@ -52,7 +52,6 @@
             this.Size = new System.Drawing.Size(1360, 886);
             this.Load += new System.EventHandler(this.HistoryPage_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
