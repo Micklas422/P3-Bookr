@@ -11,17 +11,17 @@ using P3_Bookr.Commons.CustomExceptions;
 
 namespace P3_Bookr.Models
 {
-    class ModelComponent:IModelComponent
+    class ModelComponent: IModelComponent
     {
         IDataAccesLayer _dataAccesLayer;
-        List<Customer> _customer = new List<Customer>();
+        Customer _customer;
 
         public ModelComponent(IDataAccesLayer dataAccesLayer)
         {
             _dataAccesLayer = dataAccesLayer;
         }
 
-        public List<Customer> customer
+        public Customer customer
         {
             get { return _customer; }
             set { _customer = value; }
@@ -30,20 +30,18 @@ namespace P3_Bookr.Models
         public List<Reservation> GetAllReservationsByMember(Member member)
         {
             List<Reservation> result = new List<Reservation>();
-
-            foreach (Customer cus in _customer)
+            
+            foreach (Member mem in _customer.Members)
             {
-                foreach (Member mem in cus.Members)
+                if (mem.Equals(member))
                 {
-                    if (mem.Equals(member))
+                    foreach (Reservation res in mem.Reservations)
                     {
-                        foreach (Reservation res in mem.Reservations)
-                        {
-                            result.Add(res);
-                        }
+                        result.Add(res);
                     }
                 }
             }
+         
             return result;
         }
 
@@ -52,10 +50,7 @@ namespace P3_Bookr.Models
             Member member = null;
             try
             {
-                foreach (Customer cus in _customer)
-                {
-                    member = cus.Members.Where(m => m.Username == username).FirstOrDefault();
-                }
+                member = _customer.Members.Where(m => m.Username == username).FirstOrDefault();
             }
             catch (Exception ex)
             {
@@ -72,14 +67,11 @@ namespace P3_Bookr.Models
         public List<Service> GetAllServices()
         {
             List<Service> result = new List<Service>();
-            foreach (Customer cus in _customer)
+            foreach (Department dep in _customer.Departments)
             {
-                foreach (Department dep in cus.Departments)
+                foreach (Service ser in dep.Services)
                 {
-                    foreach (Service ser in dep.Services)
-                    {
-                        result.Add(ser);
-                    }
+                    result.Add(ser);
                 }
             }
             return result;

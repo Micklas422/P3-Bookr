@@ -8,7 +8,7 @@ namespace P3_Bookr.Models
 {
     public interface IModelComponent
     {
-        List<Customer> customer { get; set; }
+        Customer customer { get; set; }
         List<Reservation> GetAllReservationsByMember(Member member);
         Member GetMemberByUsername(string username);
         List<Service> GetAllServices();
