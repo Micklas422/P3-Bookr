@@ -43,8 +43,16 @@ namespace P3_Bookr.Windows.CreateNewService
 
             foreach (PageServiceOffering offering in flowPanelServiceOffering.Controls)
             {
-                ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text), service);
-                _serviceOfferingsList.Add(serviceOffering);
+                if(offering.textBoxName.TextLength > 0 || offering.textBoxPrice.TextLength > 0 ||offering.textBoxTime.TextLength > 0)
+                {
+                    ServiceOffering serviceOffering = new ServiceOffering(offering.textBoxName.Text, int.Parse(offering.textBoxTime.Text), float.Parse(offering.textBoxPrice.Text), service);
+                    _serviceOfferingsList.Add(serviceOffering);
+
+                }
+                else
+                {
+                    MessageBox.Show("Et af service udbydelserne har manglende informationer");
+                }
             }
 
             service.Location = textBoxAddress.Text;
@@ -55,9 +63,33 @@ namespace P3_Bookr.Windows.CreateNewService
 
             selectedDepartment = _departmentsListForUser.Where(d => d.Name.Equals(DropdownAfdeling.SelectedItem)).FirstOrDefault();
             
+            foreach(Control c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (c.Text.Length < 1)
+                        MessageBox.Show("Servicen mangler informationer, venligst udfyld");
+
+                }
+                if (c is RichTextBox)
+                {
+                    if (c.Text.Length < 1)
+                        MessageBox.Show("Servicen mangler en beskrivelse, venligst udfyld");
+                }
+                if(c is FlowLayoutPanel)
+                {
+                    if (c.Controls.Count < 1)
+                        MessageBox.Show("Servicen mangler udbydelser, venligst udfyld");
+                }
+            }
+
+            if(textBoxAddress.TextLength > 0 || textBoxName.TextLength > 0 || richTextBoxDescription.TextLength > 0 || flowPanelServiceOffering.Controls.Count > 0)
+            {
+                _handler.AddService(service, selectedDepartment);
+            }
 
 
-            _handler.AddService(service, selectedDepartment);
+
         }
 
         private void ButtonNewService_Click(object sender, EventArgs e)
@@ -67,7 +99,7 @@ namespace P3_Bookr.Windows.CreateNewService
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            _handler.SwitchToHomePage();
+            _handler.SwitchToAdminToolsPage();
         }
     }
 }
