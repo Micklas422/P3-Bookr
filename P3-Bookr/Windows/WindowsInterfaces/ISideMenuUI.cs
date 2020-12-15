@@ -20,7 +20,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
         void SwitchToHistoryPage();
         void SwitchToSettingsPage();
         void SwitchToLogInPage();
-
+        void SwitchToAdminToolsPage();
 
     }
 }

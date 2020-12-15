@@ -21,6 +21,7 @@ namespace P3_Bookr.Windows
             InitializeComponent();
             _handler = handler;
             
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -57,6 +58,11 @@ namespace P3_Bookr.Windows
         {
             _handler.SwitchToLogInPage();
             
+        }
+
+        private void LabelAdminTools_Click(object sender, EventArgs e)
+        {
+            _handler.SwitchToAdminToolsPage();
         }
     }
 }

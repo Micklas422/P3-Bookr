@@ -186,6 +186,7 @@
             this.ButtonCancel.TabIndex = 19;
             this.ButtonCancel.Text = "Annuller";
             this.ButtonCancel.UseVisualStyleBackColor = false;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // DropdownServiceType
             // 
