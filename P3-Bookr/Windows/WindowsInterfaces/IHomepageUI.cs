@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_Bookr.Models;
 
 namespace P3_Bookr.Windows.WindowsInterfaces
 {
     public interface IHomepageUI
     {
-        void LastUsedService();
+        List<Service> LastUsedService(int count);
         void News();
     }
 }

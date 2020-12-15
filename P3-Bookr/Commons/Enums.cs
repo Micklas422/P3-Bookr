@@ -19,4 +19,11 @@ namespace P3_Bookr.Commons.Enums
         Cancelled
     };
 
+    public enum SystemRights
+    {
+        NoRights,
+        Member,
+        Renter,
+        Admin
+    }
 }

@@ -115,11 +115,11 @@
     <Compile Include="Windows\CreateNewService\NewService.Designer.cs">
       <DependentUpon>NewService.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\CreateNewService\ServiceOffering.cs">
+    <Compile Include="Windows\CreateNewService\PageServiceOffering.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\CreateNewService\ServiceOffering.Designer.cs">
-      <DependentUpon>ServiceOffering.cs</DependentUpon>
+    <Compile Include="Windows\CreateNewService\PageServiceOffering.Designer.cs">
+      <DependentUpon>PageServiceOffering.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Frontpage\BigNewsBox.cs">
       <SubType>UserControl</SubType>
@@ -293,8 +293,8 @@
     <EmbeddedResource Include="Windows\CreateNewService\NewService.resx">
       <DependentUpon>NewService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\CreateNewService\ServiceOffering.resx">
-      <DependentUpon>ServiceOffering.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\CreateNewService\PageServiceOffering.resx">
+      <DependentUpon>PageServiceOffering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Frontpage\BigNewsBox.resx">
       <DependentUpon>BigNewsBox.cs</DependentUpon>
