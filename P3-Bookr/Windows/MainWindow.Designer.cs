@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBoxBookr = new System.Windows.Forms.PictureBox();
             this.panelSiteView = new System.Windows.Forms.Panel();
@@ -118,8 +119,9 @@
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.panelSiteView);
             this.Controls.Add(this.panelForLogIn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.Text = "Bookr";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
