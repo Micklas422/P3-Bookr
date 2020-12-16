@@ -10,9 +10,11 @@ namespace P3_Bookr.FunctionComponent
     class ServiceManager : IServiceManager
     {
         IModelComponent _modelComponent;
-        public ServiceManager(IModelComponent modelComponent)
+        IPermissionManager _permissionManager;
+        public ServiceManager(IModelComponent modelComponent, IPermissionManager permissionManager)
         {
             _modelComponent = modelComponent;
+            _permissionManager = permissionManager;
         }
 
         public List<Service> GetActiveServices()
@@ -45,7 +47,7 @@ namespace P3_Bookr.FunctionComponent
                 {
                     if (!result.Contains(s) 
                         && s.ServiceState != Service.ServiceStates.Deactivated 
-                        && member.SystemRights >= s.SystemRights)
+                        && _permissionManager.ValidateServiceAcces(member, s))
                     {
                         result.Add(s);
                     }

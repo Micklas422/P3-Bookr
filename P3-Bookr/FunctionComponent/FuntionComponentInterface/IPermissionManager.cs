@@ -6,5 +6,6 @@ namespace P3_Bookr.FunctionComponent
     {
         bool ValidatePermission(string username);
         bool ValidateAdminPermission(Member currentUser);
+        bool ValidateServiceAcces(Member member, Service service);
     }
 }
