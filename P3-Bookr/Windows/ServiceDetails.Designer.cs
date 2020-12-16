@@ -47,7 +47,7 @@
             // 
             this.ServiceDetailsOptionPanel1.BackColor = System.Drawing.Color.White;
             this.ServiceDetailsOptionPanel1.Location = new System.Drawing.Point(467, 47);
-            this.ServiceDetailsOptionPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServiceDetailsOptionPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.ServiceDetailsOptionPanel1.Name = "ServiceDetailsOptionPanel1";
             this.ServiceDetailsOptionPanel1.Size = new System.Drawing.Size(320, 369);
             this.ServiceDetailsOptionPanel1.TabIndex = 8;
@@ -56,7 +56,7 @@
             // 
             this.ServiceDetailsInfoPanel1.BackColor = System.Drawing.Color.White;
             this.ServiceDetailsInfoPanel1.Location = new System.Drawing.Point(13, 47);
-            this.ServiceDetailsInfoPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServiceDetailsInfoPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.ServiceDetailsInfoPanel1.Name = "ServiceDetailsInfoPanel1";
             this.ServiceDetailsInfoPanel1.Size = new System.Drawing.Size(440, 369);
             this.ServiceDetailsInfoPanel1.TabIndex = 9;
@@ -78,8 +78,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label ServiceDetailsTitel1;
         public System.Windows.Forms.Panel ServiceDetailsOptionPanel1;
         public System.Windows.Forms.Panel ServiceDetailsInfoPanel1;
+        public System.Windows.Forms.Label ServiceDetailsTitel1;
     }
 }

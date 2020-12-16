@@ -17,12 +17,12 @@ namespace P3_Bookr.Windows
         ServiceInfoPanel _serviceInfoPanel;
         ServiceBook _serviceBook;
 
-        public ServiceDetails(ServiceInfoPanel serviceInfoPanel, ServiceBook serviceBook)
+        public ServiceDetails(ServiceInfoPanel serviceInfoPanel, ServiceBook serviceBook, Service service)
         {
             _serviceInfoPanel = serviceInfoPanel;
             _serviceBook = serviceBook;
             InitializeComponent();
-
+            this.ServiceDetailsTitel1.Text = service.Name;
 
         }
 

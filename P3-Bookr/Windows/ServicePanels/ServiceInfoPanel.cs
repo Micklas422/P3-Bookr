@@ -21,6 +21,8 @@ namespace P3_Bookr.Windows
             _service = service;
             _handler = handler;
             InitializeComponent();
+            this.ServiceAdressInfo1.Text = service.Location;
+            this.ServiceDescriptionInfo1.Text = service.Description;
         }
 
         private void ServiceDescriptionInfo1_Click(object sender, EventArgs e)

@@ -172,7 +172,7 @@ namespace P3_Bookr
         public void SwitchToService(Service service)
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this,this, service)));
+            _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this,this, service), service));
         }
         public void LoadInfoPanelForService(IService service)
         {

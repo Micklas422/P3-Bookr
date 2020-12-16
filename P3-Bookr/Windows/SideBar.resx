@@ -240,6 +240,9 @@
   <data name="IndstillingerKnap.Text" xml:space="preserve">
     <value>Indstillinger</value>
   </data>
+  <data name="IndstillingerKnap.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;IndstillingerKnap.Name" xml:space="preserve">
     <value>IndstillingerKnap</value>
   </data>

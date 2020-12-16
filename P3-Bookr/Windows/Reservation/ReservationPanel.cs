@@ -23,6 +23,7 @@ namespace P3_Bookr.Windows.ReservationPanels
             ReservationServiceName.Text = reservation.ServiceOffering.Name;
             labelPrice.Text = reservation.ServiceOffering.Price.ToString();
             labelOrderDate.Text = reservation.ReservationDate.ToString("dd:MM:yy HH:mm");
+            this.ReservationAddressLabel.Text = reservation.ServiceOffering.Service.Location;
             
             if(reservation.CancellationDate != new DateTime())
             {

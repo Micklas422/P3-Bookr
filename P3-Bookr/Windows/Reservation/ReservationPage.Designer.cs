@@ -33,7 +33,10 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 20);
+            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(1580, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1580, 990);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -46,10 +49,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReservationPage";
             this.Size = new System.Drawing.Size(1621, 1031);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

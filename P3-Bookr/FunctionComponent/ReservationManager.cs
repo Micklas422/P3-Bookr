@@ -35,7 +35,7 @@ namespace P3_Bookr.FunctionComponent
         public List<Reservation> GetActiveReservationsByMember(Member member)
         {
             return _modelComponent.GetAllReservationsByMember(member).
-                Where(r => r.ReservationState != ReservationStates.Cancelled).ToList();
+                Where(r => r.ReservationState != ReservationStates.Cancelled).OrderBy(r => r.ReservationDate).ToList();
         }
 
         public bool CancelReservation(Reservation reservation)
