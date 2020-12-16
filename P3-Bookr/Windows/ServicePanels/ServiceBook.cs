@@ -40,6 +40,7 @@ namespace P3_Bookr.Windows
             ServiceSubOptions sub = (ServiceSubOptions)sender;
             sub.BackColor = Color.LightGreen;
             _selectedServiceOffering = sub;
+            LoadTimePeriodes(_dateTime);
         }
 
         private void ServiceBook_Load(object sender, EventArgs e)
@@ -50,7 +51,6 @@ namespace P3_Bookr.Windows
                 sub.Click += ServiceSubOptions_click;
                 flowLayoutPanelOfferings.Controls.Add(sub);
             }
-            LoadTimePeriodes(_dateTime);
         }
 
         void LoadTimePeriodes(DateTime dayToLoad)
@@ -77,7 +77,8 @@ namespace P3_Bookr.Windows
 
             do
             {
-                if(!timePeriods.Exists(t => dayToLoad >= t.StartTime && dayToLoad <= t.EndTime))
+                if(!timePeriods.Exists(t => (dayToLoad >= t.StartTime && dayToLoad <= t.EndTime) || 
+                (dayToLoad.AddMinutes(_selectedServiceOffering.GetServiceOffering().Duration) > t.StartTime && dayToLoad < t.EndTime)))
                     comboBoxTimeSlots.Items.Add(dayToLoad.ToString("HH:mm dd/MM/yyyy "));
 
                 dayToLoad = dayToLoad.AddMinutes(15);

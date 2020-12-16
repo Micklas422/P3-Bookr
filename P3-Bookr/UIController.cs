@@ -28,7 +28,6 @@ namespace P3_Bookr
         {
             _functionComponent = functionComponenten;
             _mainWindow = new MainWindow();
-            //_mainWindow.panelSideBar.Controls.Clear();
             _mainWindow.panelSideBar.Controls.Add(new SideBar(this, false));
             SwitchToLogInPage();
             Application.Run(_mainWindow);
@@ -264,7 +263,6 @@ namespace P3_Bookr
             Succeded = _functionComponent.serviceManager.AddServiceToServiceList(service, department);
             if (!Succeded)
             {
-                throw new NullReferenceException();
                 MessageBox.Show("Noget gik galt under oprettelsen af servicen");
             }
             MessageBox.Show("Service oprettet, tryk på annuller for at returnere til hovedmenuen");

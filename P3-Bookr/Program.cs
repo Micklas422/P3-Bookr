@@ -73,9 +73,6 @@ namespace P3_Bookr
             customers.Add(c);
 
             IDataAccesLayer dal = new DataAccesLayer();
-            //dal.customerDAL.SetCustomers(customers);
-            //dal.departmentDAL.SetDepartments(c.Departments);
-            //dal.memberDAL.SetMembers(c.Members);
 
             IModelComponent m = new ModelComponent(new DataAccesLayer());
 
