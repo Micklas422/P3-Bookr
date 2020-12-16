@@ -20,14 +20,11 @@ namespace P3_Bookr.FunctionComponent
         }
         public bool ValidateAdminPermission(Member member)
         {
-            if (member.SystemRights >= Commons.Enums.SystemRights.Admin)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return member.SystemRights >= Commons.Enums.SystemRights.Admin;
+        }
+        public bool ValidateServiceAcces(Member member, Service service)
+        {
+            return member.SystemRights >= service.SystemRights;
         }
     }
 }
