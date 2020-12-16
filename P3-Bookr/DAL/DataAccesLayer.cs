@@ -7,7 +7,7 @@ using P3_Bookr.DAL.Interfaces;
 
 namespace P3_Bookr.DAL
 {
-    class DataAccesLayer : IDataAccesLayer
+    public class DataAccesLayer : IDataAccesLayer
     {
         ICustomerDAL _customerDAL;
         IDepartmentDAL _departmentDAL;

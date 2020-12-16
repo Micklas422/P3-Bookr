@@ -8,7 +8,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL
 {
-    class PaymentDAL : IPaymentDAL
+    public class PaymentDAL : IPaymentDAL
     {
         public List<Payment> Payments => throw new NotImplementedException();
 

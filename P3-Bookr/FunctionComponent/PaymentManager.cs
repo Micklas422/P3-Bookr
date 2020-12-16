@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class PaymentManager : IPaymentManager
+    public class PaymentManager : IPaymentManager
     {
         IModelComponent _modelComponent;
 

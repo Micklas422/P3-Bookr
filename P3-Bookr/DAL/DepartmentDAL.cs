@@ -8,7 +8,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL
 {
-    class DepartmentDAL : IDepartmentDAL
+    public class DepartmentDAL : IDepartmentDAL
     {
         public List<Department> Departments => throw new NotImplementedException();
 

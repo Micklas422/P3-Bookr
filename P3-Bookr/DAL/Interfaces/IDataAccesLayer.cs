@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface IDataAccesLayer
+    public interface IDataAccesLayer
     {
         ICustomerDAL customerDAL { get; }
         IDepartmentDAL departmentDAL { get; }

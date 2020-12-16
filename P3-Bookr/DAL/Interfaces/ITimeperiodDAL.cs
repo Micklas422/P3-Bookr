@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface ITimeperiodDAL
+    public interface ITimeperiodDAL
     {
         List<TimePeriod> TimePeriods { get; }
         List<TimePeriod> GetTimePeriodsByService(int serivceId);

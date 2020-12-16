@@ -8,7 +8,7 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class ReservationManager : IReservationManager
+    public class ReservationManager : IReservationManager
     {
         IModelComponent _modelComponent;
         IPaymentManager _paymentManager;

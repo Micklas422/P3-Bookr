@@ -11,7 +11,7 @@ using P3_Bookr.Commons.CustomExceptions;
 
 namespace P3_Bookr.Models
 {
-    class ModelComponent: IModelComponent
+    public class ModelComponent: IModelComponent
     {
         IDataAccesLayer _dataAccesLayer;
         Customer _customer;

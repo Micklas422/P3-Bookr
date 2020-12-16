@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface IServiceOfferingDAL
+    public interface IServiceOfferingDAL
     {
         List<ServiceOffering> ServiceOfferings { get; }
         void SetServiceOfferings(List<ServiceOffering> serviceOfferings);

@@ -8,7 +8,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL
 {
-    class MemberDAL : IMemberDAL
+    public class MemberDAL : IMemberDAL
     {
         public List<Member> Members => throw new NotImplementedException();
 

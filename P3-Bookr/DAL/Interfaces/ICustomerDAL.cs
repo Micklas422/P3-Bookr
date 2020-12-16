@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface ICustomerDAL
+    public interface ICustomerDAL
     {
         List<Customer> Customers {get;}
         Customer GetCustomer(int id);

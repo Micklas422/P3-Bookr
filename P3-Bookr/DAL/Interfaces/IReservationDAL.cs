@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface IReservationDAL
+    public interface IReservationDAL
     {
         List<Reservation> Reservations { get; }
         List<Reservation> GetReservationsByMember(int memberId);

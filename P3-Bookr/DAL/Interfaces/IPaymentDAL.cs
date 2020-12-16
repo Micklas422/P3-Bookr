@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface IPaymentDAL
+    public interface IPaymentDAL
     {
         List<Payment> Payments { get; }
         Payment GetPayment(int paymentId);

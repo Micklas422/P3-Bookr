@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.DAL.Interfaces
 {
-    interface IServiceGroupDAL
+    public interface IServiceGroupDAL
     {
         List<ServiceGroup> GetServicesByMember(int memberId);
         List<ServiceGroup> GetServicesBySerivce(int serviceId);
