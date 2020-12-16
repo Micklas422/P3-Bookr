@@ -32,7 +32,7 @@ namespace P3_Bookr
                     Email = $"test{i}@gmail.com",
                     RentalNumber = $"00000{i}",
                     MemberNumber = $"00000000{i}",
-                    MemberType = Member.MemberTypes.Renter,
+                    MemberType = Member.MemberTypes.Administrator,
                     Username = $"test{i}",
                     Password = $"test{i}"
                 });
