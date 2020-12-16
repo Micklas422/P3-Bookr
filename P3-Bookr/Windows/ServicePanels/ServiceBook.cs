@@ -20,7 +20,7 @@ namespace P3_Bookr.Windows
         ServiceSubOptions _selectedServiceOffering;
         DateTime _dateTime;
         bool _TimeSelected;
-        //List<ServiceOffering> _serviceOfferings;
+
         public ServiceBook(IServicesUI serivceHandler, IReservationUI reservationHandler, Service service)
         {
             _handler = serivceHandler;
@@ -29,11 +29,15 @@ namespace P3_Bookr.Windows
             _dateTime = DateTime.Now;
             InitializeComponent();
             buttonBack.Hide();
+            buttonForward.Hide();
+            comboBoxTimeSlots.Hide();
         }
         
         private void ServiceSubOptions_click(object sender, EventArgs e)
         {
-            foreach(ServiceSubOptions s in flowLayoutPanelOfferings.Controls)
+            buttonForward.Show();
+            comboBoxTimeSlots.Show();
+            foreach (ServiceSubOptions s in flowLayoutPanelOfferings.Controls)
             {
                 s.BackColor = Color.White;
             }
@@ -57,7 +61,7 @@ namespace P3_Bookr.Windows
         {
             DateTime endTime;
             comboBoxTimeSlots.Items.Clear();
-            List<TimePeriod> timePeriods = _service.TimePeriods.Where(t => t.StartTime.Date == dayToLoad.Date || t.EndTime.Date == dayToLoad.Date).ToList();
+            List<TimePeriod> timePeriods = _service.TimePeriods.Where(t => t.StartTime.Date == dayToLoad.Date || t.EndTime.Date >= dayToLoad.Date).ToList();
 
             if (dayToLoad.Date == DateTime.Now.Date)
             {
