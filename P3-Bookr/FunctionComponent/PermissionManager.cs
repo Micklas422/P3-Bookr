@@ -18,11 +18,11 @@ namespace P3_Bookr.FunctionComponent
         //{
         //    return true;
         //}
-        public bool ValidateAdminPermission(Member member)
+        public bool ValidateAdminPermission(IMember member)
         {
             return member.MemberType >= Member.MemberTypes.Administrator;
         }
-        public bool ValidateServiceAcces(Member member, Service service)
+        public bool ValidateServiceAcces(IMember member, IService service)
         {
             return member.SystemRights >= service.SystemRights;
         }

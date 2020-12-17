@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
-using P3_Bookr.DAL;
 using Xunit;
 
 
@@ -14,7 +13,6 @@ namespace P3_Bookr.Tests
         [Fact]
         public void  ValidateLogin_CorrectUsernameAndPasswordShouldReturnAMember()
         {
-            
             
             int i = 0;
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
@@ -67,16 +65,15 @@ namespace P3_Bookr.Tests
             List<Customer> customers = new List<Customer>();
             customers.Add(c);
 
-            DataAccesLayer dataAccesLayer = new DataAccesLayer();
-            ModelComponent modelComponent = new ModelComponent(dataAccesLayer);
+            ModelComponent modelComponent = new ModelComponent();
             modelComponent.customer = c;
             LoginManager lgnmngr = new LoginManager(modelComponent);
 
             //Arrange
-            Member expected = c.Members[0];
+            IMember expected = c.Members[0];
 
             //Act
-            Member actual = lgnmngr.ValidateLogin(c.Members[0].Username, c.Members[0].Password);
+            IMember actual = lgnmngr.ValidateLogin(c.Members[0].Username, c.Members[0].Password);
 
             //Assert
 

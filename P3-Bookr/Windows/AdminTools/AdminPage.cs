@@ -15,8 +15,8 @@ namespace P3_Bookr.Windows.AdminTools
     public partial class AdminPage : UserControl
     {
         IAdminToolsUI _handler;
-        List<Department> _departmentList;
-        public AdminPage(IAdminToolsUI handler, List<Department> departmentList)
+        List<IDepartment> _departmentList;
+        public AdminPage(IAdminToolsUI handler, List<IDepartment> departmentList)
         {
             _handler = handler;
             _departmentList = departmentList;

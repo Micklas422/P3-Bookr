@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    interface IMember
+    public interface IMember
     {
         string FirstName { get; set; }
         string LastName { get; set; }
@@ -21,8 +21,8 @@ namespace P3_Bookr.Models
         string Username { get; set; }
         string Password { get; set; }
         bool IsCustomerActive { get; }
-        Customer Customer { get; }
-        List<Reservation> Reservations { get; set; }
-        List<Department> Departments { get; set; }
+        ICustomer Customer { get; }
+        List<IReservation> Reservations { get; set; }
+        List<IDepartment> Departments { get; set; }
     }
 }

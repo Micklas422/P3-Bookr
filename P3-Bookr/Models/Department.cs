@@ -12,10 +12,10 @@ namespace P3_Bookr.Models
         string _name;
         string _adress;
         string _description;
-        Customer _customer;
-        List<Service> _services = new List<Service>();
+        ICustomer _customer;
+        List<IService> _services = new List<IService>();
 
-        public Department(Customer customer, string name)
+        public Department(ICustomer customer, string name)
         {
             Customer = customer;
             Name = name;
@@ -45,12 +45,12 @@ namespace P3_Bookr.Models
             set { _description = value; }
         }
 
-        public List<Service> Services
+        public List<IService> Services
         {
             get { return _services; }
             set { _services = value; }
         }
 
-        public Customer Customer { get => _customer; set => _customer = value; }
+        public ICustomer Customer { get => _customer; set => _customer = value; }
     }
 }

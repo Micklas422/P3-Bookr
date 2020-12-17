@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    interface IDepartment
+    public interface IDepartment
     {
         bool IsActive { get; set; }
         string Name { get; set; }
         string Adress { get; set; }
         string Description { get; set; }
-        Customer Customer { get; set; }
-        List<Service> Services { get; set; }
+        ICustomer Customer { get; set; }
+        List<IService> Services { get; set; }
     }
 }

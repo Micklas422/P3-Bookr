@@ -8,8 +8,6 @@ using P3_Bookr.Commons;
 using System.IO;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
-using P3_Bookr.DAL.Interfaces;
-using P3_Bookr.DAL;
 
 namespace P3_Bookr
 {
@@ -69,12 +67,7 @@ namespace P3_Bookr
                 new Payment(DateTime.Now, c.Departments[0].Services[0].ServiceOfferings[0].Price))
                 { ReservationDeadline = DateTime.Now.AddDays(1) } );
 
-            List<Customer> customers = new List<Customer>();
-            customers.Add(c);
-
-            IDataAccesLayer dal = new DataAccesLayer();
-
-            IModelComponent m = new ModelComponent(new DataAccesLayer());
+            IModelComponent m = new ModelComponent();
 
             m.customer = c;
             IFunctionComponentInterface functionComponent = new FunctionComponenten(m);

@@ -10,6 +10,6 @@ namespace P3_Bookr.Windows.WindowsInterfaces
     public interface IServicesUI
     {
         ServicesOverview LoadServicesToShow();
-        void SwitchToService(Service services);
+        void SwitchToService(IService services);
     }
 }

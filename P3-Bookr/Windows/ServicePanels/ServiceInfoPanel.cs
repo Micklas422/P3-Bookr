@@ -15,8 +15,8 @@ namespace P3_Bookr.Windows
     public partial class ServiceInfoPanel : UserControl
     {
         IServicesUI _handler;
-        Service _service;
-        public ServiceInfoPanel(IServicesUI handler, Service service)
+        IService _service;
+        public ServiceInfoPanel(IServicesUI handler, IService service)
         {
             _service = service;
             _handler = handler;

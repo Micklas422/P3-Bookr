@@ -15,8 +15,8 @@ namespace P3_Bookr.Windows
     public partial class ServiceViewForFlow : UserControl
     {
         IServicesUI _servicesUI;
-        Service _service;
-        public ServiceViewForFlow(Service service, IServicesUI IServices)
+        IService _service;
+        public ServiceViewForFlow(IService service, IServicesUI IServices)
         {
             _service = service;
             _servicesUI = IServices;

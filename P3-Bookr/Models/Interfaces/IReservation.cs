@@ -7,11 +7,13 @@ using P3_Bookr.Commons.Enums;
 
 namespace P3_Bookr.Models
 {
-    interface IReservation
+    public interface IReservation
     {
+        IPayment Payment { get; set; }
         DateTime CreationDate { get; set; }
         DateTime CancellationDate { get; set; }
         ReservationStates ReservationState { get; set; }
+        IServiceOffering ServiceOffering { get; set; }
         DateTime ReservationDate { get; set; }
         int Duration { get; }
         DateTime ReservationDeadline { get; set; }

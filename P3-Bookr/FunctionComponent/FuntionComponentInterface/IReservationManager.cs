@@ -6,10 +6,10 @@ namespace P3_Bookr.FunctionComponent
 {
     public interface IReservationManager
     {
-        List<Reservation> GetActiveReservationsByMember(Member member);
+        List<IReservation> GetActiveReservationsByMember(IMember member);
 
-        bool CancelReservation(Reservation reservation);
+        bool CancelReservation(IReservation reservation);
 
-        bool CreateReservation(Member member, Service service, ServiceOffering serviceOffering, DateTime dateTime);
+        bool CreateReservation(IMember member, IService service, IServiceOffering serviceOffering, DateTime dateTime);
     }
 }
