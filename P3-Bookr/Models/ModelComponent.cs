@@ -60,7 +60,7 @@ namespace P3_Bookr.Models
             }
 
             if (member == null)
-                throw new UserNotFoundException($"Cloud not find user by that username: {username}");
+                throw new UserNotFoundException($"Could not find any users with username: {username}");
             else
                 return member;
         }

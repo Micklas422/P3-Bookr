@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class PermissionManager : IPermissionManager
+    public class PermissionManager : IPermissionManager
     {
         IModelComponent _modelComponent;
         public PermissionManager(IModelComponent modelComponent)

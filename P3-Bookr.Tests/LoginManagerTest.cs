@@ -1,42 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 using P3_Bookr.Models;
-using P3_Bookr.Commons.CustomExceptions;
 using P3_Bookr.FunctionComponent;
-using P3_Bookr;
-
 
 namespace P3_Bookr.Tests
 {
     public class LoginManagerTest
     {
-        
-        //IModelComponent _modelComponent;
 
-        //Member mbr = new Member(0, "testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123");
         
-
-        //[Fact]
-        //public void ValidateLogin_CorrectUsernameAndPasswordShouldReturnUser()
-        //{
-        //    Member member;
+        [Fact]
+        public void ValidateLogin_CorrectUsernameAndPasswordShouldReturnUser()
+        {
             
-        //    LoginManager lgnmngr = new LoginManager(_modelComponent);
-        //    //Member member = _modelComponent.GetMemberByUsername(mbr.Username);
+            ModelComponent modelComponent = new ModelComponent(null);
+            Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
+            Member memberTest = new Member(c, "Jane", "Janesen", "Janevej 12")
+            {
+                IsActive = true,
+                Email = $"test@gmail.com",
+                RentalNumber = $"00000",
+                MemberNumber = $"00000000",
+                MemberType = Member.MemberTypes.Administrator,
+                Username = $"test123",
+                Password = $"test"
+            };
 
-        //    //Arrange
-        //    Member expected = mbr;
+            LoginManager lgnmngr = new LoginManager(modelComponent);
 
-        //    //Act
-        //    Member actual = lgnmngr.ValidateLogin("test" , "test123");
+            
+            memberTest = modelComponent.GetMemberByUsername(memberTest.Username);
 
-        //    //Assert
+            //Arrange
+            Member expected = memberTest;
 
-        //    Assert.Equal(expected, actual);
-        //}
+            //Act
+            Member actual = lgnmngr.ValidateLogin("test123", "test");
+
+            //Assert
+
+            Assert.Equal(expected, actual);
+        }
     }
 }
