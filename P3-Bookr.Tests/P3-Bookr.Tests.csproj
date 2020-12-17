@@ -58,8 +58,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddServiceToListUnitTest.cs" />
     <Compile Include="CancelReservationTest.cs" />
-    <Compile Include="CreateReservationTest.cs" />
+    <Compile Include="CreateReservationUnitTest.cs" />
     <Compile Include="LoginManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RefundPaymentUnitTest.cs" />

@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class HistoryManager : IHistoryManager
+    public class HistoryManager : IHistoryManager
     {
         IModelComponent _modelComponent;
         public HistoryManager(IModelComponent modelComponent)

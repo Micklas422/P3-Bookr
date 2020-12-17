@@ -5,17 +5,14 @@ using P3_Bookr.FunctionComponent;
 using P3_Bookr.DAL;
 using Xunit;
 
-
 namespace P3_Bookr.Tests
 {
-    public class LoginManagerTest
+    public class CreateReservationUnitTest
     {
- 
         [Fact]
-        public void  ValidateLogin_CorrectUsernameAndPasswordShouldReturnAMember()
+        public void CreateReservation_ShouldReturnTrue()
         {
-            
-            
+
             int i = 0;
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
@@ -62,25 +59,16 @@ namespace P3_Bookr.Tests
                 c.Departments[0].Services[0]),
                 c.Departments[0].Services[0].ServiceOfferings[0],
                 new Payment(DateTime.Now, c.Departments[0].Services[0].ServiceOfferings[0].Price))
-                { ReservationDeadline = DateTime.Now.AddDays(1) });
+                { ReservationDeadline = DateTime.Now.AddDays(1) });          
 
-            List<Customer> customers = new List<Customer>();
-            customers.Add(c);
-
+            Payment paymentTest = new Payment(DateTime.Now, 50);
             DataAccesLayer dataAccesLayer = new DataAccesLayer();
             ModelComponent modelComponent = new ModelComponent(dataAccesLayer);
             modelComponent.customer = c;
-            LoginManager lgnmngr = new LoginManager(modelComponent);
-
-            //Arrange
-            Member expected = c.Members[0];
-
-            //Act
-            Member actual = lgnmngr.ValidateLogin(c.Members[0].Username, c.Members[0].Password);
-
-            //Assert
-
-            Assert.Equal(expected, actual);
+            PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
+            ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
+            
+            Assert.True(rsrvtnmngrTest.CreateReservation(c.Members[0], c.Departments[0].Services[0], c.Departments[0].Services[0].ServiceOfferings[0], DateTime.Now));
         }
     }
 }

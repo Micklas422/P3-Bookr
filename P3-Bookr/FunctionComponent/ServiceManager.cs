@@ -7,7 +7,7 @@ using P3_Bookr.Models;
 
 namespace P3_Bookr.FunctionComponent
 {
-    class ServiceManager : IServiceManager
+    public class ServiceManager : IServiceManager
     {
         IModelComponent _modelComponent;
         IPermissionManager _permissionManager;
@@ -46,7 +46,7 @@ namespace P3_Bookr.FunctionComponent
                 foreach (Service s in d.Services)
                 {
                     if (!result.Contains(s) 
-                        && s.ServiceState != Service.ServiceStates.Deactivated 
+                        && s.ServiceState != Service.ServiceStates.Deactivated
                         && _permissionManager.ValidateServiceAcces(member, s))
                     {
                         result.Add(s);

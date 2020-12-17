@@ -16,7 +16,6 @@ namespace P3_Bookr.Tests
 
             PermissionManager permissionManager = new PermissionManager(null);
 
-
             Assert.True(permissionManager.ValidateServiceAcces(memberTest, serviceTest));
         }
     }
