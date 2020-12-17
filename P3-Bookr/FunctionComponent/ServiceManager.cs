@@ -56,15 +56,15 @@ namespace P3_Bookr.FunctionComponent
             return result;
         }
 
-        public void Reserve()
-        {
-            throw new NotImplementedException();
-        }
+        //public void Reserve()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void SeeAvailability()
-        {
-            throw new NotImplementedException();
-        }
+        //public void SeeAvailability()
+        //{
+        //    throw new NotImplementedException();
+        //}
         public bool AddServiceToServiceList(Service service, Department department)
         {
             try

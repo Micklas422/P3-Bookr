@@ -11,7 +11,9 @@ namespace P3_Bookr.Commons.Enums
         WashingMachine,
         CommonRoom
     }
-    public enum ServiceTypesTitel
+    //Danske navne på ServiceTypes
+    //Skal være samme rækkefølge som ServiceTypes!
+    public enum ServiceTypesTitel 
     {
         Vaskemaskiner,
         Festlokaler

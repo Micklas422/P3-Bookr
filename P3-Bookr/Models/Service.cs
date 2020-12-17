@@ -34,8 +34,8 @@ namespace P3_Bookr.Models
         }
         public Service(string name, ServiceTypes serviceType)
         {
-            _name = name;
-            _serviceType = serviceType;
+            Name = name;
+            ServiceType = serviceType;
         }
 
         public string Location

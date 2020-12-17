@@ -52,15 +52,5 @@ namespace P3_Bookr.Models
         }
 
         public Customer Customer { get => _customer; set => _customer = value; }
-
-        public void createService()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void deleteService()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

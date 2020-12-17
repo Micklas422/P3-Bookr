@@ -10,13 +10,6 @@ namespace P3_Bookr.Windows.WindowsInterfaces
     public interface IServicesUI
     {
         ServicesOverview LoadServicesToShow();
-        void SelectService();
-        void SelectServiceType();
-        void SelectDate();
-        void SelectTime();
-        void Book();
         void SwitchToService(Service services);
-        void LoadInfoPanelForService();
-        void LoadandExecutePanelForServiceBooking();
     }
 }
