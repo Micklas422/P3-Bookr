@@ -13,7 +13,7 @@ namespace P3_Bookr.Models
         DateTime CancellationDate { get; set; }
         ReservationStates ReservationState { get; set; }
         DateTime ReservationDate { get; set; }
-        int Duration { get; set; }
+        int Duration { get; }
         DateTime ReservationDeadline { get; set; }
     }
 }

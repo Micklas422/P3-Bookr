@@ -83,8 +83,8 @@ namespace P3_Bookr.Models
         }
         public int Duration
         {
-            get { return _duration; }
-            set { _duration = value; }
+            get { return ServiceOffering.Duration; }
+            
         }
         public DateTime ReservationDeadline
         {

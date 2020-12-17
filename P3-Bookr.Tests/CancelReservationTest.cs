@@ -44,8 +44,6 @@ namespace P3_Bookr.Tests
             Assert.True(rsrvtnmngrTest.CancelReservation(testReservation));
         }
     
-
-
         [Fact]
         public void CancelReservation_ChecksForCorrectValuesIn()
         {
