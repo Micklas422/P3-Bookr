@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using P3_Bookr.DAL;
-using P3_Bookr.DAL.Interfaces;
 using P3_Bookr.Commons.Enums;
 using P3_Bookr.Commons.CustomExceptions;
 
@@ -13,29 +11,27 @@ namespace P3_Bookr.Models
 {
     public class ModelComponent: IModelComponent
     {
-        IDataAccesLayer _dataAccesLayer;
-        Customer _customer;
+        ICustomer _customer;
 
-        public ModelComponent(IDataAccesLayer dataAccesLayer)
+        public ModelComponent()
         {
-            _dataAccesLayer = dataAccesLayer;
         }
 
-        public Customer customer
+        public ICustomer customer
         {
             get { return _customer; }
             set { _customer = value; }
         }
 
-        public List<Reservation> GetAllReservationsByMember(Member member)
+        public List<IReservation> GetAllReservationsByMember(IMember member)
         {
-            List<Reservation> result = new List<Reservation>();
+            List<IReservation> result = new List<IReservation>();
             
-            foreach (Member mem in _customer.Members)
+            foreach (IMember mem in _customer.Members)
             {
                 if (mem.Equals(member))
                 {
-                    foreach (Reservation res in mem.Reservations)
+                    foreach (IReservation res in mem.Reservations)
                     {
                         result.Add(res);
                     }
@@ -46,9 +42,9 @@ namespace P3_Bookr.Models
             return result;
         }
 
-        public Member GetMemberByUsername(string username)
+        public IMember GetMemberByUsername(string username)
         {
-            Member member = null;
+            IMember member = null;
             try
             {
                 member = _customer.Members.Where(m => m.Username == username).FirstOrDefault();
@@ -65,12 +61,12 @@ namespace P3_Bookr.Models
                 return member;
         }
 
-        public List<Service> GetAllServices()
+        public List<IService> GetAllServices()
         {
-            List<Service> result = new List<Service>();
-            foreach (Department dep in _customer.Departments)
+            List<IService> result = new List<IService>();
+            foreach (IDepartment dep in _customer.Departments)
             {
-                foreach (Service ser in dep.Services)
+                foreach (IService ser in dep.Services)
                 {
                     result.Add(ser);
                 }

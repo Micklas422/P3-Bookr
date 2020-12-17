@@ -22,7 +22,7 @@ namespace P3_Bookr
     public class UIController : ISideMenuUI, IServicesUI, IReservationUI, IHistorikUI, ILogInUI, IHomepageUI, IAdminToolsUI, ISettingsUI
     {
         MainWindow _mainWindow;
-        Member _currentUser;
+        IMember _currentUser;
         IFunctionComponentInterface _functionComponent;
         public UIController(IFunctionComponentInterface functionComponenten)
         {
@@ -45,8 +45,8 @@ namespace P3_Bookr
             _mainWindow.HideAllControls();
             _mainWindow.panelSiteView.Controls.Clear();
             FrontPageForm form = new FrontPageForm(this);
-            List<Service> services = LastUsedService(5);
-            foreach(Service s in services)
+            List<IService> services = LastUsedService(5);
+            foreach(IService s in services)
             {
                 form.lastUsedServices1.flowLayoutPanelLastUsed.Controls.Add(new ServiceViewForFlow(s, this));
             }
@@ -114,33 +114,33 @@ namespace P3_Bookr
         public ServicesOverview LoadServicesToShow()
         {
             ServicesOverview servicesOverview = new ServicesOverview(this);
-            List<Service> activeServices = new List<Service>();
+            List<IService> activeServices = new List<IService>();
             activeServices = _functionComponent.serviceManager.GetActiveServicesByMember(_currentUser);
             var enumValue = Enum.GetValues(typeof(ServiceTypes));
             var enumNames = Enum.GetNames(typeof(ServiceTypes));
 
-            List<List<Service>> sortedByServiceTypes = new List<List<Service>>();
+            List<List<IService>> sortedByServiceTypes = new List<List<IService>>();
 
             foreach (int i in enumValue)
             {
-                List<Service> v = activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
+                List<IService> v = activeServices.Where(s => s.ServiceType == (ServiceTypes) i).ToList();
                 if (v.Count > 0) 
                 {
                     sortedByServiceTypes.Add(v);
                 }
             }
 
-            foreach (List<Service> services in sortedByServiceTypes)
+            foreach (List<IService> services in sortedByServiceTypes)
             {
                 servicesOverview.FlowPanelOfFlow.Controls.Add(new ServicesTop(services.ElementAt(0)));
-                foreach (Service service in services)
+                foreach (IService service in services)
                 {
                     servicesOverview.FlowPanelOfFlow.Controls.Add(new ServiceViewForFlow(service, this));
                 }
             }
             return servicesOverview;
         }
-        public void SwitchToService(Service service)
+        public void SwitchToService(IService service)
         {
             _mainWindow.panelSiteView.Controls.Clear();
             _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this,this, service), service));
@@ -150,16 +150,16 @@ namespace P3_Bookr
         public ReservationPage LoadReservationsOfMember()
         {
             ReservationPage reservationPage = new ReservationPage(this);
-            List<Reservation> activeMemberReservations = new List<Reservation>();
+            List<IReservation> activeMemberReservations = new List<IReservation>();
             activeMemberReservations = _functionComponent.reservationManager.GetActiveReservationsByMember(_currentUser);
 
-            foreach (Reservation reservation in activeMemberReservations)
+            foreach (IReservation reservation in activeMemberReservations)
             {
                 reservationPage.flowLayoutPanel1.Controls.Add(new ReservationPanel(reservation, this));
             }
             return reservationPage;
         }
-        public void CancelReservation(Reservation reservation)
+        public void CancelReservation(IReservation reservation)
         {
             try
             {
@@ -178,7 +178,7 @@ namespace P3_Bookr
                 MessageBox.Show("Kunne ikke annullere reservation");
             }
         }
-        public bool CreateNewReservation(Service service, ServiceOffering serviceOffering, DateTime dateTime)
+        public bool CreateNewReservation(IService service, IServiceOffering serviceOffering, DateTime dateTime)
         {
             return _functionComponent.reservationManager.CreateReservation(_currentUser, service, serviceOffering, dateTime);
         }
@@ -207,14 +207,14 @@ namespace P3_Bookr
         }
         #endregion
         #region HomepageUI
-        public List<Service> LastUsedService(int count)
+        public List<IService> LastUsedService(int count)
         {
             return _functionComponent.historyManager.GetLastUsedServices(_currentUser, count);
         }
         #endregion
         #region AdminToolsUI
         
-        public void AddService(Service service, Department department)
+        public void AddService(IService service, IDepartment department)
         {
             bool Succeded;
             Succeded = _functionComponent.serviceManager.AddServiceToServiceList(service, department);
@@ -225,10 +225,10 @@ namespace P3_Bookr
             MessageBox.Show("Service oprettet, tryk på annuller for at returnere til hovedmenuen");
 
         }
-        public List<Department> deparmentListFromMember(Member member)
+        public List<IDepartment> deparmentListFromMember(IMember member)
         {
-            List<Department> departmentList = new List<Department>();
-            foreach(Department department in member.Departments)
+            List<IDepartment> departmentList = new List<IDepartment>();
+            foreach(IDepartment department in member.Departments)
             {
                 departmentList.Add(department);
             }
@@ -241,9 +241,9 @@ namespace P3_Bookr
         public HistoryPage LoadHistoryPage()
         {
             HistoryPage historyPage = new HistoryPage(this);
-            List<Reservation> reservations = _functionComponent.historyManager.SeeHistory(_currentUser);
+            List<IReservation> reservations = _functionComponent.historyManager.SeeHistory(_currentUser);
 
-            foreach (Reservation r in reservations)
+            foreach (IReservation r in reservations)
             {
                 historyPage.flowLayoutPanel1.Controls.Add(new HistoryElement(r));
             }

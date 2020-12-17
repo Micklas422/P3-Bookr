@@ -29,11 +29,11 @@ namespace P3_Bookr.Models
         string _password;
         SystemRights _systemRights;
         MemberTypes _memberType;
-        Customer _customer;
-        List<Reservation> _reservations = new List<Reservation>();
-        List<Department> _departments = new List<Department>();
+        ICustomer _customer;
+        List<IReservation> _reservations = new List<IReservation>();
+        List<IDepartment> _departments = new List<IDepartment>();
 
-        public Member(Customer customer, string firstName, string lastName, string adress)
+        public Member(ICustomer customer, string firstName, string lastName, string adress)
         {
             Customer = customer;
             FirstName = firstName;
@@ -115,13 +115,13 @@ namespace P3_Bookr.Models
             set { _password = value; }
         }
 
-        public List<Reservation> Reservations
+        public List<IReservation> Reservations
         {
             get { return _reservations; }
             set { _reservations = value; }
         }
 
-        public Customer Customer { get => _customer; private set => _customer = value; }
-        public List<Department> Departments { get => _departments; set => _departments = value; }
+        public ICustomer Customer { get => _customer; private set => _customer = value; }
+        public List<IDepartment> Departments { get => _departments; set => _departments = value; }
     }
 }

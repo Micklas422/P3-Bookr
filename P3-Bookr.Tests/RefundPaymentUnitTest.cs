@@ -11,7 +11,7 @@ namespace P3_Bookr.Tests
         [Fact]
         public void RefundPayment_ShouldReturnTrue()
         {
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             PaymentManager paymentManager = new PaymentManager(modelComponent);
             Payment payment = new Payment(DateTime.Now, 40);
 

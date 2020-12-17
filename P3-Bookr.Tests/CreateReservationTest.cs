@@ -7,8 +7,6 @@ using P3_Bookr.Commons;
 using System.IO;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
-using P3_Bookr.DAL.Interfaces;
-using P3_Bookr.DAL;
 using Xunit;
 
 namespace P3_Bookr.Tests
@@ -22,7 +20,7 @@ namespace P3_Bookr.Tests
             time = DateTime.Now;
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
             ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
             Payment paymentTest = new Payment(DateTime.Now, 50);

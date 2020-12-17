@@ -9,6 +9,6 @@ namespace P3_Bookr.Windows.WindowsInterfaces
 {
     public interface IHomepageUI
     {
-        List<Service> LastUsedService(int count);
+        List<IService> LastUsedService(int count);
     }
 }

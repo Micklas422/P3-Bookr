@@ -16,10 +16,10 @@ namespace P3_Bookr.Windows.CreateNewService
     public partial class NewService : UserControl
     {
         IAdminToolsUI _handler;
-        List<ServiceOffering> _serviceOfferingsList = new List<ServiceOffering>();
-        List<Department> _departmentsListForUser;
-        Department selectedDepartment;
-        public NewService(IAdminToolsUI handler, List<Department> memberDepartments)
+        List<IServiceOffering> _serviceOfferingsList = new List<IServiceOffering>();
+        List<IDepartment> _departmentsListForUser;
+        IDepartment selectedDepartment;
+        public NewService(IAdminToolsUI handler, List<IDepartment> memberDepartments)
         {
 
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace P3_Bookr.Windows.CreateNewService
                 DropdownServiceType.Items.Add(serviceTypes);
             }
             DropdownServiceType.SelectedIndex = 0;
-            foreach(Department department in memberDepartments)
+            foreach(IDepartment department in memberDepartments)
             {
                 DropdownAfdeling.Items.Add(department.Name);
             }

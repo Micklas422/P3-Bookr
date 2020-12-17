@@ -15,19 +15,19 @@ namespace P3_Bookr.FunctionComponent
             _modelComponent = modelComponent;
         }
 
-        public List<Reservation> SeeHistory(Member member)
+        public List<IReservation> SeeHistory(IMember member)
         {
             return _modelComponent.GetAllReservationsByMember(member)
                 .Where(r => r.ReservationState == Commons.Enums.ReservationStates.Finalised).ToList();
         }
 
-        public List<Service> GetLastUsedServices(Member member, int count)
+        public List<IService> GetLastUsedServices(IMember member, int count)
         {
-            List<Service> result = new List<Service>();
-            List<Reservation> reservations = _modelComponent.GetAllReservationsByMember(member);
+            List<IService> result = new List<IService>();
+            List<IReservation> reservations = _modelComponent.GetAllReservationsByMember(member);
 
             reservations = reservations.OrderByDescending(r => r.CreationDate).ToList();
-            foreach (Reservation res in reservations)
+            foreach (IReservation res in reservations)
             {
                 if (result.Count() == count)
                     break;

@@ -18,10 +18,10 @@ namespace P3_Bookr.FunctionComponent
             _paymentManager = paymentManager;
         }
 
-        public bool CreateReservation(Member member, Service service, ServiceOffering serviceOffering, DateTime dateTime)
+        public bool CreateReservation(IMember member, IService service, IServiceOffering serviceOffering, DateTime dateTime)
         {
             TimePeriod p = new TimePeriod(dateTime, dateTime.AddMinutes(serviceOffering.Duration), service);
-            Reservation r = new Reservation(dateTime,
+            IReservation r = new Reservation(dateTime,
                 member,
                 p,
                 serviceOffering,
@@ -32,13 +32,13 @@ namespace P3_Bookr.FunctionComponent
             return true;
         }
 
-        public List<Reservation> GetActiveReservationsByMember(Member member)
+        public List<IReservation> GetActiveReservationsByMember(IMember member)
         {
             return _modelComponent.GetAllReservationsByMember(member).
                 Where(r => r.ReservationState != ReservationStates.Cancelled).OrderBy(r => r.ReservationDate).ToList();
         }
 
-        public bool CancelReservation(Reservation reservation)
+        public bool CancelReservation(IReservation reservation)
         {
             if(DateTime.Now < reservation.ReservationDeadline)
             {

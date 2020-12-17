@@ -7,8 +7,6 @@ using P3_Bookr.Commons;
 using System.IO;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
-using P3_Bookr.DAL.Interfaces;
-using P3_Bookr.DAL;
 using Xunit;
 
 
@@ -21,7 +19,7 @@ namespace P3_Bookr.Tests
         public void  ValidateLogin_CorrectUsernameAndPasswordShouldReturnMember()
         {
             
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             int i = 0;
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
@@ -78,10 +76,10 @@ namespace P3_Bookr.Tests
             LoginManager lgnmngr = new LoginManager(modelComponent);
 
             //Arrange
-            Member expected = c.Members[0];
+            IMember expected = c.Members[0];
 
             //Act
-            Member actual = lgnmngr.ValidateLogin(c.Members[0].Username, c.Members[0].Password);
+            IMember actual = lgnmngr.ValidateLogin(c.Members[0].Username, c.Members[0].Password);
 
             //Assert
 

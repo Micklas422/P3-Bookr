@@ -9,8 +9,6 @@ namespace P3_Bookr.Models
 {
     public class Service : IService
     {
-        static List<int> UniqueIds = new List<int>();
-
         string _location;
         string _description;
         string _name;
@@ -19,8 +17,8 @@ namespace P3_Bookr.Models
         ServiceTypes _serviceType;
         SystemRights _systemRights;
 
-        List<TimePeriod> timeperiods = new List<TimePeriod>();
-        List<ServiceOffering> serviceOfferings = new List<ServiceOffering>();
+        List<ITimePeriod> timeperiods = new List<ITimePeriod>();
+        List<IServiceOffering> serviceOfferings = new List<IServiceOffering>();
 
         public enum ServiceStates
         {
@@ -28,10 +26,7 @@ namespace P3_Bookr.Models
             Taken,
             Deactivated
         };
-        public Service()
-        {
 
-        }
         public Service(string name, ServiceTypes serviceType)
         {
             Name = name;
@@ -75,12 +70,12 @@ namespace P3_Bookr.Models
             get { return _systemRights; }
             set { _systemRights = value; }
         }
-        public List<TimePeriod> TimePeriods
+        public List<ITimePeriod> TimePeriods
         {
             get { return timeperiods; }
             set { timeperiods = value; }
         }
-        public List<ServiceOffering> ServiceOfferings
+        public List<IServiceOffering> ServiceOfferings
         {
             get { return serviceOfferings; }
             set { serviceOfferings = value; }

@@ -14,7 +14,7 @@ namespace P3_Bookr.Windows
 {
     public partial class ServicesTop : UserControl
     {
-        public ServicesTop(Service service)
+        public ServicesTop(IService service)
         {
             InitializeComponent();
 

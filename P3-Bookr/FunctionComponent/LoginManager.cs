@@ -16,9 +16,9 @@ namespace P3_Bookr.FunctionComponent
         {
             _modelComponent = modelComponent;
         }
-        public Member ValidateLogin(string username, string password)
+        public IMember ValidateLogin(string username, string password)
         {
-            Member member = _modelComponent.GetMemberByUsername(username); //sets the new member to member by username
+            IMember member = _modelComponent.GetMemberByUsername(username); //sets the new member to member by username
             if (member == null)
                 throw new UserNotFoundException("User does not exsist");
             if (member.Password != password)

@@ -15,7 +15,7 @@ namespace P3_Bookr.Windows.Settings
     public partial class SettingsPage : UserControl
     {
         ISettingsUI _handler;
-        public SettingsPage(ISettingsUI handler, Member member)
+        public SettingsPage(ISettingsUI handler, IMember member)
         {
             _handler = handler;
             InitializeComponent();

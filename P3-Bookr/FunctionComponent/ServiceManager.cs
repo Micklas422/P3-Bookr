@@ -17,11 +17,11 @@ namespace P3_Bookr.FunctionComponent
             _permissionManager = permissionManager;
         }
 
-        public List<Service> GetActiveServices()
+        public List<IService> GetActiveServices()
         {
-            List<Service> services = _modelComponent.GetAllServices();
-            List<Service> result = new List<Service>();
-            foreach (Service ser in services)
+            List<IService> services = _modelComponent.GetAllServices();
+            List<IService> result = new List<IService>();
+            foreach (IService ser in services)
             {
                 if (ser.ServiceState != Service.ServiceStates.Deactivated)
                 {
@@ -31,19 +31,19 @@ namespace P3_Bookr.FunctionComponent
             return result;
         }
 
-        public List<Service> FindLastServicesUsed(Member  member, int cnt)
+        public List<IService> FindLastServicesUsed(IMember member, int cnt)
         {
-            List<Service> services = new List<Service>();
+            List<IService> services = new List<IService>();
             services.Add(_modelComponent.customer.Departments[0].Services[0]);
             return services;
         }
 
-        public List<Service> GetActiveServicesByMember(Member member)
+        public List<IService> GetActiveServicesByMember(IMember member)
         {
-            List<Service> result = new List<Service>();
-            foreach (Department d in member.Departments)
+            List<IService> result = new List<IService>();
+            foreach (IDepartment d in member.Departments)
             {
-                foreach (Service s in d.Services)
+                foreach (IService s in d.Services)
                 {
                     if (!result.Contains(s) 
                         && s.ServiceState != Service.ServiceStates.Deactivated 
@@ -65,13 +65,13 @@ namespace P3_Bookr.FunctionComponent
         //{
         //    throw new NotImplementedException();
         //}
-        public bool AddServiceToServiceList(Service service, Department department)
+        public bool AddServiceToServiceList(IService service, IDepartment department)
         {
             try
             {
                 _modelComponent.customer.Departments.Where(d => d.Equals(department)).FirstOrDefault().Services.Add(service);
             }
-            catch (ArgumentNullException)
+            catch (Exception ex)
             {
                 return false;
             }

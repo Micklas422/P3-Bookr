@@ -15,8 +15,8 @@ namespace P3_Bookr.Windows.ReservationPanels
     public partial class ReservationPanel : UserControl
     {
         IReservationUI _reservationUI;
-        Reservation _reservation;
-        public ReservationPanel(Reservation reservation, IReservationUI reservationUI)
+        IReservation _reservation;
+        public ReservationPanel(IReservation reservation, IReservationUI reservationUI)
         {
             InitializeComponent();
             _reservationUI = reservationUI;

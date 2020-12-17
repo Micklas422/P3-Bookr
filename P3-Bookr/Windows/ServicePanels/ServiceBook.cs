@@ -16,12 +16,12 @@ namespace P3_Bookr.Windows
     {
         IServicesUI _handler;
         IReservationUI _reservationHandler;
-        Service _service;
+        IService _service;
         ServiceSubOptions _selectedServiceOffering;
         DateTime _dateTime;
         bool _TimeSelected;
 
-        public ServiceBook(IServicesUI serivceHandler, IReservationUI reservationHandler, Service service)
+        public ServiceBook(IServicesUI serivceHandler, IReservationUI reservationHandler, IService service)
         {
             _handler = serivceHandler;
             _service = service;
@@ -61,7 +61,7 @@ namespace P3_Bookr.Windows
         {
             DateTime endTime;
             comboBoxTimeSlots.Items.Clear();
-            List<TimePeriod> timePeriods = _service.TimePeriods.Where(t => t.StartTime.Date == dayToLoad.Date || t.EndTime.Date >= dayToLoad.Date).ToList();
+            List<ITimePeriod> timePeriods = _service.TimePeriods.Where(t => t.StartTime.Date == dayToLoad.Date || t.EndTime.Date >= dayToLoad.Date).ToList();
 
             if (dayToLoad.Date == DateTime.Now.Date)
             {

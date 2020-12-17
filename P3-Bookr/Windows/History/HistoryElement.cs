@@ -13,7 +13,7 @@ namespace P3_Bookr.Windows.History
 {
     public partial class HistoryElement : UserControl
     {
-        public HistoryElement(Reservation reservation)
+        public HistoryElement(IReservation reservation)
         {
             InitializeComponent();
             this.labelServiceName.Text = reservation.ServiceOffering.Service.Name;

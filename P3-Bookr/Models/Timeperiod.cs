@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    public class TimePeriod : ITimeperiod
+    public class TimePeriod : ITimePeriod
     {
         DateTime _startTime;
         DateTime _endTime;
         bool _serviceUsed;
-        Service _service;
+        IService _service;
 
-        public TimePeriod(DateTime startTime, DateTime endTime, Service service)
+        public TimePeriod(DateTime startTime, DateTime endTime, IService service)
         {
             StartTime = startTime;
             EndTime = endTime;
@@ -30,6 +30,6 @@ namespace P3_Bookr.Models
             get { return _endTime; }
             set { _endTime = value; }
         }
-        internal Service Serivce { get => _service; set => _service = value; }
+        internal IService Serivce { get => _service; set => _service = value; }
     }
 }

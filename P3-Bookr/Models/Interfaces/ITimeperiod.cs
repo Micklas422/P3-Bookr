@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    interface ITimeperiod
+    public interface ITimePeriod
     {
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }

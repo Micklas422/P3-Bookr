@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    interface IPayment
+    public interface IPayment
     {
         void StateHandler(ReservationStates reservationState);
         ReservationStates ReservationStates { get; set; }

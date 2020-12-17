@@ -17,7 +17,7 @@ namespace P3_Bookr.Windows
         ServiceInfoPanel _serviceInfoPanel;
         ServiceBook _serviceBook;
 
-        public ServiceDetails(ServiceInfoPanel serviceInfoPanel, ServiceBook serviceBook, Service service)
+        public ServiceDetails(ServiceInfoPanel serviceInfoPanel, ServiceBook serviceBook, IService service)
         {
             _serviceInfoPanel = serviceInfoPanel;
             _serviceBook = serviceBook;

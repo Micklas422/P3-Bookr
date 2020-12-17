@@ -20,13 +20,13 @@ namespace P3_Bookr.FunctionComponent
         //    return true;
         //}
 
-        public bool Cancel(Payment payments)
+        public bool Cancel(IPayment payments)
         {
             payments.Refunded = true;
             return true;
         }
 
-        public bool RefundPayment(Payment payment)
+        public bool RefundPayment(IPayment payment)
         {
             return true;
         }

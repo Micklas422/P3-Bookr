@@ -14,8 +14,8 @@ namespace P3_Bookr.Models
         string _adress;
         string _email;
 
-        List<Department> departments = new List<Department>();
-        List<Member> members = new List<Member>();
+        List<IDepartment> departments = new List<IDepartment>();
+        List<IMember> members = new List<IMember>();
 
         public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
         {
@@ -54,12 +54,12 @@ namespace P3_Bookr.Models
             get { return _email; }
             set { _email = value; }
         }
-        public List<Department> Departments
+        public List<IDepartment> Departments
         {
             get { return departments; }
             set { departments = value; }
         }
-        public List<Member> Members
+        public List<IMember> Members
         {
             get { return members; }
             set { members = value; }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace P3_Bookr.Models
 {
-    interface IServiceOffering
+    public interface IServiceOffering
     {
         string Name { get; set; }
         int Duration { get; set; }
         float Price { get; set; }
+        IService Service { get; set; }
     }
 }

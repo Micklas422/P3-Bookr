@@ -13,7 +13,7 @@ namespace P3_Bookr.Tests
         {
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
             ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
             Payment paymentTest = new Payment(DateTime.Now, 50);
@@ -42,7 +42,7 @@ namespace P3_Bookr.Tests
         {
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
             ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
             Payment paymentTest = new Payment(DateTime.Now, 50);
@@ -71,7 +71,7 @@ namespace P3_Bookr.Tests
         {
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
             ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
             Payment paymentTest = new Payment(DateTime.Now, 50);
@@ -100,7 +100,7 @@ namespace P3_Bookr.Tests
         {
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
-            ModelComponent modelComponent = new ModelComponent(null);
+            ModelComponent modelComponent = new ModelComponent();
             PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
             ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
             Payment paymentTest = new Payment(DateTime.Now, 50);

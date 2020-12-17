@@ -10,7 +10,7 @@ namespace P3_Bookr.Windows.WindowsInterfaces
 {
     public interface IAdminToolsUI
     {
-        void AddService(Service service, Department department);
+        void AddService(IService service, IDepartment department);
         void SwitchToHomePage();
         void SwitchToNewService();
         void SwitchToAdminToolsPage();
