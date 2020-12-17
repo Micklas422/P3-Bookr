@@ -14,7 +14,7 @@ namespace P3_Bookr.Tests
 {
     public class LoginManagerTest
     {
-        int hej = 2;
+        
         //IModelComponent _modelComponent;
 
         //Member mbr = new Member(0, "testPerson", "testTest", true, "0093", "103", "TestvejLejer 30", "member@gmail.com", false, Member.MemberTypes.Renter, "test", "test123");

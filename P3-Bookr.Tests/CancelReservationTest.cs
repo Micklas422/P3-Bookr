@@ -17,7 +17,7 @@ namespace P3_Bookr.Tests
 
         [Fact]
         public void CancelReservation_ShouldReturnTrue()
-        {           
+        {
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
             ModelComponent modelComponent = new ModelComponent(null);
@@ -39,10 +39,12 @@ namespace P3_Bookr.Tests
                serviceTest),
                serviceOfferingTest,
                paymentTest)
-            { ReservationDeadline = DateTime.Now.AddDays(1) };;
-                     
+            { ReservationDeadline = DateTime.Now.AddDays(1) }; ;
+
             Assert.True(rsrvtnmngrTest.CancelReservation(testReservation));
         }
+    
+
 
         [Fact]
         public void CancelReservation_ChecksForCorrectValuesIn()
