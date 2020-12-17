@@ -32,6 +32,7 @@ namespace P3_Bookr.Models
             Member = member;
             TimePeriod = timePeriod;
             ServiceOffering = serviceOffering;
+
             StateHandlerTimer = new Timer(5000);
             StateHandlerTimer.Elapsed += OnTimedEvent;
             StateHandlerTimer.AutoReset = true;

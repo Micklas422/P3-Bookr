@@ -14,7 +14,5 @@ namespace P3_Bookr.Models
         string Description { get; set; }
         Customer Customer { get; set; }
         List<Service> Services { get; set; }
-        void createService();
-        void deleteService();
     }
 }

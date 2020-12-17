@@ -4,7 +4,7 @@ namespace P3_Bookr.FunctionComponent
 {
     public interface IPermissionManager
     {
-        bool ValidatePermission(string username);
+        //bool ValidatePermission(string username);
         bool ValidateAdminPermission(Member currentUser);
         bool ValidateServiceAcces(Member member, Service service);
     }

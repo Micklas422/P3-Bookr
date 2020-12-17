@@ -19,11 +19,11 @@ namespace P3_Bookr.Models
 
         public Customer(bool isActive, DateTime creationDate, string name, string adress, string email)
         {
-            _isActive = isActive;
-            _creationDate = creationDate;
-            _name = name;
-            _adress = adress;
-            _email = email;
+            IsActive = isActive;
+            CreationDate = creationDate;
+            Name = name;
+            Adress = adress;
+            Email = email;
         }
 
         public bool IsActive
@@ -63,14 +63,6 @@ namespace P3_Bookr.Models
         {
             get { return members; }
             set { members = value; }
-        }
-        public void CreateMember()
-        {
-            throw new NotImplementedException();
-        }
-        public void DeleteMember()
-        {
-            throw new NotImplementedException();
         }
     }
 }
