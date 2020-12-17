@@ -3,12 +3,12 @@ using Xunit;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
 
+
 namespace P3_Bookr.Tests
 {
     public class LoginManagerTest
     {
-
-        
+ 
         [Fact]
         public void ValidateLogin_CorrectUsernameAndPasswordShouldReturnUser()
         {
@@ -27,9 +27,6 @@ namespace P3_Bookr.Tests
             };
 
             LoginManager lgnmngr = new LoginManager(modelComponent);
-
-            
-            memberTest = modelComponent.GetMemberByUsername(memberTest.Username);
 
             //Arrange
             Member expected = memberTest;

@@ -20,18 +20,18 @@ namespace P3_Bookr.Tests
             ServiceOffering serviceOfferingTest = new ServiceOffering("Kulørtvask", 90, 12, serviceTest);
             Member memberTest = new Member(c, "Jane", "Janesen", "Janevej 12");
 
-            paymentManagerTest.Cancel(paymentTest);
+            //paymentManagerTest.Cancel(paymentTest);
 
-            Reservation testReservation = new Reservation(
-               DateTime.Now,
-               memberTest,
-               new TimePeriod(
-               DateTime.Now.AddDays(2),
-               DateTime.Now.AddDays(3),
-               serviceTest),
-               serviceOfferingTest,
-               paymentTest)
-            { ReservationDeadline = DateTime.Now.AddDays(1) }; ;
+            //Reservation testReservation = new Reservation(
+            //   DateTime.Now,
+            //   memberTest,
+            //   new TimePeriod(
+            //   DateTime.Now.AddDays(2),
+            //   DateTime.Now.AddDays(3),
+            //   serviceTest),
+            //   serviceOfferingTest,
+            //   paymentTest)
+            //{ ReservationDeadline = DateTime.Now.AddDays(1) }; ;
 
             Assert.True(rsrvtnmngrTest.CreateReservation(memberTest, serviceTest, serviceOfferingTest, DateTime.Now));
         }

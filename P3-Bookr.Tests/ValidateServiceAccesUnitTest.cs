@@ -8,7 +8,7 @@ namespace P3_Bookr.Tests
     public class ValidateServiceAccesUnitTest
     {
         [Fact]
-        public void ValidateSerceAccesUNitTest_ShouldReturnTrue()
+        public void ValidateSerceAccesUnitTest_ShouldReturnTrue()
         {
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
             Member memberTest = new Member(c, "Jane", "Janesen", "Janevej 12");
