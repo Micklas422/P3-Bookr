@@ -61,7 +61,6 @@
     <Compile Include="CancelReservationTest.cs" />
     <Compile Include="CreateReservationTest.cs" />
     <Compile Include="LoginManagerTest.cs" />
-    <Compile Include="PayUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RefundPaymentUnitTest.cs" />
     <Compile Include="ValidateAdminUnitTest.cs" />

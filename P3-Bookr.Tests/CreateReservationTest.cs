@@ -1,7 +1,15 @@
 ﻿using System;
-using Xunit;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using P3_Bookr.Windows;
+using P3_Bookr.Commons;
+using System.IO;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
+using P3_Bookr.DAL.Interfaces;
+using P3_Bookr.DAL;
+using Xunit;
 
 namespace P3_Bookr.Tests
 {
@@ -10,6 +18,8 @@ namespace P3_Bookr.Tests
         [Fact]
         public void CreateReservation_ShouldReturnTrue()
         {
+            DateTime time;
+            time = DateTime.Now;
             Customer c = new Customer(true, DateTime.Now, "Test", "Mintestvej 19", "test@gmail.com");
 
             ModelComponent modelComponent = new ModelComponent(null);
@@ -18,22 +28,18 @@ namespace P3_Bookr.Tests
             Payment paymentTest = new Payment(DateTime.Now, 50);
             Service serviceTest = new Service("Vaskemaskine", Commons.Enums.ServiceTypes.WashingMachine);
             ServiceOffering serviceOfferingTest = new ServiceOffering("Kulørtvask", 90, 12, serviceTest);
-            Member memberTest = new Member(c, "Jane", "Janesen", "Janevej 12");
-
-            //paymentManagerTest.Cancel(paymentTest);
-
-            //Reservation testReservation = new Reservation(
-            //   DateTime.Now,
-            //   memberTest,
-            //   new TimePeriod(
-            //   DateTime.Now.AddDays(2),
-            //   DateTime.Now.AddDays(3),
-            //   serviceTest),
-            //   serviceOfferingTest,
-            //   paymentTest)
-            //{ ReservationDeadline = DateTime.Now.AddDays(1) }; ;
-
-            Assert.True(rsrvtnmngrTest.CreateReservation(memberTest, serviceTest, serviceOfferingTest, DateTime.Now));
+            Member memberTest = new Member(c, "Jane", "Janesen", "Janevej 12")
+            
+            {
+                IsActive = true,
+                Email = $"test@gmail.com",
+                RentalNumber = $"00000",
+                MemberNumber = $"00000000",
+                MemberType = Member.MemberTypes.Renter,
+                Username = $"test123",
+                Password = $"test"
+            };
+            Assert.True(rsrvtnmngrTest.CreateReservation(memberTest, serviceTest, serviceOfferingTest, time));
         }
     }
 }
