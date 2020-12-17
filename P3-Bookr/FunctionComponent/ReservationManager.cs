@@ -48,15 +48,8 @@ namespace P3_Bookr.FunctionComponent
                     reservation.ReservationState = ReservationStates.Cancelled;
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
 }
