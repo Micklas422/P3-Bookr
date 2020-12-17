@@ -116,7 +116,7 @@
             this.EmailEdit.Location = new System.Drawing.Point(125, 78);
             this.EmailEdit.Name = "EmailEdit";
             this.EmailEdit.ReadOnly = true;
-            this.EmailEdit.Size = new System.Drawing.Size(100, 31);
+            this.EmailEdit.Size = new System.Drawing.Size(726, 31);
             this.EmailEdit.TabIndex = 9;
             // 
             // NameEdit
@@ -127,7 +127,7 @@
             this.NameEdit.Location = new System.Drawing.Point(122, 120);
             this.NameEdit.Name = "NameEdit";
             this.NameEdit.ReadOnly = true;
-            this.NameEdit.Size = new System.Drawing.Size(100, 31);
+            this.NameEdit.Size = new System.Drawing.Size(729, 31);
             this.NameEdit.TabIndex = 10;
             // 
             // MemberNumberEdit
@@ -138,7 +138,7 @@
             this.MemberNumberEdit.Location = new System.Drawing.Point(265, 163);
             this.MemberNumberEdit.Name = "MemberNumberEdit";
             this.MemberNumberEdit.ReadOnly = true;
-            this.MemberNumberEdit.Size = new System.Drawing.Size(100, 31);
+            this.MemberNumberEdit.Size = new System.Drawing.Size(586, 31);
             this.MemberNumberEdit.TabIndex = 11;
             // 
             // PasswordEdit
@@ -149,7 +149,7 @@
             this.PasswordEdit.Location = new System.Drawing.Point(160, 209);
             this.PasswordEdit.Name = "PasswordEdit";
             this.PasswordEdit.ReadOnly = true;
-            this.PasswordEdit.Size = new System.Drawing.Size(100, 31);
+            this.PasswordEdit.Size = new System.Drawing.Size(691, 31);
             this.PasswordEdit.TabIndex = 12;
             // 
             // PersonalInfo
@@ -183,9 +183,9 @@
         private System.Windows.Forms.Label SettingsPassword;
         private System.Windows.Forms.Button SettingsEditButton;
         private System.Windows.Forms.Label PersonalInfoTop;
-        private System.Windows.Forms.TextBox EmailEdit;
-        private System.Windows.Forms.TextBox NameEdit;
-        private System.Windows.Forms.TextBox MemberNumberEdit;
-        private System.Windows.Forms.TextBox PasswordEdit;
+        public System.Windows.Forms.TextBox EmailEdit;
+        public System.Windows.Forms.TextBox NameEdit;
+        public System.Windows.Forms.TextBox MemberNumberEdit;
+        public System.Windows.Forms.TextBox PasswordEdit;
     }
 }

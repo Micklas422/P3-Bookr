@@ -97,7 +97,7 @@ namespace P3_Bookr
         public void SwitchToSettingsPage()
         {
             _mainWindow.panelSiteView.Controls.Clear();
-            _mainWindow.panelSiteView.Controls.Add(new SettingsPage(this));
+            _mainWindow.panelSiteView.Controls.Add(LoadSettings());
         }
         public void SwitchToAdminToolsPage()
         {
@@ -306,6 +306,14 @@ namespace P3_Bookr
                 historyPage.flowLayoutPanel1.Controls.Add(new HistoryElement(r));
             }
             return historyPage;
+        }
+
+        #endregion
+        #region SettingsUI
+
+        public SettingsPage LoadSettings()
+        {
+           return new SettingsPage(this, _currentUser);
         }
 
         #endregion

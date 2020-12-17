@@ -90,7 +90,7 @@
             this.PaymentPlatformEdit.Location = new System.Drawing.Point(268, 90);
             this.PaymentPlatformEdit.Name = "PaymentPlatformEdit";
             this.PaymentPlatformEdit.ReadOnly = true;
-            this.PaymentPlatformEdit.Size = new System.Drawing.Size(100, 31);
+            this.PaymentPlatformEdit.Size = new System.Drawing.Size(583, 31);
             this.PaymentPlatformEdit.TabIndex = 8;
             // 
             // CardNumberEdit
@@ -101,7 +101,7 @@
             this.CardNumberEdit.Location = new System.Drawing.Point(206, 149);
             this.CardNumberEdit.Name = "CardNumberEdit";
             this.CardNumberEdit.ReadOnly = true;
-            this.CardNumberEdit.Size = new System.Drawing.Size(100, 31);
+            this.CardNumberEdit.Size = new System.Drawing.Size(645, 31);
             this.CardNumberEdit.TabIndex = 9;
             // 
             // PaymentInfo
@@ -128,7 +128,7 @@
         private System.Windows.Forms.Label CardNumber;
         private System.Windows.Forms.Label PaymentTop;
         private System.Windows.Forms.Button PaymentEditButton;
-        private System.Windows.Forms.TextBox PaymentPlatformEdit;
-        private System.Windows.Forms.TextBox CardNumberEdit;
+        public System.Windows.Forms.TextBox PaymentPlatformEdit;
+        public System.Windows.Forms.TextBox CardNumberEdit;
     }
 }
