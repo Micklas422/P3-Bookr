@@ -32,7 +32,7 @@ namespace P3_Bookr.Tests
                serviceTest),
                serviceOfferingTest,
                paymentTest)
-            { ReservationDeadline = DateTime.Now.AddDays(1) }; ;
+            { ReservationDeadline = DateTime.Now.AddDays(1) };;
 
             Assert.True(rsrvtnmngrTest.CancelReservation(testReservation));
         }
