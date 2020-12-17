@@ -140,48 +140,10 @@ namespace P3_Bookr
             }
             return servicesOverview;
         }
-        public void ChooseServices()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SelectService()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SelectServiceType(ServiceSubOptions price, Service service)
-        {
-            //service.ServiceOfferings.
-        }
-
-        public void SelectDate()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SelectTime()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Book()
-        {
-            throw new NotImplementedException();
-        }
         public void SwitchToService(Service service)
         {
             _mainWindow.panelSiteView.Controls.Clear();
             _mainWindow.panelSiteView.Controls.Add(new ServiceDetails(new ServiceInfoPanel(this, service), new ServiceBook(this,this, service), service));
-        }
-        public void LoadInfoPanelForService(IService service)
-        {
-            //_serviceInfoPanel.ServiceAdressInfo1.Text = service.Name;
-            //_serviceInfoPanel.ServiceDescriptionInfo1.Text = service.Name;
-        }
-        public void LoadandExecutePanelForServiceBooking()
-        {
-            throw new NotImplementedException();
         }
         #endregion
         #region ResevationUI
@@ -216,6 +178,10 @@ namespace P3_Bookr
                 MessageBox.Show("Kunne ikke annullere reservation");
             }
         }
+        public bool CreateNewReservation(Service service, ServiceOffering serviceOffering, DateTime dateTime)
+        {
+            return _functionComponent.reservationManager.CreateReservation(_currentUser, service, serviceOffering, dateTime);
+        }
         #endregion
         #region LogInUI
         public void LogIn(string username, string password)
@@ -245,18 +211,9 @@ namespace P3_Bookr
         {
             return _functionComponent.historyManager.GetLastUsedServices(_currentUser, count);
         }
-
-        public void News()
-        {
-            throw new NotImplementedException();
-        }
         #endregion
         #region AdminToolsUI
-        public void AddUser()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public void AddService(Service service, Department department)
         {
             bool Succeded;
@@ -267,21 +224,6 @@ namespace P3_Bookr
             }
             MessageBox.Show("Service oprettet, tryk på annuller for at returnere til hovedmenuen");
 
-        }
-        public void CreateServiceOffering()
-        {
-            throw new NotImplementedException();
-
-        }
-
-        public void AddServiceGroup()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddUserGroup()
-        {
-            throw new NotImplementedException();
         }
         public List<Department> deparmentListFromMember(Member member)
         {
@@ -317,25 +259,5 @@ namespace P3_Bookr
         }
 
         #endregion
-        public void LoadInfoPanelForService()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SelectServiceType()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool CreateNewReservation(Service service, ServiceOffering serviceOffering, DateTime dateTime)
-        {
-            return _functionComponent.reservationManager.CreateReservation(_currentUser, service, serviceOffering, dateTime);
-        }
-
-        public void CancelReservation()
-        {
-            throw new NotImplementedException();
-        }
-        
     }
 }

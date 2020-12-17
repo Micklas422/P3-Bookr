@@ -11,8 +11,6 @@ namespace P3_Bookr.Windows.WindowsInterfaces
     public interface IReservationUI
     {
         bool CreateNewReservation(Service service, ServiceOffering serviceOffering, DateTime dateTime);
-        //void LoadReservationsOfMember();
-        void CancelReservation();
         ReservationPage LoadReservationsOfMember();
         void CancelReservation(Reservation reservation);
     }

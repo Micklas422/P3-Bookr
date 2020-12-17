@@ -15,10 +15,10 @@ namespace P3_Bookr.FunctionComponent
         {
             _modelComponent = modelComponent;
         }
-        public bool Pay(Payment payment)
-        {
-            return true;
-        }
+        //public bool Pay(Payment payment)
+        //{
+        //    return true;
+        //}
 
         public bool Cancel(Payment payments)
         {

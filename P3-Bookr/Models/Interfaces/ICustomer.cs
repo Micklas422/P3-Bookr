@@ -15,7 +15,5 @@ namespace P3_Bookr.Models
         string Email { get; set; }
         List<Department> Departments { get; set; }
         List<Member> Members { get; set; }
-        void CreateMember();
-        void DeleteMember();
     }
 }

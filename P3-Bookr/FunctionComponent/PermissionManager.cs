@@ -14,10 +14,10 @@ namespace P3_Bookr.FunctionComponent
         {
             _modelComponent = modelComponent;
         }
-        public bool ValidatePermission(string username)
-        {
-            return true;
-        }
+        //public bool ValidatePermission(string username)
+        //{
+        //    return true;
+        //}
         public bool ValidateAdminPermission(Member member)
         {
             return member.MemberType >= Member.MemberTypes.Administrator;

@@ -15,8 +15,8 @@ namespace P3_Bookr.Models
 
         public TimePeriod(DateTime startTime, DateTime endTime, Service service)
         {
-            _startTime = startTime;
-            _endTime = endTime;
+            StartTime = startTime;
+            EndTime = endTime;
             Serivce = service;
         }
 
@@ -29,11 +29,6 @@ namespace P3_Bookr.Models
         {
             get { return _endTime; }
             set { _endTime = value; }
-        }
-        public bool ServiceUsed
-        {
-            get { return _serviceUsed; }
-            set { _serviceUsed = value; }
         }
         internal Service Serivce { get => _service; set => _service = value; }
     }
