@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using P3_Bookr.Models;
 using P3_Bookr.FunctionComponent;
-using P3_Bookr.DAL;
 using Xunit;
 
 namespace P3_Bookr.Tests
@@ -62,8 +61,7 @@ namespace P3_Bookr.Tests
                 { ReservationDeadline = DateTime.Now.AddDays(1) });          
 
             Payment paymentTest = new Payment(DateTime.Now, 50);
-            DataAccesLayer dataAccesLayer = new DataAccesLayer();
-            ModelComponent modelComponent = new ModelComponent(dataAccesLayer);
+            ModelComponent modelComponent = new ModelComponent();
             modelComponent.customer = c;
             PaymentManager paymentManagerTest = new PaymentManager(modelComponent);
             ReservationManager rsrvtnmngrTest = new ReservationManager(modelComponent, paymentManagerTest);
